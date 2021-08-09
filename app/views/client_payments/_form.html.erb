@@ -1,0 +1,57 @@
+<%= form_with(model: client_payment, local: true) do |form| %>
+  <% if client_payment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(client_payment.errors.count, "error") %> prohibited this client_payment from being saved:</h2>
+
+      <ul>
+        <% client_payment.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Company-Name %>
+    <%= form.text_field :Company-Name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Category %>
+    <%= form.text_field :Category %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Status %>
+    <%= form.text_field :Status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Receipt-Number %>
+    <%= form.text_field :Receipt-Number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Amount-Paid %>
+    <%= form.text_field :Amount-Paid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Balance %>
+    <%= form.text_field :Balance %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Date %>
+    <%= form.date_select :Date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Pro-Number %>
+    <%= form.text_field :Pro-Number %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

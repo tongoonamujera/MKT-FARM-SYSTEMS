@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company-name:</strong>
+  <%= @client_payment.Company-Name %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @client_payment.Category %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @client_payment.Status %>
+</p>
+
+<p>
+  <strong>Receipt-number:</strong>
+  <%= @client_payment.Receipt-Number %>
+</p>
+
+<p>
+  <strong>Amount-paid:</strong>
+  <%= @client_payment.Amount-Paid %>
+</p>
+
+<p>
+  <strong>Balance:</strong>
+  <%= @client_payment.Balance %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @client_payment.Date %>
+</p>
+
+<p>
+  <strong>Pro-number:</strong>
+  <%= @client_payment.Pro-Number %>
+</p>
+
+<%= link_to 'Edit', edit_client_payment_path(@client_payment) %> |
+<%= link_to 'Back', client_payments_path %>
