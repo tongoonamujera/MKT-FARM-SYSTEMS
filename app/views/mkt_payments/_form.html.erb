@@ -1,0 +1,67 @@
+<%= form_with(model: mkt_payment, local: true) do |form| %>
+  <% if mkt_payment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(mkt_payment.errors.count, "error") %> prohibited this mkt_payment from being saved:</h2>
+
+      <ul>
+        <% mkt_payment.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Date %>
+    <%= form.date_select :Date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Company_Name %>
+    <%= form.text_field :Company_Name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Service_Rendered %>
+    <%= form.text_field :Service_Rendered %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Service %>
+    <%= form.text_field :Service %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Amount_Paid %>
+    <%= form.text_field :Amount_Paid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :From %>
+    <%= form.text_field :From %>
+  </div>
+
+  <div class="field">
+    <%= form.label :To %>
+    <%= form.text_field :To %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Receipt_Number %>
+    <%= form.text_field :Receipt_Number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Paid_by %>
+    <%= form.text_field :Paid_by %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Pro_number %>
+    <%= form.text_field :Pro_number %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

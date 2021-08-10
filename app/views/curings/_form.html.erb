@@ -1,0 +1,67 @@
+<%= form_with(model: curing, local: true) do |form| %>
+  <% if curing.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(curing.errors.count, "error") %> prohibited this curing from being saved:</h2>
+
+      <ul>
+        <% curing.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Company_Name %>
+    <%= form.text_field :Company_Name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Date %>
+    <%= form.date_select :Date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Season %>
+    <%= form.text_field :Season %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Farm_Name %>
+    <%= form.text_field :Farm_Name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Facility %>
+    <%= form.text_field :Facility %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Time %>
+    <%= form.datetime_select :Time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Day %>
+    <%= form.date_select :Day %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Temperature %>
+    <%= form.text_field :Temperature %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Pro_Number %>
+    <%= form.text_field :Pro_Number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

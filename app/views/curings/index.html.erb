@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Curings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Company name</th>
+      <th>Date</th>
+      <th>Season</th>
+      <th>Farm name</th>
+      <th>Facility</th>
+      <th>Time</th>
+      <th>Day</th>
+      <th>Temperature</th>
+      <th>Pro number</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @curings.each do |curing| %>
+      <tr>
+        <td><%= curing.Company_Name %></td>
+        <td><%= curing.Date %></td>
+        <td><%= curing.Season %></td>
+        <td><%= curing.Farm_Name %></td>
+        <td><%= curing.Facility %></td>
+        <td><%= curing.Time %></td>
+        <td><%= curing.Day %></td>
+        <td><%= curing.Temperature %></td>
+        <td><%= curing.Pro_Number %></td>
+        <td><%= curing.user_id %></td>
+        <td><%= link_to 'Show', curing %></td>
+        <td><%= link_to 'Edit', edit_curing_path(curing) %></td>
+        <td><%= link_to 'Destroy', curing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Curing', new_curing_path %>

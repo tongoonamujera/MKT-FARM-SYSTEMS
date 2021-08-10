@@ -1,0 +1,2 @@
+module SeedbedsHelper
+end

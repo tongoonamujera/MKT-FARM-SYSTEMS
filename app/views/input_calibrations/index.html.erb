@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Input Calibrations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Company name</th>
+      <th>Date</th>
+      <th>Season</th>
+      <th>Farm name</th>
+      <th>Section</th>
+      <th>Crop</th>
+      <th>Variety</th>
+      <th>Fertiiliser typefertiliser rate</th>
+      <th>Bags used</th>
+      <th>Herbicide</th>
+      <th>Herbicide rate</th>
+      <th>Pro number</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @input_calibrations.each do |input_calibration| %>
+      <tr>
+        <td><%= input_calibration.Company_Name %></td>
+        <td><%= input_calibration.Date %></td>
+        <td><%= input_calibration.Season %></td>
+        <td><%= input_calibration.Farm_Name %></td>
+        <td><%= input_calibration.Section %></td>
+        <td><%= input_calibration.Crop %></td>
+        <td><%= input_calibration.Variety %></td>
+        <td><%= input_calibration.Fertiiliser_TypeFertiliser_Rate %></td>
+        <td><%= input_calibration.Bags_Used %></td>
+        <td><%= input_calibration.Herbicide %></td>
+        <td><%= input_calibration.Herbicide_Rate %></td>
+        <td><%= input_calibration.Pro_Number %></td>
+        <td><%= input_calibration.user_id %></td>
+        <td><%= link_to 'Show', input_calibration %></td>
+        <td><%= link_to 'Edit', edit_input_calibration_path(input_calibration) %></td>
+        <td><%= link_to 'Destroy', input_calibration, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Input Calibration', new_input_calibration_path %>

@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Company_name: MyString
+  Date: 2021-08-10
+  Season: MyString
+  Farm_nameSection: MyString
+  Hectrage: MyString
+  Crop: MyString
+  Pro_Number: MyString
+
+two:
+  Company_name: MyString
+  Date: 2021-08-10
+  Season: MyString
+  Farm_nameSection: MyString
+  Hectrage: MyString
+  Crop: MyString
+  Pro_Number: MyString

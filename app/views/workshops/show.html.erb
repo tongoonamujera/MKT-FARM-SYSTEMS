@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @workshop.Company_Name %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @workshop.Date %>
+</p>
+
+<p>
+  <strong>Season:</strong>
+  <%= @workshop.Season %>
+</p>
+
+<p>
+  <strong>Farm name:</strong>
+  <%= @workshop.Farm_Name %>
+</p>
+
+<p>
+  <strong>Item:</strong>
+  <%= @workshop.Item %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @workshop.Quantity %>
+</p>
+
+<p>
+  <strong>Pro number:</strong>
+  <%= @workshop.Pro_Number %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @workshop.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_workshop_path(@workshop) %> |
+<%= link_to 'Back', workshops_path %>

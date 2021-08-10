@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @seedbed.Company_Name %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @seedbed.Date %>
+</p>
+
+<p>
+  <strong>Season:</strong>
+  <%= @seedbed.Season %>
+</p>
+
+<p>
+  <strong>Farm name:</strong>
+  <%= @seedbed.Farm_Name %>
+</p>
+
+<p>
+  <strong>Section:</strong>
+  <%= @seedbed.Section %>
+</p>
+
+<p>
+  <strong>Item used:</strong>
+  <%= @seedbed.Item_Used %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @seedbed.Quantity %>
+</p>
+
+<p>
+  <strong>Unit:</strong>
+  <%= @seedbed.Unit %>
+</p>
+
+<p>
+  <strong>Input amount:</strong>
+  <%= @seedbed.Input_Amount %>
+</p>
+
+<p>
+  <strong>Labour amount:</strong>
+  <%= @seedbed.Labour_Amount %>
+</p>
+
+<p>
+  <strong>Pro number:</strong>
+  <%= @seedbed.Pro_Number %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @seedbed.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_seedbed_path(@seedbed) %> |
+<%= link_to 'Back', seedbeds_path %>

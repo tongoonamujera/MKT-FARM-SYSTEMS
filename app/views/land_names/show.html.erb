@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @land_name.Company_name %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @land_name.Date %>
+</p>
+
+<p>
+  <strong>Season:</strong>
+  <%= @land_name.Season %>
+</p>
+
+<p>
+  <strong>Farm namesection:</strong>
+  <%= @land_name.Farm_nameSection %>
+</p>
+
+<p>
+  <strong>Hectrage:</strong>
+  <%= @land_name.Hectrage %>
+</p>
+
+<p>
+  <strong>Crop:</strong>
+  <%= @land_name.Crop %>
+</p>
+
+<p>
+  <strong>Pro number:</strong>
+  <%= @land_name.Pro_Number %>
+</p>
+
+<%= link_to 'Edit', edit_land_name_path(@land_name) %> |
+<%= link_to 'Back', land_names_path %>

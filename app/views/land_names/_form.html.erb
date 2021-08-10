@@ -1,0 +1,52 @@
+<%= form_with(model: land_name, local: true) do |form| %>
+  <% if land_name.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(land_name.errors.count, "error") %> prohibited this land_name from being saved:</h2>
+
+      <ul>
+        <% land_name.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Company_name %>
+    <%= form.text_field :Company_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Date %>
+    <%= form.date_select :Date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Season %>
+    <%= form.text_field :Season %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Farm_nameSection %>
+    <%= form.text_field :Farm_nameSection %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Hectrage %>
+    <%= form.text_field :Hectrage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Crop %>
+    <%= form.text_field :Crop %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Pro_Number %>
+    <%= form.text_field :Pro_Number %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

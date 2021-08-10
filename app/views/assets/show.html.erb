@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @asset.Company_Name %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @asset.Date %>
+</p>
+
+<p>
+  <strong>Season:</strong>
+  <%= @asset.Season %>
+</p>
+
+<p>
+  <strong>Asset:</strong>
+  <%= @asset.Asset %>
+</p>
+
+<p>
+  <strong>Asset number:</strong>
+  <%= @asset.Asset_Number %>
+</p>
+
+<p>
+  <strong>Asset type:</strong>
+  <%= @asset.Asset_Type %>
+</p>
+
+<p>
+  <strong>Unit price:</strong>
+  <%= @asset.Unit_Price %>
+</p>
+
+<p>
+  <strong>Total amount:</strong>
+  <%= @asset.Total_Amount %>
+</p>
+
+<p>
+  <strong>Pro number:</strong>
+  <%= @asset.Pro_Number %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @asset.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_asset_path(@asset) %> |
+<%= link_to 'Back', assets_path %>

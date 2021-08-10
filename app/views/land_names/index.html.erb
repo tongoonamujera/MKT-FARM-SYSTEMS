@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Land Names</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Company name</th>
+      <th>Date</th>
+      <th>Season</th>
+      <th>Farm namesection</th>
+      <th>Hectrage</th>
+      <th>Crop</th>
+      <th>Pro number</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @land_names.each do |land_name| %>
+      <tr>
+        <td><%= land_name.Company_name %></td>
+        <td><%= land_name.Date %></td>
+        <td><%= land_name.Season %></td>
+        <td><%= land_name.Farm_nameSection %></td>
+        <td><%= land_name.Hectrage %></td>
+        <td><%= land_name.Crop %></td>
+        <td><%= land_name.Pro_Number %></td>
+        <td><%= link_to 'Show', land_name %></td>
+        <td><%= link_to 'Edit', edit_land_name_path(land_name) %></td>
+        <td><%= link_to 'Destroy', land_name, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Land Name', new_land_name_path %>

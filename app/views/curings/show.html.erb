@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @curing.Company_Name %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @curing.Date %>
+</p>
+
+<p>
+  <strong>Season:</strong>
+  <%= @curing.Season %>
+</p>
+
+<p>
+  <strong>Farm name:</strong>
+  <%= @curing.Farm_Name %>
+</p>
+
+<p>
+  <strong>Facility:</strong>
+  <%= @curing.Facility %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @curing.Time %>
+</p>
+
+<p>
+  <strong>Day:</strong>
+  <%= @curing.Day %>
+</p>
+
+<p>
+  <strong>Temperature:</strong>
+  <%= @curing.Temperature %>
+</p>
+
+<p>
+  <strong>Pro number:</strong>
+  <%= @curing.Pro_Number %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @curing.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_curing_path(@curing) %> |
+<%= link_to 'Back', curings_path %>

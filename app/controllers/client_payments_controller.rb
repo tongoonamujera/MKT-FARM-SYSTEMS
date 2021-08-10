@@ -64,6 +64,6 @@ class ClientPaymentsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def client_payment_params
-      params.require(:client_payment).permit(:Company-Name, :Category, :Status, :Receipt-Number, :Amount-Paid, :Balance, :Date, :Pro-Number)
+      params.require(:client_payment).permit(:Company_Name, :Category, :Receipt_Number, :Amount_Paid, :Balance, :Date, :Pro_Number)
     end
 end

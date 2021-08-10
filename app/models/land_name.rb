@@ -1,0 +1,2 @@
+class LandName < ApplicationRecord
+end

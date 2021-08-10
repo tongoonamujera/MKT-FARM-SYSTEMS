@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Company_Name: MyString
+  Date: 2021-08-10
+  Season: MyString
+  Asset: MyString
+  Asset_Number: MyString
+  Asset_Type: MyString
+  Unit_Price: MyString
+  Total_Amount: MyString
+  Pro_Number: MyString
+  user: one
+
+two:
+  Company_Name: MyString
+  Date: 2021-08-10
+  Season: MyString
+  Asset: MyString
+  Asset_Number: MyString
+  Asset_Type: MyString
+  Unit_Price: MyString
+  Total_Amount: MyString
+  Pro_Number: MyString
+  user: two

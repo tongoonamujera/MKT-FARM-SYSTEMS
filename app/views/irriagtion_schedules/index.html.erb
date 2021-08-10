@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Irriagtion Schedules</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Company name</th>
+      <th>Date</th>
+      <th>Season</th>
+      <th>Farm name</th>
+      <th>Section</th>
+      <th>Crop</th>
+      <th>Calibration</th>
+      <th>Mls</th>
+      <th>Start date</th>
+      <th>End date</th>
+      <th>Turn around time</th>
+      <th>Pro number</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @irriagtion_schedules.each do |irriagtion_schedule| %>
+      <tr>
+        <td><%= irriagtion_schedule.Company_Name %></td>
+        <td><%= irriagtion_schedule.Date %></td>
+        <td><%= irriagtion_schedule.Season %></td>
+        <td><%= irriagtion_schedule.Farm_Name %></td>
+        <td><%= irriagtion_schedule.Section %></td>
+        <td><%= irriagtion_schedule.Crop %></td>
+        <td><%= irriagtion_schedule.Calibration %></td>
+        <td><%= irriagtion_schedule.Mls %></td>
+        <td><%= irriagtion_schedule.Start_Date %></td>
+        <td><%= irriagtion_schedule.End_Date %></td>
+        <td><%= irriagtion_schedule.turn_around_time %></td>
+        <td><%= irriagtion_schedule.Pro_Number %></td>
+        <td><%= irriagtion_schedule.user_id %></td>
+        <td><%= link_to 'Show', irriagtion_schedule %></td>
+        <td><%= link_to 'Edit', edit_irriagtion_schedule_path(irriagtion_schedule) %></td>
+        <td><%= link_to 'Destroy', irriagtion_schedule, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Irriagtion Schedule', new_irriagtion_schedule_path %>

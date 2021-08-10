@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @cereal_store.Company_Name %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @cereal_store.Date %>
+</p>
+
+<p>
+  <strong>Season:</strong>
+  <%= @cereal_store.Season %>
+</p>
+
+<p>
+  <strong>Farm name:</strong>
+  <%= @cereal_store.Farm_Name %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @cereal_store.Type %>
+</p>
+
+<p>
+  <strong>Input name:</strong>
+  <%= @cereal_store.Input_Name %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @cereal_store.Quantity %>
+</p>
+
+<p>
+  <strong>Unit:</strong>
+  <%= @cereal_store.Unit %>
+</p>
+
+<p>
+  <strong>Unit price:</strong>
+  <%= @cereal_store.Unit_Price %>
+</p>
+
+<p>
+  <strong>Total amount:</strong>
+  <%= @cereal_store.Total_Amount %>
+</p>
+
+<p>
+  <strong>Pro number:</strong>
+  <%= @cereal_store.Pro_Number %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @cereal_store.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_cereal_store_path(@cereal_store) %> |
+<%= link_to 'Back', cereal_stores_path %>

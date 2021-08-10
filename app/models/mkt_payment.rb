@@ -1,0 +1,2 @@
+class MktPayment < ApplicationRecord
+end

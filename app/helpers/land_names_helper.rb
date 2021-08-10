@@ -1,0 +1,2 @@
+module LandNamesHelper
+end

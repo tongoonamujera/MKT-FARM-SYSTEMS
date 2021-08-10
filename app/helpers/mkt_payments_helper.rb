@@ -1,0 +1,2 @@
+module MktPaymentsHelper
+end
