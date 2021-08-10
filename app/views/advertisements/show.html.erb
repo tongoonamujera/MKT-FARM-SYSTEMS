@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @advertisement.Company_Name %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @advertisement.Date %>
+</p>
+
+<p>
+  <strong>Item type:</strong>
+  <%= @advertisement.Item_Type %>
+</p>
+
+<p>
+  <strong>Item name:</strong>
+  <%= @advertisement.item_Name %>
+</p>
+
+<p>
+  <strong>Unit:</strong>
+  <%= @advertisement.Unit %>
+</p>
+
+<p>
+  <strong>Unit price:</strong>
+  <%= @advertisement.Unit_Price %>
+</p>
+
+<p>
+  <strong>Vat:</strong>
+  <%= @advertisement.VAT %>
+</p>
+
+<p>
+  <strong>Total amount:</strong>
+  <%= @advertisement.Total_Amount %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @advertisement.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_advertisement_path(@advertisement) %> |
+<%= link_to 'Back', advertisements_path %>

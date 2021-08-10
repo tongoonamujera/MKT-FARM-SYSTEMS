@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Season: MyString
+  Month: MyString
+  Gross: MyString
+  Net: MyString
+  Farm_Name: MyString
+
+two:
+  Season: MyString
+  Month: MyString
+  Gross: MyString
+  Net: MyString
+  Farm_Name: MyString

@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cash Requisitions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Company name</th>
+      <th>Date</th>
+      <th>Season</th>
+      <th>Farm name</th>
+      <th>Employee name</th>
+      <th>Amount requested</th>
+      <th>Amount issued</th>
+      <th>Pay from</th>
+      <th>Pay to</th>
+      <th>Pro number</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cash_requisitions.each do |cash_requisition| %>
+      <tr>
+        <td><%= cash_requisition.Company_Name %></td>
+        <td><%= cash_requisition.Date %></td>
+        <td><%= cash_requisition.Season %></td>
+        <td><%= cash_requisition.Farm_Name %></td>
+        <td><%= cash_requisition.Employee_Name %></td>
+        <td><%= cash_requisition.Amount_Requested %></td>
+        <td><%= cash_requisition.Amount_Issued %></td>
+        <td><%= cash_requisition.Pay_From %></td>
+        <td><%= cash_requisition.Pay_To %></td>
+        <td><%= cash_requisition.Pro_Number %></td>
+        <td><%= cash_requisition.user_id %></td>
+        <td><%= link_to 'Show', cash_requisition %></td>
+        <td><%= link_to 'Edit', edit_cash_requisition_path(cash_requisition) %></td>
+        <td><%= link_to 'Destroy', cash_requisition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cash Requisition', new_cash_requisition_path %>

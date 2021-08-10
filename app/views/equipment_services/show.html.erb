@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @equipment_service.Company_Name %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @equipment_service.Date %>
+</p>
+
+<p>
+  <strong>Season:</strong>
+  <%= @equipment_service.Season %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @equipment_service.Type %>
+</p>
+
+<p>
+  <strong>Equipment number:</strong>
+  <%= @equipment_service.Equipment_Number %>
+</p>
+
+<p>
+  <strong>Service type:</strong>
+  <%= @equipment_service.Service_Type %>
+</p>
+
+<p>
+  <strong>Done by:</strong>
+  <%= @equipment_service.Done_By %>
+</p>
+
+<p>
+  <strong>Mileage:</strong>
+  <%= @equipment_service.Mileage %>
+</p>
+
+<p>
+  <strong>Next service-milaege:</strong>
+  <%= @equipment_service.next_service-milaege %>
+</p>
+
+<p>
+  <strong>Job:</strong>
+  <%= @equipment_service.Job %>
+</p>
+
+<p>
+  <strong>Total amount:</strong>
+  <%= @equipment_service.Total_Amount %>
+</p>
+
+<p>
+  <strong>Pro number:</strong>
+  <%= @equipment_service.Pro_Number %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @equipment_service.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_equipment_service_path(@equipment_service) %> |
+<%= link_to 'Back', equipment_services_path %>

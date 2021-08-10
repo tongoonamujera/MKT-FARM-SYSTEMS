@@ -1,0 +1,39 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Company_Name: MyString
+  Date: 2021-08-10
+  Season: MyString
+  Farm_Name: MyString
+  Grower_Name: MyString
+  Truck_Number: MyString
+  Trailer_Number: MyString
+  Test_Density: MyString
+  External_Matter: MyString
+  Gross_Mass: MyString
+  Tare: MyString
+  Net_Mass: MyString
+  Price_Per_Tonne: MyString
+  Quantity: MyString
+  Amount_Paid: MyString
+  Pro_Number: MyString
+  user: one
+
+two:
+  Company_Name: MyString
+  Date: 2021-08-10
+  Season: MyString
+  Farm_Name: MyString
+  Grower_Name: MyString
+  Truck_Number: MyString
+  Trailer_Number: MyString
+  Test_Density: MyString
+  External_Matter: MyString
+  Gross_Mass: MyString
+  Tare: MyString
+  Net_Mass: MyString
+  Price_Per_Tonne: MyString
+  Quantity: MyString
+  Amount_Paid: MyString
+  Pro_Number: MyString
+  user: two

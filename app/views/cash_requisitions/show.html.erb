@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @cash_requisition.Company_Name %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @cash_requisition.Date %>
+</p>
+
+<p>
+  <strong>Season:</strong>
+  <%= @cash_requisition.Season %>
+</p>
+
+<p>
+  <strong>Farm name:</strong>
+  <%= @cash_requisition.Farm_Name %>
+</p>
+
+<p>
+  <strong>Employee name:</strong>
+  <%= @cash_requisition.Employee_Name %>
+</p>
+
+<p>
+  <strong>Amount requested:</strong>
+  <%= @cash_requisition.Amount_Requested %>
+</p>
+
+<p>
+  <strong>Amount issued:</strong>
+  <%= @cash_requisition.Amount_Issued %>
+</p>
+
+<p>
+  <strong>Pay from:</strong>
+  <%= @cash_requisition.Pay_From %>
+</p>
+
+<p>
+  <strong>Pay to:</strong>
+  <%= @cash_requisition.Pay_To %>
+</p>
+
+<p>
+  <strong>Pro number:</strong>
+  <%= @cash_requisition.Pro_Number %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @cash_requisition.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_cash_requisition_path(@cash_requisition) %> |
+<%= link_to 'Back', cash_requisitions_path %>

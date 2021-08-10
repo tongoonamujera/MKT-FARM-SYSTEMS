@@ -1,0 +1,2 @@
+class DeductionTable < ApplicationRecord
+end

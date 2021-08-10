@@ -1,0 +1,33 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Company_Name: MyString
+  Date: 2021-08-10
+  Season: MyString
+  Month: MyString
+  Grower_Name: MyString
+  Hectrage: MyString
+  Operation: MyString
+  Unit_Price: MyString
+  quantity_per_hectre: MyString
+  Unity: MyString
+  Input_Name: MyString
+  Total_Amount: MyString
+  Pro_Number: MyString
+  user: one
+
+two:
+  Company_Name: MyString
+  Date: 2021-08-10
+  Season: MyString
+  Month: MyString
+  Grower_Name: MyString
+  Hectrage: MyString
+  Operation: MyString
+  Unit_Price: MyString
+  quantity_per_hectre: MyString
+  Unity: MyString
+  Input_Name: MyString
+  Total_Amount: MyString
+  Pro_Number: MyString
+  user: two

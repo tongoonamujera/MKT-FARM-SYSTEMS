@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cashflows</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Company name</th>
+      <th>Date</th>
+      <th>Season</th>
+      <th>Month</th>
+      <th>Grower name</th>
+      <th>Hectrage</th>
+      <th>Operation</th>
+      <th>Unit price</th>
+      <th>Quantity per hectre</th>
+      <th>Unity</th>
+      <th>Input name</th>
+      <th>Total amount</th>
+      <th>Pro number</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cashflows.each do |cashflow| %>
+      <tr>
+        <td><%= cashflow.Company_Name %></td>
+        <td><%= cashflow.Date %></td>
+        <td><%= cashflow.Season %></td>
+        <td><%= cashflow.Month %></td>
+        <td><%= cashflow.Grower_Name %></td>
+        <td><%= cashflow.Hectrage %></td>
+        <td><%= cashflow.Operation %></td>
+        <td><%= cashflow.Unit_Price %></td>
+        <td><%= cashflow.quantity_per_hectre %></td>
+        <td><%= cashflow.Unity %></td>
+        <td><%= cashflow.Input_Name %></td>
+        <td><%= cashflow.Total_Amount %></td>
+        <td><%= cashflow.Pro_Number %></td>
+        <td><%= cashflow.user_id %></td>
+        <td><%= link_to 'Show', cashflow %></td>
+        <td><%= link_to 'Edit', edit_cashflow_path(cashflow) %></td>
+        <td><%= link_to 'Destroy', cashflow, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cashflow', new_cashflow_path %>

@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Equipment Services</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Company name</th>
+      <th>Date</th>
+      <th>Season</th>
+      <th>Type</th>
+      <th>Equipment number</th>
+      <th>Service type</th>
+      <th>Done by</th>
+      <th>Mileage</th>
+      <th>Next service-milaege</th>
+      <th>Job</th>
+      <th>Total amount</th>
+      <th>Pro number</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @equipment_services.each do |equipment_service| %>
+      <tr>
+        <td><%= equipment_service.Company_Name %></td>
+        <td><%= equipment_service.Date %></td>
+        <td><%= equipment_service.Season %></td>
+        <td><%= equipment_service.Type %></td>
+        <td><%= equipment_service.Equipment_Number %></td>
+        <td><%= equipment_service.Service_Type %></td>
+        <td><%= equipment_service.Done_By %></td>
+        <td><%= equipment_service.Mileage %></td>
+        <td><%= equipment_service.next_service-milaege %></td>
+        <td><%= equipment_service.Job %></td>
+        <td><%= equipment_service.Total_Amount %></td>
+        <td><%= equipment_service.Pro_Number %></td>
+        <td><%= equipment_service.user_id %></td>
+        <td><%= link_to 'Show', equipment_service %></td>
+        <td><%= link_to 'Edit', edit_equipment_service_path(equipment_service) %></td>
+        <td><%= link_to 'Destroy', equipment_service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Equipment Service', new_equipment_service_path %>

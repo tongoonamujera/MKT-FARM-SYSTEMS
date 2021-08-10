@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Rainfalls</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Company name</th>
+      <th>Date</th>
+      <th>Season</th>
+      <th>Farm name</th>
+      <th>Section</th>
+      <th>Mls received</th>
+      <th>Pro number</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rainfalls.each do |rainfall| %>
+      <tr>
+        <td><%= rainfall.Company_Name %></td>
+        <td><%= rainfall.Date %></td>
+        <td><%= rainfall.Season %></td>
+        <td><%= rainfall.Farm_Name %></td>
+        <td><%= rainfall.Section %></td>
+        <td><%= rainfall.Mls_received %></td>
+        <td><%= rainfall.Pro_Number %></td>
+        <td><%= rainfall.user_id %></td>
+        <td><%= link_to 'Show', rainfall %></td>
+        <td><%= link_to 'Edit', edit_rainfall_path(rainfall) %></td>
+        <td><%= link_to 'Destroy', rainfall, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rainfall', new_rainfall_path %>

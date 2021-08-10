@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @weather.Date %>
+</p>
+
+<p>
+  <strong>Area:</strong>
+  <%= @weather.Area %>
+</p>
+
+<p>
+  <strong>Min:</strong>
+  <%= @weather.Min %>
+</p>
+
+<p>
+  <strong>Max:</strong>
+  <%= @weather.Max %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @weather.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_weather_path(@weather) %> |
+<%= link_to 'Back', weathers_path %>

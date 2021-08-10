@@ -1,0 +1,82 @@
+<%= form_with(model: delivery, local: true) do |form| %>
+  <% if delivery.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(delivery.errors.count, "error") %> prohibited this delivery from being saved:</h2>
+
+      <ul>
+        <% delivery.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Company_Name %>
+    <%= form.text_field :Company_Name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Date %>
+    <%= form.date_select :Date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Season %>
+    <%= form.text_field :Season %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Farm_Name %>
+    <%= form.text_field :Farm_Name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Section %>
+    <%= form.text_field :Section %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Type %>
+    <%= form.text_field :Type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Delivered_by %>
+    <%= form.text_field :Delivered_by %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Goods %>
+    <%= form.text_field :Goods %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Quantity %>
+    <%= form.text_field :Quantity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Amount %>
+    <%= form.text_field :Amount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Amount %>
+    <%= form.text_field :Amount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Pro_Number %>
+    <%= form.text_field :Pro_Number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,57 @@
+<%= form_with(model: activity, local: true) do |form| %>
+  <% if activity.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(activity.errors.count, "error") %> prohibited this activity from being saved:</h2>
+
+      <ul>
+        <% activity.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Company_Name %>
+    <%= form.text_field :Company_Name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Date %>
+    <%= form.text_field :Date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Season %>
+    <%= form.text_field :Season %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Farm_Name %>
+    <%= form.text_field :Farm_Name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Section %>
+    <%= form.text_field :Section %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Activity %>
+    <%= form.text_field :Activity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Pro_Number %>
+    <%= form.text_field :Pro_Number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,87 @@
+<%= form_with(model: cashflow, local: true) do |form| %>
+  <% if cashflow.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cashflow.errors.count, "error") %> prohibited this cashflow from being saved:</h2>
+
+      <ul>
+        <% cashflow.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Company_Name %>
+    <%= form.text_field :Company_Name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Date %>
+    <%= form.date_select :Date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Season %>
+    <%= form.text_field :Season %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Month %>
+    <%= form.text_field :Month %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Grower_Name %>
+    <%= form.text_field :Grower_Name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Hectrage %>
+    <%= form.text_field :Hectrage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Operation %>
+    <%= form.text_field :Operation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Unit_Price %>
+    <%= form.text_field :Unit_Price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quantity_per_hectre %>
+    <%= form.text_field :quantity_per_hectre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Unity %>
+    <%= form.text_field :Unity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Input_Name %>
+    <%= form.text_field :Input_Name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Amount %>
+    <%= form.text_field :Total_Amount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Pro_Number %>
+    <%= form.text_field :Pro_Number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

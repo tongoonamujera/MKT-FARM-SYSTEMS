@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @calender.Company_Name %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @calender.Date %>
+</p>
+
+<p>
+  <strong>Season:</strong>
+  <%= @calender.Season %>
+</p>
+
+<p>
+  <strong>Farm name:</strong>
+  <%= @calender.Farm_Name %>
+</p>
+
+<p>
+  <strong>Month:</strong>
+  <%= @calender.Month %>
+</p>
+
+<p>
+  <strong>Activity:</strong>
+  <%= @calender.Activity %>
+</p>
+
+<p>
+  <strong>Pro number:</strong>
+  <%= @calender.Pro_Number %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @calender.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_calender_path(@calender) %> |
+<%= link_to 'Back', calenders_path %>

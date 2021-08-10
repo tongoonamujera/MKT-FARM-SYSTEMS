@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Deliveries</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Company name</th>
+      <th>Date</th>
+      <th>Season</th>
+      <th>Farm name</th>
+      <th>Section</th>
+      <th>Type</th>
+      <th>Delivered by</th>
+      <th>Goods</th>
+      <th>Quantity</th>
+      <th>Amount</th>
+      <th>Amount</th>
+      <th>Pro number</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @deliveries.each do |delivery| %>
+      <tr>
+        <td><%= delivery.Company_Name %></td>
+        <td><%= delivery.Date %></td>
+        <td><%= delivery.Season %></td>
+        <td><%= delivery.Farm_Name %></td>
+        <td><%= delivery.Section %></td>
+        <td><%= delivery.Type %></td>
+        <td><%= delivery.Delivered_by %></td>
+        <td><%= delivery.Goods %></td>
+        <td><%= delivery.Quantity %></td>
+        <td><%= delivery.Amount %></td>
+        <td><%= delivery.Amount %></td>
+        <td><%= delivery.Pro_Number %></td>
+        <td><%= delivery.user_id %></td>
+        <td><%= link_to 'Show', delivery %></td>
+        <td><%= link_to 'Edit', edit_delivery_path(delivery) %></td>
+        <td><%= link_to 'Destroy', delivery, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Delivery', new_delivery_path %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Daily Requisitions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Company name</th>
+      <th>Date</th>
+      <th>Season</th>
+      <th>Farm name</th>
+      <th>Requisition</th>
+      <th>Pro number</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @daily_requisitions.each do |daily_requisition| %>
+      <tr>
+        <td><%= daily_requisition.Company_Name %></td>
+        <td><%= daily_requisition.Date %></td>
+        <td><%= daily_requisition.Season %></td>
+        <td><%= daily_requisition.Farm_Name %></td>
+        <td><%= daily_requisition.Requisition %></td>
+        <td><%= daily_requisition.Pro_Number %></td>
+        <td><%= daily_requisition.user_id %></td>
+        <td><%= link_to 'Show', daily_requisition %></td>
+        <td><%= link_to 'Edit', edit_daily_requisition_path(daily_requisition) %></td>
+        <td><%= link_to 'Destroy', daily_requisition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Daily Requisition', new_daily_requisition_path %>

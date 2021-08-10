@@ -1,4 +1,17 @@
 Rails.application.routes.draw do
+  resources :rainfalls
+  resources :deliveries
+  resources :cash_requisitions
+  resources :daily_requisitions
+  resources :activities
+  resources :cereal_sales
+  resources :calenders
+  resources :advertisements
+  resources :weathers
+  resources :cashflows
+  resources :deduction_tables
+  resources :wages
+  resources :equipment_services
   resources :assets
   resources :workshops
   resources :cereal_stores

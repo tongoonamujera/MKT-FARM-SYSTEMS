@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Season:</strong>
+  <%= @deduction_table.Season %>
+</p>
+
+<p>
+  <strong>Month:</strong>
+  <%= @deduction_table.Month %>
+</p>
+
+<p>
+  <strong>Gross:</strong>
+  <%= @deduction_table.Gross %>
+</p>
+
+<p>
+  <strong>Net:</strong>
+  <%= @deduction_table.Net %>
+</p>
+
+<p>
+  <strong>Farm name:</strong>
+  <%= @deduction_table.Farm_Name %>
+</p>
+
+<%= link_to 'Edit', edit_deduction_table_path(@deduction_table) %> |
+<%= link_to 'Back', deduction_tables_path %>

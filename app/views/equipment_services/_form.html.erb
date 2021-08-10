@@ -1,0 +1,82 @@
+<%= form_with(model: equipment_service, local: true) do |form| %>
+  <% if equipment_service.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(equipment_service.errors.count, "error") %> prohibited this equipment_service from being saved:</h2>
+
+      <ul>
+        <% equipment_service.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Company_Name %>
+    <%= form.text_field :Company_Name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Date %>
+    <%= form.date_select :Date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Season %>
+    <%= form.text_field :Season %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Type %>
+    <%= form.text_field :Type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Equipment_Number %>
+    <%= form.text_field :Equipment_Number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Service_Type %>
+    <%= form.text_field :Service_Type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Done_By %>
+    <%= form.text_field :Done_By %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Mileage %>
+    <%= form.text_field :Mileage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :next_service-milaege %>
+    <%= form.text_field :next_service-milaege %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Job %>
+    <%= form.text_field :Job %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Total_Amount %>
+    <%= form.text_field :Total_Amount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Pro_Number %>
+    <%= form.text_field :Pro_Number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

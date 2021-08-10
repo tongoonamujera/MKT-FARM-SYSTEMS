@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @daily_requisition.Company_Name %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @daily_requisition.Date %>
+</p>
+
+<p>
+  <strong>Season:</strong>
+  <%= @daily_requisition.Season %>
+</p>
+
+<p>
+  <strong>Farm name:</strong>
+  <%= @daily_requisition.Farm_Name %>
+</p>
+
+<p>
+  <strong>Requisition:</strong>
+  <%= @daily_requisition.Requisition %>
+</p>
+
+<p>
+  <strong>Pro number:</strong>
+  <%= @daily_requisition.Pro_Number %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @daily_requisition.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_daily_requisition_path(@daily_requisition) %> |
+<%= link_to 'Back', daily_requisitions_path %>

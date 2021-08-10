@@ -1,0 +1,2 @@
+module DeductionTablesHelper
+end

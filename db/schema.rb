@@ -10,7 +10,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_10_103519) do
+ActiveRecord::Schema.define(version: 2021_08_10_122709) do
+
+  create_table "activities", force: :cascade do |t|
+    t.string "Company_Name"
+    t.date "Date"
+    t.string "Season"
+    t.string "Farm_Name"
+    t.string "Section"
+    t.string "Activity"
+    t.string "Pro_Number"
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_activities_on_user_id"
+  end
+
+  create_table "advertisements", force: :cascade do |t|
+    t.string "Company_Name"
+    t.date "Date"
+    t.string "Item_Type"
+    t.string "item_Name"
+    t.string "Unit"
+    t.string "Unit_Price"
+    t.string "VAT"
+    t.string "Total_Amount"
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_advertisements_on_user_id"
+  end
 
   create_table "assets", force: :cascade do |t|
     t.string "Company_Name"
@@ -43,6 +72,80 @@ ActiveRecord::Schema.define(version: 2021_08_10_103519) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_barn_and_slate_records_on_user_id"
+  end
+
+  create_table "calenders", force: :cascade do |t|
+    t.string "Company_Name"
+    t.date "Date"
+    t.string "Season"
+    t.string "Farm_Name"
+    t.string "Month"
+    t.string "Activity"
+    t.string "Pro_Number"
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_calenders_on_user_id"
+  end
+
+  create_table "cash_requisitions", force: :cascade do |t|
+    t.string "Company_Name"
+    t.date "Date"
+    t.string "Season"
+    t.string "Farm_Name"
+    t.string "Employee_Name"
+    t.string "Amount_Requested"
+    t.string "Amount_Issued"
+    t.date "Pay_From"
+    t.date "Pay_To"
+    t.string "Pro_Number"
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_cash_requisitions_on_user_id"
+  end
+
+  create_table "cashflows", force: :cascade do |t|
+    t.string "Company_Name"
+    t.date "Date"
+    t.string "Season"
+    t.string "Month"
+    t.string "Grower_Name"
+    t.string "Hectrage"
+    t.string "Operation"
+    t.string "Unit_Price"
+    t.string "quantity_per_hectre"
+    t.string "Unity"
+    t.string "Input_Name"
+    t.string "Total_Amount"
+    t.string "Pro_Number"
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_cashflows_on_user_id"
+  end
+
+  create_table "cereal_sales", force: :cascade do |t|
+    t.string "Company_Name"
+    t.date "Date"
+    t.string "Season"
+    t.string "Farm_Name"
+    t.string "Grower_Name"
+    t.string "Truck_Number"
+    t.string "Trailer_Number"
+    t.string "Test_Density"
+    t.string "External_Matter"
+    t.string "Gross_Mass"
+    t.string "Tare"
+    t.string "Net_Mass"
+    t.string "Price_Per_Tonne"
+    t.string "Quantity"
+    t.string "Amount_Paid"
+    t.string "Pro_Number"
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_cereal_sales_on_user_id"
   end
 
   create_table "cereal_stores", force: :cascade do |t|
@@ -91,6 +194,66 @@ ActiveRecord::Schema.define(version: 2021_08_10_103519) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_curings_on_user_id"
+  end
+
+  create_table "daily_requisitions", force: :cascade do |t|
+    t.string "Company_Name"
+    t.date "Date"
+    t.string "Season"
+    t.string "Farm_Name"
+    t.string "Requisition"
+    t.string "Pro_Number"
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_daily_requisitions_on_user_id"
+  end
+
+  create_table "deduction_tables", force: :cascade do |t|
+    t.string "Season"
+    t.string "Month"
+    t.string "Gross"
+    t.string "Net"
+    t.string "Farm_Name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "deliveries", force: :cascade do |t|
+    t.string "Company_Name"
+    t.date "Date"
+    t.string "Season"
+    t.string "Farm_Name"
+    t.string "Section"
+    t.string "Type"
+    t.string "Delivered_by"
+    t.string "Goods"
+    t.string "Quantity"
+    t.string "Amount"
+    t.string "Pro_Number"
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_deliveries_on_user_id"
+  end
+
+  create_table "equipment_services", force: :cascade do |t|
+    t.string "Company_Name"
+    t.date "Date"
+    t.string "Season"
+    t.string "Type"
+    t.string "Equipment_Number"
+    t.string "Service_Type"
+    t.string "Done_By"
+    t.string "Mileage"
+    t.string "next_service_milaege"
+    t.string "Job"
+    t.string "Total_Amount"
+    t.string "Pro_Number"
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_equipment_services_on_user_id"
   end
 
   create_table "input_calibrations", force: :cascade do |t|
@@ -158,6 +321,20 @@ ActiveRecord::Schema.define(version: 2021_08_10_103519) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "rainfalls", force: :cascade do |t|
+    t.string "Company_Name"
+    t.date "Date"
+    t.string "Season"
+    t.string "Farm_Name"
+    t.string "Section"
+    t.string "Mls_received"
+    t.string "Pro_Number"
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_rainfalls_on_user_id"
+  end
+
   create_table "seedbeds", force: :cascade do |t|
     t.string "Company_Name"
     t.date "Date"
@@ -216,6 +393,30 @@ ActiveRecord::Schema.define(version: 2021_08_10_103519) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "wages", force: :cascade do |t|
+    t.string "Company_Name"
+    t.date "Date"
+    t.string "Season"
+    t.string "Farm_Name"
+    t.string "Total_Amount"
+    t.string "Pro_Number"
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_wages_on_user_id"
+  end
+
+  create_table "weathers", force: :cascade do |t|
+    t.date "Date"
+    t.string "Area"
+    t.string "Min"
+    t.string "Max"
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_weathers_on_user_id"
+  end
+
   create_table "workshops", force: :cascade do |t|
     t.string "Company_Name"
     t.date "Date"
@@ -230,15 +431,27 @@ ActiveRecord::Schema.define(version: 2021_08_10_103519) do
     t.index ["user_id"], name: "index_workshops_on_user_id"
   end
 
+  add_foreign_key "activities", "users"
+  add_foreign_key "advertisements", "users"
   add_foreign_key "assets", "users"
   add_foreign_key "barn_and_slate_records", "users"
+  add_foreign_key "calenders", "users"
+  add_foreign_key "cash_requisitions", "users"
+  add_foreign_key "cashflows", "users"
+  add_foreign_key "cereal_sales", "users"
   add_foreign_key "cereal_stores", "users"
   add_foreign_key "client_payments", "users"
   add_foreign_key "curings", "users"
+  add_foreign_key "daily_requisitions", "users"
+  add_foreign_key "deliveries", "users"
+  add_foreign_key "equipment_services", "users"
   add_foreign_key "input_calibrations", "users"
   add_foreign_key "irriagtion_schedules", "users"
+  add_foreign_key "rainfalls", "users"
   add_foreign_key "seedbeds", "users"
   add_foreign_key "set_seasons", "users"
   add_foreign_key "stores", "users"
+  add_foreign_key "wages", "users"
+  add_foreign_key "weathers", "users"
   add_foreign_key "workshops", "users"
 end

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Wages</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Company name</th>
+      <th>Date</th>
+      <th>Season</th>
+      <th>Farm name</th>
+      <th>Total amount</th>
+      <th>Pro number</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @wages.each do |wage| %>
+      <tr>
+        <td><%= wage.Company_Name %></td>
+        <td><%= wage.Date %></td>
+        <td><%= wage.Season %></td>
+        <td><%= wage.Farm_Name %></td>
+        <td><%= wage.Total_Amount %></td>
+        <td><%= wage.Pro_Number %></td>
+        <td><%= wage.user_id %></td>
+        <td><%= link_to 'Show', wage %></td>
+        <td><%= link_to 'Edit', edit_wage_path(wage) %></td>
+        <td><%= link_to 'Destroy', wage, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Wage', new_wage_path %>

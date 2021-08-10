@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Deduction Tables</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Season</th>
+      <th>Month</th>
+      <th>Gross</th>
+      <th>Net</th>
+      <th>Farm name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @deduction_tables.each do |deduction_table| %>
+      <tr>
+        <td><%= deduction_table.Season %></td>
+        <td><%= deduction_table.Month %></td>
+        <td><%= deduction_table.Gross %></td>
+        <td><%= deduction_table.Net %></td>
+        <td><%= deduction_table.Farm_Name %></td>
+        <td><%= link_to 'Show', deduction_table %></td>
+        <td><%= link_to 'Edit', edit_deduction_table_path(deduction_table) %></td>
+        <td><%= link_to 'Destroy', deduction_table, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Deduction Table', new_deduction_table_path %>

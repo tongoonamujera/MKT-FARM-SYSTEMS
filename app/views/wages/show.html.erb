@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @wage.Company_Name %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @wage.Date %>
+</p>
+
+<p>
+  <strong>Season:</strong>
+  <%= @wage.Season %>
+</p>
+
+<p>
+  <strong>Farm name:</strong>
+  <%= @wage.Farm_Name %>
+</p>
+
+<p>
+  <strong>Total amount:</strong>
+  <%= @wage.Total_Amount %>
+</p>
+
+<p>
+  <strong>Pro number:</strong>
+  <%= @wage.Pro_Number %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @wage.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_wage_path(@wage) %> |
+<%= link_to 'Back', wages_path %>

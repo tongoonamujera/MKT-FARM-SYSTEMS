@@ -1,0 +1,72 @@
+<%= form_with(model: cash_requisition, local: true) do |form| %>
+  <% if cash_requisition.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cash_requisition.errors.count, "error") %> prohibited this cash_requisition from being saved:</h2>
+
+      <ul>
+        <% cash_requisition.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Company_Name %>
+    <%= form.text_field :Company_Name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Date %>
+    <%= form.date_select :Date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Season %>
+    <%= form.text_field :Season %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Farm_Name %>
+    <%= form.text_field :Farm_Name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Employee_Name %>
+    <%= form.text_field :Employee_Name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Amount_Requested %>
+    <%= form.text_field :Amount_Requested %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Amount_Issued %>
+    <%= form.text_field :Amount_Issued %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Pay_From %>
+    <%= form.date_select :Pay_From %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Pay_To %>
+    <%= form.date_select :Pay_To %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Pro_Number %>
+    <%= form.text_field :Pro_Number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

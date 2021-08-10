@@ -1,0 +1,2 @@
+module DailyRequisitionsHelper
+end
