@@ -1,29 +1,89 @@
-<h2>Sign up</h2>
+<div class="columns is-centered">
+  <div class="column is-6">
+    <div class="card">
+    <header class="card-header">
+      <h2>Sign up</h2>
+    </header>
+      <div class="card-content">
+        <div class="content">
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <%= render "devise/shared/error_messages", resource: resource %>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+            <div class="field">
+              <%= f.label :email, class:"label" %>
+              <div class="control">
+                <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"input" %>
+              </div>
+            </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+            <div class="field">
+              <%= f.label :password, class:"label" %>
+              <div class="control">
+                <%= f.password_field :password, autocomplete: "new-password", class:"input" %>
+              </div>
+              <% if @minimum_password_length %>
+              <em>(<%= @minimum_password_length %> characters minimum)</em>
+              <% end %><br />
+            </div>
+
+            <div class="field">
+              <%= f.label :password_confirmation, class:"label" %>
+              <div class="control">
+                <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"input" %>
+              </div>
+            </div>
+
+            <div class="field">
+              <%= f.label :Company_Name, class:"label" %>
+              <div class="control">
+                <%= f.text_field :Company_Name, autocomplete: "Company_Name", class:"input" %>
+              </div>
+            </div>
+
+            <div class="field">
+              <%= f.label :cellphone, class:"label" %>
+              <div class="control">
+                <%= f.text_field :cellphone, autocomplete: "cellphone", class:"input" %>
+              </div>
+            </div>
+
+            <div class="field">
+              <%= f.label :Address, class:"label" %>
+              <div class="control">
+                <%= f.text_field :Address, autocomplete: "Address", class:"input" %>
+              </div>
+            </div>
+
+            <div class="field">
+              <%= f.label :Category, class:"label" %>
+              <div class="control">
+                <%= f.text_field :Category, autocomplete: ":Category", class:"input" %>
+              </div>
+            </div>
+
+            <div class="field">
+              <%= f.label :Status, class:"label" %>
+              <div class="control">
+                <%= f.text_field :Status, autocomplete: "Status", class:"input" %>
+              </div>
+            </div>
+
+            <div class="field">
+              <%= f.label :Pro_Number, class:"label" %>
+              <div class="control">
+                <%= f.text_field :Pro_Number, autocomplete: "Pro_Number", class:"input" %>
+              </div>
+            </div>
+
+            <div class="actions">
+              <%= f.submit "Sign up", class:"button is-success" %>
+            </div>
+          <% end %>
+          <div class="mt-5">
+            <%= render "devise/shared/links" %>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>

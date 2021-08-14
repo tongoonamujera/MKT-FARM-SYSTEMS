@@ -12,21 +12,27 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :Date %>
-    <%= form.date_select :Date %>
+    <%= form.label :Date, class:"label" %>
+    <div class="control">
+      <%= form.date_select :Date, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Season %>
-    <%= form.text_field :Season %>
+    <%= form.label :Season, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Season, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
+    <%= form.label :user_id, class:"label" %>
+    <div class="control">
+      <%= form.text_field :user_id, class:"input" %>
+    </div>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class:"button is-success" %>
   </div>
 <% end %>

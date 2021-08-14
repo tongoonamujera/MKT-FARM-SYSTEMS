@@ -1,6 +1,22 @@
-<h1>Editing Client Payment</h1>
-
-<%= render 'form', client_payment: @client_payment %>
-
-<%= link_to 'Show', @client_payment %> |
-<%= link_to 'Back', client_payments_path %>
+<div class="columns is-centered">
+  <div class="column">
+    <div class="card">
+      <header class="card-header">
+        <h1>Edit Client Payment</h1>
+      </header>
+      <div class="card-content">
+        <div class="content">
+          <%= render 'form', client_payment: @client_payment %>
+        </div>
+      </div>
+      <footer class="card-footer">
+        <div class="card-footer-item">
+          <%= link_to 'Show', @client_payment, class:"button is-success" %>
+        </div>
+        <div class="card-footer-item">
+          <%= link_to 'Back', client_payments_path, class:"button is-dark" %>
+        </div>
+      </footer>
+    </div>
+  </div>
+</div>

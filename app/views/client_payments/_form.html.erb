@@ -12,41 +12,62 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :Company_Name %>
-    <%= form.text_field :Company_Name %>
+    <%= form.label :Company_Name, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Company_Name, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Category %>
-    <%= form.text_field :Category %>
+    <%= form.label :Category, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Category, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Receipt_Number %>
-    <%= form.text_field :Receipt_Number %>
+    <%= form.label :Receipt_Number, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Receipt_Number, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Amount_Paid %>
-    <%= form.text_field :Amount_Paid %>
+    <%= form.label :Amount_Paid, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Amount_Paid, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Balance %>
-    <%= form.text_field :Balance %>
+    <%= form.label :Balance, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Balance, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Date %>
-    <%= form.date_select :Date %>
+    <%= form.label :Date, class:"label" %>
+      <div class="control">
+        <%= form.date_select :Date, class:"input" %>
+      </div>
   </div>
 
   <div class="field">
-    <%= form.label :Pro_Number %>
-    <%= form.text_field :Pro_Number %>
+    <%= form.label :Pro_Number, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Pro_Number, class:"input" %>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id, class:"label" %>
+    <div class="control">
+      <%= form.text_field :user_id, class:"input" %>
+    </div>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class:"button is-success" %>
   </div>
 <% end %>

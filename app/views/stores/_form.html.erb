@@ -12,66 +12,89 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :Company_Name %>
-    <%= form.text_field :Company_Name %>
+    <%= form.label :Company_Name, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Company_Name, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Date %>
-    <%= form.date_select :Date %>
+    <%= form.label :Date, class:"label" %>
+    <div class="control">
+      <%= form.date_select :Date, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Season %>
-    <%= form.text_field :Season %>
+    <%= form.label :Season, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Season, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Farm_Name %>
-    <%= form.text_field :Farm_Name %>
+    <%= form.label :Farm_Name, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Farm_Name, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Type %>
-    <%= form.text_field :Type %>
+    <%= form.label :Type, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Type, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Input_Name %>
-    <%= form.text_field :Input_Name %>
+    <%= form.label :Input_Name, class:"label" %>
+    <div class="control"></div>
+    <%= form.text_field :Input_Name, class:"input" %>
   </div>
 
   <div class="field">
-    <%= form.label :Quantity %>
-    <%= form.text_field :Quantity %>
+    <%= form.label :Quantity, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Quantity, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Unit %>
-    <%= form.text_field :Unit %>
+    <%= form.label :Unit, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Unit, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Unit_Price %>
-    <%= form.text_field :Unit_Price %>
+    <%= form.label :Unit_Price, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Unit_Price, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Total_Amount %>
-    <%= form.text_field :Total_Amount %>
+    <%= form.label :Total_Amount, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Total_Amount, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Pro_Number %>
-    <%= form.text_field :Pro_Number %>
+    <%= form.label :Pro_Number, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Pro_Number, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
+    <%= form.label :user_id, class:"label" %>
+    <div class="control">
+      <%= form.text_field :user_id, class:"input" %>
+    </div>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class:"button is-success" %>
   </div>
 <% end %>

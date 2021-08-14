@@ -12,71 +12,96 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :Company_Name %>
-    <%= form.text_field :Company_Name %>
+    <%= form.label :Company_Name, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Company_Name, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Date %>
-    <%= form.date_select :Date %>
+    <%= form.label :Date, class:"label" %>
+    <div class="control">
+      <%= form.date_select :Date, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Season %>
-    <%= form.text_field :Season %>
+    <%= form.label :Season, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Season, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Farm_Name %>
-    <%= form.text_field :Farm_Name %>
+    <%= form.label :Farm_Name, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Farm_Name, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Section %>
-    <%= form.text_field :Section %>
+    <%= form.label :Section, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Section, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Crop %>
-    <%= form.text_field :Crop %>
+    <%= form.label :Crop, class:"label" %>
+    <div class="control"></div>
+    <%= form.text_field :Crop, class:"input" %>
   </div>
 
   <div class="field">
-    <%= form.label :Calibration %>
-    <%= form.text_field :Calibration %>
+    <%= form.label :Calibration, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Calibration, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Mls %>
-    <%= form.text_field :Mls %>
+    <%= form.label :Mls, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Mls, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Start_Date %>
-    <%= form.date_select :Start_Date %>
+    <%= form.label :Start_Date, class:"label" %>
+    <div class="control">
+      <%= form.date_select :Start_Date, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :End_Date %>
-    <%= form.date_select :End_Date %>
+    <%= form.label :End_Date, class:"label" %>
+    <div class="control">
+      <%= form.date_select :End_Date, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :turn_around_time %>
-    <%= form.text_field :turn_around_time %>
+    <%= form.label :turn_around_time, class:"label" %>
+    <div class="control">
+      <%= form.text_field :turn_around_time, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Pro_Number %>
-    <%= form.text_field :Pro_Number %>
+    <%= form.label :Pro_Number, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Pro_Number, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
+    <%= form.label :user_id, class:"label" %>
+    <div class="control">
+      <%= form.text_field :user_id, class:"input" %>
+    </div>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class:"button is-success" %>
   </div>
 <% end %>

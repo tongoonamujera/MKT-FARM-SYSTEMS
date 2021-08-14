@@ -1,5 +1,15 @@
-<h1>New Activity</h1>
-
-<%= render 'form', activity: @activity %>
-
-<%= link_to 'Back', activities_path %>
+<div class="columns is-centered">
+  <div class="column is-12">
+    <div class="card">
+      <header class="card-header">
+        <h1><strong> New Activity</strong></h1>
+      </header>
+      <div class="card-content">
+        <div class="content">
+          <%= render 'form', activity: @activity %>
+          <%= link_to 'Back', activities_path, class:"button is-dark my-3" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

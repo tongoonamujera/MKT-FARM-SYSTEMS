@@ -1,6 +1,22 @@
-<h1>Editing Activity</h1>
-
-<%= render 'form', activity: @activity %>
-
-<%= link_to 'Show', @activity %> |
-<%= link_to 'Back', activities_path %>
+<div class="columns is-centered">
+  <div class="column is-12">
+    <div class="card">
+      <header class="card-header">
+        <h1><strong>Edit Activity</strong></h1>
+      </header>
+      <div class="card-content">
+        <div class="content">
+          <%= render 'form', activity: @activity %>
+        </div>
+      </div>
+      <footer class="card-footer">
+        <div class="card-footer-item">
+          <%= link_to 'Show', @activity, class:"button is-success" %>
+        </div>
+        <div class="card-footer-item">
+          <%= link_to 'Back', activities_path, class:"button is-dark" %>
+        </div>
+      </footer>
+    </div>
+  </div>
+</div>

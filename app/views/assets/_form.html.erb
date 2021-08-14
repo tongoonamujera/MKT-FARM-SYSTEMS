@@ -12,56 +12,76 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :Company_Name %>
-    <%= form.text_field :Company_Name %>
+    <%= form.label :Company_Name, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Company_Name, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Date %>
-    <%= form.date_select :Date %>
+    <%= form.label :Season, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Season, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Season %>
-    <%= form.text_field :Season %>
+    <%= form.label :Asset, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Asset, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Asset %>
-    <%= form.text_field :Asset %>
+    <%= form.label :Asset_Number, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Asset_Number, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Asset_Number %>
-    <%= form.text_field :Asset_Number %>
+    <%= form.label :Asset_Type, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Asset_Type, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Asset_Type %>
-    <%= form.text_field :Asset_Type %>
+    <%= form.label :Unit_Price, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Unit_Price, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Unit_Price %>
-    <%= form.text_field :Unit_Price %>
+    <%= form.label :Total_Amount, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Total_Amount, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Total_Amount %>
-    <%= form.text_field :Total_Amount %>
+    <%= form.label :Pro_Number, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Pro_Number, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Pro_Number %>
-    <%= form.text_field :Pro_Number %>
+    <%= form.label :user_id, class:"label" %>
+    <div class="control">
+      <%= form.text_field :user_id, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
+    <%= form.label :Date, class:"label" %>
+    <div class="control">
+      <%= form.date_select :Date, class:"input" %>
+    </div>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class:"button is-success" %>
   </div>
 <% end %>

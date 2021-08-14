@@ -12,31 +12,41 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :Season %>
-    <%= form.text_field :Season %>
+    <%= form.label :Season, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Season, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Month %>
-    <%= form.text_field :Month %>
+    <%= form.label :Month, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Month, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Gross %>
-    <%= form.text_field :Gross %>
+    <%= form.label :Gross, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Gross, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Net %>
-    <%= form.text_field :Net %>
+    <%= form.label :Net, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Net, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Farm_Name %>
-    <%= form.text_field :Farm_Name %>
+    <%= form.label :Farm_Name, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Farm_Name, class:"input" %>
+    </div>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class:"button is-success" %>
   </div>
 <% end %>

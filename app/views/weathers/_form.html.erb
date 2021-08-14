@@ -12,31 +12,41 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :Date %>
-    <%= form.date_select :Date %>
+    <%= form.label :Date, class:"label" %>
+    <div class="control">
+      <%= form.date_select :Date, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Area %>
-    <%= form.text_field :Area %>
+    <%= form.label :Area, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Area, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Min %>
-    <%= form.text_field :Min %>
+    <%= form.label :Min, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Min, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Max %>
-    <%= form.text_field :Max %>
+    <%= form.label :Max, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Max, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
+    <%= form.label :user_id, class:"label" %>
+    <div class="control">
+      <%= form.text_field :user_id, class:"input" %>
+    </div>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class:"button is-success" %>
   </div>
 <% end %>

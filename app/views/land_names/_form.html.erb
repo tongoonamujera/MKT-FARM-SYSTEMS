@@ -12,41 +12,55 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :Company_name %>
-    <%= form.text_field :Company_name %>
+    <%= form.label :Company_name, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Company_name, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Date %>
-    <%= form.date_select :Date %>
+    <%= form.label :Date, class:"label" %>
+    <div class="control">
+      <%= form.date_select :Date, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Season %>
-    <%= form.text_field :Season %>
+    <%= form.label :Season, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Season, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Farm_nameSection %>
-    <%= form.text_field :Farm_nameSection %>
+    <%= form.label :Farm_nameSection, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Farm_nameSection, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Hectrage %>
-    <%= form.text_field :Hectrage %>
+    <%= form.label :Hectrage, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Hectrage, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Crop %>
-    <%= form.text_field :Crop %>
+    <%= form.label :Crop, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Crop, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Pro_Number %>
-    <%= form.text_field :Pro_Number %>
+    <%= form.label :Pro_Number, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Pro_Number, class:"input" %>
+    </div>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class:"button is-success" %>
   </div>
 <% end %>

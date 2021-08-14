@@ -1,39 +1,49 @@
 <p id="notice"><%= notice %></p>
+<%= link_to 'New Client Payment', new_client_payment_path, class:"button is-success" %>
 
-<h1>Client Payments</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Company-name</th>
-      <th>Category</th>
-      <th>Receipt-number</th>
-      <th>Amount-paid</th>
-      <th>Balance</th>
-      <th>Date</th>
-      <th>Pro-number</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="columns">
+  <div class="column">
     <% @client_payments.each do |client_payment| %>
-      <tr>
-        <td><%= client_payment.Company_Name %></td>
-        <td><%= client_payment.Category %></td>
-        <td><%= client_payment.Receipt_Number %></td>
-        <td><%= client_payment.Amount_Paid %></td>
-        <td><%= client_payment.Balance %></td>
-        <td><%= client_payment.Date %></td>
-        <td><%= client_payment.Pro_Number %></td>
-        <td><%= link_to 'Show', client_payment %></td>
-        <td><%= link_to 'Edit', edit_client_payment_path(client_payment) %></td>
-        <td><%= link_to 'Destroy', client_payment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class="card my-5">
+        <div class="columns card-header">
+            <div class="column is-9">
+              <h1 class="navbar-item">
+                Showing payments for
+                <%= client_payment.Company_Name %>
+                </h1>
+            </div>
+            <div class="column is-3">
+              <nav class="navbar">
+              <div class="navbar-item">
+                    <div class="navbar-item has-dropdown is-hoverable">
+                      <a class="navbar-link">
+                        Actions
+                      </a>
+
+                      <div class="navbar-dropdown">
+                        <%= link_to 'Show', client_payment, class:"navbar-item" %>
+                        <%= link_to 'Edit', edit_client_payment_path(client_payment), class:"navbar-item" %>
+                        <%= link_to 'Destroy', client_payment, method: :delete, data: { confirm: 'Are you sure?' }, class:"navbar-item has-background-danger" %>
+                      </div>
+                    </div>
+                  </div>
+              </nav>
+            </div>
+        </div>
+        <div class="card-content">
+          <div class="content">
+            <%= client_payment.Category %><br>
+            <%= client_payment.Receipt_Number %><br>
+            <%= client_payment.Amount_Paid %><br>
+            <%= client_payment.Balance %><br>
+            <%= client_payment.Date %><br>
+            <%= client_payment.Pro_Number %>
+          </div>
+        </div>
+        <footer class="card-footer">
+          <span class="card-footer-item"> Created: <i> <strong><%= time_ago_in_words(client_payment.created_at) %></strong>  ago by <strong><%= client_payment.user.email %></strong></i> </span>
+        </footer>
+      </div>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Client Payment', new_client_payment_path %>
+  </div>
+</div>

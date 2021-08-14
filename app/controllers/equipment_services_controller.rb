@@ -64,6 +64,6 @@ class EquipmentServicesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def equipment_service_params
-      params.require(:equipment_service).permit(:Company_Name, :Date, :Season, :Type, :Equipment_Number, :Service_Type, :Done_By, :Mileage, :next_service-milaege, :Job, :Total_Amount, :Pro_Number, :user_id)
+      params.require(:equipment_service).permit(:Company_Name, :Date, :Season, :Type, :Equipment_Number, :Service_Type, :Done_By, :Mileage, :next_service_milaege, :Job, :Total_Amount, :Pro_Number, :user_id)
     end
 end

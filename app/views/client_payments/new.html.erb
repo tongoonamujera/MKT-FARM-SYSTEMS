@@ -1,5 +1,15 @@
-<h1>New Client Payment</h1>
-
-<%= render 'form', client_payment: @client_payment %>
-
-<%= link_to 'Back', client_payments_path %>
+<div class="columns is-centered">
+  <div class="column">
+    <div class="card">
+      <header class="card-header">
+        <h1>New Client Payment</h1>
+      </header>
+      <div class="card-content">
+        <div class="content">
+          <%= render 'form', client_payment: @client_payment %>
+          <%= link_to 'Back', client_payments_path, class:"button is-dark my-3" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

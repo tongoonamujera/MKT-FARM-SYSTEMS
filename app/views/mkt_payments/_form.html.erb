@@ -12,56 +12,76 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :Date %>
-    <%= form.date_select :Date %>
+    <%= form.label :Date, class:"label" %>
+    <div class="control">
+      <%= form.date_select :Date, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Company_Name %>
-    <%= form.text_field :Company_Name %>
+    <%= form.label :Company_Name, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Company_Name, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Service_Rendered %>
-    <%= form.text_field :Service_Rendered %>
+    <%= form.label :Service_Rendered, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Service_Rendered, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Service %>
-    <%= form.text_field :Service %>
+    <%= form.label :Service, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Service, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Amount_Paid %>
-    <%= form.text_field :Amount_Paid %>
+    <%= form.label :Amount_Paid, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Amount_Paid, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :From %>
-    <%= form.text_field :From %>
+    <%= form.label :From, class:"label" %>
+    <div class="control">
+      <%= form.text_field :From, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :To %>
-    <%= form.text_field :To %>
+    <%= form.label :To, class:"label" %>
+    <div class="control">
+      <%= form.text_field :To, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Receipt_Number %>
-    <%= form.text_field :Receipt_Number %>
+    <%= form.label :Receipt_Number, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Receipt_Number, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Paid_by %>
-    <%= form.text_field :Paid_by %>
+    <%= form.label :Paid_by, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Paid_by, class:"input" %>
+    </div>
   </div>
 
   <div class="field">
-    <%= form.label :Pro_number %>
-    <%= form.text_field :Pro_number %>
+    <%= form.label :Pro_number, class:"label" %>
+    <div class="control">
+      <%= form.text_field :Pro_number, class:"input" %>
+    </div>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class:"button is-success" %>
   </div>
 <% end %>

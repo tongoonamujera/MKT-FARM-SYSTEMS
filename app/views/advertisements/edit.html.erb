@@ -1,6 +1,22 @@
-<h1>Editing Advertisement</h1>
-
-<%= render 'form', advertisement: @advertisement %>
-
-<%= link_to 'Show', @advertisement %> |
-<%= link_to 'Back', advertisements_path %>
+<div class="columns is-centered">
+  <div class="column is-12">
+    <div class="card">
+      <header class="card-header">
+        <h1>Editing Advertisement</h1>
+      </header>
+      <div class="card-content">
+        <div class="content">
+          <%= render 'form', advertisement: @advertisement %>
+        </div>
+      </div>
+      <footer class="card-footer">
+        <div class="card-footer-item">
+          <%= link_to 'Show', @advertisement, class:"button is-success" %>
+        </div>
+        <div class="card-footer-item">
+          <%= link_to 'Back', advertisements_path, class:"button is-dark" %>
+        </div>
+      </footer>
+    </div>
+  </div>
+</div>

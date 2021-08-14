@@ -10,6 +10,27 @@
   </head>
 
   <body>
-    <%= yield %>
+  <%= render 'layouts/header' %>
+
+    <div class="columns">
+      <%if user_signed_in? %>
+        <div class="column is-3 has-background-primary">
+          <%= render 'layouts/sidebar'%>
+        </div>
+      
+
+        <div class="column is-9 has-background-grey-lighter">
+          <div class="columns is-centered">
+            <div class="column is-11">
+              <%= yield %>
+            </div>
+          </div>
+        </div>
+      <% else %>
+        <div class="container">
+          <%= yield %>
+        </div>
+      <% end %>
+    </div>
   </body>
 </html>
