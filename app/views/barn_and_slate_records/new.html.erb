@@ -1,15 +1,14 @@
-<h1>New Barn And Slate Record</h1>
-
-<%= render 'form', barn_and_slate_record: @barn_and_slate_record %>
-
-<%= link_to 'Back', barn_and_slate_records_path %>
-
 <div class="columns">
   <div class="column">
     <div class="card">
-      <div class="card-header"></div>
+      <div class="card-header">
+        <h1>New Barn And Slate Record</h1>
+      </div>
       <div class="card-content">
-        <div class="content"></div>
+        <div class="content">
+          <%= render 'form', barn_and_slate_record: @barn_and_slate_record %>
+          <%= link_to 'Back', barn_and_slate_records_path, class:"button is-dark" %>
+        </div>
       </div>
     </div>
   </div>

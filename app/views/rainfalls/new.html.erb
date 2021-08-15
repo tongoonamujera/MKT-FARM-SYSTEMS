@@ -1,15 +1,14 @@
-<h1>New Rainfall</h1>
-
-<%= render 'form', rainfall: @rainfall %>
-
-<%= link_to 'Back', rainfalls_path %>
-
 <div class="columns">
   <div class="column">
     <div class="card">
-      <div class="card-header"></div>
+      <div class="card-header">
+        <h1>New Rainfall</h1>
+      </div>
       <div class="card-content">
-        <div class="content"></div>
+        <div class="content">
+          <%= render 'form', rainfall: @rainfall %>
+          <%= link_to 'Back', rainfalls_path, class:"button is-dark my-3" %>
+        </div>
       </div>
     </div>
   </div>

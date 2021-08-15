@@ -1,15 +1,14 @@
-<h1>New Irriagtion Schedule</h1>
-
-<%= render 'form', irriagtion_schedule: @irriagtion_schedule %>
-
-<%= link_to 'Back', irriagtion_schedules_path %>
-
 <div class="columns">
   <div class="column">
     <div class="card">
-      <div class="card-header"></div>
+      <div class="card-header">
+        <h1>New Irriagtion Schedule</h1>
+      </div>
       <div class="card-content">
-        <div class="content"></div>
+        <div class="content">
+          <%= render 'form', irriagtion_schedule: @irriagtion_schedule %>
+          <%= link_to 'Back', irriagtion_schedules_path, class:"button is-dark"  %>
+        </div>
       </div>
     </div>
   </div>

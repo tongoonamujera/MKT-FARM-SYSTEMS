@@ -1,5 +1,15 @@
-<h1>New Wage</h1>
-
-<%= render 'form', wage: @wage %>
-
-<%= link_to 'Back', wages_path %>
+<div class="columns">
+  <div class="column">
+    <div class="card">
+      <div class="card-header">
+        <h1>New Wage</h1>
+      </div>
+      <div class="card-content">
+        <div class="content">
+          <%= render 'form', wage: @wage %>
+          <%= link_to 'Back', wages_path, class:"button is-dark my-3" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

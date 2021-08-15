@@ -1,15 +1,14 @@
-<h1>New Cereal Store</h1>
-
-<%= render 'form', cereal_store: @cereal_store %>
-
-<%= link_to 'Back', cereal_stores_path %>
-
 <div class="columns">
   <div class="column">
     <div class="card">
-      <div class="card-header"></div>
+      <div class="card-header">
+        <h1>New Cereal Store</h1>
+      </div>
       <div class="card-content">
-        <div class="content"></div>
+        <div class="content">
+          <%= render 'form', cereal_store: @cereal_store %>
+          <%= link_to 'Back', cereal_stores_path, class:"button is-dark" %>
+        </div>
       </div>
     </div>
   </div>

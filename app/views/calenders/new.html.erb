@@ -1,15 +1,14 @@
-<h1>New Calender</h1>
-
-<%= render 'form', calender: @calender %>
-
-<%= link_to 'Back', calenders_path %>
-
 <div class="columns">
   <div class="column">
     <div class="card">
-      <div class="card-header"></div>
+      <div class="card-header">
+        <h1>New Calender</h1>
+      </div>
       <div class="card-content">
-        <div class="content"></div>
+        <div class="content">
+          <%= render 'form', calender: @calender %>
+          <%= link_to 'Back', calenders_path, class:"button is-dark" %>
+        </div>
       </div>
     </div>
   </div>
