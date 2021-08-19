@@ -1,0 +1,96 @@
+<div class="columns is-centered">
+  <div class="column is-8">
+    <div class="card">
+      <header class="card-header">
+        <h2><strong> Edit  Account</strong></h2>
+      </header>
+      <div class="card-content">
+        <div class="content">
+          <%= form_with(model: user, local: true) do |f| %>
+            <div class="field">
+              <%= f.label :email, class:"label"  %>
+              <div class="control">
+                <%= f.email_field :email, autofocus: true, autocomplete: "email" , class:"input"%>
+              </div>
+            </div>
+
+              <div class="field">
+              <%= f.label :Company_Name, class:"label" %>
+              <div class="control">
+                <%= f.text_field :Company_Name, autocomplete: "Company_Name", class:"input" %>
+              </div>
+            </div>
+
+            <div class="field">
+              <%= f.label :cellphone, class:"label" %>
+              <div class="control">
+                <%= f.text_field :cellphone, autocomplete: "cellphone", class:"input" %>
+              </div>
+            </div>
+
+            <div class="field">
+              <%= f.label :Address %>
+              <div class="control">
+                <%= f.text_field :Address, autocomplete: "Address", class:"input" %>
+              </div>
+            </div>
+
+            <div class="field">
+              <%= f.label :Category, class:"label" %>
+              <div class="control">
+                <%= f.text_field :Category, autocomplete: ":Category", class:"input" %>
+              </div>
+            </div>
+
+            <div class="field">
+              <%= f.label :Pro_Number, class:"label" %>
+              <div class="control">
+                <%= f.text_field :Pro_Number, autocomplete: "Pro_Number", class:"input" %>
+              </div>
+            </div>
+
+            <div class="columns">
+              <div class="column is-2">
+                <div class="field">
+                  <%= f.label :Status, class:"label" %>
+                  <div class="control">
+                    <%= f.check_box :Status, autocomplete: "Status", class:"checkbox" %>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-3">
+                <div class="field">
+                  <%= f.label :is_admin, class:"label" %>
+                  <div class="control">
+                    <%= f.check_box :is_admin, autocomplete: "Status", class:"checkbox" %>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-3">
+                <div class="field">
+                  <%= f.label :is_manager, class:"label" %>
+                  <div class="control">
+                    <%= f.check_box :is_manager, autocomplete: "Status", class:"checkbox" %>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-4">
+                <div class="field">
+                  <%= f.label :is_farm_owner, class:"label" %>
+                  <div class="control">
+                    <%= f.check_box :is_farm_owner, autocomplete: "Status", class:"checkbox" %>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="actions">
+              <%= f.submit "Update", class:"button is-success mt-3" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

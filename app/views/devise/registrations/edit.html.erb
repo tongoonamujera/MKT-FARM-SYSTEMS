@@ -41,7 +41,7 @@
             <div class="field">
               <%= f.label :current_password, class:"label" %> <i>(we need your current password to confirm your changes)</i>
               <div class="control">
-                <%= f.password_field :current_password, autocomplete: "current-password", class:"input" %>
+                <%= f.password_field :current_password, autofocus: true, autocomplete: "current-password", class:"input" %>
               </div>
             </div>
 
@@ -76,7 +76,7 @@
             <div class="field">
               <%= f.label :Status, class:"label" %>
               <div class="control">
-                <%= f.text_field :Status, autocomplete: "Status", class:"input" %>
+                <%= f.check_box :Status, autocomplete: "Status", class:"checkbox" %>
               </div>
             </div>
 
@@ -85,7 +85,7 @@
               <div class="control">
                 <%= f.text_field :Pro_Number, autocomplete: "Pro_Number", class:"input" %>
               </div>
-            </>
+            </div>
 
             <div class="actions">
               <%= f.submit "Update", class:"button is-success mt-3" %>

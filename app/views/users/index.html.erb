@@ -1,0 +1,21 @@
+<% @users.each do |user| %>
+<div class="card my-5">
+  <div class="card-header"></div>
+  <div class="card-content">
+    <div class="content">
+      <%= user.email %><br>
+      <%= user.created_at%><br>
+      <%= user.cellphone %><br>
+      <%= user.id %>
+    </div>
+  </div>
+  <footer class="card-footer">
+    <div class="card-footer-item">
+      <%= link_to 'Edit', edit_user_path(user), class:"button is-success" %>
+    </div>
+    <div class="card-footer-item">
+      <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, class:"button is-danger" %>
+    </div>
+  </footer>
+</div>
+<% end %>

@@ -61,9 +61,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :user_id, class:"label" %>
     <div class="control">
-      <%= form.text_field :user_id, class:"input" %>
+      <%= form.text_field :user_id, value: current_user.id, type: :hidden %>
     </div>
   </div>
 

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :users
   resources :rainfalls
   resources :deliveries
   resources :cash_requisitions
@@ -25,7 +26,7 @@ Rails.application.routes.draw do
   resources :mkt_payments
   resources :set_seasons
   resources :client_payments
-  devise_for :users
+  devise_for :users, :path_prefix => 'my'
   root 'client_payments#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_13_070603) do
+ActiveRecord::Schema.define(version: 2021_08_19_175111) do
 
   create_table "activities", force: :cascade do |t|
     t.string "Company_Name"
@@ -394,6 +394,9 @@ ActiveRecord::Schema.define(version: 2021_08_13_070603) do
     t.string "Address"
     t.string "Category"
     t.string "Pro_Number"
+    t.boolean "is_admin", default: false
+    t.boolean "is_manager", default: false
+    t.boolean "is_farm_owner", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
