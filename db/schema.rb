@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2021_08_19_175111) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "activities", force: :cascade do |t|
     t.string "Company_Name"
     t.date "Date"
@@ -20,7 +23,7 @@ ActiveRecord::Schema.define(version: 2021_08_19_175111) do
     t.string "Section"
     t.string "Activity"
     t.string "Pro_Number"
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_activities_on_user_id"
@@ -35,7 +38,7 @@ ActiveRecord::Schema.define(version: 2021_08_19_175111) do
     t.string "Unit_Price"
     t.string "VAT"
     t.string "Total_Amount"
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_advertisements_on_user_id"
@@ -51,7 +54,7 @@ ActiveRecord::Schema.define(version: 2021_08_19_175111) do
     t.string "Unit_Price"
     t.string "Total_Amount"
     t.string "Pro_Number"
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_assets_on_user_id"
@@ -68,7 +71,7 @@ ActiveRecord::Schema.define(version: 2021_08_19_175111) do
     t.string "Barn_Weight"
     t.string "Cumulative_Barn_Weight"
     t.string "Pro_Number"
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_barn_and_slate_records_on_user_id"
@@ -82,7 +85,7 @@ ActiveRecord::Schema.define(version: 2021_08_19_175111) do
     t.string "Month"
     t.string "Activity"
     t.string "Pro_Number"
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_calenders_on_user_id"
@@ -99,7 +102,7 @@ ActiveRecord::Schema.define(version: 2021_08_19_175111) do
     t.date "Pay_From"
     t.date "Pay_To"
     t.string "Pro_Number"
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_cash_requisitions_on_user_id"
@@ -119,7 +122,7 @@ ActiveRecord::Schema.define(version: 2021_08_19_175111) do
     t.string "Input_Name"
     t.string "Total_Amount"
     t.string "Pro_Number"
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_cashflows_on_user_id"
@@ -142,7 +145,7 @@ ActiveRecord::Schema.define(version: 2021_08_19_175111) do
     t.string "Quantity"
     t.string "Amount_Paid"
     t.string "Pro_Number"
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_cereal_sales_on_user_id"
@@ -160,7 +163,7 @@ ActiveRecord::Schema.define(version: 2021_08_19_175111) do
     t.string "Unit_Price"
     t.string "Total_Amount"
     t.string "Pro_Number"
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_cereal_stores_on_user_id"
@@ -174,7 +177,7 @@ ActiveRecord::Schema.define(version: 2021_08_19_175111) do
     t.string "Balance"
     t.date "Date"
     t.string "Pro_Number"
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_client_payments_on_user_id"
@@ -190,7 +193,7 @@ ActiveRecord::Schema.define(version: 2021_08_19_175111) do
     t.date "Day"
     t.string "Temperature"
     t.string "Pro_Number"
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_curings_on_user_id"
@@ -203,7 +206,7 @@ ActiveRecord::Schema.define(version: 2021_08_19_175111) do
     t.string "Farm_Name"
     t.string "Requisition"
     t.string "Pro_Number"
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_daily_requisitions_on_user_id"
@@ -231,7 +234,7 @@ ActiveRecord::Schema.define(version: 2021_08_19_175111) do
     t.string "Quantity"
     t.string "Amount"
     t.string "Pro_Number"
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_deliveries_on_user_id"
@@ -250,7 +253,7 @@ ActiveRecord::Schema.define(version: 2021_08_19_175111) do
     t.string "Job"
     t.string "Total_Amount"
     t.string "Pro_Number"
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_equipment_services_on_user_id"
@@ -269,7 +272,7 @@ ActiveRecord::Schema.define(version: 2021_08_19_175111) do
     t.string "Herbicide"
     t.string "Herbicide_Rate"
     t.string "Pro_Number"
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_input_calibrations_on_user_id"
@@ -288,7 +291,7 @@ ActiveRecord::Schema.define(version: 2021_08_19_175111) do
     t.date "End_Date"
     t.string "turn_around_time"
     t.string "Pro_Number"
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_irriagtion_schedules_on_user_id"
@@ -329,7 +332,7 @@ ActiveRecord::Schema.define(version: 2021_08_19_175111) do
     t.string "Section"
     t.string "Mls_received"
     t.string "Pro_Number"
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_rainfalls_on_user_id"
@@ -347,7 +350,7 @@ ActiveRecord::Schema.define(version: 2021_08_19_175111) do
     t.string "Input_Amount"
     t.string "Labour_Amount"
     t.string "Pro_Number"
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_seedbeds_on_user_id"
@@ -356,7 +359,7 @@ ActiveRecord::Schema.define(version: 2021_08_19_175111) do
   create_table "set_seasons", force: :cascade do |t|
     t.date "Date"
     t.string "Season"
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_set_seasons_on_user_id"
@@ -374,7 +377,7 @@ ActiveRecord::Schema.define(version: 2021_08_19_175111) do
     t.string "Unit_Price"
     t.string "Total_Amount"
     t.string "Pro_Number"
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_stores_on_user_id"
@@ -408,7 +411,7 @@ ActiveRecord::Schema.define(version: 2021_08_19_175111) do
     t.string "Farm_Name"
     t.string "Total_Amount"
     t.string "Pro_Number"
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_wages_on_user_id"
@@ -419,7 +422,7 @@ ActiveRecord::Schema.define(version: 2021_08_19_175111) do
     t.string "Area"
     t.string "Min"
     t.string "Max"
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_weathers_on_user_id"
@@ -433,7 +436,7 @@ ActiveRecord::Schema.define(version: 2021_08_19_175111) do
     t.string "Item"
     t.string "Quantity"
     t.string "Pro_Number"
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_workshops_on_user_id"

@@ -3,10 +3,32 @@
   <div class="card-header"></div>
   <div class="card-content">
     <div class="content">
-      <%= user.email %><br>
-      <%= user.created_at%><br>
-      <%= user.cellphone %><br>
-      <%= user.id %>
+      <div class="columns">
+        <div class="column is-6">
+          <div class="columns">
+            <div class="column is-7">
+              <h4>Email</h4>
+              <%= user.email %>
+            </div>
+            <div class="column is-5">
+              <h4>cellphone</h4>
+              <%= user.cellphone %>
+            </div>
+          </div>
+        </div>
+        <div class="column is-6">
+          <div class="columns">
+            <div class="column is-7">
+              <h4>Created At</h4>
+              <%= user.created_at%>
+            </div>
+            <div class="column is-3">
+              <h5>Category</h5>
+              <%= user.Category %>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <footer class="card-footer">
