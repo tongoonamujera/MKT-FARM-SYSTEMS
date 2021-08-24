@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :tobacco_sales
+  resources :rentals
+  resources :purchases
+  resources :field_days
+  resources :harvestings
+  resources :rationings
   resources :users
   resources :rainfalls
   resources :deliveries
@@ -13,7 +19,7 @@ Rails.application.routes.draw do
   resources :deduction_tables
   resources :wages
   resources :equipment_services
-  resources :assets
+  resources :assets, :path_prefix => 'my'
   resources :workshops
   resources :cereal_stores
   resources :stores

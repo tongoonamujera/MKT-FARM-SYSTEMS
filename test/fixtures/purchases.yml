@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  company_name: MyString
+  date: 2021-08-24
+  season: MyString
+  item: MyString
+  unit: MyString
+  unit_price: MyString
+  total_items: MyString
+  total_amount: MyString
+  VAT: MyString
+  pro_number: MyString
+  user: one
+
+two:
+  company_name: MyString
+  date: 2021-08-24
+  season: MyString
+  item: MyString
+  unit: MyString
+  unit_price: MyString
+  total_items: MyString
+  total_amount: MyString
+  VAT: MyString
+  pro_number: MyString
+  user: two

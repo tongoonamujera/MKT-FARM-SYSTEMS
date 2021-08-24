@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @rationing.Company_Name %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @rationing.Date %>
+</p>
+
+<p>
+  <strong>Season:</strong>
+  <%= @rationing.Season %>
+</p>
+
+<p>
+  <strong>Farm name:</strong>
+  <%= @rationing.Farm_Name %>
+</p>
+
+<p>
+  <strong>Cereal name:</strong>
+  <%= @rationing.Cereal_Name %>
+</p>
+
+<p>
+  <strong>Kgs issued:</strong>
+  <%= @rationing.KGS_Issued %>
+</p>
+
+<p>
+  <strong>Pro number:</strong>
+  <%= @rationing.Pro_Number %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @rationing.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_rationing_path(@rationing) %> |
+<%= link_to 'Back', rationings_path %>

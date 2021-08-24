@@ -1,0 +1,2 @@
+json.extract! tobacco_sale, :id, :season, :date, :grower_number, :section, :sale_number, :bales_sold, :mass, :collect_bales, :average_price, :weighing_and_auction, :afforestration, :levy, :stop_oder_commission, :insurance_name, :insurance_amount, :bank_name, :bank_amount, :tianZe, :balance, :transporter_name, :transporter_amount, :other_1_name, :other_1_amount, :other_2_name, :other_2_amount, :gross_realisation, :net_realistion, :user_id, :created_at, :updated_at
+json.url tobacco_sale_url(tobacco_sale, format: :json)

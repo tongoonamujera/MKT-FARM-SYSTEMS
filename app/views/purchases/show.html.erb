@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @purchase.company_name %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @purchase.date %>
+</p>
+
+<p>
+  <strong>Season:</strong>
+  <%= @purchase.season %>
+</p>
+
+<p>
+  <strong>Item:</strong>
+  <%= @purchase.item %>
+</p>
+
+<p>
+  <strong>Unit:</strong>
+  <%= @purchase.unit %>
+</p>
+
+<p>
+  <strong>Unit price:</strong>
+  <%= @purchase.unit_price %>
+</p>
+
+<p>
+  <strong>Total items:</strong>
+  <%= @purchase.total_items %>
+</p>
+
+<p>
+  <strong>Total amount:</strong>
+  <%= @purchase.total_amount %>
+</p>
+
+<p>
+  <strong>Vat:</strong>
+  <%= @purchase.VAT %>
+</p>
+
+<p>
+  <strong>Pro number:</strong>
+  <%= @purchase.pro_number %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @purchase.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_purchase_path(@purchase) %> |
+<%= link_to 'Back', purchases_path %>

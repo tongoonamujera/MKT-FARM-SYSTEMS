@@ -29,14 +29,57 @@
           </div>
         </div>
       </div>
+
+      <div class="columns">
+        <div class="column is-6">
+          <div class="columns">
+            <div class="column is-7">
+              <h4>Status</h4>
+              <% if user.Status == true %>
+                <p>Verified</p>
+              <% else %>
+                <p>Not Verified</p>
+              <% end %>
+            </div>
+            <div class="column is-5">
+              <h4>Is Admin?</h4>
+              <% if user.is_admin == true %>
+                <p>Yes</p>
+              <% else %>
+                <p>No</p>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        <div class="column is-6">
+          <div class="columns">
+            <div class="column is-7">
+              <h4>Farm Owner</h4>
+              <% if user.is_farm_owner == true %>
+                <p>Yes</p>
+              <% else %>
+                <p>No</p>
+              <% end %>
+            </div>
+            <div class="column is-3">
+              <h5>Manager</h5>
+              <% if user.is_manager == true %>
+                <p>Yes</p>
+              <% else %>
+                <p>No</p>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <footer class="card-footer">
     <div class="card-footer-item">
-      <%= link_to 'Edit', edit_user_path(user), class:"button is-success" %>
+      <%= link_to 'Edit Account', edit_user_path(user), class:"button is-info" %>
     </div>
     <div class="card-footer-item">
-      <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, class:"button is-danger" %>
+      <%= link_to 'Delete Account', user, method: :delete, data: { confirm: 'Are you sure?' }, class:"button is-danger" %>
     </div>
   </footer>
 </div>

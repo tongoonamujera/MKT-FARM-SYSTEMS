@@ -1,0 +1,47 @@
+<%= form_with(model: field_day, local: true) do |form| %>
+  <% if field_day.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(field_day.errors.count, "error") %> prohibited this field_day from being saved:</h2>
+
+      <ul>
+        <% field_day.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Company_Name, class:"label" %>
+    <%= form.text_field :Company_Name, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Date %>
+    <%= form.date_select :Date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Season, class:"label" %>
+    <%= form.text_field :Season, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :place, class:"label" %>
+    <%= form.text_field :place, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Start_Time, class:"label" %>
+    <%= form.time_select :Start_Time, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :focus, class:"label" %>
+    <%= form.text_field :focus, class:"input" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class:"button is-info" %>
+  </div>
+<% end %>

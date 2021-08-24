@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1 class="has-background-white">Harvestings</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Compnay name</th>
+      <th>Date</th>
+      <th>Season</th>
+      <th>Farm name</th>
+      <th>Section</th>
+      <th>Crop</th>
+      <th>Kgs done</th>
+      <th>Pro number</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @harvestings.each do |harvesting| %>
+      <tr>
+        <td><%= harvesting.Compnay_Name %></td>
+        <td><%= harvesting.Date %></td>
+        <td><%= harvesting.Season %></td>
+        <td><%= harvesting.Farm_Name %></td>
+        <td><%= harvesting.Section %></td>
+        <td><%= harvesting.Crop %></td>
+        <td><%= harvesting.KGS_Done %></td>
+        <td><%= harvesting.Pro_Number %></td>
+        <td><%= harvesting.user_id %></td>
+        <td><%= link_to 'Show', harvesting %></td>
+        <td><%= link_to 'Edit', edit_harvesting_path(harvesting) %></td>
+        <td><%= link_to 'Destroy', harvesting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Harvesting', new_harvesting_path %>

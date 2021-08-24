@@ -1,0 +1,2 @@
+class FieldDay < ApplicationRecord
+end

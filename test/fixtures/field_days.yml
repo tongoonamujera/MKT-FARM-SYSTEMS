@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Company_Name: MyString
+  Date: 2021-08-22
+  Season: MyString
+  place: MyString
+  Start_Time: 2021-08-22 15:26:48
+  focus: MyString
+
+two:
+  Company_Name: MyString
+  Date: 2021-08-22
+  Season: MyString
+  place: MyString
+  Start_Time: 2021-08-22 15:26:48
+  focus: MyString

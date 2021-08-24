@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Compnay name:</strong>
+  <%= @harvesting.Compnay_Name %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @harvesting.Date %>
+</p>
+
+<p>
+  <strong>Season:</strong>
+  <%= @harvesting.Season %>
+</p>
+
+<p>
+  <strong>Farm name:</strong>
+  <%= @harvesting.Farm_Name %>
+</p>
+
+<p>
+  <strong>Section:</strong>
+  <%= @harvesting.Section %>
+</p>
+
+<p>
+  <strong>Crop:</strong>
+  <%= @harvesting.Crop %>
+</p>
+
+<p>
+  <strong>Kgs done:</strong>
+  <%= @harvesting.KGS_Done %>
+</p>
+
+<p>
+  <strong>Pro number:</strong>
+  <%= @harvesting.Pro_Number %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @harvesting.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_harvesting_path(@harvesting) %> |
+<%= link_to 'Back', harvestings_path %>

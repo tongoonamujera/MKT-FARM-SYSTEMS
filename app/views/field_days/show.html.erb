@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @field_day.Company_Name %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @field_day.Date %>
+</p>
+
+<p>
+  <strong>Season:</strong>
+  <%= @field_day.Season %>
+</p>
+
+<p>
+  <strong>Place:</strong>
+  <%= @field_day.place %>
+</p>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @field_day.Start_Time %>
+</p>
+
+<p>
+  <strong>Focus:</strong>
+  <%= @field_day.focus %>
+</p>
+
+<%= link_to 'Edit', edit_field_day_path(@field_day) %> |
+<%= link_to 'Back', field_days_path %>

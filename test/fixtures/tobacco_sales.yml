@@ -1,0 +1,61 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  season: MyString
+  date: 2021-08-24
+  grower_number: MyString
+  section: MyString
+  sale_number: MyString
+  bales_sold: MyString
+  mass: MyString
+  collect_bales: MyString
+  average_price: MyString
+  weighing_and_auction: MyString
+  afforestration: MyString
+  levy: MyString
+  stop_oder_commission: MyString
+  insurance_name: MyString
+  insurance_amount: MyString
+  bank_name: MyString
+  bank_amount: MyString
+  tianZe: MyString
+  balance: MyString
+  transporter_name: MyString
+  transporter_amount: MyString
+  other_1_name: MyString
+  other_1_amount: MyString
+  other_2_name: MyString
+  other_2_amount: MyString
+  gross_realisation: MyString
+  net_realistion: MyString
+  user: one
+
+two:
+  season: MyString
+  date: 2021-08-24
+  grower_number: MyString
+  section: MyString
+  sale_number: MyString
+  bales_sold: MyString
+  mass: MyString
+  collect_bales: MyString
+  average_price: MyString
+  weighing_and_auction: MyString
+  afforestration: MyString
+  levy: MyString
+  stop_oder_commission: MyString
+  insurance_name: MyString
+  insurance_amount: MyString
+  bank_name: MyString
+  bank_amount: MyString
+  tianZe: MyString
+  balance: MyString
+  transporter_name: MyString
+  transporter_amount: MyString
+  other_1_name: MyString
+  other_1_amount: MyString
+  other_2_name: MyString
+  other_2_amount: MyString
+  gross_realisation: MyString
+  net_realistion: MyString
+  user: two

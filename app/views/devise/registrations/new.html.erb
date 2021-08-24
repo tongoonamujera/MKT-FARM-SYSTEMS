@@ -55,9 +55,13 @@
             </div>
 
             <div class="field">
-              <%= f.label :Category, class:"label" %>
-              <div class="control">
-                <%= f.text_field :Category, autocomplete: ":Category", class:"input" %>
+              <div class="columns">
+                <div class="column is-8 my-0">
+                  <%= f.label :Category, class:"label" %>
+                </div>
+                <div class="columns is-4 my-0">
+                  <%= f.select :Category, ["Advertiser", "Clerk", "Contractor", "Farmer", "Manager"], class:"my-3" %>
+                </div>
               </div>
             </div>
 
@@ -75,7 +79,7 @@
             </div>
 
             <div class="actions">
-              <%= f.submit "Sign up", class:"button is-success" %>
+              <%= f.submit "Sign up", class:"button is-info" %>
             </div>
           <% end %>
           <div class="mt-5">

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_19_175111) do
+ActiveRecord::Schema.define(version: 2021_08_24_111307) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -259,6 +259,32 @@ ActiveRecord::Schema.define(version: 2021_08_19_175111) do
     t.index ["user_id"], name: "index_equipment_services_on_user_id"
   end
 
+  create_table "field_days", force: :cascade do |t|
+    t.string "Company_Name"
+    t.date "Date"
+    t.string "Season"
+    t.string "place"
+    t.time "Start_Time"
+    t.string "focus"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "harvestings", force: :cascade do |t|
+    t.string "Compnay_Name"
+    t.date "Date"
+    t.string "Season"
+    t.string "Farm_Name"
+    t.string "Section"
+    t.string "Crop"
+    t.string "KGS_Done"
+    t.string "Pro_Number"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_harvestings_on_user_id"
+  end
+
   create_table "input_calibrations", force: :cascade do |t|
     t.string "Company_Name"
     t.date "Date"
@@ -307,6 +333,7 @@ ActiveRecord::Schema.define(version: 2021_08_19_175111) do
     t.string "Pro_Number"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "section"
   end
 
   create_table "mkt_payments", force: :cascade do |t|
@@ -324,6 +351,23 @@ ActiveRecord::Schema.define(version: 2021_08_19_175111) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "purchases", force: :cascade do |t|
+    t.string "company_name"
+    t.date "date"
+    t.string "season"
+    t.string "item"
+    t.string "unit"
+    t.string "unit_price"
+    t.string "total_items"
+    t.string "total_amount"
+    t.string "VAT"
+    t.string "pro_number"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_purchases_on_user_id"
+  end
+
   create_table "rainfalls", force: :cascade do |t|
     t.string "Company_Name"
     t.date "Date"
@@ -336,6 +380,35 @@ ActiveRecord::Schema.define(version: 2021_08_19_175111) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_rainfalls_on_user_id"
+  end
+
+  create_table "rationings", force: :cascade do |t|
+    t.string "Company_Name"
+    t.date "Date"
+    t.string "Season"
+    t.string "Farm_Name"
+    t.string "Cereal_Name"
+    t.string "KGS_Issued"
+    t.string "Pro_Number"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_rationings_on_user_id"
+  end
+
+  create_table "rentals", force: :cascade do |t|
+    t.string "company_name"
+    t.date "date"
+    t.string "season"
+    t.string "company_paid"
+    t.string "receipt_number"
+    t.string "reason"
+    t.string "amount_paid"
+    t.string "pro_number"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_rentals_on_user_id"
   end
 
   create_table "seedbeds", force: :cascade do |t|
@@ -381,6 +454,41 @@ ActiveRecord::Schema.define(version: 2021_08_19_175111) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_stores_on_user_id"
+  end
+
+  create_table "tobacco_sales", force: :cascade do |t|
+    t.string "season"
+    t.date "date"
+    t.string "grower_number"
+    t.string "section"
+    t.string "sale_number"
+    t.string "bales_sold"
+    t.string "mass"
+    t.string "collect_bales"
+    t.string "average_price"
+    t.string "weighing_and_auction"
+    t.string "afforestration"
+    t.string "levy"
+    t.string "stop_oder_commission"
+    t.string "insurance_name"
+    t.string "insurance_amount"
+    t.string "bank_name"
+    t.string "bank_amount"
+    t.string "tianZe"
+    t.string "balance"
+    t.string "transporter_name"
+    t.string "transporter_amount"
+    t.string "other_1_name"
+    t.string "other_1_amount"
+    t.string "other_2_name"
+    t.string "other_2_amount"
+    t.string "gross_realisation"
+    t.string "net_realistion"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "company_name"
+    t.index ["user_id"], name: "index_tobacco_sales_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -456,12 +564,17 @@ ActiveRecord::Schema.define(version: 2021_08_19_175111) do
   add_foreign_key "daily_requisitions", "users"
   add_foreign_key "deliveries", "users"
   add_foreign_key "equipment_services", "users"
+  add_foreign_key "harvestings", "users"
   add_foreign_key "input_calibrations", "users"
   add_foreign_key "irriagtion_schedules", "users"
+  add_foreign_key "purchases", "users"
   add_foreign_key "rainfalls", "users"
+  add_foreign_key "rationings", "users"
+  add_foreign_key "rentals", "users"
   add_foreign_key "seedbeds", "users"
   add_foreign_key "set_seasons", "users"
   add_foreign_key "stores", "users"
+  add_foreign_key "tobacco_sales", "users"
   add_foreign_key "wages", "users"
   add_foreign_key "weathers", "users"
   add_foreign_key "workshops", "users"

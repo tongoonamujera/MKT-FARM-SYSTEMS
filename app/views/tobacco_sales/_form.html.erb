@@ -1,0 +1,162 @@
+<%= form_with(model: tobacco_sale, local: true) do |form| %>
+  <% if tobacco_sale.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tobacco_sale.errors.count, "error") %> prohibited this tobacco_sale from being saved:</h2>
+
+      <ul>
+        <% tobacco_sale.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :company_name, class:"label" %>
+    <%= form.text_field :company_name, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :season, class:"label" %>
+    <%= form.text_field :season, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.date_select :date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :grower_number, class:"label"  %>
+    <%= form.text_field :grower_number, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :section, class:"label" %>
+    <%= form.text_field :section, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sale_number, class:"label" %>
+    <%= form.text_field :sale_number, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bales_sold, class:"label" %>
+    <%= form.text_field :bales_sold, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mass, class:"label" %>
+    <%= form.text_field :mass, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :collect_bales, class:"label" %>
+    <%= form.text_field :collect_bales, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :average_price, class:"label" %>
+    <%= form.text_field :average_price, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :weighing_and_auction, class:"label" %>
+    <%= form.text_field :weighing_and_auction, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :afforestration, class:"label" %>
+    <%= form.text_field :afforestration, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :levy, class:"label" %>
+    <%= form.text_field :levy, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :stop_oder_commission, class:"label" %>
+    <%= form.text_field :stop_oder_commission, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :insurance_name, class:"label" %>
+    <%= form.text_field :insurance_name, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :insurance_amount, class:"label" %>
+    <%= form.text_field :insurance_amount, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bank_name, class:"label" %>
+    <%= form.text_field :bank_name, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bank_amount, class:"label" %>
+    <%= form.text_field :bank_amount, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tianZe, class:"label" %>
+    <%= form.text_field :tianZe, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :balance, class:"label" %>
+    <%= form.text_field :balance, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :transporter_name, class:"label" %>
+    <%= form.text_field :transporter_name, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :transporter_amount, class:"label" %>
+    <%= form.text_field :transporter_amount, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :other_1_name, class:"label" %>
+    <%= form.text_field :other_1_name, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :other_1_amount, class:"label" %>
+    <%= form.text_field :other_1_amount, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :other_2_name, class:"label" %>
+    <%= form.text_field :other_2_name, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :other_2_amount, class:"label" %>
+    <%= form.text_field :other_2_amount, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gross_realisation, class:"label" %>
+    <%= form.text_field :gross_realisation, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :net_realistion, class:"label" %>
+    <%= form.text_field :net_realistion, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id, class:"label" %>
+    <%= form.text_field :user_id, class:"input" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class:"button is-info" %>
+  </div>
+<% end %>

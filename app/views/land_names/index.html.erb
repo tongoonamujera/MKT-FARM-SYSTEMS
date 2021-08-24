@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Land Names</h1>
+<h1 class="has-background-white">Land Names</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Company name</th>
@@ -12,6 +12,7 @@
       <th>Hectrage</th>
       <th>Crop</th>
       <th>Pro number</th>
+      <th>Section</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -26,6 +27,7 @@
         <td><%= land_name.Hectrage %></td>
         <td><%= land_name.Crop %></td>
         <td><%= land_name.Pro_Number %></td>
+        <td><%= land_name.section %></td>
         <td><%= link_to 'Show', land_name %></td>
         <td><%= link_to 'Edit', edit_land_name_path(land_name) %></td>
         <td><%= link_to 'Destroy', land_name, method: :delete, data: { confirm: 'Are you sure?' } %></td>

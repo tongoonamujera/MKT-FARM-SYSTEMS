@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1 class="has-background-white">Rationings</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Company name</th>
+      <th>Date</th>
+      <th>Season</th>
+      <th>Farm name</th>
+      <th>Cereal name</th>
+      <th>Kgs issued</th>
+      <th>Pro number</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rationings.each do |rationing| %>
+      <tr>
+        <td><%= rationing.Company_Name %></td>
+        <td><%= rationing.Date %></td>
+        <td><%= rationing.Season %></td>
+        <td><%= rationing.Farm_Name %></td>
+        <td><%= rationing.Cereal_Name %></td>
+        <td><%= rationing.KGS_Issued %></td>
+        <td><%= rationing.Pro_Number %></td>
+        <td><%= rationing.user_id %></td>
+        <td><%= link_to 'Show', rationing %></td>
+        <td><%= link_to 'Edit', edit_rationing_path(rationing) %></td>
+        <td><%= link_to 'Destroy', rationing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rationing', new_rationing_path %>

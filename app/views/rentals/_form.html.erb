@@ -1,0 +1,62 @@
+<%= form_with(model: rental, local: true) do |form| %>
+  <% if rental.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(rental.errors.count, "error") %> prohibited this rental from being saved:</h2>
+
+      <ul>
+        <% rental.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :company_name, class:"label" %>
+    <%= form.text_field :company_name, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.date_select :date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :season, class:"label" %>
+    <%= form.text_field :season, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :company_paid, class:"label" %>
+    <%= form.text_field :company_paid, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :receipt_number, class:"label" %>
+    <%= form.text_field :receipt_number, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :reason, class:"label" %>
+    <%= form.text_field :reason, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :amount_paid, class:"label" %>
+    <%= form.text_field :amount_paid, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pro_number, class:"label" %>
+    <%= form.text_field :pro_number, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id, class:"label" %>
+    <%= form.text_field :user_id, class:"input" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class:"button is-info" %>
+  </div>
+<% end %>

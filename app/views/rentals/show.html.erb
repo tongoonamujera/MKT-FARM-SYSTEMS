@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @rental.company_name %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @rental.date %>
+</p>
+
+<p>
+  <strong>Season:</strong>
+  <%= @rental.season %>
+</p>
+
+<p>
+  <strong>Company paid:</strong>
+  <%= @rental.company_paid %>
+</p>
+
+<p>
+  <strong>Receipt number:</strong>
+  <%= @rental.receipt_number %>
+</p>
+
+<p>
+  <strong>Reason:</strong>
+  <%= @rental.reason %>
+</p>
+
+<p>
+  <strong>Amount paid:</strong>
+  <%= @rental.amount_paid %>
+</p>
+
+<p>
+  <strong>Pro number:</strong>
+  <%= @rental.pro_number %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @rental.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_rental_path(@rental) %> |
+<%= link_to 'Back', rentals_path %>

@@ -1,0 +1,83 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tobacco Sales</h1>
+
+<table class="table is-striped">
+  <thead>
+    <tr>
+      <th>Company Name</th>
+      <th>Season</th>
+      <th>Date</th>
+      <th>Grower number</th>
+      <th>Section</th>
+      <th>Sale number</th>
+      <th>Bales sold</th>
+      <th>Mass</th>
+      <th>Collect bales</th>
+      <th>Average price</th>
+      <th>Weighing and auction</th>
+      <th>Afforestration</th>
+      <th>Levy</th>
+      <th>Stop oder commission</th>
+      <th>Insurance name</th>
+      <th>Insurance amount</th>
+      <th>Bank name</th>
+      <th>Bank amount</th>
+      <th>Tianze</th>
+      <th>Balance</th>
+      <th>Transporter name</th>
+      <th>Transporter amount</th>
+      <th>Other 1 name</th>
+      <th>Other 1 amount</th>
+      <th>Other 2 name</th>
+      <th>Other 2 amount</th>
+      <th>Gross realisation</th>
+      <th>Net realistion</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tobacco_sales.each do |tobacco_sale| %>
+      <tr>
+        <td><%= tobacco_sale.company_name %></td>
+        <td><%= tobacco_sale.season %></td>
+        <td><%= tobacco_sale.date %></td>
+        <td><%= tobacco_sale.grower_number %></td>
+        <td><%= tobacco_sale.section %></td>
+        <td><%= tobacco_sale.sale_number %></td>
+        <td><%= tobacco_sale.bales_sold %></td>
+        <td><%= tobacco_sale.mass %></td>
+        <td><%= tobacco_sale.collect_bales %></td>
+        <td><%= tobacco_sale.average_price %></td>
+        <td><%= tobacco_sale.weighing_and_auction %></td>
+        <td><%= tobacco_sale.afforestration %></td>
+        <td><%= tobacco_sale.levy %></td>
+        <td><%= tobacco_sale.stop_oder_commission %></td>
+        <td><%= tobacco_sale.insurance_name %></td>
+        <td><%= tobacco_sale.insurance_amount %></td>
+        <td><%= tobacco_sale.bank_name %></td>
+        <td><%= tobacco_sale.bank_amount %></td>
+        <td><%= tobacco_sale.tianZe %></td>
+        <td><%= tobacco_sale.balance %></td>
+        <td><%= tobacco_sale.transporter_name %></td>
+        <td><%= tobacco_sale.transporter_amount %></td>
+        <td><%= tobacco_sale.other_1_name %></td>
+        <td><%= tobacco_sale.other_1_amount %></td>
+        <td><%= tobacco_sale.other_2_name %></td>
+        <td><%= tobacco_sale.other_2_amount %></td>
+        <td><%= tobacco_sale.gross_realisation %></td>
+        <td><%= tobacco_sale.net_realistion %></td>
+        <td><%= tobacco_sale.user_id %></td>
+        <td><%= link_to 'Show', tobacco_sale %></td>
+        <td><%= link_to 'Edit', edit_tobacco_sale_path(tobacco_sale) %></td>
+        <td><%= link_to 'Destroy', tobacco_sale, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tobacco Sale', new_tobacco_sale_path %>

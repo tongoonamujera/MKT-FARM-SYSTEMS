@@ -1,0 +1,72 @@
+<%= form_with(model: purchase, local: true) do |form| %>
+  <% if purchase.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(purchase.errors.count, "error") %> prohibited this purchase from being saved:</h2>
+
+      <ul>
+        <% purchase.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :company_name, class:"label" %>
+    <%= form.text_field :company_name , class:"input"%>
+  </div>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.date_select :date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :season, class:"label" %>
+    <%= form.text_field :season, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :item, class:"label" %>
+    <%= form.text_field :item, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :unit, class:"label" %>
+    <%= form.text_field :unit, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :unit_price, class:"label" %>
+    <%= form.text_field :unit_price, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :total_items, class:"label" %>
+    <%= form.text_field :total_items, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :total_amount, class:"label" %>
+    <%= form.text_field :total_amount, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :VAT, class:"label" %>
+    <%= form.text_field :VAT, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pro_number, class:"label" %>
+    <%= form.text_field :pro_number, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id, class:"label" %>
+    <%= form.text_field :user_id, class:"input" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class:"button is-info" %>
+  </div>
+<% end %>
