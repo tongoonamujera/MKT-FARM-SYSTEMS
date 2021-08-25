@@ -14,7 +14,7 @@
   <div class="field">
     <%= form.label :Company_Name, class:"label" %>
     <div class="control">
-      <%= form.text_field :Company_Name, class:"input" %>
+      <%= form.select :Company_Name, [current_user.Company_Name], class:"my-3" %>
     </div>
   </div>
 

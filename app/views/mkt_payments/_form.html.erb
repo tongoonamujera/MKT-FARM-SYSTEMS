@@ -75,10 +75,7 @@
   </div>
 
   <div class="field">
-    <%= form.label :Pro_number, class:"label" %>
-    <div class="control">
-      <%= form.text_field :Pro_number, class:"input" %>
-    </div>
+    <%= form.text_field :user_id, value: current_user.id, type: :hidden %>
   </div>
 
   <div class="actions">

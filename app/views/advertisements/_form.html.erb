@@ -14,7 +14,7 @@
   <div class="field">
     <%= form.label :Company_Name, class:"label" %>
     <div class="control">
-      <%= form.text_field :Company_Name, class:"input" %>
+      <%= form.select :Company_Name, [current_user.Company_Name], class:"my-3" %>
     </div>
   </div>
 
@@ -67,10 +67,7 @@
   </div>
 
   <div class="field">
-    <%= form.label :user_id, class:"label" %>
-    <div class="control">
-      <%= form.text_field :user_id, class:"input" %>
-    </div>
+    <%= form.text_field :user_id, value: current_user.id, type: :hidden %>
   </div>
 
   <div class="actions">
