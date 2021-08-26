@@ -2,82 +2,382 @@
 <%= link_to 'New Tobacco Sale', new_tobacco_sale_path, class:"button is-success my-3" %>
 <h1>Tobacco Sales</h1>
 
-<table class="table is-striped">
-  <thead>
-    <tr>
-      <th>Company Name</th>
-      <th>Season</th>
-      <th>Date</th>
-      <th>Grower number</th>
-      <th>Section</th>
-      <th>Sale number</th>
-      <th>Bales sold</th>
-      <th>Mass</th>
-      <th>Collect bales</th>
-      <th>Average price</th>
-      <th>Weighing and auction</th>
-      <th>Afforestration</th>
-      <th>Levy</th>
-      <th>Stop oder commission</th>
-      <th>Insurance name</th>
-      <th>Insurance amount</th>
-      <th>Bank name</th>
-      <th>Bank amount</th>
-      <th>Tianze</th>
-      <th>Balance</th>
-      <th>Transporter name</th>
-      <th>Transporter amount</th>
-      <th>Other 1 name</th>
-      <th>Other 1 amount</th>
-      <th>Other 2 name</th>
-      <th>Other 2 amount</th>
-      <th>Gross realisation</th>
-      <th>Net realistion</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<% @tobacco_sales.each do |tobacco_sale| %>
+<div class="box">
+  <div class="columns is-centered">
+    <div class="column is-3">
+      <div class="card">
+        <div class="has-text-centered">
+          <strong>Company Name </strong>
+        </div>
+          <div class="card-content">
+            <div class="content has-text-centered">
+              <%= tobacco_sale.company_name %>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="column is-3">
+      <div class="card">
+        <div class="has-text-centered">
+          <strong>Season</strong>
+        </div>
+        <div class="card-content">
+          <div class="content has-text-centered">
+            <%= tobacco_sale.season %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column is-3">
+      <div class="card">
+        <div class="has-text-centered">
+          <strong>Date</strong>
+        </div>
+        <div class="card-content">
+          <div class="content has-text-centered">
+            <%= tobacco_sale.date %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column is-3">
+      <div class="card">
+        <div class="has-text-centered">
+          <strong>Grower Number</strong>
+        </div>
+        <div class="card-content">
+          <div class="content has-text-centered">
+            <%= tobacco_sale.grower_number %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <tbody>
-    <% @tobacco_sales.each do |tobacco_sale| %>
-      <tr>
-        <td><%= tobacco_sale.company_name %></td>
-        <td><%= tobacco_sale.season %></td>
-        <td><%= tobacco_sale.date %></td>
-        <td><%= tobacco_sale.grower_number %></td>
-        <td><%= tobacco_sale.section %></td>
-        <td><%= tobacco_sale.sale_number %></td>
-        <td><%= tobacco_sale.bales_sold %></td>
-        <td><%= tobacco_sale.mass %></td>
-        <td><%= tobacco_sale.collect_bales %></td>
-        <td><%= tobacco_sale.average_price %></td>
-        <td><%= tobacco_sale.weighing_and_auction %></td>
-        <td><%= tobacco_sale.afforestration %></td>
-        <td><%= tobacco_sale.levy %></td>
-        <td><%= tobacco_sale.stop_oder_commission %></td>
-        <td><%= tobacco_sale.insurance_name %></td>
-        <td><%= tobacco_sale.insurance_amount %></td>
-        <td><%= tobacco_sale.bank_name %></td>
-        <td><%= tobacco_sale.bank_amount %></td>
-        <td><%= tobacco_sale.tianZe %></td>
-        <td><%= tobacco_sale.balance %></td>
-        <td><%= tobacco_sale.transporter_name %></td>
-        <td><%= tobacco_sale.transporter_amount %></td>
-        <td><%= tobacco_sale.other_1_name %></td>
-        <td><%= tobacco_sale.other_1_amount %></td>
-        <td><%= tobacco_sale.other_2_name %></td>
-        <td><%= tobacco_sale.other_2_amount %></td>
-        <td><%= tobacco_sale.gross_realisation %></td>
-        <td><%= tobacco_sale.net_realistion %></td>
-        <td><%= tobacco_sale.user_id %></td>
-        <td><%= link_to 'Show', tobacco_sale %></td>
-        <td><%= link_to 'Edit', edit_tobacco_sale_path(tobacco_sale) %></td>
-        <td><%= link_to 'Destroy', tobacco_sale, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+  <div class="columns is-centered">
+    <div class="column is-3">
+      <div class="card">
+        <div class="has-text-centered">
+          <strong>Section</strong>
+        </div>
+        <div class="card-content">
+          <div class="content has-text-centered">
+            <%= tobacco_sale.section %>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<br>
+    <div class="column is-3">
+      <div class="card">
+        <div class="has-text-centered">
+          <strong>Sale Number</strong>
+        </div>
+        <div class="card-content">
+          <div class="content has-text-centered">
+            <%= tobacco_sale.sale_number %>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <div class="column is-3">
+      <div class="card">
+        <div class="has-text-centered">
+          <strong>Bales Sold</strong>
+        </div>
+        <div class="card-content">
+          <div class="content has-text-centered">
+            <%= tobacco_sale.bales_sold %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column is-3">
+      <div class="card">
+        <div class="has-text-centered">
+          <strong>Mass</strong>
+        </div>
+        <div class="card-content">
+          <div class="content has-text-centered">
+            <%= tobacco_sale.mass %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="columns is-centered">
+    <div class="column is-3">
+      <div class="card">
+        <div class="has-text-centered">
+          <strong>Collect Bales</strong>
+        </div>
+        <div class="card-content">
+          <div class="content has-text-centered">
+            <%= tobacco_sale.collect_bales %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column is-3">
+      <div class="card">
+        <div class="has-text-centered">
+          <strong>Average Price</strong>
+        </div>
+        <div class="card-content">
+          <div class="content has-text-centered">
+            <%= tobacco_sale.average_price %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column is-3">
+      <div class="card">
+        <div class="has-text-centered">
+          <strong>Weighing and Auction</strong>
+        </div>
+        <div class="card-content">
+          <div class="content has-text-centered">
+            <%= tobacco_sale.weighing_and_auction %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column is-3">
+      <div class="card">
+        <div class="has-text-centered">
+          <strong>Afforestration</strong>
+        </div>
+        <div class="card-content">
+          <div class="content has-text-centered">
+            <%= tobacco_sale.afforestration %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="columns is-centered">
+    <div class="column is-3">
+      <div class="card">
+        <div class="has-text-centered">
+          <strong>Levy</strong>
+        </div>
+        <div class="card-content">
+          <div class="content has-text-centered">
+            <%= tobacco_sale.levy %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column is-3">
+      <div class="card">
+        <div class="has-text-centered">
+          <strong>Stop Oder Commission</strong>
+        </div>
+        <div class="card-content">
+          <div class="content has-text-centered">
+            <%= tobacco_sale.stop_oder_commission %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column is-3">
+      <div class="card">
+        <div class="has-text-centered">
+          <strong>Insurance Name</strong>
+        </div>
+        <div class="card-content">
+          <div class="content has-text-centered">
+            <%= tobacco_sale.insurance_name %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column is-3">
+      <div class="card">
+        <div class="has-text-centered">
+          <strong>Insurance Amount</strong>
+        </div>
+        <div class="card-content">
+          <div class="content has-text-centered">
+            <%= tobacco_sale.insurance_amount %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="columns is-centered">
+    <div class="column is-3">
+      <div class="card">
+        <div class="has-text-centered">
+          <strong>Bank Name</strong>
+        </div>
+        <div class="card-content">
+          <div class="content has-text-centered">
+            <%= tobacco_sale.bank_name %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column is-3">
+      <div class="card">
+        <div class="has-text-centered">
+          <strong>Bank Amount</strong>
+        </div>
+        <div class="card-content">
+          <div class="content has-text-centered">
+            <%= tobacco_sale.bank_amount %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column is-3">
+      <div class="card">
+        <div class="has-text-centered">
+          <strong>Tina Ze</strong>
+        </div>
+        <div class="card-content">
+          <div class="content has-text-centered">
+            <%= tobacco_sale.tianZe %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column is-3">
+      <div class="card">
+        <div class="has-text-centered">
+          <strong>Balance</strong>
+        </div>
+        <div class="card-content">
+          <div class="content has-text-centered">
+            <%= tobacco_sale.balance %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="columns is-centered">
+    <div class="column is-3">
+      <div class="card">
+        <div class="has-text-centered">
+          <strong>Transporter Name</strong>
+        </div>
+        <div class="card-content">
+          <div class="content has-text-centered">
+            <%= tobacco_sale.transporter_name %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column is-3">
+      <div class="card">
+        <div class="has-text-centered">
+          <strong>Transporter Amount</strong>
+        </div>
+        <div class="card-content">
+          <div class="content has-text-centered">
+            <%= tobacco_sale.transporter_amount %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column is-3">
+      <div class="card">
+        <div class="has-text-centered">
+          <strong>Other 1 Amount</strong>
+        </div>
+        <div class="card-content">
+          <div class="content has-text-centered">
+            <%= tobacco_sale.other_1_name %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column is-3">
+      <div class="card">
+        <div class="has-text-centered">
+          <strong>Other 1 Amount</strong>
+        </div>
+        <div class="card-content">
+          <div class="content has-text-centered">
+            <%= tobacco_sale.other_1_amount %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="columns is-centered">
+    <div class="column is-3">
+      <div class="card">
+        <div class="has-text-centered">
+          <strong>Other 2 Name</strong>
+        </div>
+        <div class="card-content">
+          <div class="content has-text-centered">
+            <%= tobacco_sale.other_2_name %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column is-3">
+      <div class="card">
+        <div class="has-text-centered">
+          <strong>Other 2 Amount</strong>
+        </div>
+        <div class="card-content">
+          <div class="content has-text-centered">
+            <%= tobacco_sale.other_2_amount %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column is-3">
+      <div class="card">
+        <div class="has-text-centered">
+          <strong>Gross Realisation</strong>
+        </div>
+        <div class="card-content">
+          <div class="content has-text-centered">
+            <%= tobacco_sale.gross_realisation %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column is-3">
+      <div class="card">
+        <div class="has-text-centered">
+          <strong>Net Realisation</strong>
+        </div>
+        <div class="card-content">
+          <div class="content has-text-centered">
+            <%= tobacco_sale.net_realistion %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
 
