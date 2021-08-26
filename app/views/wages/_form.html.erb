@@ -19,16 +19,16 @@
   </div>
 
   <div class="field">
-    <%= form.label :Date, class:"label" %>
+    <%= form.label :daily_rate, class:"label" %>
     <div class="control">
-      <%= form.date_select :Date, class:"input" %>
+      <%= form.text_field :daily_rate, class:"input" %>
     </div>
   </div>
 
   <div class="field">
-    <%= form.label :Season, class:"label" %>
+    <%= form.label :empoyee_number, class:"label" %>
     <div class="control">
-      <%= form.text_field :Season, class:"input" %>
+      <%= form.text_field :empoyee_number, class:"input" %>
     </div>
   </div>
 
@@ -40,9 +40,16 @@
   </div>
 
   <div class="field">
-    <%= form.label :Total_Amount, class:"label" %>
+    <%= form.label :worker_status, class:"label" %>
     <div class="control">
-      <%= form.text_field :Total_Amount, class:"input" %>
+      <%= form.select :worker_status, ['Permanent', 'Maricho'], class:"my-3" %>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= form.label :employee_name, class:"label" %>
+    <div class="control">
+      <%= form.text_field :employee_name, class:"input" %>
     </div>
   </div>
 

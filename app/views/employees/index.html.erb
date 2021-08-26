@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'New Employee', new_employee_path, class:"button is-success my-3" %>
+
+<h1 class="has-background-white">Employees</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Company name</th>
+      <th>Farm name</th>
+      <th>Employee name</th>
+      <th>Employee number</th>
+      <th>Daily rate</th>
+      <th>Worker status</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @employees.each do |employee| %>
+      <tr>
+        <td><%= employee.company_name %></td>
+        <td><%= employee.farm_name %></td>
+        <td><%= employee.employee_name %></td>
+        <td><%= employee.employee_number %></td>
+        <td><%= employee.daily_rate %></td>
+        <td><%= employee.worker_status %></td>
+        <td><%= employee.user_id %></td>
+        <td><%= link_to 'Show', employee %></td>
+        <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
+        <td><%= link_to 'Destroy', employee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
