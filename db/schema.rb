@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_24_111307) do
+ActiveRecord::Schema.define(version: 2021_08_26_062914) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -514,14 +514,15 @@ ActiveRecord::Schema.define(version: 2021_08_24_111307) do
 
   create_table "wages", force: :cascade do |t|
     t.string "Company_Name"
-    t.date "Date"
-    t.string "Season"
     t.string "Farm_Name"
-    t.string "Total_Amount"
     t.string "Pro_Number"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "worker_status"
+    t.string "employee_name"
+    t.string "empoyee_number"
+    t.string "daily_rate"
     t.index ["user_id"], name: "index_wages_on_user_id"
   end
 
