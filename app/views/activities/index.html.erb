@@ -1,54 +1,53 @@
 <p id="notice"><%= notice %></p>
 
 <%= link_to 'New Activity', new_activity_path, class:"button is-success my-3" %>
-<br>
 
-<h1 class="has-background-white">Activities</h1>
+<div class="box">
+  <h1 class="has-text-centered">Activities</h1>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>Company name</th>
-      <th>Date</th>
-      <th>Season</th>
-      <th>Farm name</th>
-      <th>Section</th>
-      <th>Activity</th>
-      <th>Pro number</th>
-      <th>User</th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @activities.each do |activity| %>
+  <table class="table">
+    <thead>
       <tr>
-        <td><%= activity.Company_Name %></td>
-        <td><%= activity.Date %></td>
-        <td><%= activity.Season %></td>
-        <td><%= activity.Farm_Name %></td>
-        <td><%= activity.Section %></td>
-        <td><%= activity.Activity %></td>
-        <td><%= activity.Pro_Number %></td>
-        <td><%= activity.user_id %></td>
-        <td class="navbar">
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link">
-              Actions
-            </a>
-
-            <div class="navbar-dropdown has-background-info">
-              <%= link_to 'Show', activity, class:"navbar-item" %>
-              <%= link_to 'Edit', edit_activity_path(activity), class:"navbar-item" %>
-              <%= link_to 'Destroy', activity, method: :delete, data: { confirm: 'Are you sure?' }, class:"navbar-item" %>
-            </div>
-          </div>
-        </td>
+        <th>Company name</th>
+        <th>Date</th>
+        <th>Season</th>
+        <th>Farm name</th>
+        <th>Section</th>
+        <th>Activity</th>
+        <th>Pro number</th>
+        <th>User</th>
+        <th></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @activities.each do |activity| %>
+        <tr>
+          <td><%= activity.Company_Name %></td>
+          <td><%= activity.Date %></td>
+          <td><%= activity.Season %></td>
+          <td><%= activity.Farm_Name %></td>
+          <td><%= activity.Section %></td>
+          <td><%= activity.Activity %></td>
+          <td><%= activity.Pro_Number %></td>
+          <td><%= activity.user_id %></td>
+          <td class="navbar">
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">
+                Actions
+              </a>
+
+              <div class="navbar-dropdown has-background-info">
+                <%= link_to 'Show', activity, class:"navbar-item" %>
+                <%= link_to 'Edit', edit_activity_path(activity), class:"navbar-item" %>
+                <%= link_to 'Destroy', activity, method: :delete, data: { confirm: 'Are you sure?' }, class:"navbar-item" %>
+              </div>
+            </div>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
 
 
