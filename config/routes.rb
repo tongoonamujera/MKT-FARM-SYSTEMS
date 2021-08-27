@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :timebooks
   resources :employees
   resources :tobacco_sales
   resources :rentals

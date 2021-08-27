@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @timebook.date %>
+</p>
+
+<p>
+  <strong>Employee name:</strong>
+  <%= @timebook.employee_name %>
+</p>
+
+<p>
+  <strong>Employee number:</strong>
+  <%= @timebook.employee_number %>
+</p>
+
+<p>
+  <strong>Rate:</strong>
+  <%= @timebook.rate %>
+</p>
+
+<p>
+  <strong>Day:</strong>
+  <%= @timebook.day %>
+</p>
+
+<p>
+  <strong>Gross:</strong>
+  <%= @timebook.gross %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @timebook.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_timebook_path(@timebook) %> |
+<%= link_to 'Back', timebooks_path %>

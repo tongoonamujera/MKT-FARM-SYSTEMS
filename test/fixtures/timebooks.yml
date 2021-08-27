@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2021-08-27
+  employee_name: MyString
+  employee_number: MyString
+  rate: MyString
+  day: MyString
+  gross: MyString
+  user: one
+
+two:
+  date: 2021-08-27
+  employee_name: MyString
+  employee_number: MyString
+  rate: MyString
+  day: MyString
+  gross: MyString
+  user: two

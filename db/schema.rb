@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_26_073318) do
+ActiveRecord::Schema.define(version: 2021_08_27_103139) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -469,6 +469,19 @@ ActiveRecord::Schema.define(version: 2021_08_26_073318) do
     t.index ["user_id"], name: "index_stores_on_user_id"
   end
 
+  create_table "timebooks", force: :cascade do |t|
+    t.date "date"
+    t.string "employee_name"
+    t.string "employee_number"
+    t.string "rate"
+    t.string "day"
+    t.string "gross"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_timebooks_on_user_id"
+  end
+
   create_table "tobacco_sales", force: :cascade do |t|
     t.string "season"
     t.date "date"
@@ -589,6 +602,7 @@ ActiveRecord::Schema.define(version: 2021_08_26_073318) do
   add_foreign_key "seedbeds", "users"
   add_foreign_key "set_seasons", "users"
   add_foreign_key "stores", "users"
+  add_foreign_key "timebooks", "users"
   add_foreign_key "tobacco_sales", "users"
   add_foreign_key "wages", "users"
   add_foreign_key "weathers", "users"

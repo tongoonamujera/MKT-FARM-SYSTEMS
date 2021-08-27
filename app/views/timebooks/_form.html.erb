@@ -1,0 +1,52 @@
+<%= form_with(model: timebook, local: true) do |form| %>
+  <% if timebook.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(timebook.errors.count, "error") %> prohibited this timebook from being saved:</h2>
+
+      <ul>
+        <% timebook.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.date_select :date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :employee_name %>
+    <%= form.text_field :employee_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :employee_number %>
+    <%= form.text_field :employee_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rate %>
+    <%= form.text_field :rate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :day %>
+    <%= form.text_field :day %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gross %>
+    <%= form.text_field :gross %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
