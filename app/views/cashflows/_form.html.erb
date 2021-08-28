@@ -56,7 +56,7 @@
   <div class="field">
     <%= form.label :Operation, class:"label" %>
     <div class="control">
-      <%= form.text_field :Operation, class:"input" %>
+      <%= form.select :Operation, ['SeedBed', 'Land Chemicals', 'Land Fertilizers', 'Farm Operations', 'Curing', 'Grading And Selling', 'Others']%>
     </div>
   </div>
 
@@ -92,6 +92,20 @@
     <%= form.label :Total_Amount, class:"label" %>
     <div class="control">
       <%= form.text_field :Total_Amount, class:"input" %>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= form.label :tian_ze_number, class:"label" %>
+    <div class="control">
+      <%= form.text_field :tian_ze_number, class:"input" %>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= form.label :total_quantity, class:"label" %>
+    <div class="control">
+      <%= form.text_field :total_quantity, class:"input" %>
     </div>
   </div>
 

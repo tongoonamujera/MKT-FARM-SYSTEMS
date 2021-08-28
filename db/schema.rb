@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_27_103139) do
+ActiveRecord::Schema.define(version: 2021_08_28_064148) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -116,15 +116,17 @@ ActiveRecord::Schema.define(version: 2021_08_27_103139) do
     t.string "Grower_Name"
     t.string "Hectrage"
     t.string "Operation"
-    t.string "Unit_Price"
-    t.string "quantity_per_hectre"
     t.string "Unity"
     t.string "Input_Name"
-    t.string "Total_Amount"
     t.string "Pro_Number"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.decimal "Unit_Price"
+    t.decimal "quantity_per_hectre"
+    t.decimal "Total_Amount"
+    t.string "total_quantity"
+    t.string "tian_ze_number"
     t.index ["user_id"], name: "index_cashflows_on_user_id"
   end
 
@@ -245,11 +247,11 @@ ActiveRecord::Schema.define(version: 2021_08_27_103139) do
     t.string "farm_name"
     t.string "employee_name"
     t.string "employee_number"
-    t.string "daily_rate"
     t.string "worker_status"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.decimal "daily_rate"
     t.index ["user_id"], name: "index_employees_on_user_id"
   end
 
@@ -473,12 +475,12 @@ ActiveRecord::Schema.define(version: 2021_08_27_103139) do
     t.date "date"
     t.string "employee_name"
     t.string "employee_number"
-    t.string "rate"
     t.string "day"
-    t.string "gross"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.decimal "rate"
+    t.decimal "gross"
     t.index ["user_id"], name: "index_timebooks_on_user_id"
   end
 
