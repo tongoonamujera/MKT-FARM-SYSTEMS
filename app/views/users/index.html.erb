@@ -1,3 +1,53 @@
+<div class="box side-bar">
+  <div class="columns pb-0">
+    <div class="column pb-0">
+      <div class="card pb-0">
+        <h1 class="has-text-centered has-background-black"><strong class="has-text-light">All Users</strong></h1>
+        <div class="card-content has-background-light">
+          <div class="content has-text-centered">
+            <%= User.all.count %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column pb-0">
+      <div class="card pb-0">
+        <h1 class="has-text-centered has-background-black"><strong class="has-text-light">Admin Users</strong></h1>
+        <div class="card-content has-background-light">
+          <div class="content has-text-centered">
+            <%= User.all.admin.count %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column pb-0">
+      <div class="card pb-0">
+        <h1 class="has-text-centered has-background-black"><strong class="has-text-light">Farm Owners</strong></h1>
+        <div class="card-content has-background-light">
+          <div class="content has-text-centered">
+            <%= User.all.farm_owner.count %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column pb-0">
+      <div class="card pb-0">
+        <h1 class="has-text-centered has-background-black"><strong class="has-text-light">Farm Manager</strong></h1>
+        <div class="card-content has-background-light">
+          <div class="content has-text-centered">
+            <%= User.all.manager.count %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 <% @users.each do |user| %>
 <div class="card my-5">
   <div class="card-header"></div>
