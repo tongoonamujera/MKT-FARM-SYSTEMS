@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   resources :deduction_tables
   resources :wages
   resources :equipment_services
-  resources :assets, :path_prefix => 'my'
+  resources :assets, path: 'my_assets'
   resources :workshops
   resources :cereal_stores
   resources :stores

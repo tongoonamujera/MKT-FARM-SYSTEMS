@@ -48,6 +48,13 @@
             </div>
 
             <div class="field">
+              <%= f.label :username, class:"label" %>
+              <div class="control">
+                <%= f.text_field :username, autocomplete: "cellphone", class:"input" %>
+              </div>
+            </div>
+
+            <div class="field">
               <%= f.label :Address, class:"label" %>
               <div class="control">
                 <%= f.text_field :Address, autocomplete: "Address", class:"input" %>
@@ -62,12 +69,6 @@
                 <div class="columns is-4 my-0">
                   <%= f.select :Category, ["Advertiser", "Clerk", "Contractor", "Farmer", "Manager"], class:"my-3" %>
                 </div>
-              </div>
-            </div>
-
-            <div class="field">
-              <div class="control">
-                <%= f.text_field :Status, autocomplete: "Status", class:"input", type: :hidden %>
               </div>
             </div>
 

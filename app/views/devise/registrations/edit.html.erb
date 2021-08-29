@@ -60,6 +60,13 @@
             </div>
 
             <div class="field">
+              <%= f.label :username, class:"label" %>
+              <div class="control">
+                <%= f.text_field :username, autocomplete: "cellphone", class:"input" %>
+              </div>
+            </div>
+
+            <div class="field">
               <%= f.label :Address %>
               <div class="control">
                 <%= f.text_field :Address, autocomplete: "Address", class:"input" %>
@@ -70,13 +77,6 @@
               <%= f.label :Category, class:"label" %>
               <div class="control">
                 <%= f.text_field :Category, autocomplete: ":Category", class:"input" %>
-              </div>
-            </div>
-
-            <div class="field">
-              <%= f.label :Status, class:"label" %>
-              <div class="control">
-                <%= f.check_box :Status, autocomplete: "Status", class:"checkbox" %>
               </div>
             </div>
 

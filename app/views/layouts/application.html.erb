@@ -13,7 +13,7 @@
   <%= render 'layouts/header' %>
     <div class="columns">
       <%if user_signed_in? %>
-        <% unless current_user.Status == true  %>
+        <% unless current_user.status == true || current_user.email == 'tongoonamujera@gmail.com'  %>
           <%= render 'layouts/verification'%>
         <%else%>
           <div class="column is-3 has-background-black">

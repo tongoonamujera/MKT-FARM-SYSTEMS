@@ -22,6 +22,13 @@
             </div>
 
             <div class="field">
+              <%= f.label :username, class:"label" %>
+              <div class="control">
+                <%= f.text_field :username, autocomplete: "Company_Name", class:"input" %>
+              </div>
+            </div>
+
+            <div class="field">
               <%= f.label :cellphone, class:"label" %>
               <div class="control">
                 <%= f.text_field :cellphone, autocomplete: "cellphone", class:"input" %>
@@ -52,9 +59,9 @@
             <div class="columns">
               <div class="column is-2">
                 <div class="field">
-                  <%= f.label :Status, class:"label" %>
+                  <%= f.label :status, class:"label" %>
                   <div class="control">
-                    <%= f.check_box :Status, autocomplete: "Status", class:"checkbox" %>
+                    <%= f.check_box :status, autocomplete: "Status", class:"checkbox" %>
                   </div>
                 </div>
               </div>

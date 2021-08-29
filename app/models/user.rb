@@ -14,4 +14,8 @@ class User < ApplicationRecord
   def self.manager
     where('is_manager =?', true)
   end
+
+  def self.verified
+    where('status =?', true)
+  end
 end
