@@ -18,4 +18,12 @@ class User < ApplicationRecord
   def self.verified
     where('status =?', true)
   end
+
+  def self.advertiser
+    where('is_advertiser =?', true)
+  end
+
+  def self.contractor
+    where('is_contractor =?', true)
+  end
 end

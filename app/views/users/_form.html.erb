@@ -1,5 +1,5 @@
 <div class="columns is-centered">
-  <div class="column is-8">
+  <div class="column is-11">
     <div class="card">
       <header class="card-header">
         <h2><strong> Edit  Account</strong></h2>
@@ -65,7 +65,7 @@
                   </div>
                 </div>
               </div>
-              <div class="column is-3">
+              <div class="column is-2">
                 <div class="field">
                   <%= f.label :is_admin, class:"label" %>
                   <div class="control">
@@ -73,7 +73,7 @@
                   </div>
                 </div>
               </div>
-              <div class="column is-3">
+              <div class="column is-2">
                 <div class="field">
                   <%= f.label :is_manager, class:"label" %>
                   <div class="control">
@@ -81,11 +81,27 @@
                   </div>
                 </div>
               </div>
-              <div class="column is-4">
+              <div class="column is-2">
                 <div class="field">
                   <%= f.label :is_farm_owner, class:"label" %>
                   <div class="control">
                     <%= f.check_box :is_farm_owner, autocomplete: "Status", class:"checkbox" %>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-2">
+                <div class="field">
+                  <%= f.label :is_advertiser, class:"label" %>
+                  <div class="control">
+                    <%= f.check_box :is_advertiser, autocomplete: "Status", class:"checkbox" %>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-2">
+                <div class="field">
+                  <%= f.label :is_contractor, class:"label" %>
+                  <div class="control">
+                    <%= f.check_box :is_contractor, autocomplete: "Status", class:"checkbox" %>
                   </div>
                 </div>
               </div>
