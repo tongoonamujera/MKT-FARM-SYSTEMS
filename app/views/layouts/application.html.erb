@@ -10,30 +10,33 @@
   </head>
 
   <body>
-  <%= render 'layouts/header' %>
+    <%= render 'layouts/header' %>
     <div class="columns">
+
       <%if user_signed_in? %>
-      <% ClientPayment.valid.each do |client_payment|%>
-        <% unless client_payment.Company_Name == current_user.Company_Name #|| current_user.email == 'tongoonamujera@gmail.com'  %>
-          <%= render 'layouts/verification'%>
-        <%else%>
-          <div class="column is-3 has-background-black">
-            <%= render 'layouts/sidebar'%>
-          </div>
-          <div class="column is-9 has-background-grey-dark">
-            <div class="columns is-centered">
-              <div class="column is-12 overflow-y">
-                <%= yield %>
+        <% ClientPayment.valid.each do |client_payment|%>
+          <% unless client_payment.Company_Name == current_user.Company_Name #|| current_user.email == 'tongoonamujera@gmail.com'  %>
+            <%= render 'layouts/verification'%>
+          <%else%>
+            <div class="column is-3 has-background-black">
+              <%= render 'layouts/sidebar'%>
+            </div>
+            <div class="column is-9 has-background-grey-dark">
+              <div class="columns is-centered">
+                <div class="column is-12 overflow-y">
+                  <%= yield %>
+                </div>
               </div>
             </div>
-          </div>
-        <% end %>
+          <% end %>
         <%end%>
+
       <% else %>
         <div class="container">
           <%= yield %>
         </div>
       <% end %>
     </div>
+
   </body>
 </html>
