@@ -14,7 +14,7 @@
   <div class="field">
     <%= form.label :Company_Name, class:"label" %>
     <div class="control">
-    <%= form.select :Company_Name, [current_user.Company_Name], class:"my-3" %>
+    <%= form.collection_select :Company_Name, User.order(:Company_Name), :Company_Name, :Company_Name, class:"my-3" %>
     </div>
   </div>
 
@@ -35,21 +35,28 @@
   <div class="field">
     <%= form.label :Amount_Paid, class:"label" %>
     <div class="control">
-      <%= form.text_field :Amount_Paid, class:"input" %>
+      <%= form.text_field :amount_paid, class:"input" %>
     </div>
   </div>
 
   <div class="field">
-    <%= form.label :Balance, class:"label" %>
+    <%= form.label :balance, class:"label" %>
     <div class="control">
-      <%= form.text_field :Balance, class:"input" %>
+      <%= form.text_field :balance, class:"input" %>
     </div>
   </div>
 
   <div class="field">
-    <%= form.label :Date, class:"label" %>
+    <%= form.label :valid_from, class:"label" %>
       <div class="control">
-        <%= form.date_select :Date, class:"input" %>
+        <%= form.date_select :valid_from, class:"input" %>
+      </div>
+  </div>
+
+  <div class="field">
+    <%= form.label :valid_to, class:"label" %>
+      <div class="control">
+        <%= form.date_select :valid_to, class:"input" %>
       </div>
   </div>
 

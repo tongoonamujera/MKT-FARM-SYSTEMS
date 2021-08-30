@@ -13,7 +13,8 @@
   <%= render 'layouts/header' %>
     <div class="columns">
       <%if user_signed_in? %>
-        <% unless current_user.status == true || current_user.email == 'tongoonamujera@gmail.com'  %>
+      <% ClientPayment.valid.each do |client_payment|%>
+        <% unless client_payment.Company_Name == current_user.Company_Name #|| current_user.email == 'tongoonamujera@gmail.com'  %>
           <%= render 'layouts/verification'%>
         <%else%>
           <div class="column is-3 has-background-black">
@@ -27,6 +28,7 @@
             </div>
           </div>
         <% end %>
+        <%end%>
       <% else %>
         <div class="container">
           <%= yield %>
