@@ -13,6 +13,7 @@
       <th>Rate</th>
       <th>Day</th>
       <th>Gross</th>
+      <th>Season</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -26,6 +27,7 @@
         <td><%= timebook.rate %></td>
         <td><%= timebook.day %></td>
         <td><%= timebook.gross %></td>
+        <td><%= timebook.season %></td>
         <td><%= link_to 'Show', timebook %></td>
         <td><%= link_to 'Edit', edit_timebook_path(timebook) %></td>
         <td><%= link_to 'Destroy', timebook, method: :delete, data: { confirm: 'Are you sure?' } %></td>

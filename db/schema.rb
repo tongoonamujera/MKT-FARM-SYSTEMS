@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_30_145333) do
+ActiveRecord::Schema.define(version: 2021_09_02_081516) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -218,11 +218,16 @@ ActiveRecord::Schema.define(version: 2021_08_30_145333) do
   create_table "deduction_tables", force: :cascade do |t|
     t.string "Season"
     t.string "Month"
-    t.string "Gross"
-    t.string "Net"
     t.string "Farm_Name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.decimal "allowance"
+    t.decimal "payee"
+    t.decimal "nssa"
+    t.decimal "nec"
+    t.decimal "cash_requests"
+    t.string "employee_name"
+    t.string "employee_number"
   end
 
   create_table "deliveries", force: :cascade do |t|
@@ -235,11 +240,11 @@ ActiveRecord::Schema.define(version: 2021_08_30_145333) do
     t.string "Delivered_by"
     t.string "Goods"
     t.string "Quantity"
-    t.string "Amount"
     t.string "Pro_Number"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "amount"
     t.index ["user_id"], name: "index_deliveries_on_user_id"
   end
 
@@ -482,6 +487,7 @@ ActiveRecord::Schema.define(version: 2021_08_30_145333) do
     t.datetime "updated_at", precision: 6, null: false
     t.decimal "rate"
     t.decimal "gross"
+    t.string "season"
     t.index ["user_id"], name: "index_timebooks_on_user_id"
   end
 

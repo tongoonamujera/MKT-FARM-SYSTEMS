@@ -64,6 +64,6 @@ class TimebooksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def timebook_params
-      params.require(:timebook).permit(:date, :employee_name, :employee_number, :rate, :day, :gross, :user_id)
+      params.require(:timebook).permit(:date, :employee_name, :employee_number, :rate, :day, :gross, :user_id, :season)
     end
 end

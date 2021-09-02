@@ -11,18 +11,43 @@
 </p>
 
 <p>
-  <strong>Gross:</strong>
-  <%= @deduction_table.Gross %>
+  <strong>Employee Name:</strong>
+  <%= @deduction_table.employee_name %>
 </p>
 
 <p>
-  <strong>Net:</strong>
-  <%= @deduction_table.Net %>
+  <strong>Employee Number:</strong>
+  <%= @deduction_table.employee_number %>
 </p>
 
 <p>
   <strong>Farm name:</strong>
   <%= @deduction_table.Farm_Name %>
+</p>
+
+<p>
+  <strong>Allowance:</strong>
+  <%= @deduction_table.allowance %>
+</p>
+
+<p>
+  <strong>P.A.Y.E.E:</strong>
+  <%= @deduction_table.payee %>
+</p>
+
+<p>
+  <strong>N.S.S.A:</strong>
+  <%= @deduction_table.nssa %>
+</p>
+
+<p>
+  <strong>N.E.C:</strong>
+  <%= @deduction_table.nec %>
+</p>
+
+<p>
+  <strong>Cash Requests:</strong>
+  <%= @deduction_table.cash_requests %>
 </p>
 
 <%= link_to 'Edit', edit_deduction_table_path(@deduction_table) %> |
