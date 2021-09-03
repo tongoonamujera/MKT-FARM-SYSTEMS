@@ -1,7 +1,7 @@
 <%= form_with(model: deduction_table, local: true) do |form| %>
   <% if deduction_table.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(deduction_table.errors.count, "error") %> prohibited this deduction_table from being saved:</h2>
+      <h2><%= pluralize(@deduction_table.errors.count, "error") %> prohibited this deduction_table from being saved:</h2>
 
       <ul>
         <% deduction_table.errors.full_messages.each do |message| %>

@@ -26,9 +26,7 @@
             </div>
           </div>
         <% else %>
-        <% ClientPayment.valid.each do |client_payment|%>
-          <% if client_payment.Company_Name == current_user.Company_Name %>
-            
+          <% if authourize_user(current_user) %>
             <div class="column is-3 has-background-black">
               <%= render 'layouts/sidebar'%>
             </div>
@@ -42,7 +40,6 @@
           <%else%>
             <%= render 'layouts/verification' %>
           <% end %>
-        <%end%>
         <% end %>
       <% else %>
         <div class="container">

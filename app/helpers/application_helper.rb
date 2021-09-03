@@ -1,7 +1,10 @@
 module ApplicationHelper
-  def user_status(current_user)
-    if  ClientPayment.all.valid.include?(current_user.Company_Name)
-      current_user.status = true
+  def authourize_user(user)
+    a = ClientPayment.valid.pluck(:Company_Name)
+    if a.include?(user.Company_Name)
+      true
+    else
+      false
     end
   end
 end

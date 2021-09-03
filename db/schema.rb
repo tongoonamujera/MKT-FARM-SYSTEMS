@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_02_081516) do
+ActiveRecord::Schema.define(version: 2021_09_03_072601) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -228,6 +228,26 @@ ActiveRecord::Schema.define(version: 2021_09_02_081516) do
     t.decimal "cash_requests"
     t.string "employee_name"
     t.string "employee_number"
+    t.string "other1_name"
+    t.decimal "other1_amount"
+    t.string "other2_name"
+    t.decimal "other2_amount"
+    t.string "other3_name"
+    t.decimal "other3_amount"
+    t.string "other4_name"
+    t.decimal "other4_amount"
+    t.string "other5_name"
+    t.decimal "other5_amount"
+    t.string "other6_name"
+    t.decimal "other6_amount"
+    t.string "other7_name"
+    t.decimal "other7_amount"
+    t.string "other8_name"
+    t.decimal "other8_amount"
+    t.string "other9_name"
+    t.decimal "other9_amount"
+    t.string "other10_name"
+    t.decimal "other10_amount"
   end
 
   create_table "deliveries", force: :cascade do |t|
@@ -314,7 +334,6 @@ ActiveRecord::Schema.define(version: 2021_09_02_081516) do
     t.string "Section"
     t.string "Crop"
     t.string "Variety"
-    t.string "Fertiiliser_TypeFertiliser_Rate"
     t.string "Bags_Used"
     t.string "Herbicide"
     t.string "Herbicide_Rate"
@@ -322,6 +341,8 @@ ActiveRecord::Schema.define(version: 2021_09_02_081516) do
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "fertiliser_rate"
+    t.string "fertiliser_type"
     t.index ["user_id"], name: "index_input_calibrations_on_user_id"
   end
 
