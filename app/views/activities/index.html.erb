@@ -31,19 +31,10 @@
           <td><%= activity.Activity %></td>
           <td><%= activity.Pro_Number %></td>
           <td><%= activity.user_id %></td>
-          <td class="navbar">
-            <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link">
-                Actions
-              </a>
-
-              <div class="navbar-dropdown has-background-info">
-                <%= link_to 'Show', activity, class:"navbar-item" %>
-                <%= link_to 'Edit', edit_activity_path(activity), class:"navbar-item" %>
-                <%= link_to 'Destroy', activity, method: :delete, data: { confirm: 'Are you sure?' }, class:"navbar-item" %>
-              </div>
-            </div>
-          </td>
+          <td><%= link_to 'Show', activity, class:"navbar-item" %></td>
+          <td><%= link_to 'Edit', edit_activity_path(activity), class:"navbar-item" %></td>
+          <td><%= link_to 'Destroy', activity, method: :delete, data: { confirm: 'Are you sure?' }, class:"navbar-item" %></td>
+          
         </tr>
       <% end %>
     </tbody>

@@ -152,6 +152,16 @@
   </div>
 
   <div class="field">
+    <%= form.label :zw_payments, class:"label" %>
+    <%= form.text_field :zw_payments, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :usd_payments, class:"label" %>
+    <%= form.text_field :usd_payments, class:"input" %>
+  </div>
+
+  <div class="field">
     <%= form.text_field :user_id, value: current_user.id, type: :hidden %>
   </div>
 

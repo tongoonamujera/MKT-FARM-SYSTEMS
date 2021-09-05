@@ -7,4 +7,8 @@ module ApplicationHelper
       false
     end
   end
+
+  def deduction_totals(employee)
+    DeductionTable.where("employee_name =?", 'Taurai Meki').order(:nssa, :nec, :payee, :cash_requests)
+  end
 end

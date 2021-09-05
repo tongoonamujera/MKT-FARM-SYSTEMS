@@ -64,6 +64,6 @@ class TobaccoSalesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def tobacco_sale_params
-      params.require(:tobacco_sale).permit(:season, :date, :grower_number, :section, :sale_number, :bales_sold, :mass, :collect_bales, :average_price, :weighing_and_auction, :afforestration, :levy, :stop_oder_commission, :insurance_name, :insurance_amount, :bank_name, :bank_amount, :tianZe, :balance, :transporter_name, :transporter_amount, :other_1_name, :other_1_amount, :other_2_name, :other_2_amount, :gross_realisation, :net_realistion, :user_id, :company_name)
+      params.require(:tobacco_sale).permit(:season, :date, :grower_number, :section, :sale_number, :bales_sold, :mass, :collect_bales, :average_price, :weighing_and_auction, :afforestration, :levy, :stop_oder_commission, :insurance_name, :insurance_amount, :bank_name, :bank_amount, :tianZe, :balance, :transporter_name, :transporter_amount, :other_1_name, :other_1_amount, :other_2_name, :other_2_amount, :gross_realisation, :net_realistion, :user_id, :company_name, :usd_payments, :zw_payments)
     end
 end
