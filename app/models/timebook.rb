@@ -2,7 +2,7 @@ class Timebook < ApplicationRecord
   belongs_to :user
 
   def self.count_days
-    where('employee_name =?', 'Taurai Meki').where('day =?', '1').pluck(:day).size
+    where('date >=?', Date.today).where('day =?', '1').pluck(:day).size
   end
 
   def self.add_rate

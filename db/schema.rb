@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_05_070217) do
+ActiveRecord::Schema.define(version: 2021_09_06_145012) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -248,6 +248,8 @@ ActiveRecord::Schema.define(version: 2021_09_05_070217) do
     t.decimal "other9_amount"
     t.string "other10_name"
     t.decimal "other10_amount"
+    t.date "month_starting"
+    t.date "month_ending"
   end
 
   create_table "deliveries", force: :cascade do |t|
