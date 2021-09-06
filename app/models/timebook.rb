@@ -1,9 +1,15 @@
 class Timebook < ApplicationRecord
   belongs_to :user
 
-  def cal_value
-    Timebook.find_each do |user|
-      value =  user.rate.to_f * user.day.to_f
-    end
+  def self.count_days
+    where('employee_name =?', 'Taurai Meki').where('day =?', '1').pluck(:day).size
+  end
+
+  def self.add_rate
+    where('employee_name =?', 'Taurai Meki').where('day =?', '1').pluck(:rate).inject(:+)
+  end
+
+  def self.check_record_existance
+    where('created_at >=?', Date.today).pluck(:employee_name)
   end
 end
