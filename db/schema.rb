@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_06_145012) do
+ActiveRecord::Schema.define(version: 2021_09_07_082226) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(version: 2021_09_06_145012) do
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "vat"
     t.index ["user_id"], name: "index_assets_on_user_id"
   end
 
@@ -150,6 +151,7 @@ ActiveRecord::Schema.define(version: 2021_09_06_145012) do
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "crop"
     t.index ["user_id"], name: "index_cereal_sales_on_user_id"
   end
 
@@ -250,6 +252,7 @@ ActiveRecord::Schema.define(version: 2021_09_06_145012) do
     t.decimal "other10_amount"
     t.date "month_starting"
     t.date "month_ending"
+    t.float "total_amount"
   end
 
   create_table "deliveries", force: :cascade do |t|

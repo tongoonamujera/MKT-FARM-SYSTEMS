@@ -35,14 +35,14 @@
   <div class="field">
     <%= form.label :month_starting, class:"label" %>
     <div class="control">
-      <%= form.text_field :month_starting, class:"input" %>
+      <%= form.date_select :month_starting, class:"input" %>
     </div>
   </div>
 
   <div class="field">
     <%= form.label :month_ending, class:"label" %>
     <div class="control">
-      <%= form.text_field :month_ending, class:"input" %>
+      <%= form.date_select :month_ending, class:"input" %>
     </div>
   </div>
 
@@ -64,6 +64,13 @@
     <%= form.label :allowance, class:"label" %>
     <div class="control">
       <%= form.text_field :allowance, class:"input" %>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= form.label :total_amount, class:"label" %>
+    <div class="control">
+      <%= form.text_field :total_amount, class:"input" %>
     </div>
   </div>
 

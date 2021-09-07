@@ -85,6 +85,27 @@
                 <%= form.text_field :cash_requests, class:"input" %>
               </div>
             </div>
+
+            <div class="field">
+              <%= form.label :month_starting, class:"label" %>
+              <div class="control">
+                <%= form.date_select :month_starting, class:"input" %>
+              </div>
+            </div>
+
+            <div class="field">
+              <%= form.label :month_ending, class:"label" %>
+              <div class="control">
+                <%= form.date_select :month_ending, class:"input" %>
+              </div>
+            </div>
+
+            <div class="field">
+              <%= form.label :total_amount, class:"label" %>
+              <div class="control">
+                <%= form.text_field :total_amount, class:"input" %>
+              </div>
+            </div>
           </div>
         </div>
 
