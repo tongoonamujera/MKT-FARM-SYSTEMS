@@ -33,7 +33,7 @@
         <td><%= deduction_table.nssa %></td>
         <td><%= deduction_table.nec %></td>
         <td><%= deduction_table.cash_requests %></td>
-        <td><%= deduction_table.total_amount %></td>
+        <td><%= employee_deductions(deduction_table.employee_name) %></td>
         <td><%= link_to 'Show', deduction_table %></td>
         <td><%= link_to 'Edit', edit_deduction_table_path(deduction_table) %></td>
         <td><%= link_to 'Destroy', deduction_table, method: :delete, data: { confirm: 'Are you sure?' } %></td>

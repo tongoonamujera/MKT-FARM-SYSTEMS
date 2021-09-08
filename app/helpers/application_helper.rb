@@ -14,4 +14,8 @@ module ApplicationHelper
       true
     end
   end
+
+  def employee_deductions(employee)
+    DeductionTable.created_within_month(employee)
+  end
 end
