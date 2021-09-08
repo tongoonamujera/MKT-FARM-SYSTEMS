@@ -16,6 +16,8 @@ module ApplicationHelper
   end
 
   def employee_deductions(employee)
-    DeductionTable.created_within_month(employee)
+    a = DeductionTable.created_within_month(employee)
+    b = DeductionTable.where("DATE_PART('month', created_at) = ? AND DATE_PART('year', created_at) =?", Date.today.month, Date.today.year).where('employee_name =?', employee).pluck(:allowance).first
+    a - b
   end
 end
