@@ -25,8 +25,8 @@ class DeductionTablesController < ApplicationController
 
     respond_to do |format|
       if @deduction_table.save
-        format.html { redirect_to @deduction_table, notice: "Deduction table was successfully created." }
-        format.json { render :show, status: :created, location: @deduction_table }
+        format.html { redirect_to deduction_tables_url, notice: "Deduction table was successfully created." }
+        format.json { render :index, status: :created, location: deduction_tables_url }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @deduction_table.errors, status: :unprocessable_entity }

@@ -17,6 +17,11 @@ class DeductionTable < ApplicationRecord
     c = DeductionTable.last.id
     a = DeductionTable.where("id =?", c).pluck(:nssa, :nec, :payee, :cash_requests, :other1_amount, :other2_amount, :other3_amount, :other4_amount, :other5_amount, :other6_amount, :other7_amount, :other8_amount, :other9_amount, :other10_amount).flatten.compact.inject(:+)
     b = DeductionTable.where("id =?", c).pluck(:allowance).compact.first
+
+    if b.nil?
+      b = 0
+    end
+
     a - b
   end
 end
