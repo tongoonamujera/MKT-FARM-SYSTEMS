@@ -19,6 +19,10 @@
   background-color: rgba(3, 3, 78, 0.993);
 }
 
+.hidden {
+  display: none;
+}
+
 .overflow-y {
   height: 90vh;
   overflow-y: scroll;
