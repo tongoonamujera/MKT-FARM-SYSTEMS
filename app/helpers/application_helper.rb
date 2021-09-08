@@ -15,6 +15,13 @@ module ApplicationHelper
     end
   end
 
+  def deduction_record_exists(employee)
+    a = DeductionTable.check_deduction_existance
+    if a.include?(employee)
+      true
+    end
+  end
+
   def employee_deductions(employee)
     a = DeductionTable.created_within_month(employee)
     b = DeductionTable.where("DATE_PART('month', created_at) = ? AND DATE_PART('year', created_at) =?", Date.today.month, Date.today.year).where('employee_name =?', employee).pluck(:allowance).first

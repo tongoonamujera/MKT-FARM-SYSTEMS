@@ -24,4 +24,8 @@ class DeductionTable < ApplicationRecord
 
     a - b
   end
+
+  def self.check_deduction_existance
+    where("DATE_PART('month', created_at) = ? AND DATE_PART('year', created_at) =?", Date.today.month, Date.today.year).pluck(:employee_name)
+  end
 end
