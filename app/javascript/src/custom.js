@@ -11,7 +11,7 @@ window.onload = function(){
   // a = document.getElementById("clickButton");
   // a.addEventListener("click", formDivControll)
 
-  var acc = document.getElementsByClassName("clickbutton");
+var acc = document.getElementsByClassName("clickbutton");
 var i;
 
 for (i = 0; i < acc.length; i++) {
