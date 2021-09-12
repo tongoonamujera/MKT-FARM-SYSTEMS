@@ -64,6 +64,6 @@ class WagesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def wage_params
-      params.require(:wage).permit(:Company_Name, :daily_rate, :empoyee_number, :Farm_Name, :worker_status, :employee_name, :Pro_Number, :user_id)
+      params.require(:wage).permit(:company_name, :season, :month, :empoyee_number, :farm_name, :days_worked, :employee_name, :gross, :payee, :allowance, :nssa, :nec, :cash_requests, :other_deductions, :net, :user_id)
     end
 end

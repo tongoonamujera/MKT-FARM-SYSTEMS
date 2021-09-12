@@ -12,16 +12,23 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :Company_Name, class:"label" %>
+    <%= form.label :company_name, class:"label" %>
     <div class="control">
-      <%= form.select :Company_Name, [current_user.Company_Name], class:"my-3" %>
+      <%= form.select :company_name, [current_user.Company_Name], class:"my-3" %>
     </div>
   </div>
 
   <div class="field">
-    <%= form.label :daily_rate, class:"label" %>
+    <%= form.label :month, class:"label" %>
     <div class="control">
-      <%= form.text_field :daily_rate, class:"input" %>
+      <%= form.text_field :month, class:"input" %>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= form.label :season, class:"label" %>
+    <div class="control">
+      <%= form.text_field :season, class:"input" %>
     </div>
   </div>
 
@@ -33,16 +40,16 @@
   </div>
 
   <div class="field">
-    <%= form.label :Farm_Name, class:"label" %>
+    <%= form.label :farm_name, class:"label" %>
     <div class="control">
-      <%= form.text_field :Farm_Name, class:"input" %>
+      <%= form.text_field :farm_name, class:"input" %>
     </div>
   </div>
 
   <div class="field">
-    <%= form.label :worker_status, class:"label" %>
+    <%= form.label :days_worked, class:"label" %>
     <div class="control">
-      <%= form.select :worker_status, ['Permanent', 'Maricho'], class:"my-3" %>
+      <%= form.text_field :days_worked, ['Permanent', 'Maricho'], class:"my-3" %>
     </div>
   </div>
 
@@ -54,9 +61,58 @@
   </div>
 
   <div class="field">
-    <%= form.label :Pro_Number, class:"label" %>
+    <%= form.label :gross, class:"label" %>
     <div class="control">
-      <%= form.text_field :Pro_Number, class:"input" %>
+      <%= form.text_field :gross, class:"input" %>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= form.label :payee, class:"label" %>
+    <div class="control">
+      <%= form.text_field :payee, class:"input" %>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= form.label :allowance, class:"label" %>
+    <div class="control">
+      <%= form.text_field :allowance, class:"input" %>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= form.label :nssa, class:"label" %>
+    <div class="control">
+      <%= form.text_field :nssa, class:"input" %>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= form.label :nec, class:"label" %>
+    <div class="control">
+      <%= form.text_field :nec, class:"input" %>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= form.label :cash_requests, class:"label" %>
+    <div class="control">
+      <%= form.text_field :cash_requests, class:"input" %>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= form.label :other_deductions, class:"label" %>
+    <div class="control">
+      <%= form.text_field :other_deductions, class:"input" %>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= form.label :net, class:"label" %>
+    <div class="control">
+      <%= form.text_field :net, class:"input" %>
     </div>
   </div>
 

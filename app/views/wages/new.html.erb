@@ -1,15 +1,176 @@
-<div class="columns">
-  <div class="column">
-    <div class="card">
-      <div class="card-header">
-        <h1>New Wage</h1>
-      </div>
-      <div class="card-content">
-        <div class="content">
-          <%= render 'form', wage: @wage %>
-          <%= link_to 'Back', wages_path, class:"button is-dark my-3" %>
+<% DeductionTable.all.each do |deduction| %>
+  <div class="box">
+    <div class="has-background-black">
+      <h1 class="has-text-centered py-0"><strong class="has-text-white">Creating Monthly Wage for: <%= deduction.employee_name %>. Emp Number: <%= deduction.employee_number %></strong></h1>
+    </div>
+
+    <%= form_with(model: @wage, local: true) do |form| %>
+      <% if @wage.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@wage.errors.count, "error") %> prohibited this wage from being saved:</h2>
+
+          <ul>
+            <% @wage.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="columns">
+        <div class="column is-3">
+          <div class="column-sec">
+            <div class="has-text-centered has-background-dark has-text-white">
+              Gross
+            </div>
+            <div class="my-1 has-text-centered">
+              $<%= Timebook.monthly_total_rate(deduction.employee_name) %>
+              <%= form.text_field :gross, value: Timebook.monthly_total_rate(deduction.employee_name), type: :hidden %>
+            </div>
+          </div>
+        </div>
+
+        <div class="column is-3">
+          <div class="column-sec">
+            <div class="has-text-centered has-background-dark has-text-white">
+              Days Worked
+            </div>
+            <div class="my-1 has-text-centered">
+              <%= Timebook.count_days(deduction.employee_name) %>
+              <%= form.text_field :days_worked, value: Timebook.count_days(deduction.employee_name), type: :hidden %>
+            </div>
+          </div>
+        </div>
+
+        <div class="column is-3">
+          <div class="column-sec">
+            <div class="has-text-centered has-background-dark has-text-white">
+              Allowance
+            </div>
+            <div class="my-1 has-text-centered">
+              $<%= deduction.allowance %>
+              <%= form.text_field :allowance, value: deduction.allowance, type: :hidden %>
+            </div>
+          </div>
+        </div>
+
+        <div class="column is-3">
+          <div class="column-sec">
+            <div class="has-text-centered has-background-dark has-text-white">
+              Net
+            </div>
+            <div class="my-1 has-text-centered">
+              $<%= (Timebook.monthly_total_rate(deduction.employee_name)- deduction.total_amount) %>
+              <%= form.text_field :employee_number, value: (Timebook.monthly_total_rate(deduction.employee_name) - deduction.total_amount), type: :hidden %>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+
+
+      <div class="columns">
+        <div class="column is-3">
+          <div class="column-sec">
+            <div class="has-text-centered has-background-dark has-text-white">
+              Payee
+            </div>
+            <div class="my-1 has-text-centered">
+              $<%= deduction.payee %>
+              <%= form.text_field :payee, value: deduction.payee, type: :hidden %>
+            </div>
+          </div>
+        </div>
+
+        <div class="column is-3">
+          <div class="column-sec">
+            <div class="has-text-centered has-background-dark has-text-white">
+              N.S.S.A
+            </div>
+            <div class="my-1 has-text-centered">
+              <%= deduction.nssa %>
+              <%= form.text_field :nssa, value: deduction.nssa, type: :hidden %>
+            </div>
+          </div>
+        </div>
+
+        <div class="column is-3">
+          <div class="column-sec">
+            <div class="has-text-centered has-background-dark has-text-white">
+              N.E.C
+            </div>
+            <div class="my-1 has-text-centered">
+              $<%= deduction.nec %>
+              <%= form.text_field :nec, value: deduction.nec, type: :hidden %>
+            </div>
+          </div>
+        </div>
+
+        <div class="column is-3">
+          <div class="column-sec">
+            <div class="has-text-centered has-background-dark has-text-white">
+              Cash Requests
+            </div>
+            <div class="my-1 has-text-centered">
+              <%= deduction.cash_requests %>
+              <%= form.text_field :cash_requests, value: deduction.cash_requests, type: :hidden %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="columns">
+        <div class="column is-3">
+          <div class="column-sec">
+            <div class="has-text-centered has-background-dark has-text-white">
+              Other deductions total
+            </div>
+            <div class="my-1 has-text-centered">
+              <%= form.text_field :other_deductions, class:"input-wage" %>
+            </div>
+          </div>
+        </div>
+
+        <div class="column is-3">
+          <div class="column-sec">
+            <div class="has-text-centered has-background-dark has-text-white">
+              Farm Name
+            </div>
+            <div class="my-1 has-text-centered">
+              <%= form.text_field :farm_name, class:"input-wage" %>
+            </div>
+          </div>
+        </div>
+
+        <div class="column is-3">
+          <div class="column-sec">
+            <div class="has-text-centered has-background-dark has-text-white">
+              Company Name
+            </div>
+            <div class="my-1 has-text-centered">
+              <%= form.select :company_name, [current_user.Company_Name] %>
+            </div>
+          </div>
+        </div>
+
+        <div class="column is-3">
+          <div class="column-sec">
+            <div class="has-text-centered has-background-dark has-text-white">
+              Month
+            </div>
+            <div class="my-1 has-text-centered">
+              <%= form.text_field :month, class:"input-wage" %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <%= form.text_field :empoyee_number, value: deduction.employee_name, type: :hidden %>
+      <%= form.text_field :employee_name, value: deduction.employee_name, type: :hidden %>
+      <%= form.text_field :user_id, value: current_user.id, type: :hidden %>
+      <div class="actions has-text-centered">
+        <%= form.submit "Create Wage", class:"button is-success" %>
+      </div>
+    <% end %>
   </div>
-</div>
+<% end %>

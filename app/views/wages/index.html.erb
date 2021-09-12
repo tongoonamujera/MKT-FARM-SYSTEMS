@@ -5,13 +5,21 @@
 <table class="table">
   <thead>
     <tr>
+      <th>Season</th>
+      <th>Month</th>
       <th>Company name</th>
       <th>Farm Name</th>
       <th>Employee Name</th>
       <th>Employee Number</th>
-      <th>Daily Rate</th>
-      <th>Worker Status</th>
-      <th>Pro number</th>
+      <th>Days Worked</th>
+      <th>Gross</th>
+      <th>Allowance</th>
+      <th>Payee</th>
+      <th>NSSA</th>
+      <th>NEC</th>
+      <th>Cash Requests</th>
+      <th>Other Deductions</th>
+      <th>Net</th>
       <th>User</th>
       <th colspan="3"></th>
     </tr>
@@ -20,13 +28,21 @@
   <tbody>
     <% @wages.each do |wage| %>
       <tr>
-        <td><%= wage.Company_Name %></td>
-        <td><%= wage.Farm_Name %></td>
+        <td><%= wage.season %></td>
+        <td><%= wage.month %></td>
+        <td><%= wage.company_name %></td>
+        <td><%= wage.farm_name %></td>
         <td><%= wage.employee_name %></td>
         <td><%= wage.empoyee_number %></td>
-        <td><%= wage.daily_rate %></td>
-        <td><%= wage.worker_status %></td>
-        <td><%= wage.Pro_Number %></td>
+        <td><%= wage.days_worked %></td>
+        <td><%= wage.gross %></td>
+        <td><%= wage.allowance %></td>
+        <td><%= wage.payee %></td>
+        <td><%= wage.nssa %></td>
+        <td><%= wage.nec %></td>
+        <td><%= wage.cash_requests %></td>
+        <td><%= wage.other_deductions %></td>
+        <td><%= wage.net %></td>
         <td><%= wage.user_id %></td>
         <td><%= link_to 'Show', wage %></td>
         <td><%= link_to 'Edit', edit_wage_path(wage) %></td>
