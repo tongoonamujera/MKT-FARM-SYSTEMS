@@ -11,7 +11,7 @@ class Wage < ApplicationRecord
     c = Wage.last.id
     d = Wage.last.employee_name
     a = Wage.where("id =?", c).pluck(:gross).flatten.compact.inject(:+)
-    b = DeductionTable.where("employee_name =?", d).pluck(:total_amount).compact.first
+    b = DeductionTable.where("employee_name =?", d).where("DATE_PART('month', created_at) = ? AND DATE_PART('year', created_at) =?", Date.today.month, Date.today.year).pluck(:total_amount).compact.first
 
     if b.nil?
       b = 0
