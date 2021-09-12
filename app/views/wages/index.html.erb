@@ -20,7 +20,6 @@
       <th>Cash Requests</th>
       <th>Other Deductions</th>
       <th>Net</th>
-      <th>User</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -43,7 +42,6 @@
         <td><%= wage.cash_requests %></td>
         <td><%= wage.other_deductions %></td>
         <td><%= wage.net %></td>
-        <td><%= wage.user_id %></td>
         <td><%= link_to 'Show', wage %></td>
         <td><%= link_to 'Edit', edit_wage_path(wage) %></td>
         <td><%= link_to 'Destroy', wage, method: :delete, data: { confirm: 'Are you sure?' } %></td>

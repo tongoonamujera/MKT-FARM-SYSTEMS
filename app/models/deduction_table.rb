@@ -23,6 +23,10 @@ class DeductionTable < ApplicationRecord
       b = 0
     end
 
+    if a.nil?
+      a = 0
+    end
+
     a - b
   end
 
