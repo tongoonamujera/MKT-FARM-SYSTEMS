@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @input_stores_usage.company_name %>
+</p>
+
+<p>
+  <strong>Season:</strong>
+  <%= @input_stores_usage.season %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @input_stores_usage.date %>
+</p>
+
+<p>
+  <strong>Farm name:</strong>
+  <%= @input_stores_usage.farm_name %>
+</p>
+
+<p>
+  <strong>Input name:</strong>
+  <%= @input_stores_usage.input_name %>
+</p>
+
+<p>
+  <strong>Quantity used:</strong>
+  <%= @input_stores_usage.quantity_used %>
+</p>
+
+<p>
+  <strong>Unit:</strong>
+  <%= @input_stores_usage.unit %>
+</p>
+
+<p>
+  <strong>Total amount:</strong>
+  <%= @input_stores_usage.total_amount %>
+</p>
+
+<p>
+  <strong>Profile number:</strong>
+  <%= @input_stores_usage.profile_number %>
+</p>
+
+<p>
+  <strong>Delete:</strong>
+  <%= @input_stores_usage.deleted %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @input_stores_usage.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_input_stores_usage_path(@input_stores_usage) %> |
+<%= link_to 'Back', input_stores_usages_path %>

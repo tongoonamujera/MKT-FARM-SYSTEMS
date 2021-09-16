@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_12_064006) do
+ActiveRecord::Schema.define(version: 2021_09_16_061051) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -351,6 +351,23 @@ ActiveRecord::Schema.define(version: 2021_09_12_064006) do
     t.index ["user_id"], name: "index_input_calibrations_on_user_id"
   end
 
+  create_table "input_stores_usages", force: :cascade do |t|
+    t.string "company_name"
+    t.string "season"
+    t.date "date"
+    t.string "farm_name"
+    t.string "input_name"
+    t.string "quantity_used"
+    t.string "unit"
+    t.string "total_amount"
+    t.string "profile_number"
+    t.boolean "deleted", default: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_input_stores_usages_on_user_id"
+  end
+
   create_table "irriagtion_schedules", force: :cascade do |t|
     t.string "Company_Name"
     t.date "Date"
@@ -642,6 +659,7 @@ ActiveRecord::Schema.define(version: 2021_09_12_064006) do
   add_foreign_key "equipment_services", "users"
   add_foreign_key "harvestings", "users"
   add_foreign_key "input_calibrations", "users"
+  add_foreign_key "input_stores_usages", "users"
   add_foreign_key "irriagtion_schedules", "users"
   add_foreign_key "purchases", "users"
   add_foreign_key "rainfalls", "users"
