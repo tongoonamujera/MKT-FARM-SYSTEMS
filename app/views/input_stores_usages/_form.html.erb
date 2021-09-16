@@ -1,72 +1,74 @@
-<%= form_with(model: input_stores_usage, local: true) do |form| %>
-  <% if input_stores_usage.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(input_stores_usage.errors.count, "error") %> prohibited this input_stores_usage from being saved:</h2>
+<div class="box">
+  <%= form_with(model: input_stores_usage, local: true) do |form| %>
+    <% if input_stores_usage.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(input_stores_usage.errors.count, "error") %> prohibited this input_stores_usage from being saved:</h2>
 
-      <ul>
-        <% input_stores_usage.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
+        <ul>
+          <% input_stores_usage.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= form.label :company_name, class:"label" %>
+      <%= form.text_field :company_name, class:"input" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :season, class:"label" %>
+      <%= form.text_field :season, class:"input" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :date %>
+      <%= form.date_select :date %>
+    </div>
+
+    <div class="field">
+      <%= form.label :farm_name, class:"label" %>
+      <%= form.text_field :farm_name, class:"input" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :input_name, class:"label" %>
+      <%= form.text_field :input_name, class:"input" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :quantity_used, class:"label" %>
+      <%= form.text_field :quantity_used, class:"input" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :unit, class:"label" %>
+      <%= form.text_field :unit, class:"input" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :total_amount, class:"label" %>
+      <%= form.text_field :total_amount, class:"input" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :profile_number, class:"label" %>
+      <%= form.text_field :profile_number, class:"input" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :deleted %>
+      <%= form.check_box :deleted %>
+    </div>
+
+    <div class="field">
+      <%= form.label :user_id, class:"label" %>
+      <%= form.text_field :user_id, value: current_user.id, class:"input" %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit class:"button is-success" %>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :company_name %>
-    <%= form.text_field :company_name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :season %>
-    <%= form.text_field :season %>
-  </div>
-
-  <div class="field">
-    <%= form.label :date %>
-    <%= form.date_select :date %>
-  </div>
-
-  <div class="field">
-    <%= form.label :farm_name %>
-    <%= form.text_field :farm_name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :input_name %>
-    <%= form.text_field :input_name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :quantity_used %>
-    <%= form.text_field :quantity_used %>
-  </div>
-
-  <div class="field">
-    <%= form.label :unit %>
-    <%= form.text_field :unit %>
-  </div>
-
-  <div class="field">
-    <%= form.label :total_amount %>
-    <%= form.text_field :total_amount %>
-  </div>
-
-  <div class="field">
-    <%= form.label :profile_number %>
-    <%= form.text_field :profile_number %>
-  </div>
-
-  <div class="field">
-    <%= form.label :deleted %>
-    <%= form.check_box :deleted %>
-  </div>
-
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>

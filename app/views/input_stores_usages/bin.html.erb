@@ -19,7 +19,7 @@
   </thead>
 
   <tbody>
-    <% @input_stores_usages.each do |input_stores_usage| %>
+    <% @input_stores_usages_deleted.each do |input_stores_usage| %>
       <tr>
         <td><%= input_stores_usage.company_name %></td>
         <td><%= input_stores_usage.season %></td>
@@ -31,18 +31,15 @@
         <td><%= input_stores_usage.total_amount %></td>
         <td><%= input_stores_usage.profile_number %></td>
         <td><%= link_to 'Show', input_stores_usage %></td>
-        <td><%= link_to 'Edit', edit_input_stores_usage_path(input_stores_usage) %></td>
         <td>
-          <%= form_for input_stores_usage, :url =>[:delete_records, input_stores_usage], html: { method: :put } do |f| %>
-          <%= f.submit 'delete' %>
-        <% end %>
+          <%= form_for input_stores_usage, :url =>[:restore_records, input_stores_usage], html: { method: :put } do |f| %>
+          <%= f.submit 'restore' %>
+          <% end %>
         </td>
+        <td><%= link_to 'Destroy', input_stores_usage, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-<%= link_to 'Bin', bin_input_stores_usage_path(@input_stores_usages), class:"button is-success" %>
-
-<%= link_to 'New Input Stores Usage', new_input_stores_usage_path, class:"button is-success" %>
+<%= link_to 'Back', input_stores_usages_path, class:"button is-dark" %>

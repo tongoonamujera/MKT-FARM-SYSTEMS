@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :input_stores_usages
+  resources :input_stores_usages do
+    get :bin, on: :member
+    put :delete_records, on: :member
+    put :restore_records, on: :member
+  end
   resources :timebooks
   resources :employees
   resources :tobacco_sales

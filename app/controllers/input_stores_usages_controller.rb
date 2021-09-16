@@ -3,7 +3,11 @@ class InputStoresUsagesController < ApplicationController
 
   # GET /input_stores_usages or /input_stores_usages.json
   def index
-    @input_stores_usages = InputStoresUsage.all
+    @input_stores_usages = InputStoresUsage.where("deleted =?", false)
+  end
+
+  def bin
+    @input_stores_usages_deleted = InputStoresUsage.where("deleted =?", true)
   end
 
   # GET /input_stores_usages/1 or /input_stores_usages/1.json
@@ -54,6 +58,18 @@ class InputStoresUsagesController < ApplicationController
       format.html { redirect_to input_stores_usages_url, notice: "Input stores usage was successfully destroyed." }
       format.json { head :no_content }
     end
+  end
+
+  def delete_records
+    @input_stores_usages = InputStoresUsage.find(params[:id])
+    @input_stores_usages.delete_record
+    redirect_to input_stores_usages_url
+  end
+
+  def restore_records
+    @input_stores_usages = InputStoresUsage.find(params[:id])
+    @input_stores_usages.restore_record
+    redirect_to bin_input_stores_usage_path(@input_stores_usages)
   end
 
   private
