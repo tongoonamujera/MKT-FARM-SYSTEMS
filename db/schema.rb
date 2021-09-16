@@ -595,7 +595,7 @@ ActiveRecord::Schema.define(version: 2021_09_12_064006) do
     t.decimal "cash_requests"
     t.decimal "other_deductions"
     t.decimal "net"
-    t.date "month"
+    t.string "month"
     t.decimal "nec"
     t.index ["user_id"], name: "index_wages_on_user_id"
   end

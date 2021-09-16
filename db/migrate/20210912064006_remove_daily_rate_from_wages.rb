@@ -16,7 +16,7 @@ class RemoveDailyRateFromWages < ActiveRecord::Migration[6.0]
     add_column :wages, :cash_requests, :decimal
     add_column :wages, :other_deductions, :decimal
     add_column :wages, :net, :decimal
-    add_column :wages, :month, :date
+    add_column :wages, :month, :string
     add_column :wages, :nec, :decimal
   end
 end

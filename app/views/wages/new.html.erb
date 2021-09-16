@@ -159,7 +159,8 @@
               Month
             </div>
             <div class="my-1 has-text-centered">
-              <%= form.text_field :month, class:"input-wage" %>
+              <%= deduction.Month %>
+              <%= form.text_field :month, value: deduction.Month, type: :hidden %>
             </div>
           </div>
         </div>
@@ -167,6 +168,7 @@
 
       <%= form.text_field :empoyee_number, value: deduction.employee_name, type: :hidden %>
       <%= form.text_field :employee_name, value: deduction.employee_name, type: :hidden %>
+      <%= form.text_field :season, value: deduction.Season, type: :hidden %>
       <%= form.text_field :user_id, value: current_user.id, type: :hidden %>
       <div class="actions has-text-centered">
         <%= form.submit "Create New Employee Wage", class:"button is-success" %>
