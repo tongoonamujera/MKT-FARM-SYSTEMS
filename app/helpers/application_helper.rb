@@ -27,4 +27,10 @@ module ApplicationHelper
     b = DeductionTable.where("DATE_PART('month', created_at) = ? AND DATE_PART('year', created_at) =?", Date.today.month, Date.today.year).where('employee_name =?', employee).pluck(:allowance).first
     a - b
   end
+
+  def quantity(types)
+    a = Store.where('types =?', types).pluck(:quantity).inject(:+)
+    b = InputStoresUsage.where('types =? AND deleted =?', types, false).pluck(:quantity_used).inject(:+)
+    a - b
+  end
 end

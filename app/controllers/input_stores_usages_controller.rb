@@ -17,6 +17,7 @@ class InputStoresUsagesController < ApplicationController
   # GET /input_stores_usages/new
   def new
     @input_stores_usage = InputStoresUsage.new
+    @stores = Store.all
   end
 
   # GET /input_stores_usages/1/edit
@@ -55,7 +56,7 @@ class InputStoresUsagesController < ApplicationController
   def destroy
     @input_stores_usage.destroy
     respond_to do |format|
-      format.html { redirect_to input_stores_usages_url, notice: "Input stores usage was successfully destroyed." }
+      format.html { redirect_to bin_input_stores_usage_path(@input_stores_usage), notice: "Input stores usage was successfully destroyed." }
       format.json { head :no_content }
     end
   end
@@ -80,6 +81,6 @@ class InputStoresUsagesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def input_stores_usage_params
-      params.require(:input_stores_usage).permit(:company_name, :season, :date, :farm_name, :input_name, :quantity_used, :unit, :total_amount, :profile_number, :deleted, :user_id)
+      params.require(:input_stores_usage).permit(:company_name, :types, :season, :date, :farm_name, :input_name, :quantity_used, :unit, :total_amount, :profile_number, :deleted, :user_id, :search)
     end
 end

@@ -1,75 +1,79 @@
 
-<% Store.all.each do |store|%>
-<div class="box">
-  <div class="has-text-centered">
-    <strong>Creating Usage for:<%= store.Input_Name %></strong>
-  </div>
-  <div class="columns">
-    <div class="column is-12">
-      <div class="box">
-        <%= form_with(model: @input_stores_usage, local: true) do |form| %>
-          <% if @input_stores_usage.errors.any? %>
-            <div id="error_explanation">
-              <h2><%= pluralize(@input_stores_usage.errors.count, "error") %> prohibited this input_stores_usage from being saved:</h2>
+<% @stores.each do |store|%>
+  <div class="box">
+    <div class="has-text-centered">
+      <strong>Creating Usage for:<%= store.input_name %></strong>
+    </div>
+    <div class="columns">
+      <div class="column is-12">
+        <div class="box">
+          <%= form_with(model: @input_stores_usage, local: true) do |form| %>
+            <% if @input_stores_usage.errors.any? %>
+              <div id="error_explanation">
+                <h2><%= pluralize(@input_stores_usage.errors.count, "error") %> prohibited this input_stores_usage from being saved:</h2>
 
-              <ul>
-                <% @input_stores_usage.errors.full_messages.each do |message| %>
-                  <li><%= message %></li>
-                <% end %>
-              </ul>
+                <ul>
+                  <% @input_stores_usage.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                  <% end %>
+                </ul>
+              </div>
+            <% end %>
+
+            <div class="field">
+              <%= form.text_field :company_name, value: store.company_name, type: :hidden %>
+            </div>
+
+            <div class="field">
+              <%= form.text_field :season, value: store.season, type: :hidden %>
+            </div>
+
+            <div class="field">
+              <%= form.label :date %>
+              <%= form.date_select :date %>
+            </div>
+
+            <div class="field">
+              <%= form.text_field :farm_name, value: store.farm_name, type: :hidden %>
+            </div>
+
+            <div class="field">
+              <%= form.text_field :input_name, value: store.input_name, type: :hidden  %>
+            </div>
+
+            <div class="field">
+              <%= form.label :quantity_used, class:"label" %>
+              <%= form.text_field :quantity_used, class:"input" %>
+            </div>
+
+            <div class="field">
+              <%= form.text_field :unit, value: store.unit, type: :hidden %>
+            </div>
+
+            <div class="field">
+              <%= form.text_field :types, value: store.types, type: :hidden %>
+            </div>
+
+            <div class="field">
+              <%= form.text_field :total_amount, value: 0, type: :hidden %>
+            </div>
+
+            <div class="field">
+              <%= form.text_field :profile_number, value: store.pro_number, type: :hidden %>
+            </div>
+
+            <div class="field">
+              <%= form.text_field :user_id, value: current_user.id, type: :hidden %>
+            </div>
+
+            <div class="actions">
+              <%= form.submit class:"button is-success" %>
             </div>
           <% end %>
-
-          <div class="field">
-            <%= form.text_field :company_name, value: store.Company_Name, type: :hidden %>
-          </div>
-
-          <div class="field">
-            <%= form.text_field :season, value: store.Season, type: :hidden %>
-          </div>
-
-          <div class="field">
-            <%= form.label :date %>
-            <%= form.date_select :date %>
-          </div>
-
-          <div class="field">
-            <%= form.text_field :farm_name, value: store.Farm_Name, type: :hidden %>
-          </div>
-
-          <div class="field">
-            <%= form.text_field :input_name, value: store.Input_Name, type: :hidden  %>
-          </div>
-
-          <div class="field">
-            <%= form.label :quantity_used, class:"label" %>
-            <%= form.text_field :quantity_used, class:"input" %>
-          </div>
-
-          <div class="field">
-            <%= form.text_field :unit, value: store.Unit, type: :hidden %>
-          </div>
-
-          <div class="field">
-            <%= form.text_field :total_amount, value: 0, type: :hidden %>
-          </div>
-
-          <div class="field">
-            <%= form.text_field :profile_number, value: store.Pro_Number, type: :hidden %>
-          </div>
-
-          <div class="field">
-            <%= form.text_field :user_id, value: current_user.id, type: :hidden %>
-          </div>
-
-          <div class="actions">
-            <%= form.submit class:"button is-success" %>
-          </div>
-        <% end %>
+        </div>
       </div>
     </div>
   </div>
-</div>
 <% end %>
 
 <%= link_to 'Back', input_stores_usages_path, class:"button is-dark" %>

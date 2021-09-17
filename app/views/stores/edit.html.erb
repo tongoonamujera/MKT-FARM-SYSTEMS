@@ -1,6 +1,90 @@
-<h1>Editing Store</h1>
+<div class="box">
+  <%= form_with(model: @store, local: true) do |form| %>
+    <% if @store.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@store.errors.count, "error") %> prohibited this store from being saved:</h2>
 
-<%= render 'form', store: @store %>
+        <ul>
+          <% @store.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
 
-<%= link_to 'Show', @store %> |
-<%= link_to 'Back', stores_path %>
+    <div class="field">
+      <div class="control">
+        <%= form.select :company_name, [current_user.Company_Name],type: :hidden %>
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="control">
+        <%= form.text_field :season, type: :hidden %>
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="control">
+        <%= form.text_field :farm_name, type: :hidden %>
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="control">
+        <%= form.select :types, ['Fertiliser', 'Chemical', 'Fuel', 'Other'], type: :hidden %>
+      </div>
+    </div>
+
+    <div class="field">
+      <%= form.text_field :input_name, type: :hidden %>
+    </div>
+
+    <div class="field">
+      <div class="control">
+        <%= form.text_field :quantity, type: :hidden %>
+      </div>
+    </div>
+
+    <div class="field">
+      <%= form.label :top_up, class:"label" %>
+      <div class="control">
+        <%= form.text_field :top_up, class:"input" %>
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="control">
+        <%= form.text_field :unit, type: :hidden %>
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="control">
+        <%= form.text_field :unit_price, type: :hidden %>
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="control">
+        <%= form.text_field :total_amount, type: :hidden %>
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="control">
+        <%= form.text_field :pro_number, type: :hidden %>
+      </div>
+    </div>
+
+    <div class="field">
+      <%= form.text_field :user_id, value: current_user.id, type: :hidden %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit class:"button is-success" %>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to 'Back', stores_path, class:"button is-black" %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_16_104336) do
+ActiveRecord::Schema.define(version: 2021_09_17_133649) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -357,7 +357,6 @@ ActiveRecord::Schema.define(version: 2021_09_16_104336) do
     t.date "date"
     t.string "farm_name"
     t.string "input_name"
-    t.string "quantity_used"
     t.string "unit"
     t.string "total_amount"
     t.string "profile_number"
@@ -365,6 +364,8 @@ ActiveRecord::Schema.define(version: 2021_09_16_104336) do
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "types"
+    t.decimal "quantity_used"
     t.index ["user_id"], name: "index_input_stores_usages_on_user_id"
   end
 
@@ -503,21 +504,21 @@ ActiveRecord::Schema.define(version: 2021_09_16_104336) do
   end
 
   create_table "stores", force: :cascade do |t|
-    t.string "Company_Name"
-    t.date "Date"
-    t.string "Season"
-    t.string "Farm_Name"
-    t.string "Type"
-    t.string "Input_Name"
-    t.string "Quantity"
-    t.string "Unit"
-    t.string "Unit_Price"
-    t.string "Total_Amount"
-    t.string "Pro_Number"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.decimal "top_up"
+    t.string "company_name"
+    t.date "date"
+    t.string "farm_name"
+    t.string "input_name"
+    t.decimal "quantity"
+    t.string "unit"
+    t.decimal "unit_price"
+    t.decimal "total_amount"
+    t.string "pro_number"
+    t.string "season"
+    t.string "types"
     t.index ["user_id"], name: "index_stores_on_user_id"
   end
 
