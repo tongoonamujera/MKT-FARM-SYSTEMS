@@ -1,52 +1,50 @@
-<p id="notice"><%= notice %></p>
 <%= link_to 'New Store', new_store_path, class:"button is-success my-3" %>
-<h1 class="has-background-white">Stores</h1>
+<div class="box">
+  <p id="notice"><%= notice %></p>
+  <h1 class="has-text-centered"><strong>Stores</strong></h1>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>Company name</th>
-      <th>Date</th>
-      <th>Season</th>
-      <th>Farm name</th>
-      <th>Type</th>
-      <th>Input name</th>
-      <th>Quantity</th>
-      <th>Unit</th>
-      <th>Unit price</th>
-      <th>Total amount</th>
-      <th>Pro number</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @stores.each do |store| %>
+  <table class="table">
+    <thead>
       <tr>
-        <td><%= store.company_name %></td>
-        <td><%= store.date %></td>
-        <td><%= store.season %></td>
-        <td><%= store.farm_name %></td>
-        <td><%= store.types %></td>
-        <td><%= store.input_name %></td>
-        <td>
-          <%= store.quantity %>
-          <%= quantity(store.types) %>
-        </td>
-        <td><%= store.unit %></td>
-        <td><%= store.unit_price %></td>
-        <td><%= store.total_amount %></td>
-        <td><%= store.pro_number %></td>
-        <td><%= store.user_id %></td>
-        <td><%= link_to 'Show', store %></td>
-        <td><%= link_to 'Edit', edit_store_path(store) %></td>
-        <td><%= link_to 'Destroy', store, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Company name</th>
+        <th>Date</th>
+        <th>Season</th>
+        <th>Farm name</th>
+        <th>Type</th>
+        <th>Input name</th>
+        <th>Quantity</th>
+        <th>Unit</th>
+        <th>Unit price</th>
+        <th>Total amount</th>
+        <th>Pro number</th>
+        <th>User</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
-
-
+    <tbody>
+      <% @stores.each do |store| %>
+        <tr>
+          <td><%= store.company_name %></td>
+          <td><%= store.date %></td>
+          <td><%= store.season %></td>
+          <td><%= store.farm_name %></td>
+          <td><%= store.types %></td>
+          <td><%= store.input_name %></td>
+          <td>
+            <%= store.quantity %>
+            <%= quantity(store.types) %>
+          </td>
+          <td><%= store.unit %></td>
+          <td><%= store.unit_price %></td>
+          <td><%= store.total_amount %></td>
+          <td><%= store.pro_number %></td>
+          <td><%= store.user_id %></td>
+          <td><%= link_to 'Show', store %></td>
+          <td><%= link_to 'Edit', edit_store_path(store) %></td>
+          <td><%= link_to 'Destroy', store, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
