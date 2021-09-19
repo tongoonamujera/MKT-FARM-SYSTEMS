@@ -28,9 +28,12 @@ module ApplicationHelper
     a - b
   end
 
-  def quantity(types)
-    a = Store.where('types =?', types).pluck(:quantity).inject(:+)
-    b = InputStoresUsage.where('types =? AND deleted =?', types, false).pluck(:quantity_used).inject(:+)
+  def quantity(types, input)
+    a = Store.where('types =? AND input_name =?', types,input).pluck(:quantity).inject(:+)
+    b = InputStoresUsage.where('types =? AND deleted =?', types, false).where('input_name =?', input).pluck(:quantity_used).inject(:+)
+    if b.nil?
+      b=0
+    end
     a - b
   end
 end

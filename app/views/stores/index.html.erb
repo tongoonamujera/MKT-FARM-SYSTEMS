@@ -32,8 +32,8 @@
           <td><%= store.types %></td>
           <td><%= store.input_name %></td>
           <td>
-            <%= store.quantity %>
-            <%= quantity(store.types) %>
+            <%# <%= store.quantity %>
+            <%= quantity(store.types, store.input_name) %>
           </td>
           <td><%= store.unit %></td>
           <td><%= store.unit_price %></td>
@@ -41,7 +41,7 @@
           <td><%= store.pro_number %></td>
           <td><%= store.user_id %></td>
           <td><%= link_to 'Show', store %></td>
-          <td><%= link_to 'Edit', edit_store_path(store) %></td>
+          <td><%= link_to 'Top Up', edit_store_path(store) %></td>
           <td><%= link_to 'Destroy', store, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
