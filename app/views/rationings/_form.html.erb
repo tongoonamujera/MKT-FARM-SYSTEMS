@@ -12,38 +12,53 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :Company_Name, class:"label" %>
-    <%= form.select :Company_Name, [current_user.Company_Name], class:"my-3" %>
+    <%= form.label :company_name, class:"label" %>
+    <%= form.select :company_name, [current_user.Company_Name], class:"my-3" %>
   </div>
 
   <div class="field">
-    <%= form.label :Date %>
-    <%= form.date_select :Date %>
+    <%= form.label :date %>
+    <%= form.date_select :date %>
   </div>
 
   <div class="field">
-    <%= form.label :Season, class:"label" %>
-    <%= form.text_field :Season, class:"input" %>
+    <%= form.label :season, class:"label" %>
+    <%= form.text_field :season, class:"input" %>
   </div>
 
   <div class="field">
-    <%= form.label :Farm_Name, class:"label" %>
-    <%= form.text_field :Farm_Name, class:"input" %>
+    <%= form.label :farm_name, class:"label" %>
+    <%= form.text_field :farm_name, class:"input" %>
   </div>
 
   <div class="field">
-    <%= form.label :Cereal_Name, class:"label" %>
-    <%= form.text_field :Cereal_Name, class:"input" %>
+    <%= form.label :cereal_name, class:"label" %>
+    <%= form.text_field :cereal_name, class:"input" %>
   </div>
 
   <div class="field">
-    <%= form.label :KGS_Issued, class:"label" %>
-    <%= form.text_field :KGS_Issued, class:"input" %>
+    <%= form.label :kgs_issued, class:"label" %>
+    <%= form.text_field :kgs_issued, class:"input" %>
   </div>
 
   <div class="field">
-    <%= form.label :Pro_Number, class:"label" %>
-    <%= form.text_field :Pro_Number, class:"input" %>
+    <%= form.label :pro_number, class:"label" %>
+    <%= form.text_field :pro_number, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :issued_to, class:"label" %>
+    <%= form.text_field :issued_to, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price, class:"label" %>
+    <%= form.text_field :price, class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_sold, class:"label" %>
+    <%= form.check_box :is_sold %>
   </div>
 
   <div class="field">

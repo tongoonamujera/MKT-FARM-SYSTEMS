@@ -15,8 +15,8 @@
   <tbody>
     <% @set_seasons.each do |set_season| %>
       <tr>
-        <td><%= set_season.Date %></td>
-        <td><%= set_season.Season %></td>
+        <td><%= set_season.date %></td>
+        <td><%= set_season.season %></td>
         <td><%= set_season.user_id %></td>
         <td><%= link_to 'Show', set_season %></td>
         <td><%= link_to 'Edit', edit_set_season_path(set_season) %></td>

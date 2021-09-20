@@ -25,18 +25,18 @@
   <tbody>
     <% @equipment_services.each do |equipment_service| %>
       <tr>
-        <td><%= equipment_service.Company_Name %></td>
-        <td><%= equipment_service.Date %></td>
-        <td><%= equipment_service.Season %></td>
-        <td><%= equipment_service.Type %></td>
-        <td><%= equipment_service.Equipment_Number %></td>
-        <td><%= equipment_service.Service_Type %></td>
-        <td><%= equipment_service.Done_By %></td>
-        <td><%= equipment_service.Mileage %></td>
+        <td><%= equipment_service.company_Name %></td>
+        <td><%= equipment_service.date %></td>
+        <td><%= equipment_service.season %></td>
+        <td><%= equipment_service.type %></td>
+        <td><%= equipment_service.equipment_number %></td>
+        <td><%= equipment_service.service_type %></td>
+        <td><%= equipment_service.done_by %></td>
+        <td><%= equipment_service.mileage %></td>
         <td><%= equipment_service.next_service_milaege %></td>
-        <td><%= equipment_service.Job %></td>
-        <td><%= equipment_service.Total_Amount %></td>
-        <td><%= equipment_service.Pro_Number %></td>
+        <td><%= equipment_service.job %></td>
+        <td><%= equipment_service.total_amount %></td>
+        <td><%= equipment_service.pro_number %></td>
         <td><%= equipment_service.user_id %></td>
         <td><%= link_to 'Show', equipment_service %></td>
         <td><%= link_to 'Edit', edit_equipment_service_path(equipment_service) %></td>

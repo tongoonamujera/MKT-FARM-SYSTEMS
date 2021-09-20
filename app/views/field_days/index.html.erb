@@ -18,11 +18,11 @@
   <tbody>
     <% @field_days.each do |field_day| %>
       <tr>
-        <td><%= field_day.Company_Name %></td>
-        <td><%= field_day.Date %></td>
-        <td><%= field_day.Season %></td>
+        <td><%= field_day.company_name %></td>
+        <td><%= field_day.date %></td>
+        <td><%= field_day.season %></td>
         <td><%= field_day.place %></td>
-        <td><%= field_day.Start_Time %></td>
+        <td><%= field_day.start_time %></td>
         <td><%= field_day.focus %></td>
         <td><%= link_to 'Show', field_day %></td>
         <td><%= link_to 'Edit', edit_field_day_path(field_day) %></td>

@@ -25,18 +25,18 @@
   <tbody>
     <% @irriagtion_schedules.each do |irriagtion_schedule| %>
       <tr>
-        <td><%= irriagtion_schedule.Company_Name %></td>
-        <td><%= irriagtion_schedule.Date %></td>
-        <td><%= irriagtion_schedule.Season %></td>
-        <td><%= irriagtion_schedule.Farm_Name %></td>
-        <td><%= irriagtion_schedule.Section %></td>
-        <td><%= irriagtion_schedule.Crop %></td>
-        <td><%= irriagtion_schedule.Calibration %></td>
-        <td><%= irriagtion_schedule.Mls %></td>
-        <td><%= irriagtion_schedule.Start_Date %></td>
-        <td><%= irriagtion_schedule.End_Date %></td>
+        <td><%= irriagtion_schedule.company_name %></td>
+        <td><%= irriagtion_schedule.date %></td>
+        <td><%= irriagtion_schedule.season %></td>
+        <td><%= irriagtion_schedule.farm_name %></td>
+        <td><%= irriagtion_schedule.section %></td>
+        <td><%= irriagtion_schedule.crop %></td>
+        <td><%= irriagtion_schedule.calibration %></td>
+        <td><%= irriagtion_schedule.mls %></td>
+        <td><%= irriagtion_schedule.start_date %></td>
+        <td><%= irriagtion_schedule.end_date %></td>
         <td><%= irriagtion_schedule.turn_around_time %></td>
-        <td><%= irriagtion_schedule.Pro_Number %></td>
+        <td><%= irriagtion_schedule.pro_number %></td>
         <td><%= irriagtion_schedule.user_id %></td>
         <td><%= link_to 'Show', irriagtion_schedule %></td>
         <td><%= link_to 'Edit', edit_irriagtion_schedule_path(irriagtion_schedule) %></td>

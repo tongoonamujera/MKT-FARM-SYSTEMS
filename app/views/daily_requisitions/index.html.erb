@@ -19,12 +19,12 @@
   <tbody>
     <% @daily_requisitions.each do |daily_requisition| %>
       <tr>
-        <td><%= daily_requisition.Company_Name %></td>
-        <td><%= daily_requisition.Date %></td>
-        <td><%= daily_requisition.Season %></td>
-        <td><%= daily_requisition.Farm_Name %></td>
-        <td><%= daily_requisition.Requisition %></td>
-        <td><%= daily_requisition.Pro_Number %></td>
+        <td><%= daily_requisition.company_name %></td>
+        <td><%= daily_requisition.date %></td>
+        <td><%= daily_requisition.season %></td>
+        <td><%= daily_requisition.farm_name %></td>
+        <td><%= daily_requisition.requisition %></td>
+        <td><%= daily_requisition.pro_number %></td>
         <td><%= daily_requisition.user_id %></td>
         <td><%= link_to 'Show', daily_requisition %></td>
         <td><%= link_to 'Edit', edit_daily_requisition_path(daily_requisition) %></td>

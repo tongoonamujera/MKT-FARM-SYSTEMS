@@ -64,6 +64,6 @@ class AdvertisementsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def advertisement_params
-      params.require(:advertisement).permit(:Company_Name, :Date, :Item_Type, :item_Name, :Unit, :Unit_Price, :VAT, :Total_Amount, :user_id)
+      params.require(:advertisement).permit(:company_name, :date, :item_type, :item_name, :unit, :unit_price, :vat, :total_amount, :user_id)
     end
 end

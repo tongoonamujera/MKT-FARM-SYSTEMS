@@ -23,14 +23,14 @@
   <tbody>
     <% @advertisements.each do |advertisement| %>
       <tr>
-        <td><%= advertisement.Company_Name %></td>
-        <td><%= advertisement.Date %></td>
-        <td><%= advertisement.Item_Type %></td>
-        <td><%= advertisement.item_Name %></td>
-        <td><%= advertisement.Unit %></td>
-        <td><%= advertisement.Unit_Price %></td>
-        <td><%= advertisement.VAT %></td>
-        <td><%= advertisement.Total_Amount %></td>
+        <td><%= advertisement.company_name %></td>
+        <td><%= advertisement.date %></td>
+        <td><%= advertisement.item_type %></td>
+        <td><%= advertisement.item_name %></td>
+        <td><%= advertisement.unit %></td>
+        <td><%= advertisement.unit_price %></td>
+        <td><%= advertisement.vat %></td>
+        <td><%= advertisement.total_amount %></td>
         <td><%= advertisement.user_id %></td>
         <td><%= link_to 'Show', advertisement %></td>
         <td><%= link_to 'Edit', edit_advertisement_path(advertisement) %></td>

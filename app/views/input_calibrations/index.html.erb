@@ -26,19 +26,19 @@
   <tbody>
     <% @input_calibrations.each do |input_calibration| %>
       <tr>
-        <td><%= input_calibration.Company_Name %></td>
-        <td><%= input_calibration.Date %></td>
-        <td><%= input_calibration.Season %></td>
-        <td><%= input_calibration.Farm_Name %></td>
-        <td><%= input_calibration.Section %></td>
-        <td><%= input_calibration.Crop %></td>
-        <td><%= input_calibration.Variety %></td>
+        <td><%= input_calibration.company_name %></td>
+        <td><%= input_calibration.date %></td>
+        <td><%= input_calibration.season %></td>
+        <td><%= input_calibration.farm_name %></td>
+        <td><%= input_calibration.section %></td>
+        <td><%= input_calibration.crop %></td>
+        <td><%= input_calibration.variety %></td>
         <td><%= input_calibration.fertiliser_type %></td>
         <td><%= input_calibration.fertiliser_rate %></td>
-        <td><%= input_calibration.Bags_Used %></td>
-        <td><%= input_calibration.Herbicide %></td>
-        <td><%= input_calibration.Herbicide_Rate %></td>
-        <td><%= input_calibration.Pro_Number %></td>
+        <td><%= input_calibration.bags_used %></td>
+        <td><%= input_calibration.herbicide %></td>
+        <td><%= input_calibration.herbicide_rate %></td>
+        <td><%= input_calibration.pro_number %></td>
         <td><%= input_calibration.user_id %></td>
         <td><%= link_to 'Show', input_calibration %></td>
         <td><%= link_to 'Edit', edit_input_calibration_path(input_calibration) %></td>

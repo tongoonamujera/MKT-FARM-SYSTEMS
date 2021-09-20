@@ -24,16 +24,16 @@
   <tbody>
     <% @assets.each do |asset| %>
       <tr>
-        <td><%= asset.Company_Name %></td>
-        <td><%= asset.Date %></td>
-        <td><%= asset.Season %></td>
-        <td><%= asset.Asset %></td>
-        <td><%= asset.Asset_Number %></td>
-        <td><%= asset.Asset_Type %></td>
-        <td><%= asset.Unit_Price %></td>
+        <td><%= asset.company_name %></td>
+        <td><%= asset.date %></td>
+        <td><%= asset.season %></td>
+        <td><%= asset.asset %></td>
+        <td><%= asset.asset_number %></td>
+        <td><%= asset.asset_type %></td>
+        <td><%= asset.unit_price %></td>
         <td><%= asset.vat %></td>
-        <td><%= asset.Total_Amount %></td>
-        <td><%= asset.Pro_Number %></td>
+        <td><%= asset.total_amount %></td>
+        <td><%= asset.pro_number %></td>
         <td><%= asset.user_id %></td>
         <td><%= link_to 'Show', asset %></td>
         <td><%= link_to 'Edit', edit_asset_path(asset) %></td>

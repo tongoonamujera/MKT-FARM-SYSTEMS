@@ -14,7 +14,8 @@
         <th>Farm name</th>
         <th>P barn number</th>
         <th>Reap</th>
-        <th>P slate numberslate weight</th>
+        <th>P slate number</th>
+        <th>slate weight</th>
         <th>Barn weight</th>
         <th>Cumulative barn weight</th>
         <th>Pro number</th>
@@ -26,16 +27,17 @@
     <tbody>
       <% @barn_and_slate_records.each do |barn_and_slate_record| %>
         <tr>
-          <td><%= barn_and_slate_record.Company_Name %></td>
-          <td><%= barn_and_slate_record.Date %></td>
-          <td><%= barn_and_slate_record.Season %></td>
-          <td><%= barn_and_slate_record.Farm_Name %></td>
-          <td><%= barn_and_slate_record.P_Barn_Number %></td>
-          <td><%= barn_and_slate_record.Reap %></td>
-          <td><%= barn_and_slate_record.P_Slate_NumberSlate_Weight %></td>
-          <td><%= barn_and_slate_record.Barn_Weight %></td>
-          <td><%= barn_and_slate_record.Cumulative_Barn_Weight %></td>
-          <td><%= barn_and_slate_record.Pro_Number %></td>
+          <td><%= barn_and_slate_record.company_name %></td>
+          <td><%= barn_and_slate_record.date %></td>
+          <td><%= barn_and_slate_record.season %></td>
+          <td><%= barn_and_slate_record.farm_name %></td>
+          <td><%= barn_and_slate_record.p_barn_number %></td>
+          <td><%= barn_and_slate_record.reap %></td>
+          <td><%= barn_and_slate_record.p_slate_number %></td>
+          <td><%= barn_and_slate_record.slate_weight %></td>
+          <td><%= barn_and_slate_record.barn_weight %></td>
+          <td><%= barn_and_slate_record.cumulative_barn_weight %></td>
+          <td><%= barn_and_slate_record.pro_number %></td>
           <td><%= barn_and_slate_record.user_id %></td>
           <td><%= link_to 'Show', barn_and_slate_record %></td>
           <td><%= link_to 'Edit', edit_barn_and_slate_record_path(barn_and_slate_record) %></td>

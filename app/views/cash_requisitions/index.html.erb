@@ -23,16 +23,16 @@
   <tbody>
     <% @cash_requisitions.each do |cash_requisition| %>
       <tr>
-        <td><%= cash_requisition.Company_Name %></td>
-        <td><%= cash_requisition.Date %></td>
-        <td><%= cash_requisition.Season %></td>
-        <td><%= cash_requisition.Farm_Name %></td>
-        <td><%= cash_requisition.Employee_Name %></td>
-        <td><%= cash_requisition.Amount_Requested %></td>
-        <td><%= cash_requisition.Amount_Issued %></td>
-        <td><%= cash_requisition.Pay_From %></td>
-        <td><%= cash_requisition.Pay_To %></td>
-        <td><%= cash_requisition.Pro_Number %></td>
+        <td><%= cash_requisition.company_name %></td>
+        <td><%= cash_requisition.date %></td>
+        <td><%= cash_requisition.season %></td>
+        <td><%= cash_requisition.farm_name %></td>
+        <td><%= cash_requisition.employee_name %></td>
+        <td><%= cash_requisition.amount_requested %></td>
+        <td><%= cash_requisition.amount_issued %></td>
+        <td><%= cash_requisition.pay_from %></td>
+        <td><%= cash_requisition.pay_to %></td>
+        <td><%= cash_requisition.pro_number %></td>
         <td><%= cash_requisition.user_id %></td>
         <td><%= link_to 'Show', cash_requisition %></td>
         <td><%= link_to 'Edit', edit_cash_requisition_path(cash_requisition) %></td>

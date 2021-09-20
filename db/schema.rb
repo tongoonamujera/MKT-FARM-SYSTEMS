@@ -10,37 +10,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_19_073555) do
+ActiveRecord::Schema.define(version: 2021_09_20_102357) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "activities", force: :cascade do |t|
-    t.string "Company_Name"
-    t.date "Date"
-    t.string "Season"
-    t.string "Farm_Name"
-    t.string "Section"
-    t.string "Activity"
-    t.string "Pro_Number"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "company_name"
+    t.date "date"
+    t.string "season"
+    t.string "farm_name"
+    t.string "section"
+    t.string "activity"
+    t.string "pro_number"
     t.index ["user_id"], name: "index_activities_on_user_id"
   end
 
   create_table "advertisements", force: :cascade do |t|
-    t.string "Company_Name"
-    t.date "Date"
-    t.string "Item_Type"
-    t.string "item_Name"
-    t.string "Unit"
-    t.string "Unit_Price"
-    t.string "VAT"
-    t.string "Total_Amount"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "company_name"
+    t.string "date"
+    t.string "item_type"
+    t.string "item_name"
+    t.string "unit"
+    t.decimal "unit_price"
+    t.decimal "vat"
+    t.decimal "total_amount"
     t.index ["user_id"], name: "index_advertisements_on_user_id"
   end
 
@@ -156,20 +156,21 @@ ActiveRecord::Schema.define(version: 2021_09_19_073555) do
   end
 
   create_table "cereal_stores", force: :cascade do |t|
-    t.string "Company_Name"
-    t.date "Date"
-    t.string "Season"
-    t.string "Farm_Name"
-    t.string "Type"
-    t.string "Input_Name"
-    t.string "Quantity"
-    t.string "Unit"
-    t.string "Unit_Price"
-    t.string "Total_Amount"
-    t.string "Pro_Number"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "cereal_name"
+    t.string "company_name"
+    t.date "date"
+    t.string "season"
+    t.string "farm_name"
+    t.string "type"
+    t.decimal "quantity"
+    t.string "unit"
+    t.decimal "unit_price"
+    t.decimal "total_amount"
+    t.string "pro_number"
+    t.boolean "is_bought", default: false
     t.index ["user_id"], name: "index_cereal_stores_on_user_id"
   end
 
@@ -448,16 +449,19 @@ ActiveRecord::Schema.define(version: 2021_09_19_073555) do
   end
 
   create_table "rationings", force: :cascade do |t|
-    t.string "Company_Name"
-    t.date "Date"
-    t.string "Season"
-    t.string "Farm_Name"
-    t.string "Cereal_Name"
-    t.string "KGS_Issued"
-    t.string "Pro_Number"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "pro_number"
+    t.date "date"
+    t.string "season"
+    t.string "farm_name"
+    t.string "company_name"
+    t.string "cereal_name"
+    t.string "issued_to"
+    t.decimal "price"
+    t.decimal "kgs_issued"
+    t.boolean "is_sold", default: false
     t.index ["user_id"], name: "index_rationings_on_user_id"
   end
 

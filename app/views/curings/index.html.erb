@@ -22,15 +22,15 @@
   <tbody>
     <% @curings.each do |curing| %>
       <tr>
-        <td><%= curing.Company_Name %></td>
-        <td><%= curing.Date %></td>
-        <td><%= curing.Season %></td>
-        <td><%= curing.Farm_Name %></td>
-        <td><%= curing.Facility %></td>
-        <td><%= curing.Time %></td>
-        <td><%= curing.Day %></td>
-        <td><%= curing.Temperature %></td>
-        <td><%= curing.Pro_Number %></td>
+        <td><%= curing.company_name %></td>
+        <td><%= curing.date %></td>
+        <td><%= curing.season %></td>
+        <td><%= curing.farm_name %></td>
+        <td><%= curing.facility %></td>
+        <td><%= curing.time %></td>
+        <td><%= curing.day %></td>
+        <td><%= curing.temperature %></td>
+        <td><%= curing.pro_number %></td>
         <td><%= curing.user_id %></td>
         <td><%= link_to 'Show', curing %></td>
         <td><%= link_to 'Edit', edit_curing_path(curing) %></td>

@@ -20,13 +20,13 @@
   <tbody>
     <% @workshops.each do |workshop| %>
       <tr>
-        <td><%= workshop.Company_Name %></td>
-        <td><%= workshop.Date %></td>
-        <td><%= workshop.Season %></td>
-        <td><%= workshop.Farm_Name %></td>
-        <td><%= workshop.Item %></td>
-        <td><%= workshop.Quantity %></td>
-        <td><%= workshop.Pro_Number %></td>
+        <td><%= workshop.company_name %></td>
+        <td><%= workshop.date %></td>
+        <td><%= workshop.season %></td>
+        <td><%= workshop.farm_name %></td>
+        <td><%= workshop.item %></td>
+        <td><%= workshop.quantity %></td>
+        <td><%= workshop.pro_number %></td>
         <td><%= workshop.user_id %></td>
         <td><%= link_to 'Show', workshop %></td>
         <td><%= link_to 'Edit', edit_workshop_path(workshop) %></td>

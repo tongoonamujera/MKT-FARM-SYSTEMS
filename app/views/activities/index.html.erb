@@ -23,13 +23,13 @@
     <tbody>
       <% @activities.each do |activity| %>
         <tr>
-          <td><%= activity.Company_Name %></td>
-          <td><%= activity.Date %></td>
-          <td><%= activity.Season %></td>
-          <td><%= activity.Farm_Name %></td>
-          <td><%= activity.Section %></td>
-          <td><%= activity.Activity %></td>
-          <td><%= activity.Pro_Number %></td>
+          <td><%= activity.company_name %></td>
+          <td><%= activity.date %></td>
+          <td><%= activity.season %></td>
+          <td><%= activity.farm_name %></td>
+          <td><%= activity.section %></td>
+          <td><%= activity.activity %></td>
+          <td><%= activity.pro_number %></td>
           <td><%= activity.user_id %></td>
           <td><%= link_to 'Show', activity, class:"navbar-item" %></td>
           <td><%= link_to 'Edit', edit_activity_path(activity), class:"navbar-item" %></td>

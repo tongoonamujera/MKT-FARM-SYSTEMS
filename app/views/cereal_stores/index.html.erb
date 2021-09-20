@@ -24,17 +24,17 @@
   <tbody>
     <% @cereal_stores.each do |cereal_store| %>
       <tr>
-        <td><%= cereal_store.Company_Name %></td>
-        <td><%= cereal_store.Date %></td>
-        <td><%= cereal_store.Season %></td>
-        <td><%= cereal_store.Farm_Name %></td>
-        <td><%= cereal_store.Type %></td>
-        <td><%= cereal_store.Input_Name %></td>
-        <td><%= cereal_store.Quantity %></td>
-        <td><%= cereal_store.Unit %></td>
-        <td><%= cereal_store.Unit_Price %></td>
-        <td><%= cereal_store.Total_Amount %></td>
-        <td><%= cereal_store.Pro_Number %></td>
+        <td><%= cereal_store.company_name %></td>
+        <td><%= cereal_store.date %></td>
+        <td><%= cereal_store.season %></td>
+        <td><%= cereal_store.farm_name %></td>
+        <td><%= cereal_store.type %></td>
+        <td><%= cereal_store.cereal_name %></td>
+        <td><%= cereal_store.quantity %></td>
+        <td><%= cereal_store.unit %></td>
+        <td><%= cereal_store.unit_price %></td>
+        <td><%= cereal_store.total_amount %></td>
+        <td><%= cereal_store.pro_number %></td>
         <td><%= cereal_store.user_id %></td>
         <td><%= link_to 'Show', cereal_store %></td>
         <td><%= link_to 'Edit', edit_cereal_store_path(cereal_store) %></td>

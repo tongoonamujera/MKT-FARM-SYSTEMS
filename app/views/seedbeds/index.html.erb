@@ -24,17 +24,17 @@
   <tbody>
     <% @seedbeds.each do |seedbed| %>
       <tr>
-        <td><%= seedbed.Company_Name %></td>
-        <td><%= seedbed.Date %></td>
-        <td><%= seedbed.Season %></td>
-        <td><%= seedbed.Farm_Name %></td>
-        <td><%= seedbed.Section %></td>
-        <td><%= seedbed.Item_Used %></td>
-        <td><%= seedbed.Quantity %></td>
-        <td><%= seedbed.Unit %></td>
-        <td><%= seedbed.Input_Amount %></td>
-        <td><%= seedbed.Labour_Amount %></td>
-        <td><%= seedbed.Pro_Number %></td>
+        <td><%= seedbed.company_name %></td>
+        <td><%= seedbed.date %></td>
+        <td><%= seedbed.season %></td>
+        <td><%= seedbed.farm_name %></td>
+        <td><%= seedbed.section %></td>
+        <td><%= seedbed.item_used %></td>
+        <td><%= seedbed.quantity %></td>
+        <td><%= seedbed.unit %></td>
+        <td><%= seedbed.input_amount %></td>
+        <td><%= seedbed.labour_amount %></td>
+        <td><%= seedbed.pro_number %></td>
         <td><%= seedbed.user_id %></td>
         <td><%= link_to 'Show', seedbed %></td>
         <td><%= link_to 'Edit', edit_seedbed_path(seedbed) %></td>

@@ -22,16 +22,16 @@
   <tbody>
     <% @mkt_payments.each do |mkt_payment| %>
       <tr>
-        <td><%= mkt_payment.Date %></td>
-        <td><%= mkt_payment.Company_Name %></td>
-        <td><%= mkt_payment.Service_Rendered %></td>
-        <td><%= mkt_payment.Service %></td>
-        <td><%= mkt_payment.Amount_Paid %></td>
-        <td><%= mkt_payment.From %></td>
-        <td><%= mkt_payment.To %></td>
-        <td><%= mkt_payment.Receipt_Number %></td>
-        <td><%= mkt_payment.Paid_by %></td>
-        <td><%= mkt_payment.Pro_number %></td>
+        <td><%= mkt_payment.date %></td>
+        <td><%= mkt_payment.company_name %></td>
+        <td><%= mkt_payment.service_rendered %></td>
+        <td><%= mkt_payment.service %></td>
+        <td><%= mkt_payment.amount_paid %></td>
+        <td><%= mkt_payment.from %></td>
+        <td><%= mkt_payment.to %></td>
+        <td><%= mkt_payment.receipt_number %></td>
+        <td><%= mkt_payment.paid_by %></td>
+        <td><%= mkt_payment.pro_number %></td>
         <td><%= link_to 'Show', mkt_payment %></td>
         <td><%= link_to 'Edit', edit_mkt_payment_path(mkt_payment) %></td>
         <td><%= link_to 'Destroy', mkt_payment, method: :delete, data: { confirm: 'Are you sure?' } %></td>

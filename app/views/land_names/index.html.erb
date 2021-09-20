@@ -8,7 +8,7 @@
       <th>Company name</th>
       <th>Date</th>
       <th>Season</th>
-      <th>Farm namesection</th>
+      <th>Farm name</th>
       <th>Hectrage</th>
       <th>Crop</th>
       <th>Pro number</th>
@@ -20,13 +20,13 @@
   <tbody>
     <% @land_names.each do |land_name| %>
       <tr>
-        <td><%= land_name.Company_name %></td>
-        <td><%= land_name.Date %></td>
-        <td><%= land_name.Season %></td>
-        <td><%= land_name.Farm_nameSection %></td>
-        <td><%= land_name.Hectrage %></td>
-        <td><%= land_name.Crop %></td>
-        <td><%= land_name.Pro_Number %></td>
+        <td><%= land_name.company_name %></td>
+        <td><%= land_name.date %></td>
+        <td><%= land_name.season %></td>
+        <td><%= land_name.farm_name %></td>
+        <td><%= land_name.hectrage %></td>
+        <td><%= land_name.crop %></td>
+        <td><%= land_name.pro_number %></td>
         <td><%= land_name.section %></td>
         <td><%= link_to 'Show', land_name %></td>
         <td><%= link_to 'Edit', edit_land_name_path(land_name) %></td>

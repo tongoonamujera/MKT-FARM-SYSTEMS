@@ -21,14 +21,14 @@
   <tbody>
     <% @harvestings.each do |harvesting| %>
       <tr>
-        <td><%= harvesting.Compnay_Name %></td>
-        <td><%= harvesting.Date %></td>
-        <td><%= harvesting.Season %></td>
-        <td><%= harvesting.Farm_Name %></td>
-        <td><%= harvesting.Section %></td>
-        <td><%= harvesting.Crop %></td>
-        <td><%= harvesting.KGS_Done %></td>
-        <td><%= harvesting.Pro_Number %></td>
+        <td><%= harvesting.company_name %></td>
+        <td><%= harvesting.date %></td>
+        <td><%= harvesting.season %></td>
+        <td><%= harvesting.farm_name %></td>
+        <td><%= harvesting.section %></td>
+        <td><%= harvesting.crop %></td>
+        <td><%= harvesting.kgs_done %></td>
+        <td><%= harvesting.pro_number %></td>
         <td><%= harvesting.user_id %></td>
         <td><%= link_to 'Show', harvesting %></td>
         <td><%= link_to 'Edit', edit_harvesting_path(harvesting) %></td>

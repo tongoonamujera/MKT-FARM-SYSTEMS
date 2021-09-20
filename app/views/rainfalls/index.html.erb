@@ -20,13 +20,13 @@
   <tbody>
     <% @rainfalls.each do |rainfall| %>
       <tr>
-        <td><%= rainfall.Company_Name %></td>
-        <td><%= rainfall.Date %></td>
-        <td><%= rainfall.Season %></td>
-        <td><%= rainfall.Farm_Name %></td>
-        <td><%= rainfall.Section %></td>
-        <td><%= rainfall.Mls_received %></td>
-        <td><%= rainfall.Pro_Number %></td>
+        <td><%= rainfall.company_name %></td>
+        <td><%= rainfall.date %></td>
+        <td><%= rainfall.season %></td>
+        <td><%= rainfall.farm_name %></td>
+        <td><%= rainfall.section %></td>
+        <td><%= rainfall.mls_received %></td>
+        <td><%= rainfall.pro_number %></td>
         <td><%= rainfall.user_id %></td>
         <td><%= link_to 'Show', rainfall %></td>
         <td><%= link_to 'Edit', edit_rainfall_path(rainfall) %></td>

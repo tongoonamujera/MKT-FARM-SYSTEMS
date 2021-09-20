@@ -30,23 +30,23 @@
   <tbody>
     <% @cereal_sales.each do |cereal_sale| %>
       <tr>
-        <td><%= cereal_sale.Company_Name %></td>
-        <td><%= cereal_sale.Date %></td>
-        <td><%= cereal_sale.Season %></td>
-        <td><%= cereal_sale.Farm_Name %></td>
-        <td><%= cereal_sale.Grower_Name %></td>
+        <td><%= cereal_sale.company_name %></td>
+        <td><%= cereal_sale.date %></td>
+        <td><%= cereal_sale.season %></td>
+        <td><%= cereal_sale.farm_name %></td>
+        <td><%= cereal_sale.grower_name %></td>
         <td><%= cereal_sale.crop %></td>
-        <td><%= cereal_sale.Truck_Number %></td>
-        <td><%= cereal_sale.Trailer_Number %></td>
-        <td><%= cereal_sale.Test_Density %></td>
-        <td><%= cereal_sale.External_Matter %></td>
-        <td><%= cereal_sale.Gross_Mass %></td>
-        <td><%= cereal_sale.Tare %></td>
-        <td><%= cereal_sale.Net_Mass %></td>
-        <td><%= cereal_sale.Price_Per_Tonne %></td>
-        <td><%= cereal_sale.Quantity %></td>
-        <td><%= cereal_sale.Amount_Paid %></td>
-        <td><%= cereal_sale.Pro_Number %></td>
+        <td><%= cereal_sale.truck_number %></td>
+        <td><%= cereal_sale.trailer_number %></td>
+        <td><%= cereal_sale.test_density %></td>
+        <td><%= cereal_sale.external_matter %></td>
+        <td><%= cereal_sale.gross_mass %></td>
+        <td><%= cereal_sale.tare %></td>
+        <td><%= cereal_sale.net_mass %></td>
+        <td><%= cereal_sale.price_per_tonne %></td>
+        <td><%= cereal_sale.quantity %></td>
+        <td><%= cereal_sale.amount_paid %></td>
+        <td><%= cereal_sale.pro_number %></td>
         <td><%= cereal_sale.user_id %></td>
         <td><%= link_to 'Show', cereal_sale %></td>
         <td><%= link_to 'Edit', edit_cereal_sale_path(cereal_sale) %></td>

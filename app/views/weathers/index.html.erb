@@ -17,10 +17,10 @@
   <tbody>
     <% @weathers.each do |weather| %>
       <tr>
-        <td><%= weather.Date %></td>
-        <td><%= weather.Area %></td>
-        <td><%= weather.Min %></td>
-        <td><%= weather.Max %></td>
+        <td><%= weather.date %></td>
+        <td><%= weather.area %></td>
+        <td><%= weather.min %></td>
+        <td><%= weather.max %></td>
         <td><%= weather.user_id %></td>
         <td><%= link_to 'Show', weather %></td>
         <td><%= link_to 'Edit', edit_weather_path(weather) %></td>

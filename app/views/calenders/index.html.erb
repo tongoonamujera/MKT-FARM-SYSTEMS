@@ -22,13 +22,13 @@
   <tbody>
     <% @calenders.each do |calender| %>
       <tr>
-        <td><%= calender.Company_Name %></td>
-        <td><%= calender.Date %></td>
-        <td><%= calender.Season %></td>
-        <td><%= calender.Farm_Name %></td>
-        <td><%= calender.Month %></td>
-        <td><%= calender.Activity %></td>
-        <td><%= calender.Pro_Number %></td>
+        <td><%= calender.company_name %></td>
+        <td><%= calender.date %></td>
+        <td><%= calender.season %></td>
+        <td><%= calender.farm_name %></td>
+        <td><%= calender.month %></td>
+        <td><%= calender.activity %></td>
+        <td><%= calender.pro_number %></td>
         <td><%= calender.user_id %></td>
         <td><%= link_to 'Show', calender %></td>
         <td><%= link_to 'Edit', edit_calender_path(calender) %></td>

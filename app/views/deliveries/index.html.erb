@@ -24,17 +24,17 @@
   <tbody>
     <% @deliveries.each do |delivery| %>
       <tr>
-        <td><%= delivery.Company_Name %></td>
-        <td><%= delivery.Date %></td>
-        <td><%= delivery.Season %></td>
-        <td><%= delivery.Farm_Name %></td>
-        <td><%= delivery.Section %></td>
-        <td><%= delivery.Type %></td>
-        <td><%= delivery.Delivered_by %></td>
-        <td><%= delivery.Goods %></td>
-        <td><%= delivery.Quantity %></td>
+        <td><%= delivery.company_name %></td>
+        <td><%= delivery.date %></td>
+        <td><%= delivery.season %></td>
+        <td><%= delivery.farm_name %></td>
+        <td><%= delivery.section %></td>
+        <td><%= delivery.type %></td>
+        <td><%= delivery.delivered_by %></td>
+        <td><%= delivery.goods %></td>
+        <td><%= delivery.quantity %></td>
         <td><%= delivery.amount %></td>
-        <td><%= delivery.Pro_Number %></td>
+        <td><%= delivery.pro_number %></td>
         <td><%= delivery.user_id %></td>
         <td><%= link_to 'Show', delivery %></td>
         <td><%= link_to 'Edit', edit_delivery_path(delivery) %></td>
