@@ -64,6 +64,6 @@ class HarvestingsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def harvesting_params
-      params.require(:harvesting).permit(:Compnay_Name, :Date, :Season, :Farm_Name, :Section, :Crop, :KGS_Done, :Pro_Number, :user_id)
+      params.require(:harvesting).permit(:compnay_name, :date, :season, :farm_name, :section, :crop, :kgs_done, :pro_number, :user_id)
     end
 end

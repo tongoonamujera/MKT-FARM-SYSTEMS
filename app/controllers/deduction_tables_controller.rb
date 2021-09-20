@@ -64,6 +64,6 @@ class DeductionTablesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def deduction_table_params
-      params.require(:deduction_table).permit(:Season, :Month, :employee_name, :employee_number, :Farm_Name, :allowance, :payee, :nssa, :nec, :cash_requests, :other1_name, :other1_amount, :other2_name, :other2_amount, :other3_name, :other3_amount, :other4_name, :other4_amount, :other5_name, :other5_amount, :other6_name, :other6_amount, :other7_name, :other7_amount, :other8_name, :other8_amount, :other9_name, :other9_amount, :other10_name, :other10_amount, :month_starting, :month_ending, :total_amount)
+      params.require(:deduction_table).permit(:company_name,:season, :month, :employee_name, :employee_number, :farm_name, :allowance, :payee, :nssa, :nec, :cash_requests, :other1_name, :other1_amount, :other2_name, :other2_amount, :other3_name, :other3_amount, :other4_name, :other4_amount, :other5_name, :other5_amount, :other6_name, :other6_amount, :other7_name, :other7_amount, :other8_name, :other8_amount, :other9_name, :other9_amount, :other10_name, :other10_amount, :month_starting, :month_ending, :total_amount)
     end
 end

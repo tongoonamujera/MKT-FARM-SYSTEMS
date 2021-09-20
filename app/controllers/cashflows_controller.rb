@@ -64,6 +64,6 @@ class CashflowsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def cashflow_params
-      params.require(:cashflow).permit(:Company_Name, :Date, :Season, :Month, :Grower_Name, :Hectrage, :Operation, :Unit_Price, :quantity_per_hectre, :Unity, :Input_Name, :Total_Amount, :Pro_Number, :user_id, :total_quantity, :tian_ze_number)
+      params.require(:cashflow).permit(:company_name, :date, :season, :month, :grower_name, :hectrage, :operation, :unit_price, :quantity_per_hectre, :unity, :input_name, :total_amount, :pro_number, :user_id, :total_quantity, :tian_ze_number)
     end
 end

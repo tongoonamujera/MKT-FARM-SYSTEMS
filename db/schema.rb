@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_20_102357) do
+ActiveRecord::Schema.define(version: 2021_09_20_151217) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,113 +45,114 @@ ActiveRecord::Schema.define(version: 2021_09_20_102357) do
   end
 
   create_table "assets", force: :cascade do |t|
-    t.string "Company_Name"
-    t.date "Date"
-    t.string "Season"
-    t.string "Asset"
-    t.string "Asset_Number"
-    t.string "Asset_Type"
-    t.string "Unit_Price"
-    t.string "Total_Amount"
-    t.string "Pro_Number"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "vat"
+    t.date "date"
+    t.string "Season"
+    t.string "asset"
+    t.string "asset_number"
+    t.string "asset_type"
+    t.decimal "unit_price"
+    t.decimal "total_amount"
+    t.string "pro_number"
+    t.string "company_name"
     t.index ["user_id"], name: "index_assets_on_user_id"
   end
 
   create_table "barn_and_slate_records", force: :cascade do |t|
-    t.string "Company_Name"
-    t.date "Date"
-    t.string "Season"
-    t.string "Farm_Name"
-    t.string "P_Barn_Number"
-    t.string "Reap"
-    t.string "P_Slate_NumberSlate_Weight"
-    t.string "Barn_Weight"
-    t.string "Cumulative_Barn_Weight"
-    t.string "Pro_Number"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "company_name"
+    t.date "date"
+    t.string "season"
+    t.string "farm_name"
+    t.string "p_barn_number"
+    t.string "reap"
+    t.string "p_slate_number"
+    t.decimal "slate_weight"
+    t.decimal "barn_weight"
+    t.decimal "cumulative_barn_weight"
+    t.string "pro_number"
     t.index ["user_id"], name: "index_barn_and_slate_records_on_user_id"
   end
 
   create_table "calenders", force: :cascade do |t|
-    t.string "Company_Name"
-    t.date "Date"
-    t.string "Season"
-    t.string "Farm_Name"
-    t.string "Month"
-    t.string "Activity"
-    t.string "Pro_Number"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "company_name"
+    t.date "date"
+    t.string "season"
+    t.string "farm_name"
+    t.string "month"
+    t.string "activity"
+    t.string "pro_number"
     t.index ["user_id"], name: "index_calenders_on_user_id"
   end
 
   create_table "cash_requisitions", force: :cascade do |t|
-    t.string "Company_Name"
-    t.date "Date"
-    t.string "Season"
-    t.string "Farm_Name"
-    t.string "Employee_Name"
-    t.string "Amount_Requested"
-    t.string "Amount_Issued"
-    t.date "Pay_From"
-    t.date "Pay_To"
-    t.string "Pro_Number"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "company_name"
+    t.date "date"
+    t.string "season"
+    t.string "farm_name"
+    t.string "employee_name"
+    t.decimal "amount_requested"
+    t.decimal "amount_issued"
+    t.date "pay_from"
+    t.date "pay_to"
+    t.string "pro_number"
     t.index ["user_id"], name: "index_cash_requisitions_on_user_id"
   end
 
   create_table "cashflows", force: :cascade do |t|
-    t.string "Company_Name"
-    t.date "Date"
-    t.string "Season"
-    t.string "Month"
-    t.string "Grower_Name"
-    t.string "Hectrage"
-    t.string "Operation"
-    t.string "Unity"
-    t.string "Input_Name"
-    t.string "Pro_Number"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.decimal "Unit_Price"
     t.decimal "quantity_per_hectre"
-    t.decimal "Total_Amount"
-    t.string "total_quantity"
     t.string "tian_ze_number"
+    t.string "company_name"
+    t.date "date"
+    t.string "season"
+    t.string "month"
+    t.string "grower_name"
+    t.string "hectrage"
+    t.string "operation"
+    t.string "unity"
+    t.string "input_name"
+    t.string "pro_number"
+    t.decimal "unit_price"
+    t.decimal "total_amount"
+    t.decimal "total_quantity"
     t.index ["user_id"], name: "index_cashflows_on_user_id"
   end
 
   create_table "cereal_sales", force: :cascade do |t|
-    t.string "Company_Name"
-    t.date "Date"
-    t.string "Season"
-    t.string "Farm_Name"
-    t.string "Grower_Name"
-    t.string "Truck_Number"
-    t.string "Trailer_Number"
-    t.string "Test_Density"
-    t.string "External_Matter"
-    t.string "Gross_Mass"
-    t.string "Tare"
-    t.string "Net_Mass"
-    t.string "Price_Per_Tonne"
-    t.string "Quantity"
-    t.string "Amount_Paid"
-    t.string "Pro_Number"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "crop"
+    t.string "company_name"
+    t.date "date"
+    t.string "season"
+    t.string "farm_name"
+    t.string "grower_name"
+    t.string "truck_number"
+    t.string "trailer_number"
+    t.string "test_density"
+    t.string "external_matter"
+    t.decimal "gross_mass"
+    t.string "tare"
+    t.decimal "net_mass"
+    t.decimal "price_per_tonne"
+    t.decimal "quantity"
+    t.decimal "amount_paid"
+    t.string "pro_number"
     t.index ["user_id"], name: "index_cereal_sales_on_user_id"
   end
 
@@ -175,10 +176,6 @@ ActiveRecord::Schema.define(version: 2021_09_20_102357) do
   end
 
   create_table "client_payments", force: :cascade do |t|
-    t.string "Company_Name"
-    t.string "Category"
-    t.string "Receipt_Number"
-    t.string "Pro_Number"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -186,42 +183,43 @@ ActiveRecord::Schema.define(version: 2021_09_20_102357) do
     t.decimal "balance"
     t.date "valid_from"
     t.date "valid_to"
+    t.string "company_name"
+    t.string "category"
+    t.string "receipt_number"
+    t.string "pro_number"
     t.index ["user_id"], name: "index_client_payments_on_user_id"
   end
 
   create_table "curings", force: :cascade do |t|
-    t.string "Company_Name"
-    t.date "Date"
-    t.string "Season"
-    t.string "Farm_Name"
-    t.string "Facility"
-    t.datetime "Time"
-    t.date "Day"
-    t.string "Temperature"
-    t.string "Pro_Number"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "company_name"
+    t.date "date"
+    t.string "season"
+    t.string "farm_name"
+    t.string "facility"
+    t.datetime "time"
+    t.date "day"
+    t.string "temperature"
+    t.string "pro_number"
     t.index ["user_id"], name: "index_curings_on_user_id"
   end
 
   create_table "daily_requisitions", force: :cascade do |t|
-    t.string "Company_Name"
-    t.date "Date"
-    t.string "Season"
-    t.string "Farm_Name"
-    t.string "Requisition"
-    t.string "Pro_Number"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "company_name"
+    t.date "date"
+    t.string "season"
+    t.string "farm_name"
+    t.string "requisition"
+    t.string "pro_number"
     t.index ["user_id"], name: "index_daily_requisitions_on_user_id"
   end
 
   create_table "deduction_tables", force: :cascade do |t|
-    t.string "Season"
-    t.string "Month"
-    t.string "Farm_Name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.decimal "allowance"
@@ -254,23 +252,27 @@ ActiveRecord::Schema.define(version: 2021_09_20_102357) do
     t.date "month_starting"
     t.date "month_ending"
     t.float "total_amount"
+    t.string "season"
+    t.string "farm_name"
+    t.string "company_name"
+    t.string "month"
   end
 
   create_table "deliveries", force: :cascade do |t|
-    t.string "Company_Name"
-    t.date "Date"
-    t.string "Season"
-    t.string "Farm_Name"
-    t.string "Section"
-    t.string "Type"
-    t.string "Delivered_by"
-    t.string "Goods"
-    t.string "Quantity"
-    t.string "Pro_Number"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "amount"
+    t.string "company_name"
+    t.date "date"
+    t.string "season"
+    t.string "farm_name"
+    t.string "section"
+    t.string "type"
+    t.string "delivered_by"
+    t.string "goods"
+    t.string "quantity"
+    t.string "pro_number"
     t.index ["user_id"], name: "index_deliveries_on_user_id"
   end
 
@@ -288,67 +290,67 @@ ActiveRecord::Schema.define(version: 2021_09_20_102357) do
   end
 
   create_table "equipment_services", force: :cascade do |t|
-    t.string "Company_Name"
-    t.date "Date"
-    t.string "Season"
-    t.string "Type"
-    t.string "Equipment_Number"
-    t.string "Service_Type"
-    t.string "Done_By"
-    t.string "Mileage"
     t.string "next_service_milaege"
-    t.string "Job"
-    t.string "Total_Amount"
-    t.string "Pro_Number"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "company_name"
+    t.date "date"
+    t.string "season"
+    t.string "type"
+    t.string "equipment_number"
+    t.string "service_type"
+    t.string "done_by"
+    t.string "mileage"
+    t.string "job"
+    t.decimal "total_amount"
+    t.string "pro_number"
     t.index ["user_id"], name: "index_equipment_services_on_user_id"
   end
 
   create_table "field_days", force: :cascade do |t|
-    t.string "Company_Name"
-    t.date "Date"
-    t.string "Season"
     t.string "place"
-    t.time "Start_Time"
-    t.string "focus"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "company_name"
+    t.date "date"
+    t.string "season"
+    t.time "start_time"
+    t.text "focus"
   end
 
   create_table "harvestings", force: :cascade do |t|
-    t.string "Compnay_Name"
-    t.date "Date"
-    t.string "Season"
-    t.string "Farm_Name"
-    t.string "Section"
-    t.string "Crop"
-    t.string "KGS_Done"
-    t.string "Pro_Number"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "company_name"
+    t.date "date"
+    t.string "season"
+    t.string "farm_name"
+    t.string "section"
+    t.string "cereal_name"
+    t.decimal "kgs_done"
+    t.string "pro_number"
     t.index ["user_id"], name: "index_harvestings_on_user_id"
   end
 
   create_table "input_calibrations", force: :cascade do |t|
-    t.string "Company_Name"
-    t.date "Date"
-    t.string "Season"
-    t.string "Farm_Name"
-    t.string "Section"
-    t.string "Crop"
-    t.string "Variety"
-    t.string "Bags_Used"
-    t.string "Herbicide"
-    t.string "Herbicide_Rate"
-    t.string "Pro_Number"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "fertiliser_rate"
     t.string "fertiliser_type"
+    t.string "company_name"
+    t.date "date"
+    t.string "season"
+    t.string "farm_name"
+    t.string "section"
+    t.string "crop"
+    t.string "variety"
+    t.decimal "bags_used"
+    t.string "herbicide"
+    t.string "herbicide_rate"
+    t.string "pro_number"
     t.index ["user_id"], name: "index_input_calibrations_on_user_id"
   end
 
@@ -371,50 +373,50 @@ ActiveRecord::Schema.define(version: 2021_09_20_102357) do
   end
 
   create_table "irriagtion_schedules", force: :cascade do |t|
-    t.string "Company_Name"
-    t.date "Date"
-    t.string "Season"
-    t.string "Farm_Name"
-    t.string "Section"
-    t.string "Crop"
-    t.string "Calibration"
-    t.string "Mls"
-    t.date "Start_Date"
-    t.date "End_Date"
     t.string "turn_around_time"
-    t.string "Pro_Number"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "company_name"
+    t.date "date"
+    t.string "season"
+    t.string "section"
+    t.string "crop"
+    t.string "calibration"
+    t.string "mls"
+    t.date "start_date"
+    t.date "end_date"
+    t.string "farm_name"
+    t.string "pro_number"
     t.index ["user_id"], name: "index_irriagtion_schedules_on_user_id"
   end
 
   create_table "land_names", force: :cascade do |t|
-    t.string "Company_name"
-    t.date "Date"
-    t.string "Season"
-    t.string "Farm_nameSection"
-    t.string "Hectrage"
-    t.string "Crop"
-    t.string "Pro_Number"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "section"
+    t.string "company_name"
+    t.date "date"
+    t.string "season"
+    t.string "farm_name"
+    t.string "hectrage"
+    t.string "crop"
+    t.string "pro_number"
   end
 
   create_table "mkt_payments", force: :cascade do |t|
-    t.date "Date"
-    t.string "Company_Name"
-    t.string "Service_Rendered"
-    t.string "Service"
-    t.string "Amount_Paid"
-    t.string "From"
-    t.string "To"
-    t.string "Receipt_Number"
-    t.string "Paid_by"
-    t.string "Pro_number"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "company_name"
+    t.date "date"
+    t.string "service_rendered"
+    t.string "service"
+    t.decimal "amount_paid"
+    t.string "from"
+    t.string "to"
+    t.string "receipt_number"
+    t.string "paid_by"
+    t.string "pro_number"
   end
 
   create_table "purchases", force: :cascade do |t|
@@ -435,16 +437,16 @@ ActiveRecord::Schema.define(version: 2021_09_20_102357) do
   end
 
   create_table "rainfalls", force: :cascade do |t|
-    t.string "Company_Name"
-    t.date "Date"
-    t.string "Season"
-    t.string "Farm_Name"
-    t.string "Section"
-    t.string "Mls_received"
-    t.string "Pro_Number"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "company_name"
+    t.date "Date"
+    t.string "season"
+    t.string "farm_name"
+    t.string "section"
+    t.string "mls_received"
+    t.string "pro_number"
     t.index ["user_id"], name: "index_rainfalls_on_user_id"
   end
 
@@ -481,29 +483,28 @@ ActiveRecord::Schema.define(version: 2021_09_20_102357) do
   end
 
   create_table "seedbeds", force: :cascade do |t|
-    t.string "Company_Name"
-    t.date "Date"
-    t.string "Season"
-    t.string "Farm_Name"
-    t.string "Section"
-    t.string "Item_Used"
-    t.string "Quantity"
-    t.string "Unit"
-    t.string "Input_Amount"
-    t.string "Labour_Amount"
-    t.string "Pro_Number"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "company_name"
+    t.date "date"
+    t.string "season"
+    t.string "farm_name"
+    t.string "section"
+    t.string "item_used"
+    t.string "unit"
+    t.decimal "input_amount"
+    t.integer "labour_amount"
+    t.decimal "pro_number"
     t.index ["user_id"], name: "index_seedbeds_on_user_id"
   end
 
   create_table "set_seasons", force: :cascade do |t|
-    t.date "Date"
-    t.string "Season"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "season"
+    t.date "date"
     t.index ["user_id"], name: "index_set_seasons_on_user_id"
   end
 
@@ -625,27 +626,27 @@ ActiveRecord::Schema.define(version: 2021_09_20_102357) do
   end
 
   create_table "weathers", force: :cascade do |t|
-    t.date "Date"
-    t.string "Area"
-    t.string "Min"
-    t.string "Max"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.decimal "min"
+    t.decimal "max"
+    t.date "date"
+    t.string "area"
     t.index ["user_id"], name: "index_weathers_on_user_id"
   end
 
   create_table "workshops", force: :cascade do |t|
-    t.string "Company_Name"
-    t.date "Date"
-    t.string "Season"
-    t.string "Farm_Name"
-    t.string "Item"
-    t.string "Quantity"
-    t.string "Pro_Number"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "company_name"
+    t.date "date"
+    t.string "season"
+    t.string "farm_name"
+    t.string "item"
+    t.decimal "quantity"
+    t.string "pro_number"
     t.index ["user_id"], name: "index_workshops_on_user_id"
   end
 

@@ -64,6 +64,6 @@ class SeedbedsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def seedbed_params
-      params.require(:seedbed).permit(:Company_Name, :Date, :Season, :Farm_Name, :Section, :Item_Used, :Quantity, :Unit, :Input_Amount, :Labour_Amount, :Pro_Number, :user_id)
+      params.require(:seedbed).permit(:company_name, :date, :season, :farm_name, :section, :item_used, :quantity, :unit, :input_amount, :labour_amount, :pro_number, :user_id)
     end
 end

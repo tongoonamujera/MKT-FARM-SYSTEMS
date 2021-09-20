@@ -64,6 +64,6 @@ class WeathersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def weather_params
-      params.require(:weather).permit(:Date, :Area, :Min, :Max, :user_id)
+      params.require(:weather).permit(:date, :area, :min, :max, :user_id)
     end
 end

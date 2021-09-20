@@ -64,6 +64,6 @@ class SetSeasonsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def set_season_params
-      params.require(:set_season).permit(:Date, :Season, :user_id)
+      params.require(:set_season).permit(:date, :season, :user_id)
     end
 end

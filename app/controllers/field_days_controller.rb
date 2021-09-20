@@ -64,6 +64,6 @@ class FieldDaysController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def field_day_params
-      params.require(:field_day).permit(:Company_Name, :Date, :Season, :place, :Start_Time, :focus)
+      params.require(:field_day).permit(:company_name, :date, :season, :place, :start_time, :focus)
     end
 end
