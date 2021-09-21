@@ -42,6 +42,40 @@
 
 body {
   font-family: 'Times New Roman', Times, serif;
-  font-weight: 900;
-  font-size: 17px;
+  font-weight: 400;
+  font-size: 15px;
 }
+
+.box-height  {
+  height: 25vh;
+  border-radius: 12px;
+  &:hover {
+    height: 30vh;
+    width: 50;
+    ul {
+      li {
+        line-height: 50px;
+      }
+    }
+  }
+  .dark {
+    background-color: rgb(17, 16, 16);
+    color: white;
+    text-align: center;
+  }
+  ul {
+    margin-left: 30%;
+  }
+}
+
+.orange {
+  background-color: rgb(92, 64, 2);
+  box-decoration-break: slice;
+}
+
+$fa-font-path: '@fortawesome/fontawesome-free/webfonts';
+@import '@fortawesome/fontawesome-free/scss/fontawesome';
+@import '@fortawesome/fontawesome-free/scss/solid';
+@import '@fortawesome/fontawesome-free/scss/regular';
+@import '@fortawesome/fontawesome-free/scss/brands';
+@import '@fortawesome/fontawesome-free/scss/v4-shims';

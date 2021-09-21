@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :home
   resources :input_stores_usages do
     get :bin, on: :member
     put :delete_records, on: :member

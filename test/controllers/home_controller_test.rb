@@ -6,14 +6,4 @@ class HomeControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should get edit" do
-    get home_edit_url
-    assert_response :success
-  end
-
-  test "should get show" do
-    get home_show_url
-    assert_response :success
-  end
-
 end

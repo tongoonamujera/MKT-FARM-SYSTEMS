@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_20_151217) do
+ActiveRecord::Schema.define(version: 2021_09_21_072755) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -165,13 +165,13 @@ ActiveRecord::Schema.define(version: 2021_09_20_151217) do
     t.date "date"
     t.string "season"
     t.string "farm_name"
-    t.string "type"
     t.decimal "quantity"
     t.string "unit"
     t.decimal "unit_price"
     t.decimal "total_amount"
     t.string "pro_number"
     t.boolean "is_bought", default: false
+    t.string "types"
     t.index ["user_id"], name: "index_cereal_stores_on_user_id"
   end
 

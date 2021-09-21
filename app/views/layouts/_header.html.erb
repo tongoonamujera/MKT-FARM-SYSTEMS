@@ -41,7 +41,9 @@
               <div class="buttons">
                 <%= link_to 'Users', users_path, class:"button is-light" %>
                 <%= link_to 'Edit Account', edit_user_registration_path, class:"button is-light" %>
-                <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class:"button is-light" %>
+                  <%= link_to destroy_user_session_path, method: :delete, class:"has-text-dark button is-light" do %>
+                    <span><i class="fas fa-sign-out-alt fa-2x"></i></span> 
+                  <%end%>
               </div>
             </div>
           </div>

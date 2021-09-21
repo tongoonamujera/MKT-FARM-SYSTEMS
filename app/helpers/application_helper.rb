@@ -36,4 +36,10 @@ module ApplicationHelper
     end
     a - b
   end
+
+  def icon(icon, text = nil)
+    html = "<i class=\"fa fa-#{icon}\"></i>"
+    html << " #{text.to_s.html_safe}" if text
+    html.html_safe
+  end
 end
