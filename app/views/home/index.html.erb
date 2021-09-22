@@ -1,36 +1,170 @@
 <div class="outerdiv">
   <div class="columns">
-    <div class="column is-4">
-      <div class="box">
-        <ul>
-          <li>iiiiiiiiiiiiiiiiii</li>
-          <li>iiiiiiiiiiiiiiiiii</li>
-          <li>iiiiiiiiiiiiiiiiii</li>
-          <li>iiiiiiiiiiiiiiiiii</li>
-        </ul>
-      </div>
-    </div>
-    <div class="column is-4">
+    <div class="column is-3">
       <div class="orange box-height">
         <div class="dark">
-          <span>ACCOUNTING</span>
+          <span><i class="far fa-money-bill-alt"></i>ACCOUNTING</span>
         </div>
-        <ul class="has-text-white">
+        <ul class="has-text-white has-text-centered">
           <li><%= link_to 'Cash Requests', cash_requisitions_path, class:"has-text-white" %></li>
           <li><%= link_to 'Cashflows', cashflows_path, class:"has-text-white" %></li>
-          <li>iiiiiiiiiiiiiiiiii</li>
-          <li>iiiiiiiiiiiiiiiiii</li>
+          <li><%= link_to 'Deduction Table', deduction_tables_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Purchases & Payments', purchases_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Rentals', rentals_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Wages & Salaries', wages_path, class:"has-text-white" %></li>
         </ul>
       </div>
     </div>
-    <div class="column is-4">
-      <div class="box">
-        <ul>
-          <li>iiiiiiiiiiiiiiiiii</li>
-          <li>iiiiiiiiiiiiiiiiii</li>
-          <li>iiiiiiiiiiiiiiiiii</li>
-          <li>iiiiiiiiiiiiiiiiii</li>
-          <li>iiiiiiiiiiiiiiiiii</li>
+
+    <div class="column is-3">
+      <div class="orange box-height">
+        <div class="dark">
+          <span>LIVESTOCK RECORDS</span>
+        </div>
+        <ul class="has-text-white has-text-centered">
+          <li><%= link_to 'Cattle', cash_requisitions_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Goats', cashflows_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Pigs', cashflows_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Chicken', cashflows_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Horses', cashflows_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Fish Farming', cashflows_path, class:"has-text-white" %></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="column is-3">
+      <div class="orange box-height">
+        <div class="dark">
+          <span>HORTICULTURE</span>
+        </div>
+        <ul class="has-text-white has-text-centered">
+          <li><%= link_to 'Potatoes', cash_requisitions_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Beans', cashflows_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Onions', cashflows_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Tomatoes', cashflows_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Cabbages', cashflows_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Pumpkins', cashflows_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Butternuts', cashflows_path, class:"has-text-white" %></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="column is-3">
+      <div class="orange box-height">
+        <div class="dark">
+          <span>WAREHOUSING</span>
+        </div>
+        <ul class="has-text-white has-text-centered">
+          <li><%= link_to 'Cereal Stores', cereal_stores_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Deliveries', deliveries_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Harvesting', harvestings_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Rationing', rationings_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Input Stores', stores_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Input Stores Usage', input_stores_usages_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Workshop', workshops_path, class:"has-text-white" %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="columns">
+    <div class="column is-3">
+      <div class="orange box-height-middle">
+        <div class="dark">
+          <span>LAND(S)</span>
+        </div>
+        <ul class="has-text-white has-text-centered">
+          <li><%= link_to 'Input Calibration', input_calibrations_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Irrigation Schedule', irriagtion_schedules_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Land Names', land_names_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Rainfall Records', rainfalls_path, class:"has-text-white" %></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="column is-3">
+      <div class="orange box-height-middle">
+        <div class="dark">
+          <span>DAILY ACTIVITIES</span>
+        </div>
+        <ul class="has-text-white has-text-centered">
+          <li><%= link_to 'Activity', activities_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Requests', daily_requisitions_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Time Book', timebooks_path, class:"has-text-white" %></li>
+      </ul>
+      </div>
+    </div>
+    
+    <div class="column is-3">
+      <div class="orange box-height-middle">
+        <div class="dark">
+          <span>CROP SALES</span>
+        </div>
+        <ul class="has-text-white has-text-centered">
+          <li><%= link_to 'Cereal Sales', cereal_sales_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Tobacco Sales', tobacco_sales_path, class:"has-text-white" %></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="column is-3">
+      <div class="orange box-height-middle">
+        <div class="dark">
+          <span>OTHERS</span>
+        </div>
+        <ul class="has-text-white has-text-centered">
+          <li><%= link_to 'Calender', calenders_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Field Days', field_days_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Weather Updates', weathers_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Set Season', set_seasons_path, class:"has-text-white" %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="columns">
+    <div class="column is-3">
+      <div class="orange box-height-last">
+        <div class="dark">
+          <span>ADVERTISEMENTS</span>
+        </div>
+        <ul class="has-text-white has-text-centered">
+          <li><%= link_to 'Adverts', advertisements_path, class:"has-text-white" %></li>
+      </ul>
+      </div>
+    </div>
+
+    <div class="column is-3">
+      <div class="orange box-height-last">
+        <div class="dark">
+          <span>SEEDBED PLANTING</span>
+        </div>
+        <ul class="has-text-white has-text-centered">
+          <li><%= link_to 'Seed Bed', seedbeds_path, class:"has-text-white" %></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="column is-3">
+      <div class="orange box-height-last">
+        <div class="dark">
+          <span>TOBACCO CURING</span>
+        </div>
+        <ul class="has-text-white has-text-centered">
+          <li><%= link_to 'Barn & Slate Packs', barn_and_slate_records_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Curing', curings_path, class:"has-text-white" %></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="column is-3">
+      <div class="orange box-height-last">
+        <div class="dark">
+          <span>PROPERTY RECORDS</span>
+        </div>
+        <ul class="has-text-white has-text-centered">
+          <li><%= link_to 'Assets', assets_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Equipment Service', equipment_services_path, class:"has-text-white" %></li>
         </ul>
       </div>
     </div>

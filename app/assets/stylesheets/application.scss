@@ -47,30 +47,67 @@ body {
 }
 
 .box-height  {
-  height: 25vh;
+  height: 30vh;
   border-radius: 12px;
-  &:hover {
-    height: 30vh;
-    width: 50;
-    ul {
-      li {
-        line-height: 50px;
-      }
-    }
-  }
   .dark {
     background-color: rgb(17, 16, 16);
     color: white;
     text-align: center;
+    font-weight: 900;
+    font-size: 18px;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
   }
   ul {
-    margin-left: 30%;
+    li {
+      font-size: 15px !important;
+      font-weight: 900;
+    }
+  }
+}
+
+.box-height-middle  {
+  height: 20vh;
+  border-radius: 12px;
+  .dark {
+    background-color: rgb(17, 16, 16);
+    color: white;
+    text-align: center;
+    font-weight: 900;
+    font-size: 18px;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+  }
+  ul {
+    li {
+      font-size: 15px !important;
+      font-weight: 900;
+    }
+  }
+}
+
+.box-height-last  {
+  height: 15vh;
+  border-radius: 12px;
+  .dark {
+    background-color: rgb(17, 16, 16);
+    color: white;
+    text-align: center;
+    font-weight: 900;
+    font-size: 18px;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+  }
+  ul {
+    li {
+      font-size: 15px !important;
+      font-weight: 900;
+    }
   }
 }
 
 .orange {
-  background-color: rgb(92, 64, 2);
-  box-decoration-break: slice;
+  background-color: rgba(39, 29, 2, 0.993);
 }
 
 $fa-font-path: '@fortawesome/fontawesome-free/webfonts';

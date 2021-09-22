@@ -11,32 +11,21 @@
 
   <body id="body">
     <%= render 'layouts/header' %>
-    <div class="columns">
 
       <%if user_signed_in? %>
         <% if current_user.email == 'tongoonamujera@gmail.com' || current_user.email == 'tntmukotekwa@gmail.com' %>
-          <div class="column is-3 has-background-black">
-            <%= render 'layouts/sidebar'%>
-          </div>
-          <div class="column is-9 has-background-grey-dark">
-            <div class="columns is-centered">
-              <div class="column is-12 overflow-y">
+            <div class="columns is-centered has-background-grey-dark">
+              <div class="column is-11 overflow-y">
                 <%= yield %>
               </div>
             </div>
-          </div>
         <% else %>
           <% if authourize_user(current_user) %>
-            <div class="column is-3 has-background-black">
-              <%= render 'layouts/sidebar'%>
-            </div>
-            <div class="column is-9 has-background-grey-dark">
-              <div class="columns is-centered">
-                <div class="column is-12 overflow-y">
+              <div class="columns is-centered has-background-grey-dark">
+                <div class="column is-11 overflow-y">
                   <%= yield %>
                 </div>
               </div>
-            </div>
           <%else%>
             <%= render 'layouts/verification' %>
           <% end %>
@@ -46,7 +35,6 @@
           <%= yield %>
         </div>
       <% end %>
-    </div>
 
   </body>
 </html>
