@@ -38,7 +38,10 @@ Rails.application.routes.draw do
   resources :input_calibrations
   resources :land_names
   resources :mkt_payments
-  resources :set_seasons
+  resources :set_seasons do
+    put :deactivate_season, on: :member
+    put :activate_season, on: :member
+  end
   resources :client_payments
   devise_for :users, :path_prefix => 'my'
   root 'home#index'

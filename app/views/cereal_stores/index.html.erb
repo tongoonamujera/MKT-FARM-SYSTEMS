@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 <%= link_to 'New Cereal Store', new_cereal_store_path, class:"button is-success my-3" %>
+<div class='box'>
 <h1 class="has-background-white">Cereal Stores</h1>
 
 <table class="table">
@@ -37,7 +38,7 @@
         <td><%= cereal_store.pro_number %></td>
         <td><%= cereal_store.user_id %></td>
         <td><%= link_to 'Show', cereal_store %></td>
-        <td><%= link_to 'Edit', edit_cereal_store_path(cereal_store) %></td>
+        <td><%= link_to 'Top Up', edit_cereal_store_path(cereal_store) %></td>
         <td><%= link_to 'Destroy', cereal_store, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -45,5 +46,5 @@
 </table>
 
 <br>
-
+</div>
 

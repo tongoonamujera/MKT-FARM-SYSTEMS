@@ -56,6 +56,18 @@ class SetSeasonsController < ApplicationController
     end
   end
 
+  def activate_season
+    @set_season = SetSeason.find(params[:id])
+    @set_season.activate_s
+    redirect_to set_seasons_url
+  end
+
+  def deactivate_season
+    @set_season = SetSeason.find(params[:id])
+    @set_season.deactivate_s
+    redirect_to set_seasons_url
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_set_season
@@ -64,6 +76,6 @@ class SetSeasonsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def set_season_params
-      params.require(:set_season).permit(:date, :season, :user_id)
+      params.require(:set_season).permit(:date_from, :date_to, :is_active, :season, :user_id)
     end
 end

@@ -12,9 +12,23 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :date, class:"label" %>
+    <%= form.label :date_from, class:"label" %>
     <div class="control">
-      <%= form.date_select :date, class:"input" %>
+      <%= form.date_select :date_from, class:"input" %>
+    </div>
+  </div>
+
+    <div class="field">
+    <%= form.label :date_to, class:"label" %>
+    <div class="control">
+      <%= form.date_select :date_to, class:"input" %>
+    </div>
+  </div>
+
+    <div class="field">
+    <%= form.label :is_active %>
+    <div class="control">
+      <%= form.check_box :is_active %>
     </div>
   </div>
 

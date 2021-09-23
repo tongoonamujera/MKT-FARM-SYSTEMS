@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_21_072755) do
+ActiveRecord::Schema.define(version: 2021_09_23_112056) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -172,6 +172,7 @@ ActiveRecord::Schema.define(version: 2021_09_21_072755) do
     t.string "pro_number"
     t.boolean "is_bought", default: false
     t.string "types"
+    t.decimal "top_up"
     t.index ["user_id"], name: "index_cereal_stores_on_user_id"
   end
 
@@ -504,7 +505,9 @@ ActiveRecord::Schema.define(version: 2021_09_21_072755) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "season"
-    t.date "date"
+    t.date "date_from"
+    t.date "date_to"
+    t.boolean "is_active", default: false
     t.index ["user_id"], name: "index_set_seasons_on_user_id"
   end
 

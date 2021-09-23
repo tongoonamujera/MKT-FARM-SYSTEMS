@@ -47,7 +47,7 @@
   <div class="field">
     <%= form.label :cereal_name, class:"label" %>
     <div class="control">
-      <%= form.text_field :input_name, class:"input" %>
+      <%= form.text_field :cereal_name, class:"input" %>
     </div>
   </div>
 
@@ -83,6 +83,20 @@
     <%= form.label :pro_number, class:"label" %>
     <div class="control">
       <%= form.text_field :pro_number, class:"input" %>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= form.label :top_up, class:"label" %>
+    <div class="control">
+      <%= form.text_field :top_up, class:"input" %>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_bought, class:"label" %>
+    <div class="control">
+      <%= form.check_box :is_bought %>
     </div>
   </div>
 

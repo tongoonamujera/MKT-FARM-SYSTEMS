@@ -1,4 +1,5 @@
 <div class="box">
+<%= @store.input_name %>
   <%= form_with(model: @store, local: true) do |form| %>
     <% if @store.errors.any? %>
       <div id="error_explanation">
@@ -54,9 +55,8 @@
     </div>
 
     <div class="field">
-      <%= form.label :top_up_unit_price, class:"label" %>
       <div class="control">
-        <%= form.text_field :top_up_unit_price, class:"input" %>
+        <%= form.text_field :top_up_unit_price, type: :hidden %>
       </div>
     </div>
 
