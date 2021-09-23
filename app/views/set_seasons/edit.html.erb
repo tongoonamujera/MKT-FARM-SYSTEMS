@@ -1,6 +1,11 @@
-<h1>Editing Set Season</h1>
 
-<%= render 'form', set_season: @set_season %>
-
-<%= link_to 'Show', @set_season %> |
-<%= link_to 'Back', set_seasons_path %>
+<div class="columns is-centered">
+  <div class="column is-6">
+    <div class="box">
+      <h1>Editing Season</h1>
+      <%= render 'form', set_season: @set_season %>
+      <%= link_to 'Show', @set_season %> |
+      <%= link_to 'Back', set_seasons_path %>
+    </div>
+  </div>
+</div>

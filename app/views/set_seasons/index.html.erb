@@ -1,78 +1,81 @@
 <p id="notice"><%= notice %></p>
 <%= link_to 'Create New Season', new_set_season_path, class:'button is-success mb-2' %>
-<div class='box'>
-<h1 class="has-background-white">All Non-Active-Seasons</h1>
+<div class='box orange'>
+  <div class="columns is-centered">
+    <div class="column is-6">
+      <div class="box">
+        <h1 class="has-text-centered"><strong>All Non-Active-Seasons</strong></h1>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>Date From</th>
-      <th>Date To</th>
-      <th>Season</th>
-      <th>User</th>
-      <th colspan="4">Actions</th>
-    </tr>
-  </thead>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Date From</th>
+              <th>Date To</th>
+              <th>Season</th>
+              <th colspan="4">Actions</th>
+            </tr>
+          </thead>
 
-  <tbody>
-    <% @set_seasons.each do |set_season| %>
-      <tr>
-        <td><%= set_season.date_from %></td>
-        <td><%= set_season.date_to %></td>
-        <td><%= set_season.season %></td>
-        <td><%= set_season.user_id %></td>
-        <td><%= link_to 'Show', set_season %></td>
-        <td><%= link_to 'Edit', edit_set_season_path(set_season) %></td>
-        <% unless active_season_available %>
-          <td>
-            <%= form_for set_season, :url =>[:activate_season, set_season], html: { method: :put } do |f| %>
-              <%= f.submit 'Activate Season' %>
+          <tbody>
+            <% @set_seasons.each do |set_season| %>
+              <tr>
+                <td><%= set_season.date_from %></td>
+                <td><%= set_season.date_to %></td>
+                <td><%= set_season.season %></td>
+                <td><%= link_to 'Show', set_season %></td>
+                <td><%= link_to 'Edit', edit_set_season_path(set_season) %></td>
+                <% unless active_season_available %>
+                  <td>
+                    <%= form_for set_season, :url =>[:activate_season, set_season], html: { method: :put } do |f| %>
+                      <%= f.submit 'Activate Season' %>
+                    <% end %>
+                  </td>
+                <% end %>
+                <td><%= link_to 'Destroy', set_season, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
             <% end %>
-          </td>
-        <% end %>
-        <td><%= link_to 'Destroy', set_season, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+          </tbody>
+        </table>
+      </div>
+    </div>
 
-<br>
+    <div class="column is-6">
+      <div class="box">
+        <h1 class="has-text-centered"><strong>Active Season</strong></h1>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Date From</th>
+              <th>Date To</th>
+              <th>Season</th>
+              <th colspan="4"></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <% @active_season.each do |set_season| %>
+              <tr>
+                <td><%= set_season.date_from %></td>
+                <td><%= set_season.date_to %></td>
+                <td><%= set_season.season %></td>
+                <td><%= link_to 'Show', set_season %></td>
+                <td><%= link_to 'Edit', edit_set_season_path(set_season) %></td>
+                <td>
+                  <%= form_for set_season, :url =>[:deactivate_season, set_season], html: { method: :put } do |f| %>
+                    <%= f.submit 'De-activate' %>
+                  <% end %>
+                </td>
+                <td><%= link_to 'Destroy', set_season, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 
-<div class='box'>
-<h1 class="has-background-white"><strong>Active Season</strong></h1>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>Date From</th>
-      <th>Date To</th>
-      <th>Season</th>
-      <th>User</th>
-      <th colspan="4"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @active_season.each do |set_season| %>
-      <tr>
-        <td><%= set_season.date_from %></td>
-        <td><%= set_season.date_to %></td>
-        <td><%= set_season.season %></td>
-        <td><%= set_season.user_id %></td>
-        <td><%= link_to 'Show', set_season %></td>
-        <td><%= link_to 'Edit', edit_set_season_path(set_season) %></td>
-        <td>
-          <%= form_for set_season, :url =>[:deactivate_season, set_season], html: { method: :put } do |f| %>
-            <%= f.submit 'De-activate' %>
-          <% end %>
-        </td>
-        <td><%= link_to 'Destroy', set_season, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-</div>
