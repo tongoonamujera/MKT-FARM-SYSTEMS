@@ -42,4 +42,10 @@ module ApplicationHelper
     html << " #{text.to_s.html_safe}" if text
     html.html_safe
   end
+
+  def active_season_available
+    a = SetSeason.where('is_active =?', true).count
+
+    a > 0 ? true : false
+  end
 end
