@@ -44,7 +44,7 @@ module ApplicationHelper
   end
 
   def active_season_available
-    a = SetSeason.where('is_active =?', true).count
+    a = SetSeason.active_season.size
 
     a > 0 ? true : false
   end

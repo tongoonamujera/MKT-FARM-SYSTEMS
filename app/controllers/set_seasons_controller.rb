@@ -3,8 +3,8 @@ class SetSeasonsController < ApplicationController
 
   # GET /set_seasons or /set_seasons.json
   def index
-    @set_seasons = SetSeason.where('is_active =?', false)
-    @active_season = SetSeason.where('is_active =?', true)
+    @set_seasons = SetSeason.inactive_season
+    @active_season = SetSeason.active_season
   end
 
   # GET /set_seasons/1 or /set_seasons/1.json
