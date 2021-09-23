@@ -27,7 +27,7 @@
                 <% unless active_season_available %>
                   <td>
                     <%= form_for set_season, :url =>[:activate_season, set_season], html: { method: :put } do |f| %>
-                      <%= f.submit 'Activate Season' %>
+                      <%= f.submit 'Activate Season', class:"has-text-success" %>
                     <% end %>
                   </td>
                 <% end %>
@@ -49,7 +49,7 @@
               <th>Date From</th>
               <th>Date To</th>
               <th>Season</th>
-              <th colspan="4"></th>
+              <th colspan="4">Actions</th>
             </tr>
           </thead>
 
@@ -63,7 +63,7 @@
                 <td><%= link_to 'Edit', edit_set_season_path(set_season) %></td>
                 <td>
                   <%= form_for set_season, :url =>[:deactivate_season, set_season], html: { method: :put } do |f| %>
-                    <%= f.submit 'De-activate' %>
+                    <%= f.submit 'De-activate', class:"has-text-danger" %>
                   <% end %>
                 </td>
                 <td><%= link_to 'Destroy', set_season, method: :delete, data: { confirm: 'Are you sure?' } %></td>
