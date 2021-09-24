@@ -1,6 +1,13 @@
-<h1>Editing Timebook</h1>
 
-<%= render 'form', timebook: @timebook %>
+<div class="columns is-centered">
+  <div class="column is-6">
+    <div class="box outerdiv">
+      <h1 class="has-text-centered"><strong>Editing Timebook</strong></h1>
 
-<%= link_to 'Show', @timebook %> |
-<%= link_to 'Back', timebooks_path %>
+      <%= render 'form', timebook: @timebook %>
+
+      <%= link_to 'Show', @timebook %> |
+      <%= link_to 'Back', timebooks_path %>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,5 @@
 
-<div class="box">
+<div class="box outerdiv">
 <h1 class="has-text-centered">New Timebook</h1>
 <% Employee.all.each do |employee| %>
   <% unless employee_already_exists(employee.employee_name) %>
@@ -81,7 +81,7 @@
             </div>
             <div class="column is-3">
               <div class="actions">
-                <%= form.submit 'Update', class:"button is-success" %>
+                <%= form.submit 'Update', class:"button btn-orange" %>
               </div>
             </div>
           </div>
@@ -91,32 +91,4 @@
     <% end %>
     <%end%>
   <%= link_to 'Back', timebooks_path, class:"button is-dark" %>
-</div>
-
-<div class="box">
-  <%= form_for @timebook do|form| %>
-  <table class="table">
-    <tr>
-      <th>Name</th>
-      <th>Employee Number</th>
-      <th>Daily Rate</th>
-      <th>Day</th>
-      <th>Date</th>
-      <th></th>
-    </tr>
-    <% @employee.each do |employee| %>
-    <tr>
-      <td><%= employee.employee_name %></td>
-      <td><%= employee.employee_number %></td>
-      <td><%= employee.daily_rate %></td>
-      <td><%= employee.employee_name %></td>
-      <td><%= employee.employee_name %></td>
-      <td><%= check_box_tag 'employee_ids[]', employee.id %></td>
-      <%= form.text_field :employee_name, value: employee.employee_name, type: :hidden %>
-    </tr>
-    <% end %>
-  </table>
-  <%= form.text_field :user_id, value: current_user.id, type: :hidden %>
-  <%= form.submit "submit all"%>
-  <% end %>
 </div>
