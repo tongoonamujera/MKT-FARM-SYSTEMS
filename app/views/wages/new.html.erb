@@ -1,5 +1,5 @@
 <% DeductionTable.all.each do |deduction| %>
-  <div class="box">
+  <div class="box outerdiv">
     <div class="has-background-black">
       <h1 class="has-text-centered py-0"><strong class="has-text-white">Creating Monthly Wage for: <%= deduction.employee_name %>. Emp Number: <%= deduction.employee_number %></strong></h1>
     </div>
@@ -171,8 +171,10 @@
       <%= form.text_field :season, value: deduction.season, type: :hidden %>
       <%= form.text_field :user_id, value: current_user.id, type: :hidden %>
       <div class="actions has-text-centered">
-        <%= form.submit "Create New Employee Wage", class:"button is-success" %>
+        <%= form.submit "Create New Employee Wage", class:"button btn-orange" %>
       </div>
     <% end %>
   </div>
 <% end %>
+
+<%= link_to "Back", wages_path, class:"button is-black" %>
