@@ -1,45 +1,43 @@
 <p id="notice"><%= notice %></p>
 <%= link_to 'New Mkt Payment', new_mkt_payment_path, class:"button is-success my-3" %>
-<h1 class="has-background-white">Mkt Payments</h1>
+<div class="box">
+  <h1 class="has-background-white">Mkt Payments</h1>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>Date</th>
-      <th>Company name</th>
-      <th>Service rendered</th>
-      <th>Service</th>
-      <th>Amount paid</th>
-      <th>From</th>
-      <th>To</th>
-      <th>Receipt number</th>
-      <th>Paid by</th>
-      <th>Pro number</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @mkt_payments.each do |mkt_payment| %>
+  <table class="table">
+    <thead>
       <tr>
-        <td><%= mkt_payment.date %></td>
-        <td><%= mkt_payment.company_name %></td>
-        <td><%= mkt_payment.service_rendered %></td>
-        <td><%= mkt_payment.service %></td>
-        <td><%= mkt_payment.amount_paid %></td>
-        <td><%= mkt_payment.from %></td>
-        <td><%= mkt_payment.to %></td>
-        <td><%= mkt_payment.receipt_number %></td>
-        <td><%= mkt_payment.paid_by %></td>
-        <td><%= mkt_payment.pro_number %></td>
-        <td><%= link_to 'Show', mkt_payment %></td>
-        <td><%= link_to 'Edit', edit_mkt_payment_path(mkt_payment) %></td>
-        <td><%= link_to 'Destroy', mkt_payment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Date</th>
+        <th>Company name</th>
+        <th>Service rendered</th>
+        <th>Service</th>
+        <th>Amount paid</th>
+        <th>From</th>
+        <th>To</th>
+        <th>Receipt number</th>
+        <th>Paid by</th>
+        <th>Pro number</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
-
-
+    <tbody>
+      <% @mkt_payments.each do |mkt_payment| %>
+        <tr>
+          <td><%= mkt_payment.date %></td>
+          <td><%= mkt_payment.company_name %></td>
+          <td><%= mkt_payment.service_rendered %></td>
+          <td><%= mkt_payment.service %></td>
+          <td><%= mkt_payment.amount_paid %></td>
+          <td><%= mkt_payment.from %></td>
+          <td><%= mkt_payment.to %></td>
+          <td><%= mkt_payment.receipt_number %></td>
+          <td><%= mkt_payment.paid_by %></td>
+          <td><%= mkt_payment.pro_number %></td>
+          <td><%= link_to 'Show', mkt_payment %></td>
+          <td><%= link_to 'Edit', edit_mkt_payment_path(mkt_payment) %></td>
+          <td><%= link_to 'Destroy', mkt_payment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
