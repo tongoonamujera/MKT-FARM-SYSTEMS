@@ -1,7 +1,7 @@
 module ApplicationHelper
   def authourize_user(user)
-    a = ClientPayment.valid.pluck(:Company_Name)
-    if a.include?(user.Company_Name)
+    a = ClientPayment.valid.pluck(:company_name)
+    if a.include?(user.company_name)
       true
     else
       false
