@@ -14,7 +14,7 @@
   <div class="field">
     <%= form.label :company_name, class:"label" %>
     <div class="control">
-    <%= form.collection_select :company_name, User.order(:Company_Name), :Company_Name, :Company_Name, class:"my-3" %>
+    <%= form.collection_select :company_name, User.order(:company_name), :company_name, :company_name, class:"my-3" %>
     </div>
   </div>
 
