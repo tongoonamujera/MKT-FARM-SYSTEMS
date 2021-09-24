@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_23_112056) do
+ActiveRecord::Schema.define(version: 2021_09_24_060944) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -590,11 +590,11 @@ ActiveRecord::Schema.define(version: 2021_09_23_112056) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "Company_Name"
+    t.string "company_name"
     t.string "cellphone"
-    t.string "Address"
-    t.string "Category"
-    t.string "Pro_Number"
+    t.string "address"
+    t.string "category"
+    t.string "pro_number"
     t.boolean "is_admin", default: false
     t.boolean "is_manager", default: false
     t.boolean "is_farm_owner", default: false
@@ -602,6 +602,7 @@ ActiveRecord::Schema.define(version: 2021_09_23_112056) do
     t.string "username"
     t.boolean "is_advertiser", default: false
     t.boolean "is_contractor", default: false
+    t.string "farm_name"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

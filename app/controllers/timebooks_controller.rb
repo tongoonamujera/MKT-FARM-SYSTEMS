@@ -13,6 +13,7 @@ class TimebooksController < ApplicationController
   # GET /timebooks/new
   def new
     @timebook = Timebook.new
+    @employee = Employee.all
   end
 
   # GET /timebooks/1/edit
@@ -21,7 +22,8 @@ class TimebooksController < ApplicationController
 
   # POST /timebooks or /timebooks.json
   def create
-    @timebook = Timebook.new(timebook_params)
+    @timebooks = Timebook.find(params[:employee_ids])
+    @timebook  = Timebook.new(@timebooks)
 
     respond_to do |format|
       if @timebook.save
@@ -32,6 +34,12 @@ class TimebooksController < ApplicationController
         format.json { render json: @timebook.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def new_timebooks
+    @timebooks = Timebook.find(params[:id])
+    @timebooks.insert_all({id: params[:employee_ids]})
+    redirect_to timebooks_url
   end
 
   # PATCH/PUT /timebooks/1 or /timebooks/1.json

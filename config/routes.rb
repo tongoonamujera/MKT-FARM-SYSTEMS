@@ -5,7 +5,9 @@ Rails.application.routes.draw do
     put :delete_records, on: :member
     put :restore_records, on: :member
   end
-  resources :timebooks
+  resources :timebooks do
+    match '/new', to: 'timebooks#new_timebooks', via: :post, on: :collection
+  end
   resources :employees
   resources :tobacco_sales
   resources :rentals

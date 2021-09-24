@@ -115,6 +115,11 @@ body {
   background-color: rgba(39, 29, 2, 0.993);
 }
 
+.btn-orange {
+  background-color: #6e2f03;
+  color: #ffffff;
+}
+
 $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
 @import '@fortawesome/fontawesome-free/scss/fontawesome';
 @import '@fortawesome/fontawesome-free/scss/solid';
