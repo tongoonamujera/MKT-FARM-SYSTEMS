@@ -1,5 +1,5 @@
-<%= link_to 'New Store', new_store_path, class:"button is-success my-3" %>
-<div class="box">
+<%= link_to 'New Store', new_store_path, class:"button btn-orange my-3" %>
+<div class="box outerdiv">
   <p id="notice"><%= notice %></p>
   <h1 class="has-text-centered"><strong>Stores</strong></h1>
 
@@ -16,9 +16,8 @@
         <th>Unit</th>
         <th>Unit price</th>
         <th>Total amount</th>
-        <th>Pro number</th>
-        <th>User</th>
-        <th colspan="3"></th>
+        <th>Pro Number</th>
+        <th colspan="3" class="has-text-centered">Actions</th>
       </tr>
     </thead>
 
@@ -39,10 +38,9 @@
           <td><%= store.unit_price %></td>
           <td><%= store.total_amount %></td>
           <td><%= store.pro_number %></td>
-          <td><%= store.user_id %></td>
           <td><%= link_to 'Show', store %></td>
           <td><%= link_to 'Top Up', edit_store_path(store) %></td>
-          <td><%= link_to 'Destroy', store, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Delete', store, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
     </tbody>
