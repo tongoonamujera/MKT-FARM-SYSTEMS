@@ -120,6 +120,16 @@ body {
   color: #ffffff;
 }
 
+tr {
+  th {
+    background-color: gray;
+  }
+  &:hover {
+    background-color: rgb(177, 168, 168);
+    color: white;
+  }
+}
+
 $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
 @import '@fortawesome/fontawesome-free/scss/fontawesome';
 @import '@fortawesome/fontawesome-free/scss/solid';

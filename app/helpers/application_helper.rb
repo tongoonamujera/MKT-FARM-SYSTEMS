@@ -48,4 +48,10 @@ module ApplicationHelper
 
     a > 0 ? true : false
   end
+
+  def season_active
+    a = SetSeason.active_season.pluck(:season)[0]
+
+    a.nil? ? nil : a
+  end
 end
