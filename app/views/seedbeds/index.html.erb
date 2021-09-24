@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
-<%= link_to 'New Seedbed', new_seedbed_path, class:"button is-success my-3" %>
-<div class='box'>
+<%= link_to 'New Seedbed', new_seedbed_path, class:"button btn-orange my-3" %>
+<div class='box outerdiv'>
 <h1 class="has-background-white">Seedbeds</h1>
 
 <table class="table">
@@ -12,7 +12,6 @@
       <th>Farm name</th>
       <th>Section</th>
       <th>Item used</th>
-      <th>Quantity</th>
       <th>Unit</th>
       <th>Input amount</th>
       <th>Labour amount</th>
@@ -31,7 +30,6 @@
         <td><%= seedbed.farm_name %></td>
         <td><%= seedbed.section %></td>
         <td><%= seedbed.item_used %></td>
-        <td><%= seedbed.quantity %></td>
         <td><%= seedbed.unit %></td>
         <td><%= seedbed.input_amount %></td>
         <td><%= seedbed.labour_amount %></td>
