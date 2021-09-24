@@ -65,7 +65,9 @@
         <p>
         Hello 
         <% if user_signed_in? %>
+        <span class="blink">
           <%= current_user.username.upcase %>
+        </span>
         <% else %>
           <span>Guest User</span>
         <% end %>
