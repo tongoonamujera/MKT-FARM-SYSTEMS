@@ -63,6 +63,9 @@
 
           <div class="field">
             <%= form.text_field :user_id, value: current_user.id, type: :hidden %>
+            <%= form.text_field :company_name, value: current_user.company_name, type: :hidden %>
+            <%= form.text_field :farm_name, value: current_user.farm_name, type: :hidden %>
+            <%= form.text_field :season, value: season_active, type: :hidden %>
           </div>
 
           <div class="columns">

@@ -99,7 +99,8 @@
             <div class="field">
               <%= form.label :season, class:"label" %>
               <div class="control">
-                <%= form.text_field :season, class:"input" %>
+              <%= season_active %>
+                <%= form.text_field :season, value: season_active, type: :hidden %>
               </div>
             </div>
           </div>

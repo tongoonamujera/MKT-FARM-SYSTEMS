@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_24_060944) do
+ActiveRecord::Schema.define(version: 2021_09_25_093244) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 2021_09_24_060944) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "vat"
     t.date "date"
-    t.string "Season"
+    t.string "season"
     t.string "asset"
     t.string "asset_number"
     t.string "asset_type"
@@ -269,7 +269,7 @@ ActiveRecord::Schema.define(version: 2021_09_24_060944) do
     t.string "season"
     t.string "farm_name"
     t.string "section"
-    t.string "type"
+    t.string "types"
     t.string "delivered_by"
     t.string "goods"
     t.string "quantity"
@@ -298,7 +298,7 @@ ActiveRecord::Schema.define(version: 2021_09_24_060944) do
     t.string "company_name"
     t.date "date"
     t.string "season"
-    t.string "type"
+    t.string "types"
     t.string "equipment_number"
     t.string "service_type"
     t.string "done_by"
@@ -429,7 +429,7 @@ ActiveRecord::Schema.define(version: 2021_09_24_060944) do
     t.string "unit_price"
     t.string "total_items"
     t.string "total_amount"
-    t.string "VAT"
+    t.string "vat"
     t.string "pro_number"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -442,7 +442,7 @@ ActiveRecord::Schema.define(version: 2021_09_24_060944) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "company_name"
-    t.date "Date"
+    t.date "date"
     t.string "season"
     t.string "farm_name"
     t.string "section"
@@ -542,6 +542,8 @@ ActiveRecord::Schema.define(version: 2021_09_24_060944) do
     t.decimal "rate"
     t.decimal "gross"
     t.string "season"
+    t.string "company_name"
+    t.string "farm_name"
     t.index ["user_id"], name: "index_timebooks_on_user_id"
   end
 

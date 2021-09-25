@@ -1,5 +1,13 @@
-<h1>New Cereal Sale</h1>
 
-<%= render 'form', cereal_sale: @cereal_sale %>
 
-<%= link_to 'Back', cereal_sales_path %>
+<div class="columns is-centered">
+  <div class="column is-6">
+    <div class="box outerdiv">
+      <h1 class="has-text-centered"><strong>New Cereal Sale</strong></h1>
+
+      <%= render 'form', cereal_sale: @cereal_sale %>
+
+      <%= link_to 'Back', cereal_sales_path %>
+    </div>
+  </div>
+</div>

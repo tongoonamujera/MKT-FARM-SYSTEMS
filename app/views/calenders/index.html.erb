@@ -15,7 +15,6 @@
       <th>Month</th>
       <th>Activity</th>
       <th>Pro number</th>
-      <th>User</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -30,7 +29,6 @@
         <td><%= calender.month %></td>
         <td><%= calender.activity %></td>
         <td><%= calender.pro_number %></td>
-        <td><%= calender.user_id %></td>
         <td><%= link_to 'Show', calender %></td>
         <td><%= link_to 'Edit', edit_calender_path(calender) %></td>
         <td><%= link_to 'Destroy', calender, method: :delete, data: { confirm: 'Are you sure?' } %></td>

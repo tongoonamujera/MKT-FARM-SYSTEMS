@@ -17,7 +17,6 @@
       <th>Unit price</th>
       <th>Total amount</th>
       <th>Pro number</th>
-      <th>User</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -36,7 +35,6 @@
         <td><%= cereal_store.unit_price %></td>
         <td><%= cereal_store.total_amount %></td>
         <td><%= cereal_store.pro_number %></td>
-        <td><%= cereal_store.user_id %></td>
         <td><%= link_to 'Show', cereal_store %></td>
         <td><%= link_to 'Top Up', edit_cereal_store_path(cereal_store) %></td>
         <td><%= link_to 'Destroy', cereal_store, method: :delete, data: { confirm: 'Are you sure?' } %></td>

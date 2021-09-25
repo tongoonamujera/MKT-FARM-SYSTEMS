@@ -10,6 +10,8 @@
         <thead>
           <tr>
             <th>Date</th>
+            <th>Company Name</th>
+            <th>Farm Name</th>
             <th>Employee name</th>
             <th>Employee number</th>
             <th>Rate</th>
@@ -24,6 +26,8 @@
           <% @timebooks.each do |timebook| %>
             <tr>
               <td><%= timebook.date %></td>
+              <td><%= timebook.company_name %></td>
+              <td><%= timebook.farm_name %></td>
               <td><%= timebook.employee_name %></td>
               <td><%= timebook.employee_number %></td>
               <td><%= timebook.rate %></td>
@@ -32,7 +36,7 @@
               <td><%= timebook.season %></td>
               <td><%= link_to 'Show', timebook %></td>
               <td><%= link_to 'Edit', edit_timebook_path(timebook) %></td>
-              <td><%= link_to 'Destroy', timebook, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <td><%= link_to 'Restore', timebook, method: :delete, data: { confirm: 'Are you sure?' } %></td>
             </tr>
           <% end %>
         </tbody>

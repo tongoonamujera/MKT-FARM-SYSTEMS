@@ -14,7 +14,7 @@
   <div class="field">
     <%= form.label :company_name, class:"label" %>
     <div class="control">
-      <%= form.select :company_Name, [current_user.company_name], class:"my-3" %>
+      <%= form.select :company_name, [current_user.company_name], class:"my-3" %>
     </div>
   </div>
 
@@ -26,9 +26,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :season, class:"label" %>
     <div class="control">
-      <%= form.text_field :season, class:"input" %>
+      <%= form.text_field :season, value: season_active, type: :hidden %>
     </div>
   </div>
 

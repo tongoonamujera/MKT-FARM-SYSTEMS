@@ -168,7 +168,7 @@
 
       <%= form.text_field :empoyee_number, value: deduction.employee_name, type: :hidden %>
       <%= form.text_field :employee_name, value: deduction.employee_name, type: :hidden %>
-      <%= form.text_field :season, value: deduction.season, type: :hidden %>
+      <%= form.text_field :season, value: season_active, type: :hidden %>
       <%= form.text_field :user_id, value: current_user.id, type: :hidden %>
       <div class="actions has-text-centered">
         <%= form.submit "Create New Employee Wage", class:"button btn-orange" %>

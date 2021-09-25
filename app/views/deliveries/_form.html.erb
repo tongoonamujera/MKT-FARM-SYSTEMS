@@ -26,9 +26,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :season, class:"label" %>
     <div class="control">
-      <%= form.text_field :season, class:"input" %>
+      <%= form.text_field :season, value: season_active, type: :hidden %>
     </div>
   </div>
 
@@ -47,9 +46,9 @@
   </div>
 
   <div class="field">
-    <%= form.label :type, class:"label" %>
+    <%= form.label :types, class:"label" %>
     <div class="control">
-      <%= form.text_field :type, class:"input" %>
+      <%= form.text_field :types, class:"input" %>
     </div>
   </div>
 

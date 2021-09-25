@@ -22,13 +22,12 @@ class TimebooksController < ApplicationController
 
   # POST /timebooks or /timebooks.json
   def create
-    @timebooks = Timebook.find(params[:employee_ids])
-    @timebook  = Timebook.new(@timebooks)
+    @timebook = Timebook.new(timebook_params)
 
     respond_to do |format|
       if @timebook.save
-        format.html { redirect_to @timebook, notice: "Timebook was successfully created." }
-        format.json { render :show, status: :created, location: @timebook }
+        format.html { redirect_to new_timebook_path, notice: "Timebook was successfully created." }
+        format.json { render :new, status: :created, location: @timebook }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @timebook.errors, status: :unprocessable_entity }
@@ -72,6 +71,6 @@ class TimebooksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def timebook_params
-      params.require(:timebook).permit(:date, :employee_name, :employee_number, :rate, :day, :gross, :user_id, :season)
+      params.require(:timebook).permit(:date, :employee_name, :employee_number, :rate, :day, :gross, :user_id, :season, :company_name, :farm_name)
     end
 end

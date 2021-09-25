@@ -19,9 +19,7 @@
   </div>
 
   <div class="field">
-    <%= form.label :season, class:"label" %>
-      <%= form.text_field :season, class:"input" %>
-    <div class="control"></div>
+    <%= form.text_field :season, value: season_active, type: :hidden %>
   </div>
 
   <div class="field">
@@ -48,7 +46,7 @@
   <div class="field">
     <%= form.label :p_slate_number, class:"label" %>
     <div class="control">
-      <%= form.text_field :p_slatenumber, class:"input" %>
+      <%= form.text_field :p_slate_number, class:"input" %>
     </div>
   </div>
 
@@ -69,7 +67,7 @@
   <div class="field">
     <%= form.label :cumulative_barn_weight, class:"label" %>
     <div class="control">
-      <%= form.text_field :cumulative_barn_Weight, class:"input" %>
+      <%= form.text_field :cumulative_barn_weight, class:"input" %>
     </div>
   </div>
 
@@ -85,9 +83,9 @@
   </div>
 
   <div class="field">
-    <%= form.label :Date, class:"label" %>
+    <%= form.label :date, class:"label" %>
     <div class="control">
-      <%= form.date_select :Date, class:"input" %>
+      <%= form.date_select :date, class:"input" %>
     </div>
   </>
 
