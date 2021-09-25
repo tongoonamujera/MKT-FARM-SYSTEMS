@@ -1,11 +1,8 @@
 module ApplicationHelper
   def authourize_user(user)
     a = ClientPayment.valid.pluck(:company_name)
-    if a.include?(user.company_name)
-      true
-    else
-      false
-    end
+
+    a.include?(user.company_name) ? true : false
   end
 
   def employee_already_exists(employee)
@@ -53,5 +50,24 @@ module ApplicationHelper
     a = SetSeason.active_season.pluck(:season)[0]
 
     a.nil? ? nil : a
+  end
+
+  def current_date
+    x = DateTime.now.day
+    a = DateTime.now.strftime("%A")
+    b = DateTime.now.strftime("%B")
+    c = DateTime.now.strftime("%Y")
+    d = "#{a} #{x} #{b} #{c}"
+    d
+  end
+
+  def greeting_text
+    a = ["Good Moring #{current_user.username.capitalize}",
+      "Good Afternoon #{current_user.username.capitalize}",
+      "Good Evening #{current_user.username.capitalize}"
+    ]
+    b = Time.now.hour
+
+    0 < b && b < 12 ? a[0] : 12 < b && b < 15 ? a[1] : a[2]
   end
 end

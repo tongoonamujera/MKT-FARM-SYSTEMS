@@ -63,17 +63,17 @@
   <div class="hero-body">
     <div class="container has-text-centered">
         <p>
-        Hello 
+
         <% if user_signed_in? %>
         <span class="blink">
-          <%= current_user.username.upcase %>
+          <%= greeting_text %>
         </span>
         <% else %>
           <span>Guest User</span>
         <% end %>
         </p>
       <p class="subtitle">
-        
+        <%= current_date %>
       </p>
     </div>
   </div>
