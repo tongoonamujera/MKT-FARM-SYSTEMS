@@ -62,12 +62,20 @@ module ApplicationHelper
   end
 
   def greeting_text
-    a = ["Good Moring #{current_user.username.capitalize}",
+    a = ["Good Morning #{current_user.username.capitalize}",
       "Good Afternoon #{current_user.username.capitalize}",
       "Good Evening #{current_user.username.capitalize}"
     ]
     b = Time.now.hour
 
     0 < b && b < 12 ? a[0] : 12 < b && b < 15 ? a[1] : a[2]
+  end
+
+  def admin_users
+    a = 'tongoonamujera@gmail.com'
+    b = 'tntmukotekwa@gmail.com'
+    c = current_user.email
+
+    c = a || c = b ? true : false
   end
 end

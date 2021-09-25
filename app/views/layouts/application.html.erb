@@ -13,7 +13,7 @@
     <%= render 'layouts/header' %>
 
       <%if user_signed_in? %>
-        <% if current_user.email == 'tongoonamujera@gmail.com' || current_user.email == 'tntmukotekwa@gmail.com' %>
+        <% if admin_users %>
             <div class="columns is-centered has-background-grey-dark">
               <div class="column is-11 overflow-y">
                 <%= yield %>
