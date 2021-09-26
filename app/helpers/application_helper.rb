@@ -68,7 +68,7 @@ module ApplicationHelper
     ]
     b = Time.now.hour
 
-    0 < b && b < 12 ? a[0] : 12 < b && b < 15 ? a[1] : a[2]
+    0 <= b && b < 12 ? a[0] : 12 <= b && b < 15 ? a[1] : a[2]
   end
 
   def admin_users
@@ -76,6 +76,26 @@ module ApplicationHelper
     b = 'tntmukotekwa@gmail.com'
     c = current_user.email
 
-    c = a || c = b ? true : false
+    c == a || c == b ? true : false
+  end
+
+  def c_quantity(cereal)
+    a = Harvesting.where('cereal_name =?', cereal).pluck(:kgs_done).flatten.compact.inject(:+)
+    a.nil? ? a = 0 : a
+    b = CerealStore.where('cereal_name =?', cereal).pluck(:quantity).flatten.compact.inject(:+)
+    b.nil? ? b = 0 : b
+    c = a + b
+    d = Rationing.where('cereal_name =?', cereal).pluck(:kgs_issued).flatten.compact.inject(:+)
+    d.nil? ? d = 0 : d
+    e = c - d
+    e
+  end
+
+  def user_farmnames(user)
+    a = user.company_name
+    b = User.where("company_name =?", a).pluck(:id).flatten
+    c = FarmName.where("user_id IN (?)", b).pluck(:user_farm_name)
+
+    c
   end
 end

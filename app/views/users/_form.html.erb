@@ -38,7 +38,7 @@
             <div class="field">
               <%= f.label :farm_name, class:"label" %>
               <div class="control">
-                <%= f.text_field :farm_name, autocomplete: "cellphone", class:"input" %>
+                <%= f.select :farm_name, user_farmnames(@user) %>
               </div>
             </div>
 

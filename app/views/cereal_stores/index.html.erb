@@ -11,7 +11,7 @@
       <th>Season</th>
       <th>Farm name</th>
       <th>Type</th>
-      <th>Input name</th>
+      <th>Cereal Name</th>
       <th>Quantity</th>
       <th>Unit</th>
       <th>Unit price</th>
@@ -30,7 +30,9 @@
         <td><%= cereal_store.farm_name %></td>
         <td><%= cereal_store.types %></td>
         <td><%= cereal_store.cereal_name %></td>
-        <td><%= cereal_store.quantity %></td>
+        <td>
+          <%= c_quantity(cereal_store.cereal_name) %>
+        </td>
         <td><%= cereal_store.unit %></td>
         <td><%= cereal_store.unit_price %></td>
         <td><%= cereal_store.total_amount %></td>

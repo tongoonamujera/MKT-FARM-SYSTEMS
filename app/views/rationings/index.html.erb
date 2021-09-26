@@ -33,7 +33,7 @@
         <td><%= rationing.price %></td>
         <td><%= link_to 'Show', rationing %></td>
         <td><%= link_to 'Edit', edit_rationing_path(rationing) %></td>
-        <td><%= link_to 'Destroy', rationing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Restore', rationing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

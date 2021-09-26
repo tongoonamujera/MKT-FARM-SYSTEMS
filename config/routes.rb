@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :farm_names
   resources :home
   resources :input_stores_usages do
     get :bin, on: :member

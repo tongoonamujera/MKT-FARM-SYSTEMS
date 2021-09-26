@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_25_154123) do
+ActiveRecord::Schema.define(version: 2021_09_26_112438) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -307,6 +307,14 @@ ActiveRecord::Schema.define(version: 2021_09_25_154123) do
     t.decimal "total_amount"
     t.string "pro_number"
     t.index ["user_id"], name: "index_equipment_services_on_user_id"
+  end
+
+  create_table "farm_names", force: :cascade do |t|
+    t.string "user_farm_name"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_farm_names_on_user_id"
   end
 
   create_table "field_days", force: :cascade do |t|
@@ -614,7 +622,7 @@ ActiveRecord::Schema.define(version: 2021_09_25_154123) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "employee_name"
-    t.string "empoyee_number"
+    t.string "employee_number"
     t.string "company_name"
     t.string "farm_name"
     t.string "season"
@@ -671,6 +679,7 @@ ActiveRecord::Schema.define(version: 2021_09_25_154123) do
   add_foreign_key "deliveries", "users"
   add_foreign_key "employees", "users"
   add_foreign_key "equipment_services", "users"
+  add_foreign_key "farm_names", "users"
   add_foreign_key "harvestings", "users"
   add_foreign_key "input_calibrations", "users"
   add_foreign_key "input_stores_usages", "users"

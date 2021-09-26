@@ -33,7 +33,7 @@
         <td><%= harvesting.user_id %></td>
         <td><%= link_to 'Show', harvesting %></td>
         <td><%= link_to 'Edit', edit_harvesting_path(harvesting) %></td>
-        <td><%= link_to 'Destroy', harvesting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Restore', harvesting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

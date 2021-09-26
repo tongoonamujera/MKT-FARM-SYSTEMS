@@ -1,0 +1,26 @@
+<%= form_with(model: farm_name, local: true) do |form| %>
+  <% if farm_name.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(farm_name.errors.count, "error") %> prohibited this farm_name from being saved:</h2>
+
+      <ul>
+        <% farm_name.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_farm_name, class:'label' %>
+    <%= form.text_field :user_farm_name, class:'input' %>
+  </div>
+
+  <div class="field">
+    <%= form.text_field :user_id, value:current_user.id, type: :hidden %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class:'button btn-orange' %>
+  </div>
+<% end %>

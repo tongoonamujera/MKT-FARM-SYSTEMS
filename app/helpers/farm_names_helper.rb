@@ -1,0 +1,2 @@
+module FarmNamesHelper
+end

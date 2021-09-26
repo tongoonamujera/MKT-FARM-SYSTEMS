@@ -107,12 +107,8 @@
         <div class="column is-6">
           <div class="columns">
             <div class="column is-7">
-              <h4>Status</h4>
-              <% if user.status == true %>
-                <p>Verified</p>
-              <% else %>
-                <p>Not Verified</p>
-              <% end %>
+              <h4>Farm Name</h4>
+              <p><%= user.farm_name %></p>
             </div>
             <div class="column is-5">
               <h4>Is Admin?</h4>
