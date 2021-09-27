@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
-<div class='box'>
-<h1>Input Stores Usages</h1>
+<div class='box outerdiv'>
+<h1 class="has-text-centered"><strong>Input Stores Usages</strong></h1>
 
 <table class="table">
   <thead>
@@ -44,6 +44,6 @@
 
 <br>
 </div>
-<%= link_to 'Bin', bin_input_stores_usage_path(@input_stores_usages), class:"button is-success" %>
+<%= link_to 'Bin', bin_input_stores_usage_path(@input_stores_usages), class:"button btn-orange" %>
 
-<%= link_to 'New Input Stores Usage', new_input_stores_usage_path, class:"button is-success" %>
+<%= link_to 'New Input Stores Usage', new_input_stores_usage_path, class:"button btn-orange" %>
