@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'seasonal_inputs_usage_to_date/index'
   resources :farm_names
   resources :home
   resources :input_stores_usages do
