@@ -12,9 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :company_name, class:"label" %>
     <div class="control">
-      <%= form.select :company_name, [current_user.company_name], class:"my-3" %>
+      <%= form.text_field :company_name, value:current_user.company_name, type: :hidden %>
     </div>
   </div>
 

@@ -137,7 +137,8 @@
               Farm Name
             </div>
             <div class="my-1 has-text-centered">
-              <%= form.text_field :farm_name, class:"input-wage" %>
+              <%= current_user.farm_name %>
+              <%= form.text_field :farm_name, value:current_user.farm_name, type: :hidden %>
             </div>
           </div>
         </div>

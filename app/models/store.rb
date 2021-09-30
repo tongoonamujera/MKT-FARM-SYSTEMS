@@ -13,9 +13,9 @@ class Store < ApplicationRecord
   end
 
   def total_value
-    c = Store.last.types
-    d = Store.last.id
-    a = Store.where("types =? AND id =?", c,d).pluck(:quantity, :top_up).flatten.compact.inject(:+)
+    c = Store.where("updated_at =?", Store.maximum(:updated_at)).pluck(:types)[0]
+    d = Store.where("updated_at =?", Store.maximum(:updated_at)).pluck(:id)[0]
+    a = Store.where("id =?", d).pluck(:quantity, :top_up).flatten.compact.inject(:+)
 
     a 
   end

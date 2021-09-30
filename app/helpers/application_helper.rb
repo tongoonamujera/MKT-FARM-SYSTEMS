@@ -98,4 +98,26 @@ module ApplicationHelper
 
     c
   end
+
+  ## input usage to date calcs
+
+  def total_quantity(input_name)
+    a = InputStoresUsage.where("input_name =?", input_name).pluck(:total_amount).inject(:+)
+    a.nil? ? a = 0 : a
+  end
+
+  def unit_price(input_name)
+    a = Store.where("input_name =?", input_name).pluck(:unit_price).flatten.first
+    a.nil? ? a = 0 : a
+  end
+
+  def unit(input_name)
+    a = InputStoresUsage.where("input_name =?", input_name).pluck(:unit).flatten.first
+    a.nil? ? a = 0 : a
+  end
+
+  def quantity_used(input_name)
+    a = InputStoresUsage.where("input_name =?", input_name).pluck(:quantity_used).inject(:+)
+    a.nil? ? a = 0 : a
+  end
 end

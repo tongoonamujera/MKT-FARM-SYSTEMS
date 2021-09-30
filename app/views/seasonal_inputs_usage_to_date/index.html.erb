@@ -8,11 +8,43 @@
     <th>Unit</th>
     <th>Total Quantity</th>
   </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
+  <%@seeds.each do |seed|%>
+    <tr>
+      <td><%= seed %></td>
+      <td><%= total_quantity(seed) %></td>
+      <td>$<%= unit_price(seed)%></td>
+      <td><%= unit(seed)%></td>
+      <td><%= quantity_used(seed)%></td>
+    </tr>
+  <% end %>
+
+  <%@fertilisers.each do |fertiliser|%>
+    <tr>
+      <td><%= fertiliser %></td>
+      <td><%= total_quantity(fertiliser) %></td>
+      <td>$<%= unit_price(fertiliser)%></td>
+      <td><%= unit(fertiliser)%></td>
+      <td><%= quantity_used(fertiliser)%></td>
+    </tr>
+  <% end %>
+
+  <%@chemicals.each do |chemical|%>
+    <tr>
+      <td><%= chemical %></td>
+      <td><%= total_quantity(chemical) %></td>
+      <td>$<%= unit_price(chemical)%></td>
+      <td><%= unit(chemical)%></td>
+      <td><%= quantity_used(chemical)%></td>
+    </tr>
+  <% end %>
+
+  <%@fuels.each do |fuel|%>
+    <tr>
+      <td><%= fuel %></td>
+      <td><%= total_quantity(fuel) %></td>
+      <td>$<%= unit_price(fuel)%></td>
+      <td><%= unit(fuel)%></td>
+      <td><%= quantity_used(fuel)%></td>
+    </tr>
+  <% end %>
 </table>

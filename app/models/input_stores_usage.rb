@@ -17,8 +17,9 @@ class InputStoresUsage < ApplicationRecord
 
   def total_value
     c = InputStoresUsage.last.types
+    x = InputStoresUsage.last.input_name
     d = InputStoresUsage.last.id
-    a = Store.where("types =?", c).pluck(:unit_price).compact.inject(:+)
+    a = Store.where("types =? AND input_name =?", c, x).pluck(:unit_price).compact.inject(:+)
     b = InputStoresUsage.where("id =?", d).pluck(:quantity_used).inject(:+)
 
     if b.nil?

@@ -12,8 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :company_name, class:"label" %>
-    <%= form.select :company_name, [current_user.company_name], class:"my-3" %>
+    <%= form.text_field :company_name, value:current_user.company_name, type: :hidden %>
   </div>
 
   <div class="field">
@@ -26,8 +25,7 @@
   </div>
 
   <div class="field">
-    <%= form.label :farm_name, class:"label" %>
-    <%= form.text_field :farm_name, class:"input" %>
+    <%= form.text_field :farm_name, value:current_user.farm_name, type: :hidden %>
   </div>
 
   <div class="field">
