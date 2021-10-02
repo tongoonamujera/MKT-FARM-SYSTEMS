@@ -64,6 +64,6 @@ class BarnAndSlateRecordsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def barn_and_slate_record_params
-      params.require(:barn_and_slate_record).permit(:company_name, :date, :season, :farm_name, :p_barn_number, :reap, :p_slate_number, :slate_weight, :barn_weight, :cumulative_barn_weight, :pro_number, :user_id)
+      params.require(:barn_and_slate_record).permit(:company_name, :date, :season, :farm_name, :p_barn_number, :reap, :p_slate_number, :slate_weight, :barn_weight, :cumulative_barn_weight, :user_id)
     end
 end

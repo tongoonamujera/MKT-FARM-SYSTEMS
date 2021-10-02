@@ -64,6 +64,6 @@ class CashRequisitionsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def cash_requisition_params
-      params.require(:cash_requisition).permit(:company_name, :date, :season, :farm_name, :employee_name, :amount_requested, :amount_issued, :pay_from, :pay_to, :pro_number, :user_id)
+      params.require(:cash_requisition).permit(:company_name, :date, :season, :farm_name, :employee_name, :amount_requested, :amount_issued, :pay_from, :pay_to, :user_id)
     end
 end

@@ -64,6 +64,6 @@ class RationingsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def rationing_params
-      params.require(:rationing).permit(:company_name, :date, :season, :farm_name, :cereal_name, :kgs_issued, :pro_number, :user_id, :is_sold, :price, :issued_to)
+      params.require(:rationing).permit(:company_name, :date, :season, :farm_name, :cereal_name, :kgs_issued, :user_id, :is_sold, :price, :issued_to)
     end
 end

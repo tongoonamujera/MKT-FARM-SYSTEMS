@@ -64,6 +64,6 @@ class LandNamesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def land_name_params
-      params.require(:land_name).permit(:company_name, :date, :season, :farm_name, :hectrage, :crop, :pro_number, :section)
+      params.require(:land_name).permit(:company_name, :date, :season, :farm_name, :hectrage, :crop, :section)
     end
 end

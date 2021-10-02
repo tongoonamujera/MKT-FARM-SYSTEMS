@@ -64,6 +64,6 @@ class CerealSalesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def cereal_sale_params
-      params.require(:cereal_sale).permit(:company_name, :date, :season, :farm_name, :grower_name, :crop, :truck_number, :trailer_number, :test_density, :external_matter, :gross_mass, :tare, :net_mass, :price_per_tonne, :quantity, :amount_paid, :pro_number, :user_id)
+      params.require(:cereal_sale).permit(:company_name, :date, :season, :farm_name, :grower_name, :crop, :truck_number, :trailer_number, :test_density, :external_matter, :gross_mass, :tare, :net_mass, :price_per_tonne, :quantity, :amount_paid, :user_id)
     end
 end

@@ -64,6 +64,6 @@ class DailyRequisitionsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def daily_requisition_params
-      params.require(:daily_requisition).permit(:company_name, :date, :season, :farm_name, :requisition, :pro_number, :user_id)
+      params.require(:daily_requisition).permit(:company_name, :date, :season, :farm_name, :requisition, :user_id)
     end
 end

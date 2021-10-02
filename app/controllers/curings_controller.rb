@@ -64,6 +64,6 @@ class CuringsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def curing_params
-      params.require(:curing).permit(:company_name, :date, :season, :farm_name, :facility, :time, :day, :temperature, :pro_number, :user_id)
+      params.require(:curing).permit(:company_name, :date, :season, :farm_name, :facility, :time, :day, :temperature, :user_id)
     end
 end

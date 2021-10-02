@@ -64,6 +64,6 @@ class InputCalibrationsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def input_calibration_params
-      params.require(:input_calibration).permit(:company_name, :date, :season, :farm_name, :section, :crop, :variety, :fertiliser_type, :fertiliser_rate, :bags_used, :herbicide, :herbicide_rate, :pro_number, :user_id)
+      params.require(:input_calibration).permit(:company_name, :date, :season, :farm_name, :section, :crop, :variety, :fertiliser_type, :fertiliser_rate, :bags_used, :herbicide, :herbicide_rate, :user_id)
     end
 end

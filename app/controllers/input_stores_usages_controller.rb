@@ -81,6 +81,6 @@ class InputStoresUsagesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def input_stores_usage_params
-      params.require(:input_stores_usage).permit(:company_name, :types, :season, :date, :farm_name, :input_name, :quantity_used, :unit, :total_amount, :profile_number, :deleted, :user_id, :search)
+      params.require(:input_stores_usage).permit(:company_name, :types, :season, :date, :farm_name, :input_name, :quantity_used, :unit, :total_amount, :deleted, :user_id, :search)
     end
 end

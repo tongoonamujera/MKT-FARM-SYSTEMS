@@ -64,6 +64,6 @@ class DeliveriesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def delivery_params
-      params.require(:delivery).permit(:company_name, :date, :season, :farm_name, :section, :types, :delivered_by, :goods, :quantity, :amount, :pro_number, :user_id)
+      params.require(:delivery).permit(:company_name, :date, :season, :farm_name, :section, :types, :delivered_by, :goods, :quantity, :amount, :user_id)
     end
 end

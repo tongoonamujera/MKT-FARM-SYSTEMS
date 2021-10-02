@@ -64,6 +64,6 @@ class IrriagtionSchedulesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def irriagtion_schedule_params
-      params.require(:irriagtion_schedule).permit(:company_name, :date, :season, :farm_name, :section, :crop, :calibration, :mls, :start_date, :end_date, :turn_around_time, :pro_number, :user_id)
+      params.require(:irriagtion_schedule).permit(:company_name, :date, :season, :farm_name, :section, :crop, :calibration, :mls, :start_date, :end_date, :turn_around_time, :user_id)
     end
 end

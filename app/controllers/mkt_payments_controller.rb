@@ -64,6 +64,6 @@ class MktPaymentsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def mkt_payment_params
-      params.require(:mkt_payment).permit(:date, :company_name, :service_rendered, :service, :amount_paid, :from, :to, :receipt_number, :paid_by, :pro_number)
+      params.require(:mkt_payment).permit(:date, :company_name, :service_rendered, :service, :amount_paid, :from, :to, :receipt_number, :paid_by)
     end
 end

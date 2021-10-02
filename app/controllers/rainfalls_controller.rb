@@ -64,6 +64,6 @@ class RainfallsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def rainfall_params
-      params.require(:rainfall).permit(:company_name, :date, :season, :farm_name, :section, :mls_received, :pro_number, :user_id)
+      params.require(:rainfall).permit(:company_name, :date, :season, :farm_name, :section, :mls_received, :user_id)
     end
 end

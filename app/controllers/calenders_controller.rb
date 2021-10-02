@@ -64,6 +64,6 @@ class CalendersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def calender_params
-      params.require(:calender).permit(:company_name, :date, :season, :farm_name, :month, :activity, :pro_number, :user_id)
+      params.require(:calender).permit(:company_name, :date, :season, :farm_name, :month, :activity, :user_id)
     end
 end
