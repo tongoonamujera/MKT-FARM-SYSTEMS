@@ -15,7 +15,6 @@
         <th>To</th>
         <th>Receipt number</th>
         <th>Paid by</th>
-        <th>Pro number</th>
         <th colspan="3"></th>
       </tr>
     </thead>
@@ -32,7 +31,6 @@
           <td><%= mkt_payment.to %></td>
           <td><%= mkt_payment.receipt_number %></td>
           <td><%= mkt_payment.paid_by %></td>
-          <td><%= mkt_payment.pro_number %></td>
           <td><%= link_to 'Show', mkt_payment %></td>
           <td><%= link_to 'Edit', edit_mkt_payment_path(mkt_payment) %></td>
           <td><%= link_to 'Destroy', mkt_payment, method: :delete, data: { confirm: 'Are you sure?' } %></td>

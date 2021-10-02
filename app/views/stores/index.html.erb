@@ -16,7 +16,6 @@
         <th>Unit</th>
         <th>Unit price</th>
         <th>Total amount</th>
-        <th>Pro Number</th>
         <th colspan="3" class="has-text-centered">Actions</th>
       </tr>
     </thead>
@@ -37,7 +36,6 @@
           <td><%= store.unit %></td>
           <td><%= store.unit_price %></td>
           <td><%= store.total_amount %></td>
-          <td><%= store.pro_number %></td>
           <td><%= link_to 'Show', store %></td>
           <td><%= link_to 'Top Up', edit_store_path(store) %></td>
           <td><%= link_to 'Delete', store, method: :delete, data: { confirm: 'Are you sure?' } %></td>

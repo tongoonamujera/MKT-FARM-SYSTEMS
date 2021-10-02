@@ -15,8 +15,6 @@
       <th>Unit</th>
       <th>Input amount</th>
       <th>Labour amount</th>
-      <th>Pro number</th>
-      <th>User</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -33,8 +31,6 @@
         <td><%= seedbed.unit %></td>
         <td><%= seedbed.input_amount %></td>
         <td><%= seedbed.labour_amount %></td>
-        <td><%= seedbed.pro_number %></td>
-        <td><%= seedbed.user_id %></td>
         <td><%= link_to 'Show', seedbed %></td>
         <td><%= link_to 'Edit', edit_seedbed_path(seedbed) %></td>
         <td><%= link_to 'Destroy', seedbed, method: :delete, data: { confirm: 'Are you sure?' } %></td>

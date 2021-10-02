@@ -17,8 +17,6 @@
       <th>Start date</th>
       <th>End date</th>
       <th>Turn around time</th>
-      <th>Pro number</th>
-      <th>User</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -37,8 +35,6 @@
         <td><%= irriagtion_schedule.start_date %></td>
         <td><%= irriagtion_schedule.end_date %></td>
         <td><%= irriagtion_schedule.turn_around_time %></td>
-        <td><%= irriagtion_schedule.pro_number %></td>
-        <td><%= irriagtion_schedule.user_id %></td>
         <td><%= link_to 'Show', irriagtion_schedule %></td>
         <td><%= link_to 'Edit', edit_irriagtion_schedule_path(irriagtion_schedule) %></td>
         <td><%= link_to 'Destroy', irriagtion_schedule, method: :delete, data: { confirm: 'Are you sure?' } %></td>

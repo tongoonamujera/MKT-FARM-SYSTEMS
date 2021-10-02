@@ -16,7 +16,6 @@
       <th>Goods</th>
       <th>Quantity</th>
       <th>Amount</th>
-      <th>Pro number</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -34,7 +33,6 @@
         <td><%= delivery.goods %></td>
         <td><%= delivery.quantity %></td>
         <td><%= delivery.amount %></td>
-        <td><%= delivery.pro_number %></td>
         <td><%= link_to 'Show', delivery %></td>
         <td><%= link_to 'Edit', edit_delivery_path(delivery) %></td>
         <td><%= link_to 'Destroy', delivery, method: :delete, data: { confirm: 'Are you sure?' } %></td>

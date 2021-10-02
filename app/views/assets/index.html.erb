@@ -16,7 +16,6 @@
       <th>Unit price</th>
       <th>V.A.T</th>
       <th>Total amount</th>
-      <th>Pro number</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -33,7 +32,6 @@
         <td><%= asset.unit_price %></td>
         <td><%= asset.vat %></td>
         <td><%= asset.total_amount %></td>
-        <td><%= asset.pro_number %></td>
         <td><%= link_to 'Show', asset %></td>
         <td><%= link_to 'Edit', edit_asset_path(asset) %></td>
         <td><%= link_to 'Destroy', asset, method: :delete, data: { confirm: 'Are you sure?' } %></td>

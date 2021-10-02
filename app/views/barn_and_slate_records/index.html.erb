@@ -18,7 +18,6 @@
         <th>slate weight</th>
         <th>Barn weight</th>
         <th>Cumulative barn weight</th>
-        <th>Pro number</th>
         <th colspan="3"></th>
       </tr>
     </thead>
@@ -36,7 +35,6 @@
           <td><%= barn_and_slate_record.slate_weight %></td>
           <td><%= barn_and_slate_record.barn_weight %></td>
           <td><%= barn_and_slate_record.cumulative_barn_weight %></td>
-          <td><%= barn_and_slate_record.pro_number %></td>
           <td><%= link_to 'Show', barn_and_slate_record %></td>
           <td><%= link_to 'Edit', edit_barn_and_slate_record_path(barn_and_slate_record) %></td>
           <td><%= link_to 'Destroy', barn_and_slate_record, method: :delete, data: { confirm: 'Are you sure?' } %></td>

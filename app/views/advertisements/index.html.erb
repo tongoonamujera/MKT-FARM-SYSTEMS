@@ -15,7 +15,6 @@
       <th>Unit price</th>
       <th>Vat</th>
       <th>Total amount</th>
-      <th>User</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -31,7 +30,6 @@
         <td><%= advertisement.unit_price %></td>
         <td><%= advertisement.vat %></td>
         <td><%= advertisement.total_amount %></td>
-        <td><%= advertisement.user_id %></td>
         <td><%= link_to 'Show', advertisement %></td>
         <td><%= link_to 'Edit', edit_advertisement_path(advertisement) %></td>
         <td><%= link_to 'Destroy', advertisement, method: :delete, data: { confirm: 'Are you sure?' } %></td>

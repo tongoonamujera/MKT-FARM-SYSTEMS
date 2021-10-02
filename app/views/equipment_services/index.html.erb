@@ -17,7 +17,6 @@
       <th>Next service-milaege</th>
       <th>Job</th>
       <th>Total amount</th>
-      <th>Pro number</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -36,7 +35,6 @@
         <td><%= equipment_service.next_service_milaege %></td>
         <td><%= equipment_service.job %></td>
         <td><%= equipment_service.total_amount %></td>
-        <td><%= equipment_service.pro_number %></td>
         <td><%= link_to 'Show', equipment_service %></td>
         <td><%= link_to 'Edit', edit_equipment_service_path(equipment_service) %></td>
         <td><%= link_to 'Destroy', equipment_service, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -35,15 +35,5 @@
   <%= @rental.amount_paid %>
 </p>
 
-<p>
-  <strong>Pro number:</strong>
-  <%= @rental.pro_number %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @rental.user_id %>
-</p>
-
 <%= link_to 'Edit', edit_rental_path(@rental) %> |
 <%= link_to 'Back', rentals_path %>

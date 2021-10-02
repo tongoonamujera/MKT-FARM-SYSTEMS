@@ -22,7 +22,6 @@
       <th>Price per tonne</th>
       <th>Quantity</th>
       <th>Amount paid</th>
-      <th>Pro number</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -46,7 +45,6 @@
         <td><%= cereal_sale.price_per_tonne %></td>
         <td><%= cereal_sale.quantity %></td>
         <td><%= cereal_sale.amount_paid %></td>
-        <td><%= cereal_sale.pro_number %></td>
         <td><%= link_to 'Show', cereal_sale %></td>
         <td><%= link_to 'Edit', edit_cereal_sale_path(cereal_sale) %></td>
         <td><%= link_to 'Destroy', cereal_sale, method: :delete, data: { confirm: 'Are you sure?' } %></td>

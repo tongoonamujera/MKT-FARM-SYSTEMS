@@ -17,7 +17,6 @@
         <th>Amount issued</th>
         <th>Pay from</th>
         <th>Pay to</th>
-        <th>Pro number</th>
         <th colspan="3"></th>
       </tr>
     </thead>
@@ -34,7 +33,6 @@
           <td>$<%= cash_requisition.amount_issued %></td>
           <td><%= cash_requisition.pay_from %></td>
           <td><%= cash_requisition.pay_to %></td>
-          <td><%= cash_requisition.pro_number %></td>
           <td><%= link_to 'Show', cash_requisition %></td>
           <td><%= link_to 'Edit', edit_cash_requisition_path(cash_requisition) %></td>
           <td><%= link_to 'Destroy', cash_requisition, method: :delete, data: { confirm: 'Are you sure?' } %></td>

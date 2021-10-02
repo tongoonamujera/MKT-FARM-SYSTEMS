@@ -14,8 +14,6 @@
         <th>Farm name</th>
         <th>Section</th>
         <th>Activity</th>
-        <th>Pro number</th>
-        <th>User</th>
         <th></th>
       </tr>
     </thead>
@@ -29,8 +27,6 @@
           <td><%= activity.farm_name %></td>
           <td><%= activity.section %></td>
           <td><%= activity.activity %></td>
-          <td><%= activity.pro_number %></td>
-          <td><%= activity.user_id %></td>
           <td><%= link_to 'Show', activity, class:"navbar-item" %></td>
           <td><%= link_to 'Edit', edit_activity_path(activity), class:"navbar-item" %></td>
           <td><%= link_to 'Destroy', activity, method: :delete, data: { confirm: 'Are you sure?' }, class:"navbar-item" %></td>

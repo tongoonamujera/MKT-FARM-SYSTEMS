@@ -12,7 +12,6 @@
       <th>Farm name</th>
       <th>Item</th>
       <th>Quantity</th>
-      <th>Pro number</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -26,7 +25,6 @@
         <td><%= workshop.farm_name %></td>
         <td><%= workshop.item %></td>
         <td><%= workshop.quantity %></td>
-        <td><%= workshop.pro_number %></td>
         <td><%= link_to 'Show', workshop %></td>
         <td><%= link_to 'Edit', edit_workshop_path(workshop) %></td>
         <td><%= link_to 'Destroy', workshop, method: :delete, data: { confirm: 'Are you sure?' } %></td>
