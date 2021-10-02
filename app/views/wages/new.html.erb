@@ -61,7 +61,7 @@
             </div>
             <div class="my-1 has-text-centered">
               $<%= (montly_rate(deduction.employee_name)- deduction.total_amount) %>
-              <%= form.text_field :employee_number, value: (montly_rate(deduction.employee_name) - deduction.total_amount), type: :hidden %>
+              <%= form.text_field :net, value: (montly_rate(deduction.employee_name) - deduction.total_amount), type: :hidden %>
             </div>
           </div>
         </div>
@@ -117,7 +117,6 @@
           </div>
         </div>
       </div>
-
 
       <div class="columns">
         <div class="column is-3">

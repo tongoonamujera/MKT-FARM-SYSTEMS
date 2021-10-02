@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_30_074312) do
+ActiveRecord::Schema.define(version: 2021_10_02_082231) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,7 +25,6 @@ ActiveRecord::Schema.define(version: 2021_09_30_074312) do
     t.string "farm_name"
     t.string "section"
     t.string "activity"
-    t.string "pro_number"
     t.index ["user_id"], name: "index_activities_on_user_id"
   end
 
@@ -56,7 +55,6 @@ ActiveRecord::Schema.define(version: 2021_09_30_074312) do
     t.string "asset_type"
     t.decimal "unit_price"
     t.decimal "total_amount"
-    t.string "pro_number"
     t.string "company_name"
     t.index ["user_id"], name: "index_assets_on_user_id"
   end
@@ -75,7 +73,6 @@ ActiveRecord::Schema.define(version: 2021_09_30_074312) do
     t.decimal "slate_weight"
     t.decimal "barn_weight"
     t.decimal "cumulative_barn_weight"
-    t.string "pro_number"
     t.index ["user_id"], name: "index_barn_and_slate_records_on_user_id"
   end
 
@@ -89,7 +86,6 @@ ActiveRecord::Schema.define(version: 2021_09_30_074312) do
     t.string "farm_name"
     t.string "month"
     t.string "activity"
-    t.string "pro_number"
     t.index ["user_id"], name: "index_calenders_on_user_id"
   end
 
@@ -106,7 +102,6 @@ ActiveRecord::Schema.define(version: 2021_09_30_074312) do
     t.decimal "amount_issued"
     t.date "pay_from"
     t.date "pay_to"
-    t.string "pro_number"
     t.index ["user_id"], name: "index_cash_requisitions_on_user_id"
   end
 
@@ -125,7 +120,6 @@ ActiveRecord::Schema.define(version: 2021_09_30_074312) do
     t.string "operation"
     t.string "unity"
     t.string "input_name"
-    t.string "pro_number"
     t.decimal "unit_price"
     t.decimal "total_amount"
     t.decimal "total_quantity"
@@ -152,7 +146,6 @@ ActiveRecord::Schema.define(version: 2021_09_30_074312) do
     t.decimal "price_per_tonne"
     t.decimal "quantity"
     t.decimal "amount_paid"
-    t.string "pro_number"
     t.index ["user_id"], name: "index_cereal_sales_on_user_id"
   end
 
@@ -169,7 +162,6 @@ ActiveRecord::Schema.define(version: 2021_09_30_074312) do
     t.string "unit"
     t.decimal "unit_price"
     t.decimal "total_amount"
-    t.string "pro_number"
     t.boolean "is_bought", default: false
     t.string "types"
     t.decimal "top_up"
@@ -187,7 +179,6 @@ ActiveRecord::Schema.define(version: 2021_09_30_074312) do
     t.string "company_name"
     t.string "category"
     t.string "receipt_number"
-    t.string "pro_number"
     t.index ["user_id"], name: "index_client_payments_on_user_id"
   end
 
@@ -203,7 +194,6 @@ ActiveRecord::Schema.define(version: 2021_09_30_074312) do
     t.datetime "time"
     t.date "day"
     t.string "temperature"
-    t.string "pro_number"
     t.index ["user_id"], name: "index_curings_on_user_id"
   end
 
@@ -216,7 +206,6 @@ ActiveRecord::Schema.define(version: 2021_09_30_074312) do
     t.string "season"
     t.string "farm_name"
     t.string "requisition"
-    t.string "pro_number"
     t.index ["user_id"], name: "index_daily_requisitions_on_user_id"
   end
 
@@ -273,7 +262,6 @@ ActiveRecord::Schema.define(version: 2021_09_30_074312) do
     t.string "delivered_by"
     t.string "goods"
     t.string "quantity"
-    t.string "pro_number"
     t.index ["user_id"], name: "index_deliveries_on_user_id"
   end
 
@@ -305,7 +293,6 @@ ActiveRecord::Schema.define(version: 2021_09_30_074312) do
     t.string "mileage"
     t.string "job"
     t.decimal "total_amount"
-    t.string "pro_number"
     t.index ["user_id"], name: "index_equipment_services_on_user_id"
   end
 
@@ -339,7 +326,6 @@ ActiveRecord::Schema.define(version: 2021_09_30_074312) do
     t.string "section"
     t.string "cereal_name"
     t.decimal "kgs_done"
-    t.string "pro_number"
     t.index ["user_id"], name: "index_harvestings_on_user_id"
   end
 
@@ -359,7 +345,6 @@ ActiveRecord::Schema.define(version: 2021_09_30_074312) do
     t.decimal "bags_used"
     t.string "herbicide"
     t.string "herbicide_rate"
-    t.string "pro_number"
     t.index ["user_id"], name: "index_input_calibrations_on_user_id"
   end
 
@@ -370,7 +355,6 @@ ActiveRecord::Schema.define(version: 2021_09_30_074312) do
     t.string "farm_name"
     t.string "input_name"
     t.string "unit"
-    t.string "profile_number"
     t.boolean "deleted", default: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -396,7 +380,6 @@ ActiveRecord::Schema.define(version: 2021_09_30_074312) do
     t.date "start_date"
     t.date "end_date"
     t.string "farm_name"
-    t.string "pro_number"
     t.index ["user_id"], name: "index_irriagtion_schedules_on_user_id"
   end
 
@@ -410,7 +393,6 @@ ActiveRecord::Schema.define(version: 2021_09_30_074312) do
     t.string "farm_name"
     t.string "hectrage"
     t.string "crop"
-    t.string "pro_number"
   end
 
   create_table "mkt_payments", force: :cascade do |t|
@@ -425,7 +407,6 @@ ActiveRecord::Schema.define(version: 2021_09_30_074312) do
     t.string "to"
     t.string "receipt_number"
     t.string "paid_by"
-    t.string "pro_number"
   end
 
   create_table "purchases", force: :cascade do |t|
@@ -438,7 +419,6 @@ ActiveRecord::Schema.define(version: 2021_09_30_074312) do
     t.string "total_items"
     t.string "total_amount"
     t.string "vat"
-    t.string "pro_number"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -455,7 +435,6 @@ ActiveRecord::Schema.define(version: 2021_09_30_074312) do
     t.string "farm_name"
     t.string "section"
     t.string "mls_received"
-    t.string "pro_number"
     t.index ["user_id"], name: "index_rainfalls_on_user_id"
   end
 
@@ -463,7 +442,6 @@ ActiveRecord::Schema.define(version: 2021_09_30_074312) do
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "pro_number"
     t.date "date"
     t.string "season"
     t.string "farm_name"
@@ -484,7 +462,6 @@ ActiveRecord::Schema.define(version: 2021_09_30_074312) do
     t.string "receipt_number"
     t.string "reason"
     t.string "amount_paid"
-    t.string "pro_number"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -504,7 +481,6 @@ ActiveRecord::Schema.define(version: 2021_09_30_074312) do
     t.string "unit"
     t.decimal "input_amount"
     t.integer "labour_amount"
-    t.decimal "pro_number"
     t.index ["user_id"], name: "index_seedbeds_on_user_id"
   end
 
@@ -532,7 +508,6 @@ ActiveRecord::Schema.define(version: 2021_09_30_074312) do
     t.string "unit"
     t.decimal "unit_price"
     t.decimal "total_amount"
-    t.string "pro_number"
     t.string "season"
     t.string "types"
     t.decimal "top_up_unit_price"
@@ -604,7 +579,6 @@ ActiveRecord::Schema.define(version: 2021_09_30_074312) do
     t.string "cellphone"
     t.string "address"
     t.string "category"
-    t.string "pro_number"
     t.boolean "is_admin", default: false
     t.boolean "is_manager", default: false
     t.boolean "is_farm_owner", default: false
@@ -660,7 +634,6 @@ ActiveRecord::Schema.define(version: 2021_09_30_074312) do
     t.string "farm_name"
     t.string "item"
     t.decimal "quantity"
-    t.string "pro_number"
     t.index ["user_id"], name: "index_workshops_on_user_id"
   end
 
