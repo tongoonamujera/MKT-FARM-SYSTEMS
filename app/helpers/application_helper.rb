@@ -25,6 +25,11 @@ module ApplicationHelper
     a - b
   end
 
+  def montly_rate(employee)
+    a = Timebook.monthly_total_rate(employee)
+    a.nil? ? a = 0 : a
+  end
+
   def quantity(types, input)
     a = Store.where('types =? AND input_name =?', types,input).pluck(:quantity).inject(:+)
     b = InputStoresUsage.where('types =? AND deleted =?', types, false).where('input_name =?', input).pluck(:quantity_used).inject(:+)

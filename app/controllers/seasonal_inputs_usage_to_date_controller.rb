@@ -4,5 +4,6 @@ class SeasonalInputsUsageToDateController < ApplicationController
     @fertilisers= InputStoresUsage.where('types =?',"Fertiliser").pluck(:input_name).uniq
     @chemicals= InputStoresUsage.where('types =?',"Chemical").pluck(:input_name).uniq
     @fuels= InputStoresUsage.where('types =?',"Fuel").pluck(:input_name).uniq
+    @payee = Wage.where('farm_name =?',current_user.farm_name).pluck(:payee).inject(:+)
   end
 end
