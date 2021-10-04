@@ -1,3 +1,8 @@
+<div class="columns is-centered">
+  <div class="column is-6 has-background-white">
+    <%= line_chart User.all.group_by_day(:created_at).count %>
+  </div>
+</div>
 <h1 class='has-background-white'>SeasonalInputsUsageToDate#index</h1>
 <table class="table">
   <tr>
