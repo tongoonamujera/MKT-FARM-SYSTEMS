@@ -9,6 +9,7 @@ gem 'rails', '~> 6.0.4'
 # gem 'pg', '~> 1.4', '>= 1.4.2'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'hirb', '~> 0.7.3'
+gem 'chartkick'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
