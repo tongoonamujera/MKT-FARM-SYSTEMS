@@ -12,6 +12,7 @@ gem 'hirb', '~> 0.7.3'
 gem 'chartkick'
 gem 'groupdate'
 gem 'wicked_pdf', '~> 2.1'
+gem 'prawn', '~> 2.4'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
