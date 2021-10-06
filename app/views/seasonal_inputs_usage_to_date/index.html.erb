@@ -1,6 +1,6 @@
 <div class="columns is-centered">
   <div class="column is-6 has-background-white">
-    <%= line_chart User.all.group_by_day(:created_at).count %>
+    <%= column_chart User.all.map { |user| {name: user.username, data: user.created_at}} %>
   </div>
 </div>
 <h1 class='has-background-white'>SeasonalInputsUsageToDate#index</h1>
