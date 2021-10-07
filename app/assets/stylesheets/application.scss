@@ -120,15 +120,15 @@ body {
   color: #ffffff;
 }
 
-tr {
-  th {
-    background-color: gray;
-  }
-  &:hover {
-    background-color: rgb(177, 168, 168);
-    color: white;
-  }
-}
+// tr {
+//   th {
+//     background-color: gray;
+//   }
+//   &:hover {
+//     background-color: rgb(177, 168, 168);
+//     color: white;
+//   }
+// }
 
 .blink {
   font-size: 19px;
@@ -142,6 +142,70 @@ tr {
   50% { opacity: 0.0; }
   to {opacity: 1.0;}
 }
+
+form {
+  width: 100%;
+  .field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .labels {
+      font-weight: 900;
+    }
+    .control {
+      width: inherit;
+      .inputs {
+        height: 5vh;
+        width: 100%;
+        font-size: 20px;
+        border: 1px solid rgb(224, 222, 222);
+        border-radius: 3px;
+        &:hover {
+          border: 1px solid rgb(224, 222, 222) !important;
+          border-radius: 3px;
+          background-color: rgb(240, 238, 238);
+        }
+      }
+    }
+  }
+}
+
+// ########**********TABLE STYLES***********###########
+.tables {
+  font-family: 'Times New Roman', Times, serif;
+  width: 100%;
+  background: #012b39;
+  border-radius: 5px;
+  border-collapse: collapse;
+  tr {
+    th {
+      width: inherit;
+      border-bottom-left-radius: 5px !important;
+      border-bottom-right-radius: 5px !important;
+      background: #000a0e;
+      border-bottom: 1px solid #364043;
+      color: #e2b842;
+      font-weight: 600;
+      padding: 0.25em 1em;
+      text-align: center;
+    }
+    td {
+      color: #fff;
+      font-weight: 400;
+      padding: 0.65em 1em;
+      text-align: center;
+    }
+  }
+
+  tbody tr {
+    transition: background 0.25s ease;
+    &:hover{
+      background: #014055;
+    }
+  }
+}
+
+// #######******TABLE STYLES END*******########
 
 $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
 @import '@fortawesome/fontawesome-free/scss/fontawesome';

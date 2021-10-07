@@ -5,6 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   
   has_many :farm_names
+  has_many :timebooks
+  has_many :stores
   def self.admin
     where('is_admin =?', true)
   end
