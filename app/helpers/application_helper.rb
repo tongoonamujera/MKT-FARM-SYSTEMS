@@ -76,6 +76,10 @@ module ApplicationHelper
     0 <= b && b < 12 ? a[0] : 12 <= b && b < 15 ? a[1] : a[2]
   end
 
+  def pass_greeting_to_users
+    user_signed_in? ? greeting_text : "Hello Gest User"
+  end
+
   def admin_users
     a = 'tongoonamujera@gmail.com'
     b = 'tntmukotekwa@gmail.com'

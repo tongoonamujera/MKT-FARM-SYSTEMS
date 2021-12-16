@@ -13,19 +13,25 @@
   
     <%= render 'layouts/header' %>
 
-      <%if user_signed_in? %>
+    <%if user_signed_in? %>
         <% if admin_users %>
-            <div class="columns is-centered has-background-grey-dark">
-              <div class="column is-11 overflow-y">
-                <%= yield %>
-              </div>
-            </div>
+          <div class="page-container">
+            <input type="radio" name="navigation-contol" id="control1" data-id="1"/>
+            <input type="radio" name="navigation-contol" id="control2" data-id="2" checked />
+            <%= render 'layouts/homepage' %>
+          <div class="content-container">
+            <%= yield %>
+          </div>
+          </div>
         <% else %>
           <% if authourize_user(current_user) %>
-              <div class="columns is-centered has-background-grey-dark">
-                <div class="column is-11 overflow-y">
-                  <%= yield %>
-                </div>
+              <div class="page-container">
+                <input type="radio" name="navigation-contol" id="control1" data-id="1" />
+                <input type="radio" name="navigation-contol" id="control2" data-id="2" checked />
+                <%= render 'layouts/homepage' %>
+              <div class="content-container">
+                <%= yield %>
+              </div>
               </div>
           <%else%>
             <%= render 'layouts/verification' %>
@@ -35,7 +41,6 @@
         <div class="container">
           <%= yield %>
         </div>
-      <% end %>
-
+    <% end %>
   </body>
 </html>
