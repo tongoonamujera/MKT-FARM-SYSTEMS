@@ -1,15 +1,15 @@
-<section class="hero has-background-grey is-small">
+<section class="hero has-background-grey is-small has-text-white">
   <div class="hero-head">
     <nav class="navbar is-light" role="navigation" aria-label="main navigation">
       <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-start">
-          <a class="navbar-item">
-            MKT-FARM_SYSTEMS
+        <div class="navbar-start has-text-white">
+          <a class="navbar-item has-text-white text">
+            MKT-FARM-SYSTEMS
           </a>
 
           <div class="navbar-item has-dropdown is-hoverable">
             <% if admin_users %>
-              <a class="navbar-link">
+              <a class="navbar-link has-text-white text">
                 Admin Activities
               </a>
 
@@ -27,11 +27,11 @@
             <% end %>
           </div>
 
-          <p class="navbar-item blink">
+          <p class="navbar-item blink has-text-white text">
             <%= pass_greeting_to_users %>
           </p>
 
-          <p class="navbar-item">
+          <p class="navbar-item has-text-white text">
             <%= current_date %>
           </p>
         </div>
