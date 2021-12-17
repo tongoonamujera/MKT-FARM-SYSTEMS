@@ -202,7 +202,7 @@ form {
   max-width: 100vw;
   height: fit-content;
   display: flex;
-  background-color: rgb(145, 16, 102);
+  background-color: rgb(61, 4, 42);
 
   .content-container {
     background-color: rgb(77, 39, 112);
@@ -232,8 +232,9 @@ form {
       }
     }
 
-    .rows > div {
-      border-bottom: 2px solid gray;
+    .rows > div > span > span {
+      text-transform: uppercase;
+      font-weight: 900;
     }
   }
 
@@ -253,7 +254,7 @@ form {
 
   .page-navigation {
     display: block;
-    background-color: rgb(145, 16, 102);
+    background-color: rgb(168, 14, 60);
     color: white;
     max-height: 100vh;
   
@@ -265,65 +266,157 @@ form {
       grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 
       div > span {
+        padding-top: 8px;
+        padding-left: 0.8rem;
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        justify-items: center;
       }
-  
+
       .row1 {
         width: calc(100% - 1rem);
         grid-row: 1 / span 1;
+        &:hover {
+          background-color: #7e1d2d;
+          border-top: 3px solid #f3072e;
+          border-bottom: 3px solid #f3072e;
+          border-left: 3px solid #f3072e;
+          border-top-left-radius: 0.7rem;
+          border-bottom-left-radius: 0.7rem;
+        }
       }
-  
+
       .row2 {
         width: calc(100% - 1rem);
         grid-row: 2 / span 1;
+        &:hover {
+          background-color: #7e1d2d;
+          border-top: 3px solid #f3072e;
+          border-bottom: 3px solid #f3072e;
+          border-left: 3px solid #f3072e;
+          border-top-left-radius: 0.7rem;
+          border-bottom-left-radius: 0.7rem;
+        }
       }
-  
+
       .row3 {
         width: calc(100% - 1rem);
         grid-row: 3 / span 1;
+        &:hover {
+          background-color: #7e1d2d;
+          border-top: 3px solid #f3072e;
+          border-bottom: 3px solid #f3072e;
+          border-left: 3px solid #f3072e;
+          border-top-left-radius: 0.7rem;
+          border-bottom-left-radius: 0.7rem;
+        }
       }
-  
+
       .row4 {
         width: calc(100% - 1rem);
         grid-row: 4 / span 1;
+        &:hover {
+          background-color: #7e1d2d;
+          border-top: 3px solid #f3072e;
+          border-bottom: 3px solid #f3072e;
+          border-left: 3px solid #f3072e;
+          border-top-left-radius: 0.7rem;
+          border-bottom-left-radius: 0.7rem;
+        }
       }
-  
+
       .row5 {
         width: calc(100% - 1rem);
         grid-row: 5 / span 1;
+        &:hover {
+          background-color: #7e1d2d;
+          border-top: 3px solid #f3072e;
+          border-bottom: 3px solid #f3072e;
+          border-left: 3px solid #f3072e;
+          border-top-left-radius: 0.7rem;
+          border-bottom-left-radius: 0.7rem;
+        }
       }
-  
+
       .row6 {
         width: calc(100% - 1rem);
         grid-row: 6 / span 1;
+        &:hover {
+          background-color: #7e1d2d;
+          border-top: 3px solid #f3072e;
+          border-bottom: 3px solid #f3072e;
+          border-left: 3px solid #f3072e;
+          border-top-left-radius: 0.7rem;
+          border-bottom-left-radius: 0.7rem;
+        }
       }
-  
+
       .row7 {
         width: calc(100% - 1rem);
         grid-row: 7 / span 1;
+        &:hover {
+          background-color: #7e1d2d;
+          border-top: 3px solid #f3072e;
+          border-bottom: 3px solid #f3072e;
+          border-left: 3px solid #f3072e;
+          border-top-left-radius: 0.7rem;
+          border-bottom-left-radius: 0.7rem;
+        }
       }
-  
+
       .row8 {
         width: calc(100% - 1rem);
         grid-row: 8 / span 1;
+        &:hover {
+          background-color: #7e1d2d;
+          border-top: 3px solid #f3072e;
+          border-bottom: 3px solid #f3072e;
+          border-left: 3px solid #f3072e;
+          border-top-left-radius: 0.7rem;
+          border-bottom-left-radius: 0.7rem;
+        }
       }
-  
+
       .row9 {
         width: calc(100% - 1rem);
         grid-row: 9 / span 1;
+        &:hover {
+          background-color: #7e1d2d;
+          border-top: 3px solid #f3072e;
+          border-bottom: 3px solid #f3072e;
+          border-left: 3px solid #f3072e;
+          border-top-left-radius: 0.7rem;
+          border-bottom-left-radius: 0.7rem;
+        }
       }
-  
+
       .row10 {
         width: calc(100% - 1rem);
         grid-row: 10 / span 1;
+        &:hover {
+          background-color: #7e1d2d;
+          border-top: 3px solid #f3072e;
+          border-bottom: 3px solid #f3072e;
+          border-left: 3px solid #f3072e;
+          border-top-left-radius: 0.7rem;
+          border-bottom-left-radius: 0.7rem;
+        }
       }
-  
+
       .row11 {
         width: calc(100% - 1rem);
         grid-row: 11 / span 1;
+        &:hover {
+          background-color: #7e1d2d;
+          border-top: 3px solid #f3072e;
+          border-bottom: 3px solid #f3072e;
+          border-left: 3px solid #f3072e;
+          border-top-left-radius: 0.7rem;
+          border-bottom-left-radius: 0.7rem;
+        }
       }
-  
+
       .row12 {
         grid-row: 12 / span 1;
         width: calc(100% - 1rem);
@@ -340,6 +433,8 @@ form {
     }
   }
 }
+
+@import url('./tables.scss');
 
 $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
 @import '@fortawesome/fontawesome-free/scss/fontawesome';
