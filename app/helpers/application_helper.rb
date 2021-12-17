@@ -81,11 +81,13 @@ module ApplicationHelper
   end
 
   def admin_users
-    a = 'tongoonamujera@gmail.com'
-    b = 'tntmukotekwa@gmail.com'
-    c = current_user.email
+    if user_signed_in?
+      a = 'tongoonamujera@gmail.com'
+      b = 'tntmukotekwa@gmail.com'
+      c = current_user.email
 
-    c == a || c == b ? true : false
+      c == a || c == b ? true : false
+    end
   end
 
   def c_quantity(cereal)

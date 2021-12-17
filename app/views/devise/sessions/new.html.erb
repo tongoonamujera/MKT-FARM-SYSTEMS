@@ -1,9 +1,7 @@
 <div class="columns is-centered mt-5">
-  <div class="columns is-6">
+  <div class="column is-4">
     <div class="card">
-    <header class="card-header">
-      <h2>Log in</h2>
-    </header>
+      <h2 class="has-text-centered">Please Log in</h2>
       <div class="card-content">
         <div class="content">
           <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -29,7 +27,7 @@
             <% end %>
 
             <div class="actions">
-              <%= f.submit "Log in", class:"button is-info" %>
+              <%= f.submit "Log in", class:"button is-info is-fullwidth" %>
             </div>
           <% end %>
           <div class="mt-5">
