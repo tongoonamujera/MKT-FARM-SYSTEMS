@@ -2,68 +2,240 @@
   <div class="rows">
     <div class="row1">
       <span>
-        <i class="fas fa-cog fa-3x"></i> <span>User Account</span>
+        <i class="fas fa-cog fa-3x"></i> 
+        <span>
+          User Account &nbsp;
+          <i class='fas fa-angle-right'></i>
+        </span>
       </span>
+
+      <section>
+        <div class="heading">
+          <p>Account Settings</p>
+        </div>
+        <ul class="section-links">
+          <li><%= link_to 'Edit Account', edit_user_registration_path, class:"has-text-white" %></li>
+        </ul>
+      </section>
     </div>
+
     <div class="row2">
       <span>
-        <i class="far fa-money-bill-alt fa-3x"></i> <span>ACCOUNTING</span>
+        <i class="far fa-money-bill-alt fa-3x"></i> 
+        <span>
+          ACCOUNTING &nbsp;
+          <i class='fas fa-angle-right'></i>
+        </span>
       </span>
+      <section>
+        <div class="heading">
+          <p>Accounting</p>
+        </div>
+        <ul class="section-links">
+          <li><%= link_to 'Cash Requests', cash_requisitions_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Cashflows', cashflows_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Deduction Table', deduction_tables_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Purchases & Payments', purchases_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Rentals', rentals_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Wages & Salaries', wages_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Seasonal Inputs Usage To Date', seasonal_inputs_usage_to_date_index_path, class:"has-text-white" %></li>
+        </ul>
+      </section>
     </div>
+
     <div class="row3">
       <span>
-        <i class="fas fa-warehouse fa-3x"></i> <span>WAREHOUSING</span>
+        <i class="fas fa-warehouse fa-3x"></i> 
+        <span>
+          WAREHOUSING &nbsp;
+          <i class='fas fa-angle-right'></i>
+        </span>
       </span>
+
+      <section>
+        <div class="heading">
+          <p>Warehousing</p>
+        </div>
+        <ul class="section-links">
+          <li><%= link_to 'Cereal Stores', cereal_stores_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Deliveries', deliveries_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Harvesting', harvestings_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Rationing', rationings_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Input Stores', stores_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Input Stores Usage', input_stores_usages_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Workshop', workshops_path, class:"has-text-white" %></li>
+        </ul>
+      </section>
     </div>
+
     <div class="row4">
       <span>
-        <i class="fab fa-pagelines fa-3x"></i> <span>LAND(S)</span>
+        <i class="fab fa-pagelines fa-3x"></i> 
+        <span>
+          LAND(S) &nbsp;
+          <i class='fas fa-angle-right'></i>
+        </span>
       </span>
+
+      <section>
+        <div class="heading">
+          <p>Land(s)</p>
+        </div>
+        <ul class="section-links">
+          <li><%= link_to 'Input Calibration', input_calibrations_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Irrigation Schedule', irriagtion_schedules_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Land Names', land_names_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Rainfall Records', rainfalls_path, class:"has-text-white" %></li>
+        </ul>
+      </section>
     </div>
+
     <div class="row5">
       <span>
-        <i class="fas fa-hiking fa-3x"></i> <span>DAILY ACTIVITIES</span>
+        <i class="fas fa-hiking fa-3x"></i> 
+        <span>
+          DAILY ACTIVITIES &nbsp;
+          <i class='fas fa-angle-right'></i>
+        </span>
       </span>
+
+      <section>
+        <div class="heading">
+          <p>Daily Activities</p>
+        </div>
+        <ul class="section-links">
+          <li><%= link_to 'Activity', activities_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Requests', daily_requisitions_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Time Book', timebooks_path, class:"has-text-white" %></li>
+        </ul>
+      </section>
     </div>
+
     <div class="row6">
       <span>
-        <i class="fas fa-funnel-dollar fa-3x"></i> <span>CROP SALES</span>
+        <i class="fas fa-funnel-dollar fa-3x"></i> 
+        <span>
+          CROP SALES &nbsp;
+          <i class='fas fa-angle-right'></i>
+        </span>
       </span>
+
+      <section>
+        <div class="heading">
+          <p>Crop Sales</p>
+        </div>
+        <ul class="section-links">
+          <li><%= link_to 'Cereal Sales', cereal_sales_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Tobacco Sales', tobacco_sales_path, class:"has-text-white" %></li>
+        </ul>
+      </section>
     </div>
+
     <div class="row7">
       <span>
-        <i class="fab fa-adversal fa-3x"></i> <span>Advertisements</span>
+        <i class="fab fa-adversal fa-3x"></i> 
+        <span>
+          Advertisements &nbsp;
+          <i class='fas fa-angle-right'></i>
+        </span>
       </span>
+
+      <section>
+        <div class="heading">
+          <p>Advertisements</p>
+        </div>
+        <ul class="section-links">
+          <li><%= link_to 'Adverts', advertisements_path, class:"has-text-white" %></li>
+        </ul>
+      </section>
     </div>
+
     <div class="row8">
       <span>
-        <i class="fas fa-seedling fa-3x"></i> <span>SEEDBEB PLANTING</span>
+        <i class="fas fa-seedling fa-3x"></i> 
+        <span>
+          SEEDBEB PLANTING &nbsp;
+          <i class='fas fa-angle-right'></i>
+        </span>
       </span>
+
+      <section>
+        <div class="heading">
+          <p>SEEDBEB PLANTING</p>
+        </div>
+        <ul class="section-links">
+          <li><%= link_to 'Seed Bed', seedbeds_path, class:"has-text-white" %></li>
+        </ul>
+      </section>
     </div>
+
     <div class="row9">
       <span>
-        <i class="fas fa-laptop-house fa-3x"></i> <span>Properties</span>
+        <i class="fas fa-laptop-house fa-3x"></i> 
+        <span>
+          Properties &nbsp;
+          <i class='fas fa-angle-right'></i>
+        </span>
       </span>
+
+      <section>
+        <div class="heading">
+          <p>Property Records</p>
+        </div>
+        <ul class="section-links">
+          <li><%= link_to 'Assets', assets_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Equipment Service', equipment_services_path, class:"has-text-white" %></li>
+        </ul>
+      </section>
     </div>
+
     <div class="row10">
       <span>
-        <i class="fas fa-layer-group fa-3x"></i> <span>LIVESTOCK & HORTICULTURE</span>
+        <i class="fas fa-layer-group fa-3x"></i> 
+        <span>
+          LIVESTOCK & HORTICULTURE &nbsp;
+          <i class='fas fa-angle-right'></i>
+        </span>
       </span>
     </div>
+
     <div class="row11">
       <span>
-        <i class="fas fa-cogs fa-3x"></i> <span>OTHERS</span>
+        <i class="fas fa-cogs fa-3x"></i> 
+        <span>
+          OTHERS &nbsp;
+          <i class='fas fa-angle-right'></i>
+        </span>
       </span>
+
+      <section>
+        <div class="heading">
+          <p>OTHERS</p>
+        </div>
+        <ul class="section-links">
+          <li><%= link_to 'Calender', calenders_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Field Days', field_days_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Weather Updates', weathers_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Set Season', set_seasons_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Create Employees', employees_path, class:"has-text-white" %></li>
+          <li><%= link_to 'Farm Names', farm_names_path, class:"has-text-white" %></li>
+        </ul>
+      </section>
     </div>
+
     <div class="row12">
       <div class="section">
+      <span>
         <label for="control1">
           <i class='fas fa-angle-double-right fa-3x'></i>
         </label>
+      </span>
 
+      <span>
         <label for="control2">
           <i class='fas fa-angle-double-left fa-3x'></i>
         </label>
+      </span>
       </div>
     </div>
   </div>
