@@ -48,6 +48,6 @@ Rails.application.routes.draw do
   end
   resources :client_payments
   devise_for :users, :path_prefix => 'my'
-  root 'home#index'
+  root 'activities#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
