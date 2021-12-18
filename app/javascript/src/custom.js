@@ -24,7 +24,9 @@ const refDiv = document.querySelector('.content-container');
 const list = document.querySelectorAll('li');
 [...list].forEach(list => {
   list.addEventListener('click', () => {
-    console.log(list.innerText);
+    setTimeout(() => {
+      location.reload();
+    }, 1000);
   });
 });
 
