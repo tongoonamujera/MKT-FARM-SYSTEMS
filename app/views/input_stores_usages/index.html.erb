@@ -1,59 +1,185 @@
 <p id="notice"><%= notice %></p>
-<div class="navigation">
-  <label for="first" class="first-label">adsddsdsdf</label>
-  <label for="second" class="second-label">addsfsfffs</label>
-  <label for="third" class="third">adfsrfsf</label>
-</div>
+<div class="inputs-usage-container">
+  <div class="navigation">
+    <div class="buttons">
+      <button class="first-label">Bin</button>
+      <button class="second-label">Inputs Usage</button>
+      <button class="third-label">Create New Usage</button>
+    </div>
+  </div>
 
-<div class="pagination">
-  <input type="radio" name="navigation" id="first" checked/>
-  <input type="radio" name="navigation" id="second">
-  <input type="radio" name="navigation" id="third">
-</div>
+  <div class="pagination">
+    <div class="bin first-div">
+      <h1>Input Stores Usages</h1>
 
-<div class='box outerdiv'>
-  <h1 class="has-text-centered"><strong>Input Stores Usages</strong></h1>
+      <% if @input_stores_usages_deleted.empty? %>
+        <div class="box">
+          <h1 class="has-text-centered"><strong>There is nothing to Show the Bin is Empty!!!!!!!!!!</strong></h1>
+        </div>
+      <% else %>
+        <div class="columns is-centered">
+          <div class="column is-11">
+            <div class='box outerdiv'>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Company name</th>
+                    <th>Season</th>
+                    <th>Date</th>
+                    <th>Farm name</th>
+                    <th>Input name</th>
+                    <th>Quantity used</th>
+                    <th>Unit</th>
+                    <th>Total amount</th>
+                    <th colspan="3"></th>
+                  </tr>
+                </thead>
 
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Company name</th>
-        <th>Season</th>
-        <th>Date</th>
-        <th>Farm name</th>
-        <th>Input name</th>
-        <th>Quantity used</th>
-        <th>Unit</th>
-        <th>Total amount</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @input_stores_usages.each do |input_stores_usage| %>
-        <tr>
-          <td><%= input_stores_usage.company_name %></td>
-          <td><%= input_stores_usage.season %></td>
-          <td><%= input_stores_usage.date %></td>
-          <td><%= input_stores_usage.farm_name %></td>
-          <td><%= input_stores_usage.input_name %></td>
-          <td><%= input_stores_usage.quantity_used %></td>
-          <td><%= input_stores_usage.unit %></td>
-          <td><%= input_stores_usage.total_amount %></td>
-          <td><%= link_to 'Show', input_stores_usage %></td>
-          <td><%= link_to 'Edit', edit_input_stores_usage_path(input_stores_usage) %></td>
-          <td>
-            <%= form_for input_stores_usage, :url =>[:delete_records, input_stores_usage], html: { method: :put } do |f| %>
-            <%= f.submit 'delete' %>
-          <% end %>
-          </td>
-        </tr>
+                <tbody>
+                  <% @input_stores_usages_deleted.each do |input_stores_usage| %>
+                    <tr>
+                      <td><%= input_stores_usage.company_name %></td>
+                      <td><%= input_stores_usage.season %></td>
+                      <td><%= input_stores_usage.date %></td>
+                      <td><%= input_stores_usage.farm_name %></td>
+                      <td><%= input_stores_usage.input_name %></td>
+                      <td><%= input_stores_usage.quantity_used %></td>
+                      <td><%= input_stores_usage.unit %></td>
+                      <td><%= input_stores_usage.total_amount %></td>
+                      <td><%= link_to 'Show', input_stores_usage %></td>
+                      <td>
+                        <%= form_for input_stores_usage, :url =>[:restore_records, input_stores_usage], html: { method: :put } do |f| %>
+                        <%= f.submit 'restore' %>
+                        <% end %>
+                      </td>
+                      <td><%= link_to 'Destroy', input_stores_usage, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                    </tr>
+                  <% end %>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
       <% end %>
-    </tbody>
-  </table>
+    </div>
 
-  <br>
+    <div class='box outerdiv second-div'>
+      <h1 class="has-text-centered"><strong>Input Stores Usages</strong></h1>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Company name</th>
+            <th>Season</th>
+            <th>Date</th>
+            <th>Farm name</th>
+            <th>Input name</th>
+            <th>Quantity used</th>
+            <th>Unit</th>
+            <th>Total amount</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @input_stores_usages.each do |input_stores_usage| %>
+            <tr>
+              <td><%= input_stores_usage.company_name %></td>
+              <td><%= input_stores_usage.season %></td>
+              <td><%= input_stores_usage.date %></td>
+              <td><%= input_stores_usage.farm_name %></td>
+              <td><%= input_stores_usage.input_name %></td>
+              <td><%= input_stores_usage.quantity_used %></td>
+              <td><%= input_stores_usage.unit %></td>
+              <td><%= input_stores_usage.total_amount %></td>
+              <td><%= link_to 'Show', input_stores_usage %></td>
+              <td><%= link_to 'Edit', edit_input_stores_usage_path(input_stores_usage) %></td>
+              <td>
+                <%= form_for input_stores_usage, :url =>[:delete_records, input_stores_usage], html: { method: :put } do |f| %>
+                <%= f.submit 'delete' %>
+              <% end %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+
+      <br>
+    </div>
+
+    <div class="third-div">
+      <% @stores.each do |store|%>
+        <div class="box">
+          <div class="has-text-centered">
+            <strong>Creating Usage for:<%= store.input_name %></strong>
+          </div>
+          <div class="columns">
+            <div class="column is-12">
+              <div class="box">
+                <%= form_with(model: @input_stores_usage, local: true) do |form| %>
+                  <% if @input_stores_usage.errors.any? %>
+                    <div id="error_explanation">
+                      <h2><%= pluralize(@input_stores_usage.errors.count, "error") %> prohibited this input_stores_usage from being saved:</h2>
+
+                      <ul>
+                        <% @input_stores_usage.errors.full_messages.each do |message| %>
+                          <li><%= message %></li>
+                        <% end %>
+                      </ul>
+                    </div>
+                  <% end %>
+
+                  <div class="field">
+                    <%= form.text_field :company_name, value: store.company_name, type: :hidden %>
+                  </div>
+
+                  <div class="field">
+                    <%= form.text_field :season, value: season_active, type: :hidden %>
+                  </div>
+
+                  <div class="field">
+                    <%= form.label :date %>
+                    <%= form.date_select :date %>
+                  </div>
+
+                  <div class="field">
+                    <%= form.text_field :farm_name, value: store.farm_name, type: :hidden %>
+                  </div>
+
+                  <div class="field">
+                    <%= form.text_field :input_name, value: store.input_name, type: :hidden  %>
+                  </div>
+
+                  <div class="field">
+                    <%= form.label :quantity_used, class:"label" %>
+                    <%= form.text_field :quantity_used, class:"input" %>
+                  </div>
+
+                  <div class="field">
+                    <%= form.text_field :unit, value: store.unit, type: :hidden %>
+                  </div>
+
+                  <div class="field">
+                    <%= form.text_field :types, value: store.types, type: :hidden %>
+                  </div>
+
+                  <div class="field">
+                    <%= form.text_field :total_amount, value: 0, type: :hidden %>
+                  </div>
+
+                  <div class="field">
+                    <%= form.text_field :user_id, value: current_user.id, type: :hidden %>
+                  </div>
+
+                  <div class="actions">
+                    <%= form.submit class:"button is-success" %>
+                  </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </div>
-<%= link_to 'Bin', bin_input_stores_usage_path(@input_stores_usages), class:"button btn-orange" %>
-
-<%= link_to 'New Input Stores Usage', new_input_stores_usage_path, class:"button btn-orange" %>

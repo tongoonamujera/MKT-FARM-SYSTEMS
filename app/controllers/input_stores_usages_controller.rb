@@ -5,6 +5,8 @@ class InputStoresUsagesController < ApplicationController
   def index
     @input_stores_usages = InputStoresUsage.where("deleted =?", false)
     @input_stores_usages_deleted = InputStoresUsage.where("deleted =?", true)
+    @input_stores_usage = InputStoresUsage.new
+    @stores = Store.all
   end
 
   def bin
@@ -71,7 +73,7 @@ class InputStoresUsagesController < ApplicationController
   def restore_records
     @input_stores_usages = InputStoresUsage.find(params[:id])
     @input_stores_usages.restore_record
-    redirect_to bin_input_stores_usage_path(@input_stores_usages)
+    redirect_to input_stores_usages_url
   end
 
   private

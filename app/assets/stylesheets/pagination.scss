@@ -1,0 +1,60 @@
+
+.inputs-usage-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .pagination {
+    width: 100%;
+  
+    .first-div {
+      display: none;
+    }
+  
+    .second-div {
+      display: none;
+    }
+  
+    .third-div {
+      display: none;
+    }
+  
+    .active {
+      display: block;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  .navigation {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  
+    .buttons {
+      display: flex;
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+      justify-content: space-evenly;
+      margin-top: 0.5rem;
+  
+      button {
+        padding: 0.5rem 1.8rem 0.5rem 1.8rem;
+        background-color: rgba(218, 187, 12, 0.808);
+        color: white;
+        border: 3px solid rgba(156, 218, 12, 0.808);
+        border-radius: 0.4rem;
+        font-size: 1.2rem;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 900;
+        letter-spacing: 1px;
+        text-shadow: 2px 2px rgb(90, 87, 87);
+
+        &:focus {
+          outline: red;
+        }
+      }
+    }
+  }
+}

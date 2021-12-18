@@ -21,7 +21,6 @@
               <th>Quantity used</th>
               <th>Unit</th>
               <th>Total amount</th>
-              <th>Profile number</th>
               <th colspan="3"></th>
             </tr>
           </thead>
@@ -37,7 +36,6 @@
                 <td><%= input_stores_usage.quantity_used %></td>
                 <td><%= input_stores_usage.unit %></td>
                 <td><%= input_stores_usage.total_amount %></td>
-                <td><%= input_stores_usage.profile_number %></td>
                 <td><%= link_to 'Show', input_stores_usage %></td>
                 <td>
                   <%= form_for input_stores_usage, :url =>[:restore_records, input_stores_usage], html: { method: :put } do |f| %>
