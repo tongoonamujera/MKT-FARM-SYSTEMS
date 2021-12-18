@@ -1,46 +1,58 @@
 <p id="notice"><%= notice %></p>
+<div class="navigation">
+  <label for="first" class="first-label">adsddsdsdf</label>
+  <label for="second" class="second-label">addsfsfffs</label>
+  <label for="third" class="third">adfsrfsf</label>
+</div>
+
+<div class="pagination">
+  <input type="radio" name="navigation" id="first" checked/>
+  <input type="radio" name="navigation" id="second">
+  <input type="radio" name="navigation" id="third">
+</div>
+
 <div class='box outerdiv'>
-<h1 class="has-text-centered"><strong>Input Stores Usages</strong></h1>
+  <h1 class="has-text-centered"><strong>Input Stores Usages</strong></h1>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>Company name</th>
-      <th>Season</th>
-      <th>Date</th>
-      <th>Farm name</th>
-      <th>Input name</th>
-      <th>Quantity used</th>
-      <th>Unit</th>
-      <th>Total amount</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @input_stores_usages.each do |input_stores_usage| %>
+  <table class="table">
+    <thead>
       <tr>
-        <td><%= input_stores_usage.company_name %></td>
-        <td><%= input_stores_usage.season %></td>
-        <td><%= input_stores_usage.date %></td>
-        <td><%= input_stores_usage.farm_name %></td>
-        <td><%= input_stores_usage.input_name %></td>
-        <td><%= input_stores_usage.quantity_used %></td>
-        <td><%= input_stores_usage.unit %></td>
-        <td><%= input_stores_usage.total_amount %></td>
-        <td><%= link_to 'Show', input_stores_usage %></td>
-        <td><%= link_to 'Edit', edit_input_stores_usage_path(input_stores_usage) %></td>
-        <td>
-          <%= form_for input_stores_usage, :url =>[:delete_records, input_stores_usage], html: { method: :put } do |f| %>
-          <%= f.submit 'delete' %>
-        <% end %>
-        </td>
+        <th>Company name</th>
+        <th>Season</th>
+        <th>Date</th>
+        <th>Farm name</th>
+        <th>Input name</th>
+        <th>Quantity used</th>
+        <th>Unit</th>
+        <th>Total amount</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @input_stores_usages.each do |input_stores_usage| %>
+        <tr>
+          <td><%= input_stores_usage.company_name %></td>
+          <td><%= input_stores_usage.season %></td>
+          <td><%= input_stores_usage.date %></td>
+          <td><%= input_stores_usage.farm_name %></td>
+          <td><%= input_stores_usage.input_name %></td>
+          <td><%= input_stores_usage.quantity_used %></td>
+          <td><%= input_stores_usage.unit %></td>
+          <td><%= input_stores_usage.total_amount %></td>
+          <td><%= link_to 'Show', input_stores_usage %></td>
+          <td><%= link_to 'Edit', edit_input_stores_usage_path(input_stores_usage) %></td>
+          <td>
+            <%= form_for input_stores_usage, :url =>[:delete_records, input_stores_usage], html: { method: :put } do |f| %>
+            <%= f.submit 'delete' %>
+          <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
 </div>
 <%= link_to 'Bin', bin_input_stores_usage_path(@input_stores_usages), class:"button btn-orange" %>
 

@@ -36,14 +36,14 @@
 
   <div class="field">
     <%= form.label :worker_status, class:"label" %>
-    <%= form.select :worker_status, ['Permanent', 'Maricho'], class:"my-3" %>
-  </div>,
+    <%= form.select :worker_status, ['', 'Permanent', 'Maricho'], class:"my-3" %>
+  </div>
 
   <div class="field">
     <%= form.text_field :user_id, value: current_user.id, type: :hidden %>
   </div>
 
   <div class="actions">
-    <%= form.submit class:"button btn-orange" %>
+    <%= form.submit class:"button btn-orange is-fullwidth" %>
   </div>
 <% end %>

@@ -4,6 +4,7 @@ class InputStoresUsagesController < ApplicationController
   # GET /input_stores_usages or /input_stores_usages.json
   def index
     @input_stores_usages = InputStoresUsage.where("deleted =?", false)
+    @input_stores_usages_deleted = InputStoresUsage.where("deleted =?", true)
   end
 
   def bin

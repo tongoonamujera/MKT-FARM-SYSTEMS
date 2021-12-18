@@ -202,6 +202,11 @@ form {
   letter-spacing: 1px;
   font-size: 17px;
   font-family: 'Times New Roman', Times, serif;
+
+  &:hover {
+    color: #000a0e;
+    text-shadow: white;
+  }
 }
 
 // #######******TABLE STYLES END*******########
@@ -214,7 +219,7 @@ form {
   background-color: rgb(168, 14, 60);
 
   .content-container {
-    background-color: rgb(77, 39, 112);
+    background: linear-gradient(to right, rgba(204, 11, 243, 0.571), rgba(243, 230, 241, 0.959)) ;
   }
 
   input[type="radio"] {
