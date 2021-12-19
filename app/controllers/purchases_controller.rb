@@ -4,6 +4,7 @@ class PurchasesController < ApplicationController
   # GET /purchases or /purchases.json
   def index
     @purchases = Purchase.all
+    @purchase = Purchase.new
   end
 
   # GET /purchases/1 or /purchases/1.json

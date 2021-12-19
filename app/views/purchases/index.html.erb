@@ -1,46 +1,68 @@
 <p id="notice"><%= notice %></p>
-<%= link_to 'New Purchase', new_purchase_path, class:"button btn-orange my-3" %>
-<div class='box outerdiv'>
-<h1 class="has-background-white">Purchases</h1>
+<div class="purchases-container">
+  <div class="navigation">
+    <div class="buttons">
+      <button class="purchases-first-label">Create New Purchase</button>
+      <button class="purchases-second-label">Items Purchased</button>
+    </div>
+  </div>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>Company name</th>
-      <th>Date</th>
-      <th>Season</th>
-      <th>Item</th>
-      <th>Unit</th>
-      <th>Unit price</th>
-      <th>Total items</th>
-      <th>Total amount</th>
-      <th>Vat</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <div class="pagination">
+    <div class="columns is-centered purchases-first-div">
+      <div class="column is-6 mx-auto">
+        <div class="card outerdiv">
+          <div class="">
+            <h1 class="has-text-centered"><strong>New Purchase</strong></h1>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <%= render 'form', purchase: @purchase %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <tbody>
-    <% @purchases.each do |purchase| %>
-      <tr>
-        <td><%= purchase.company_name %></td>
-        <td><%= purchase.date %></td>
-        <td><%= purchase.season %></td>
-        <td><%= purchase.item %></td>
-        <td><%= purchase.unit %></td>
-        <td><%= purchase.unit_price %></td>
-        <td><%= purchase.total_items %></td>
-        <td><%= purchase.total_amount %></td>
-        <td><%= purchase.vat %></td>
-        <td><%= link_to 'Show', purchase %></td>
-        <td><%= link_to 'Edit', edit_purchase_path(purchase) %></td>
-        <td><%= link_to 'Destroy', purchase, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <div class='box outerdiv purchases-second-div'>
+      <h1 class="has-background-white">Purchases</h1>
 
-<br>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Company name</th>
+            <th>Date</th>
+            <th>Season</th>
+            <th>Item</th>
+            <th>Unit</th>
+            <th>Unit price</th>
+            <th>Total items</th>
+            <th>Total amount</th>
+            <th>Vat</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
 
+        <tbody>
+          <% @purchases.each do |purchase| %>
+            <tr>
+              <td><%= purchase.company_name %></td>
+              <td><%= purchase.date %></td>
+              <td><%= purchase.season %></td>
+              <td><%= purchase.item %></td>
+              <td><%= purchase.unit %></td>
+              <td><%= purchase.unit_price %></td>
+              <td><%= purchase.total_items %></td>
+              <td><%= purchase.total_amount %></td>
+              <td><%= purchase.vat %></td>
+              <td><%= link_to 'Show', purchase %></td>
+              <td><%= link_to 'Edit', edit_purchase_path(purchase) %></td>
+              <td><%= link_to 'Destroy', purchase, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
 
 

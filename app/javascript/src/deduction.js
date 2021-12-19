@@ -19,11 +19,11 @@ const deduction = () => {
   }
 
   const additionBtn = document.querySelector('.button');
-  const activaton = document.querySelector('.activate');
+  const activation = document.querySelector('.activate');
   const hiddenDiv = document.querySelector('.hidden');
 
   if (additionBtn) {
-    if (activaton) {
+    if (activation) {
       additionBtn.addEventListener('click', () => {
         hiddenDiv.classList.remove('activate');
       });
