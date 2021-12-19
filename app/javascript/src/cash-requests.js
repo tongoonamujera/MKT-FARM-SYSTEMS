@@ -1,4 +1,4 @@
-window.onload = () => {
+const cashRequsets = () => {
   console.log('loaded');
 
   const firstBtn = document.querySelector('.cash-req-first-label');
@@ -20,3 +20,5 @@ window.onload = () => {
     });
   }
 }
+
+export default cashRequsets;

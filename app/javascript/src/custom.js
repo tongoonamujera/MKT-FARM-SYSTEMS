@@ -1,6 +1,7 @@
-
+import cashRequsets from './cash-requests';
+import cashRequests from './cash-requests';
 window.onload = function(){
-
+  cashRequsets();
   var acc = document.getElementsByClassName("clickbutton");
   var i;
 
@@ -18,7 +19,8 @@ window.onload = function(){
       });
     });
   });
-  // preventing default
+
+// preventing default
   const list = document.querySelectorAll('li');
   [...list].forEach(list => {
     list.addEventListener('click', () => {
