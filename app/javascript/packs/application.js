@@ -8,6 +8,7 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 require('src/custom')
+require('src/cash-requests')
 require("jquery")
 
 import "@fortawesome/fontawesome-free/js/all";

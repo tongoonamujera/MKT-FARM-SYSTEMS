@@ -1,43 +1,66 @@
 <p id="notice"><%= notice %></p>
-<%= link_to 'New Cash Requisition', new_cash_requisition_path, class:"button btn-orange my-3" %>
+<div class="cash-requests-container">
+  <div class="navigation">
+    <div class="buttons">
+      <button class="cash-req-first-label">Create New Request</button>
+      <button class="cash-req-second-label">Cash Requests</button>
+    </div>
+  </div>
 
+  <div class="pagination">
+    <div class="columns cash-req-first-div">
+      <div class="column is-6 mx-auto">
+        <div class="card outerdiv">
 
-<div class="box outerdiv">
-  <h1 class="has-text-centered"><strong>Cash Requisitions</strong></h1>
+            <h1 class="has-text-centered"><strong>New Cash Requisition</strong></h1>
 
-  <table class="table is-striped is-bordered">
-    <thead>
-      <tr>
-        <th>Company name</th>
-        <th>Date</th>
-        <th>Season</th>
-        <th>Farm name</th>
-        <th>Employee name</th>
-        <th>Amount requested</th>
-        <th>Amount issued</th>
-        <th>Pay from</th>
-        <th>Pay to</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
+          <div class="card-content">
+            <div class="content">
+              <%= render 'form', cash_requisition: @cash_requisition %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <tbody>
-      <% @cash_requisitions.each do |cash_requisition| %>
-        <tr>
-          <td><%= cash_requisition.company_name %></td>
-          <td><%= cash_requisition.date %></td>
-          <td><%= cash_requisition.season %></td>
-          <td><%= cash_requisition.farm_name %></td>
-          <td><%= cash_requisition.employee_name %></td>
-          <td>$<%= cash_requisition.amount_requested %></td>
-          <td>$<%= cash_requisition.amount_issued %></td>
-          <td><%= cash_requisition.pay_from %></td>
-          <td><%= cash_requisition.pay_to %></td>
-          <td><%= link_to 'Show', cash_requisition %></td>
-          <td><%= link_to 'Edit', edit_cash_requisition_path(cash_requisition) %></td>
-          <td><%= link_to 'Destroy', cash_requisition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+    <div class="box outerdiv cash-req-second-div">
+      <h1 class="has-text-centered"><strong>Cash Requests</strong></h1>
+
+      <table class="table is-striped is-bordered">
+        <thead>
+          <tr>
+            <th>Company name</th>
+            <th>Date</th>
+            <th>Season</th>
+            <th>Farm name</th>
+            <th>Employee name</th>
+            <th>Amount requested</th>
+            <th>Amount issued</th>
+            <th>Pay from</th>
+            <th>Pay to</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @cash_requisitions.each do |cash_requisition| %>
+            <tr>
+              <td><%= cash_requisition.company_name %></td>
+              <td><%= cash_requisition.date %></td>
+              <td><%= cash_requisition.season %></td>
+              <td><%= cash_requisition.farm_name %></td>
+              <td><%= cash_requisition.employee_name %></td>
+              <td>$<%= cash_requisition.amount_requested %></td>
+              <td>$<%= cash_requisition.amount_issued %></td>
+              <td><%= cash_requisition.pay_from %></td>
+              <td><%= cash_requisition.pay_to %></td>
+              <td><%= link_to 'Show', cash_requisition %></td>
+              <td><%= link_to 'Edit', edit_cash_requisition_path(cash_requisition) %></td>
+              <td><%= link_to 'Destroy', cash_requisition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>

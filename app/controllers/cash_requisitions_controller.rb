@@ -4,6 +4,7 @@ class CashRequisitionsController < ApplicationController
   # GET /cash_requisitions or /cash_requisitions.json
   def index
     @cash_requisitions = CashRequisition.all
+    @cash_requisition = CashRequisition.new
   end
 
   # GET /cash_requisitions/1 or /cash_requisitions/1.json
