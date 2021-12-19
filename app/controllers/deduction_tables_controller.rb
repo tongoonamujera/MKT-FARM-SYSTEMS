@@ -4,6 +4,7 @@ class DeductionTablesController < ApplicationController
   # GET /deduction_tables or /deduction_tables.json
   def index
     @deduction_tables = DeductionTable.all
+    @deduction_table = DeductionTable.new
   end
 
   # GET /deduction_tables/1 or /deduction_tables/1.json

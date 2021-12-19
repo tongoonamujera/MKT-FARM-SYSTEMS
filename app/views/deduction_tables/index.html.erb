@@ -1,48 +1,367 @@
 <p id="notice"><%= notice %></p>
-<%= link_to 'New Deduction Table', new_deduction_table_path, class:"button btn-orange my-3" %>
+<div class="deduction-container">
+  <div class="navigation">
+    <div class="buttons">
+      <button class="deduction-first-label">Create New Deductions</button>
+      <button class="deduction-second-label">Deductions</button>
+    </div>
+  </div>
 
-<div class="box outerdiv">
-  <h1 class="has-text-centered">Deduction Tables</h1>
+  <div class="pagination">
+    <% Employee.all.each do |employee| %>
+      <% unless deduction_record_exists(employee.employee_name) %>
+        <div class="box deduction-first-div">
+          <%= form_with(model: @deduction_table, local: true) do |form| %>
+            <% if @deduction_table.errors.any? %>
+              <div id="error_explanation">
+                <h2><%= pluralize(@deduction_table.errors.count, "error") %> prohibited this deduction_table from being saved:</h2>
 
-  <table class="table is-bordered is-striped">
-    <thead>
-      <tr>
-        <th>Season</th>
-        <th>Month</th>
-        <th>Employee Name</th>
-        <th>Employee Number</th>
-        <th>Farm name</th>
-        <th>Allowance</th>
-        <th>Payee</th>
-        <th>NSSA</th>
-        <th>NEC</th>
-        <th>Cash Requests</th>
-        <th>Total Amount</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
+                <ul>
+                  <% @deduction_table.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                  <% end %>
+                </ul>
+              </div>
+            <% end %>
 
-    <tbody>
-      <% @deduction_tables.each do |deduction_table| %>
-        <tr>
-          <td><%= deduction_table.season %></td>
-          <td><%= deduction_table.month %></td>
-          <td><%= deduction_table.employee_name %></td>
-          <td><%= deduction_table.employee_number %></td>
-          <td><%= deduction_table.farm_name %></td>
-          <td><%= deduction_table.allowance %></td>
-          <td><%= deduction_table.payee %></td>
-          <td><%= deduction_table.nssa %></td>
-          <td><%= deduction_table.nec %></td>
-          <td><%= deduction_table.cash_requests %></td>
-          <td>
-          <%= deduction_table.total_amount %>
-          </td> 
-          <td><%= link_to 'Show', deduction_table %></td>
-          <td><%= link_to 'Edit', edit_deduction_table_path(deduction_table) %></td>
-          <td><%= link_to 'Destroy', deduction_table, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
+            <div class="columns">
+              <div class="column is-3">
+                <strong>Employee Name</strong> <br>
+                <%= employee.employee_name %>
+                <%= form.text_field :employee_name, value: employee.employee_name, type: :hidden %>
+              </div>
+              <div class="column is-3">
+                <strong>Employee Number</strong> <br>
+                <%= employee.employee_number %>
+                <%= form.text_field :employee_number, value: employee.employee_number, type: :hidden %>
+              </div>
+              <div class="column is-3">
+                <div class="field">
+                  <%= form.label :month_starting, class:"label" %>
+                  <div class="control">
+                    <%= form.date_select :month_starting, class:"input" %>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-3">
+                <div class="field">
+                  <%= form.label :month_ending, class:"label" %>
+                  <div class="control">
+                    <%= form.date_select :month_ending, class:"input" %>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="columns">
+              <div class="column is-3">
+                <div class="field">
+                  <%= form.label :payee, class:"label" %>
+                  <div class="control">
+                    <%= form.text_field :payee, class:"input" %>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-3">
+                <div class="field">
+                  <%= form.label :nssa, class:"label" %>
+                  <div class="control">
+                    <%= form.text_field :nssa, class:"input" %>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-3">
+                <div class="field">
+                  <%= form.label :nec, class:"label" %>
+                  <div class="control">
+                    <%= form.text_field :nec, class:"input" %>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-3">
+                <div class="field">
+                  <%= form.label :cash_requests, class:"label" %>
+                  <div class="control">
+                    <%= form.text_field :cash_requests, class:"input" %>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="columns">
+              <div class="column is-3">
+                <div class="field">
+                  <%= form.label :farm_name, class:"label" %>
+                  <div class="control">
+                    <%= current_user.farm_name %>
+                    <%= form.text_field :farm_name, value: current_user.farm_name, type: :hidden %>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-3">
+                <div class="field">
+                  <%= form.label :allowance, class:"label" %>
+                  <div class="control">
+                    <%= form.text_field :allowance, class:"input" %>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-3">
+                <div class="field">
+                  <%= form.label :season, class:"label" %>
+                  <div class="control">
+                  <%= season_active %>
+                    <%= form.text_field :season, value: season_active, type: :hidden %>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-3">
+                <div class="field">
+                  <%= form.label :month, class:"label" %>
+                  <div class="control">
+                    <%= form.text_field :month, class:"input" %>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="other-deductions has-text-centered">
+              <span id="clickButton" class="clickbutton button is-info mb-2">Click To Add More Deductions</span>
+              <div id="otherDeductions" class="hidden">
+                <div class="columns">
+                  <div class="column">
+                    <div class="field">
+                      <%= form.label :other1_name, class:"label" %>
+                      <div class="control">
+                        <%= form.text_field :other1_name, class:"input" %>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="field">
+                      <%= form.label :other1_amount, class:"label" %>
+                      <div class="control">
+                        <%= form.text_field :other1_amount, class:"input" %>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="field">
+                      <%= form.label :other2_name, class:"label" %>
+                      <div class="control">
+                        <%= form.text_field :other2_name, class:"input" %>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="field">
+                      <%= form.label :other2_amount, class:"label" %>
+                      <div class="control">
+                        <%= form.text_field :other2_amount, class:"input" %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="columns">
+                  <div class="column">
+                    <div class="field">
+                      <%= form.label :other3_name, class:"label" %>
+                      <div class="control">
+                        <%= form.text_field :other3_name, class:"input" %>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="field">
+                      <%= form.label :other3_amount, class:"label" %>
+                      <div class="control">
+                        <%= form.text_field :other3_amount, class:"input" %>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="field">
+                      <%= form.label :other4_name, class:"label" %>
+                      <div class="control">
+                        <%= form.text_field :other4_name, class:"input" %>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="field">
+                      <%= form.label :other4_amount, class:"label" %>
+                      <div class="control">
+                        <%= form.text_field :other4_amount, class:"input" %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="columns">
+                  <div class="column">
+                    <div class="field">
+                      <%= form.label :other5_name, class:"label" %>
+                      <div class="control">
+                        <%= form.text_field :other5_name, class:"input" %>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="field">
+                      <%= form.label :other5_amount, class:"label" %>
+                      <div class="control">
+                        <%= form.text_field :other5_amount, class:"input" %>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="field">
+                      <%= form.label :other6_name, class:"label" %>
+                      <div class="control">
+                        <%= form.text_field :other6_name, class:"input" %>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="field">
+                      <%= form.label :other6_amount, class:"label" %>
+                      <div class="control">
+                        <%= form.text_field :other6_amount, class:"input" %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="columns">
+                  <div class="column">
+                    <div class="field">
+                      <%= form.label :other7_name, class:"label" %>
+                      <div class="control">
+                        <%= form.text_field :other7_name, class:"input" %>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="field">
+                      <%= form.label :other7_amount, class:"label" %>
+                      <div class="control">
+                        <%= form.text_field :other7_amount, class:"input" %>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="field">
+                      <%= form.label :other8_name, class:"label" %>
+                      <div class="control">
+                        <%= form.text_field :other8_name, class:"input" %>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="field">
+                      <%= form.label :other8_amount, class:"label" %>
+                      <div class="control">
+                        <%= form.text_field :other8_amount, class:"input" %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="columns">
+                  <div class="column">
+                    <div class="field">
+                      <%= form.label :other9_name, class:"label" %>
+                      <div class="control">
+                        <%= form.text_field :other9_name, class:"input" %>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="field">
+                      <%= form.label :other9_amount, class:"label" %>
+                      <div class="control">
+                        <%= form.text_field :other9_amount, class:"input" %>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="field">
+                      <%= form.label :other10_name, class:"label" %>
+                      <div class="control">
+                        <%= form.text_field :other10_name, class:"input" %>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="field">
+                      <%= form.label :other10_amount, class:"label" %>
+                      <div class="control">
+                        <%= form.text_field :other10_amount, class:"input" %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+              <%= form.text_field :total_amount, value: 0, type: :hidden %>
+              <%= form.text_field :company_name, value: current_user.company_name, type: :hidden %>
+              <div class="actions has-text-centered my-3">
+                <%= form.submit 'Create New Deduction', class:"button is-success" %>
+              </div>
+          <% end %>
+        </div>
       <% end %>
-    </tbody>
-  </table>
+    <% end %>
+
+
+
+    <div class="box outerdiv deduction-second-div">
+      <h1 class="has-text-centered">Deduction Tables</h1>
+
+      <table class="table is-bordered is-striped">
+        <thead>
+          <tr>
+            <th>Season</th>
+            <th>Month</th>
+            <th>Employee Name</th>
+            <th>Employee Number</th>
+            <th>Farm name</th>
+            <th>Allowance</th>
+            <th>Payee</th>
+            <th>NSSA</th>
+            <th>NEC</th>
+            <th>Cash Requests</th>
+            <th>Total Amount</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @deduction_tables.each do |deduction_table| %>
+            <tr>
+              <td><%= deduction_table.season %></td>
+              <td><%= deduction_table.month %></td>
+              <td><%= deduction_table.employee_name %></td>
+              <td><%= deduction_table.employee_number %></td>
+              <td><%= deduction_table.farm_name %></td>
+              <td><%= deduction_table.allowance %></td>
+              <td><%= deduction_table.payee %></td>
+              <td><%= deduction_table.nssa %></td>
+              <td><%= deduction_table.nec %></td>
+              <td><%= deduction_table.cash_requests %></td>
+              <td>
+              <%= deduction_table.total_amount %>
+              </td> 
+              <td><%= link_to 'Show', deduction_table %></td>
+              <td><%= link_to 'Edit', edit_deduction_table_path(deduction_table) %></td>
+              <td><%= link_to 'Destroy', deduction_table, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>

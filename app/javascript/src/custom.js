@@ -1,8 +1,10 @@
 import cashRequsets from './cash-requests';
 import cashFlows from './cashflow';
+import deduction from './deduction';
 window.onload = function(){
   cashRequsets();
   cashFlows();
+  deduction();
   var acc = document.getElementsByClassName("clickbutton");
   var i;
 
