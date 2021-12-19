@@ -3,12 +3,14 @@ import cashFlows from './cashflow';
 import deduction from './deduction';
 import Purchases from './purchases';
 import Rentals from './rentals';
+import Wages from './wages';
 window.onload = function(){
   cashRequsets();
   cashFlows();
   deduction();
   Purchases();
   Rentals();
+  Wages();
   var acc = document.getElementsByClassName("clickbutton");
   var i;
 

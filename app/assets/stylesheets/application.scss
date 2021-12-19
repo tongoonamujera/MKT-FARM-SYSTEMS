@@ -133,32 +133,32 @@ body {
   to {opacity: 1.0;}
 }
 
-form {
-  width: 100%;
-  .field {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    .labels {
-      font-weight: 900;
-    }
-    .control {
-      width: inherit;
-      .inputs {
-        height: 5vh;
-        width: 100%;
-        font-size: 20px;
-        border: 1px solid rgb(224, 222, 222);
-        border-radius: 3px;
-        &:hover {
-          border: 1px solid rgb(224, 222, 222) !important;
-          border-radius: 3px;
-          background-color: rgb(240, 238, 238);
-        }
-      }
-    }
-  }
-}
+// form {
+//   width: 100%;
+//   .field {
+//     display: flex;
+//     flex-direction: column;
+//     width: 100%;
+//     .labels {
+//       font-weight: 900;
+//     }
+//     .control {
+//       width: inherit;
+//       .inputs {
+//         height: 5vh;
+//         width: 100%;
+//         font-size: 20px;
+//         border: 1px solid rgb(224, 222, 222);
+//         border-radius: 3px;
+//         &:hover {
+//           border: 1px solid rgb(224, 222, 222) !important;
+//           border-radius: 3px;
+//           background-color: rgb(240, 238, 238);
+//         }
+//       }
+//     }
+//   }
+// }
 
 // ########**********TABLE STYLES***********###########
 .tables {
@@ -760,13 +760,14 @@ form {
 }
 
 @import url('./tables.scss');
-@import url('./forms.scss');
+// @import url('./forms.scss');
 @import url('./pagination.scss');
 @import url('./cashRequests.scss');
 @import url('./cashflows.scss');
 @import url('./deduction.scss');
 @import url('./Purchases.scss');
 @import url('./rentals.scss');
+@import url('./wages.scss');
 
 $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
 @import '@fortawesome/fontawesome-free/scss/fontawesome';

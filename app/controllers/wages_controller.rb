@@ -4,6 +4,7 @@ class WagesController < ApplicationController
   # GET /wages or /wages.json
   def index
     @wages = Wage.all
+    @wage = Wage.new
   end
 
   # GET /wages/1 or /wages/1.json

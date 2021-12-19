@@ -1,56 +1,242 @@
 <p id="notice"><%= notice %></p>
-<%= link_to 'New Wage', new_wage_path, class:"button btn-orange my-3" %>
-<div class='box outerdiv'>
-<h1 class="has-background-white">Wages</h1>
+<div class="wages-container">
+  <div class="navigation">
+    <div class="buttons">
+      <button class="wages-first-label">Create New Wage Entry</button>
+      <button class="wages-second-label">Wages</button>
+    </div>
+  </div>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>Season</th>
-      <th>Month</th>
-      <th>Company name</th>
-      <th>Farm Name</th>
-      <th>Employee Name</th>
-      <th>Employee Number</th>
-      <th>Days Worked</th>
-      <th>Gross</th>
-      <th>Allowance</th>
-      <th>Payee</th>
-      <th>NSSA</th>
-      <th>NEC</th>
-      <th>Cash Requests</th>
-      <th>Other Deductions</th>
-      <th>Net</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <div class="pagination">
+    <% DeductionTable.all.each do |deduction| %>
+      <div class="box outerdiv wages-first-div">
+        <div class="has-background-black">
+          <h1 class="has-text-centered py-0"><strong class="has-text-white">Creating Monthly Wage for: <%= deduction.employee_name %>. Emp Number: <%= deduction.employee_number %></strong></h1>
+        </div>
 
-  <tbody>
-    <% @wages.each do |wage| %>
-      <tr>
-        <td><%= wage.season %></td>
-        <td><%= wage.month %></td>
-        <td><%= wage.company_name %></td>
-        <td><%= wage.farm_name %></td>
-        <td><%= wage.employee_name %></td>
-        <td><%= wage.employee_number %></td>
-        <td><%= wage.days_worked %></td>
-        <td><%= wage.gross %></td>
-        <td><%= wage.allowance %></td>
-        <td><%= wage.payee %></td>
-        <td><%= wage.nssa %></td>
-        <td><%= wage.nec %></td>
-        <td><%= wage.cash_requests %></td>
-        <td><%= wage.other_deductions %></td>
-        <td><%= wage.net %></td>
-        <td><%= link_to 'Show', wage %></td>
-        <td><%= link_to 'Edit', edit_wage_path(wage) %></td>
-        <td><%= link_to 'Destroy', wage, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+        <%= form_with(model: @wage, local: true) do |form| %>
+          <% if @wage.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(@wage.errors.count, "error") %> prohibited this wage from being saved:</h2>
+
+              <ul>
+                <% @wage.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
+
+          <div class="columns">
+            <div class="column is-3">
+              <div class="column-sec">
+                <div class="has-text-centered has-background-dark has-text-white">
+                  Gross
+                </div>
+                <div class="my-1 has-text-centered">
+                  $<%= Timebook.monthly_total_rate(deduction.employee_name) %>
+                  <%= form.text_field :gross, value: Timebook.monthly_total_rate(deduction.employee_name), type: :hidden %>
+                </div>
+              </div>
+            </div>
+
+            <div class="column is-3">
+              <div class="column-sec">
+                <div class="has-text-centered has-background-dark has-text-white">
+                  Days Worked
+                </div>
+                <div class="my-1 has-text-centered">
+                  <%= Timebook.count_days(deduction.employee_name) %>
+                  <%= form.text_field :days_worked, value: Timebook.count_days(deduction.employee_name), type: :hidden %>
+                </div>
+              </div>
+            </div>
+
+            <div class="column is-3">
+              <div class="column-sec">
+                <div class="has-text-centered has-background-dark has-text-white">
+                  Allowance
+                </div>
+                <div class="my-1 has-text-centered">
+                  $<%= deduction.allowance %>
+                  <%= form.text_field :allowance, value: deduction.allowance, type: :hidden %>
+                </div>
+              </div>
+            </div>
+
+            <div class="column is-3">
+              <div class="column-sec">
+                <div class="has-text-centered has-background-dark has-text-white">
+                  Net
+                </div>
+                <div class="my-1 has-text-centered">
+                  $<%= (montly_rate(deduction.employee_name)- deduction.total_amount) %>
+                  <%= form.text_field :net, value: (montly_rate(deduction.employee_name) - deduction.total_amount), type: :hidden %>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="columns">
+            <div class="column is-3">
+              <div class="column-sec">
+                <div class="has-text-centered has-background-dark has-text-white">
+                  Payee
+                </div>
+                <div class="my-1 has-text-centered">
+                  $<%= deduction.payee %>
+                  <%= form.text_field :payee, value: deduction.payee, type: :hidden %>
+                </div>
+              </div>
+            </div>
+
+            <div class="column is-3">
+              <div class="column-sec">
+                <div class="has-text-centered has-background-dark has-text-white">
+                  N.S.S.A
+                </div>
+                <div class="my-1 has-text-centered">
+                  <%= deduction.nssa %>
+                  <%= form.text_field :nssa, value: deduction.nssa, type: :hidden %>
+                </div>
+              </div>
+            </div>
+
+            <div class="column is-3">
+              <div class="column-sec">
+                <div class="has-text-centered has-background-dark has-text-white">
+                  N.E.C
+                </div>
+                <div class="my-1 has-text-centered">
+                  $<%= deduction.nec %>
+                  <%= form.text_field :nec, value: deduction.nec, type: :hidden %>
+                </div>
+              </div>
+            </div>
+
+            <div class="column is-3">
+              <div class="column-sec">
+                <div class="has-text-centered has-background-dark has-text-white">
+                  Cash Requests
+                </div>
+                <div class="my-1 has-text-centered">
+                  <%= deduction.cash_requests %>
+                  <%= form.text_field :cash_requests, value: deduction.cash_requests, type: :hidden %>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="columns">
+            <div class="column is-3">
+              <div class="column-sec">
+                <div class="has-text-centered has-background-dark has-text-white">
+                  Other deductions total
+                </div>
+                <div class="my-1 has-text-centered">
+                  <%= form.text_field :other_deductions, class:"input-wage" %>
+                </div>
+              </div>
+            </div>
+
+            <div class="column is-3">
+              <div class="column-sec">
+                <div class="has-text-centered has-background-dark has-text-white">
+                  Farm Name
+                </div>
+                <div class="my-1 has-text-centered">
+                  <%= current_user.farm_name %>
+                  <%= form.text_field :farm_name, value:current_user.farm_name, type: :hidden %>
+                </div>
+              </div>
+            </div>
+
+            <div class="column is-3">
+              <div class="column-sec">
+                <div class="has-text-centered has-background-dark has-text-white">
+                  Company Name
+                </div>
+                <div class="my-1 has-text-centered">
+                  <%= form.select :company_name, [current_user.company_name] %>
+                </div>
+              </div>
+            </div>
+
+            <div class="column is-3">
+              <div class="column-sec">
+                <div class="has-text-centered has-background-dark has-text-white">
+                  Month
+                </div>
+                <div class="my-1 has-text-centered">
+                  <%= deduction.month %>
+                  <%= form.text_field :month, value: deduction.month, type: :hidden %>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <%= form.text_field :employee_number, value: deduction.employee_number, type: :hidden %>
+          <%= form.text_field :employee_name, value: deduction.employee_name, type: :hidden %>
+          <%= form.text_field :season, value: season_active, type: :hidden %>
+          <%= form.text_field :user_id, value: current_user.id, type: :hidden %>
+          <div class="actions has-text-centered">
+            <%= form.submit "Create New Employee Wage", class:"button btn-orange" %>
+          </div>
+        <% end %>
+      </div>
     <% end %>
-  </tbody>
-</table>
 
-<br>
+    <div class='box outerdiv wages-second-div'>
+      <h1 class="has-background-white">Wages</h1>
 
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Season</th>
+            <th>Month</th>
+            <th>Company name</th>
+            <th>Farm Name</th>
+            <th>Employee Name</th>
+            <th>Employee Number</th>
+            <th>Days Worked</th>
+            <th>Gross</th>
+            <th>Allowance</th>
+            <th>Payee</th>
+            <th>NSSA</th>
+            <th>NEC</th>
+            <th>Cash Requests</th>
+            <th>Other Deductions</th>
+            <th>Net</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @wages.each do |wage| %>
+            <tr>
+              <td><%= wage.season %></td>
+              <td><%= wage.month %></td>
+              <td><%= wage.company_name %></td>
+              <td><%= wage.farm_name %></td>
+              <td><%= wage.employee_name %></td>
+              <td><%= wage.employee_number %></td>
+              <td><%= wage.days_worked %></td>
+              <td><%= wage.gross %></td>
+              <td><%= wage.allowance %></td>
+              <td><%= wage.payee %></td>
+              <td><%= wage.nssa %></td>
+              <td><%= wage.nec %></td>
+              <td><%= wage.cash_requests %></td>
+              <td><%= wage.other_deductions %></td>
+              <td><%= wage.net %></td>
+              <td><%= link_to 'Show', wage %></td>
+              <td><%= link_to 'Edit', edit_wage_path(wage) %></td>
+              <td><%= link_to 'Destroy', wage, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
