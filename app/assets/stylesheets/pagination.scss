@@ -41,9 +41,9 @@
   
       button {
         padding: 0.5rem 1.8rem 0.5rem 1.8rem;
-        background-color: rgba(218, 187, 12, 0.808);
+        background-color: rgba(83, 5, 41, 0.808);
         color: white;
-        border: 3px solid rgba(156, 218, 12, 0.808);
+        border: 3px solid rgba(241, 55, 9, 0.808);
         border-radius: 0.4rem;
         font-size: 1.2rem;
         font-family: 'Times New Roman', Times, serif;
@@ -52,7 +52,7 @@
         text-shadow: 2px 2px rgb(90, 87, 87);
 
         &:focus {
-          outline: red;
+          transform: scale(1.5, 1.2);
         }
       }
     }

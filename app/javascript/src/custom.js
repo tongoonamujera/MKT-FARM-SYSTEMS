@@ -1,63 +1,63 @@
 
 window.onload = function(){
 
-var acc = document.getElementsByClassName("clickbutton");
-var i;
+  var acc = document.getElementsByClassName("clickbutton");
+  var i;
 
-const radioBtn = document.querySelectorAll('input[type="radio"]');
-document.querySelectorAll('label').forEach(label => {
-  label.addEventListener('click', () => {
-    radioBtn.forEach(btn => {
-      if(btn.checked) {
-        btn.checked = false;
-        console.log(btn);
-      }else {
-        btn.checked = true;
-        console.log(btn);
-      }
+  const radioBtn = document.querySelectorAll('input[type="radio"]');
+  document.querySelectorAll('label').forEach(label => {
+    label.addEventListener('click', () => {
+      radioBtn.forEach(btn => {
+        if(btn.checked) {
+          btn.checked = false;
+          console.log(btn);
+        }else {
+          btn.checked = true;
+          console.log(btn);
+        }
+      });
     });
   });
-});
-
-const refDiv = document.querySelector('.content-container');
-
-const list = document.querySelectorAll('li');
-[...list].forEach(list => {
-  list.addEventListener('click', () => {
-    setTimeout(() => {
-      location.reload();
-    }, 1000);
-  });
-});
-
-const firstBtn = document.querySelector('.first-label');
-const secondBtn = document.querySelector('.second-label');
-const thirdBtn = document.querySelector('.third-label');
-
-const firstDiv = document.querySelector('.first-div');
-const secondDiv = document.querySelector('.second-div');
-const thirdDiv = document.querySelector('.third-div');
-
-if (firstDiv && firstBtn && secondDiv && secondBtn && thirdBtn && thirdDiv) {
-  secondDiv.classList.add('active');
-  firstBtn.addEventListener('click', () => {
-    secondDiv.classList.remove('active');
-    thirdDiv.classList.remove('active');
-    firstDiv.classList.add('active');
+  // preventing default
+  const list = document.querySelectorAll('li');
+  [...list].forEach(list => {
+    list.addEventListener('click', () => {
+      setTimeout(() => {
+        location.reload();
+      }, 1000);
+    });
   });
 
-  secondBtn.addEventListener('click', () => {
-    firstDiv.classList.remove('active');
-    thirdDiv.classList.remove('active');
+
+  // switching between links
+  const firstBtn = document.querySelector('.first-label');
+  const secondBtn = document.querySelector('.second-label');
+  const thirdBtn = document.querySelector('.third-label');
+
+  const firstDiv = document.querySelector('.first-div');
+  const secondDiv = document.querySelector('.second-div');
+  const thirdDiv = document.querySelector('.third-div');
+
+  if (firstDiv && firstBtn && secondDiv && secondBtn && thirdBtn && thirdDiv) {
     secondDiv.classList.add('active');
-  });
+    firstBtn.addEventListener('click', () => {
+      secondDiv.classList.remove('active');
+      thirdDiv.classList.remove('active');
+      firstDiv.classList.add('active');
+    });
 
-  thirdBtn.addEventListener('click', () => {
-    firstDiv.classList.remove('active');
-    thirdDiv.classList.add('active');
-    secondDiv.classList.remove('active');
-  });
-}
+    secondBtn.addEventListener('click', () => {
+      firstDiv.classList.remove('active');
+      thirdDiv.classList.remove('active');
+      secondDiv.classList.add('active');
+    });
+
+    thirdBtn.addEventListener('click', () => {
+      firstDiv.classList.remove('active');
+      thirdDiv.classList.add('active');
+      secondDiv.classList.remove('active');
+    });
+  }
 
   for (i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function() {
