@@ -1,7 +1,8 @@
 import cashRequsets from './cash-requests';
-import cashRequests from './cash-requests';
+import cashFlows from './cashflow';
 window.onload = function(){
   cashRequsets();
+  cashFlows();
   var acc = document.getElementsByClassName("clickbutton");
   var i;
 
