@@ -154,6 +154,11 @@
   border-radius: 10px;
   box-shadow: 5px 10px rgb(233, 232, 232);
 
+  :not(:first-child):hover {
+    transform: scale(1, 1.4);
+    transition: transform 0.7s ease-in-out;
+  }
+
   tr {
     th {
       width: inherit;
