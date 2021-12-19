@@ -4,6 +4,7 @@ class RentalsController < ApplicationController
   # GET /rentals or /rentals.json
   def index
     @rentals = Rental.all
+    @rental = Rental.new
   end
 
   # GET /rentals/1 or /rentals/1.json

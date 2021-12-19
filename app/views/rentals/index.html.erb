@@ -1,40 +1,63 @@
 <p id="notice"><%= notice %></p>
-<%= link_to 'New Rental', new_rental_path, class:"button btn-orange my-3" %>
-<div class='box outerdiv'>
-<h1 class="has-text-centered"><strong>Rentals</strong></h1>
+<div class="rentals-container">
+  <div class="navigation">
+    <div class="buttons">
+      <button class="rentals-first-label">Create New Rental Entry</button>
+      <button class="rentals-second-label">Paid Rentals</button>
+    </div>
+  </div>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>Company name</th>
-      <th>Date</th>
-      <th>Season</th>
-      <th>Company paid</th>
-      <th>Receipt number</th>
-      <th>Reason</th>
-      <th>Amount paid</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <div class="pagination">
+    <div class="columns is-centered rentals-first-div">
+      <div class="column is-6 mx-auto">
+        <div class="card outerdiv">
 
-  <tbody>
-    <% @rentals.each do |rental| %>
-      <tr>
-        <td><%= rental.company_name %></td>
-        <td><%= rental.date %></td>
-        <td><%= rental.season %></td>
-        <td><%= rental.company_paid %></td>
-        <td><%= rental.receipt_number %></td>
-        <td><%= rental.reason %></td>
-        <td><%= rental.amount_paid %></td>
-        <td><%= link_to 'Show', rental %></td>
-        <td><%= link_to 'Edit', edit_rental_path(rental) %></td>
-        <td><%= link_to 'Destroy', rental, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+          <h1 class="has-text-centered"><strong>New Rental</strong></h1>
 
-<br>
+          <div class="card-content">
+            <div class="content">
+              <%= render 'form', rental: @rental %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
+
+    <div class='box outerdiv rentals-second-div'>
+      <h1 class="has-text-centered"><strong>Paid Rentals</strong></h1>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Company name</th>
+            <th>Date</th>
+            <th>Season</th>
+            <th>Company paid</th>
+            <th>Receipt number</th>
+            <th>Reason</th>
+            <th>Amount paid</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @rentals.each do |rental| %>
+            <tr>
+              <td><%= rental.company_name %></td>
+              <td><%= rental.date %></td>
+              <td><%= rental.season %></td>
+              <td><%= rental.company_paid %></td>
+              <td><%= rental.receipt_number %></td>
+              <td><%= rental.reason %></td>
+              <td><%= rental.amount_paid %></td>
+              <td><%= link_to 'Show', rental %></td>
+              <td><%= link_to 'Edit', edit_rental_path(rental) %></td>
+              <td><%= link_to 'Destroy', rental, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
