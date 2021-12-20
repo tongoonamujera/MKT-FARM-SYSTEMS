@@ -1,4 +1,5 @@
-.harvesting-container {
+
+.activities-container {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -6,11 +7,11 @@
   .pagination {
     width: 100%;
   
-    .harvesting-first-div {
+    .activities-first-div {
       display: none;
     }
   
-    .harvesting-second-div {
+    .activities-second-div {
       display: none;
     }
 

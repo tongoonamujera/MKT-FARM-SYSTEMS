@@ -4,6 +4,7 @@ class ActivitiesController < ApplicationController
   # GET /activities or /activities.json
   def index
     @activities = Activity.all
+    @activity = Activity.new
   end
 
   # GET /activities/1 or /activities/1.json
