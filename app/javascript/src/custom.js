@@ -8,6 +8,7 @@ import CerealStores from './CerealStore';
 import Deliveries from './delivery';
 import Harvesting from './Harvesting';
 import Rationing from './Rationing';
+import Stores from './stores';
 window.onload = function(){
   cashRequsets();
   cashFlows();
@@ -19,6 +20,7 @@ window.onload = function(){
   Deliveries();
   Harvesting();
   Rationing();
+  Stores();
   var acc = document.getElementsByClassName("clickbutton");
   var i;
 

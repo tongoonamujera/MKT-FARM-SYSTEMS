@@ -25,15 +25,9 @@ class RationingsController < ApplicationController
     @rationing = Rationing.new(rationing_params)
     @rationings = Rationing.all
 
-    respond_to do |format|
       if @rationing.save
-        format.html { redirect_to @rationings, notice: "Rationing was successfully created." }
-        format.json { render :index, status: :created, location: @rationings }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @rationing.errors, status: :unprocessable_entity }
+        redirect_to rationings_url
       end
-    end
   end
 
   # PATCH/PUT /rationings/1 or /rationings/1.json
