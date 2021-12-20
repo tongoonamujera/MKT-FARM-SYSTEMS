@@ -4,6 +4,8 @@ class TimebooksController < ApplicationController
   # GET /timebooks or /timebooks.json
   def index
     @timebooks = Timebook.all
+    @timebook = Timebook.new
+    @employee = Employee.all
   end
 
   # GET /timebooks/1 or /timebooks/1.json

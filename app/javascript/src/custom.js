@@ -16,6 +16,7 @@ import Lands from './lands';
 import Rainfalls from './Rainfall';
 import Activities from './Activities';
 import Requests from './requests';
+import Timebooks from './timebook';
 window.onload = function(){
   cashRequsets();
   cashFlows();
@@ -35,6 +36,7 @@ window.onload = function(){
   Rainfalls();
   Activities();
   Requests();
+  Timebooks();
   var acc = document.getElementsByClassName("clickbutton");
   var i;
 
