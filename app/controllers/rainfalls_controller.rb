@@ -4,6 +4,7 @@ class RainfallsController < ApplicationController
   # GET /rainfalls or /rainfalls.json
   def index
     @rainfalls = Rainfall.all
+    @rainfall = Rainfall.new
   end
 
   # GET /rainfalls/1 or /rainfalls/1.json

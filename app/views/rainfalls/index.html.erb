@@ -1,38 +1,62 @@
+
 <p id="notice"><%= notice %></p>
-<%= link_to 'New Rainfall', new_rainfall_path, class:"button btn-orange my-3" %>
-<div class='box outerdiv'>
-<h1 class="has-text-centered"><strong>Rainfalls</strong></h1>
+<div class="rainfalls-container">
+  <div class="navigation">
+    <div class="buttons">
+      <button class="rainfalls-first-label">New Rainfall Records</button>
+      <button class="rainfalls-second-label">Rainfall Records</button>
+    </div>
+  </div>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>Company name</th>
-      <th>Date</th>
-      <th>Season</th>
-      <th>Farm name</th>
-      <th>Section</th>
-      <th>Mls received</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <div class="pagination">
+    <div class="columns is-centered rainfalls-first-div">
+      <div class="column is-6 mx-auto">
+        <div class="card outerdiv">
+          <div class="">
+            <h1 class="has-text-centered"><strong>New Rainfall</strong></h1>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <%= render 'form', rainfall: @rainfall %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <tbody>
-    <% @rainfalls.each do |rainfall| %>
-      <tr>
-        <td><%= rainfall.company_name %></td>
-        <td><%= rainfall.date %></td>
-        <td><%= rainfall.season %></td>
-        <td><%= rainfall.farm_name %></td>
-        <td><%= rainfall.section %></td>
-        <td><%= rainfall.mls_received %></td>
-        <td><%= link_to 'Show', rainfall %></td>
-        <td><%= link_to 'Edit', edit_rainfall_path(rainfall) %></td>
-        <td><%= link_to 'Destroy', rainfall, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <div class='box outerdiv rainfalls-second-div'>
+      <h1 class="has-text-centered"><strong>Rainfalls</strong></h1>
 
-<br>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Company name</th>
+            <th>Date</th>
+            <th>Season</th>
+            <th>Farm name</th>
+            <th>Section</th>
+            <th>Mls received</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @rainfalls.each do |rainfall| %>
+            <tr>
+              <td><%= rainfall.company_name %></td>
+              <td><%= rainfall.date %></td>
+              <td><%= rainfall.season %></td>
+              <td><%= rainfall.farm_name %></td>
+              <td><%= rainfall.section %></td>
+              <td><%= rainfall.mls_received %></td>
+              <td><%= link_to 'Show', rainfall %></td>
+              <td><%= link_to 'Edit', edit_rainfall_path(rainfall) %></td>
+              <td><%= link_to 'Destroy', rainfall, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
 

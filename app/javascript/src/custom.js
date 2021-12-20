@@ -13,6 +13,7 @@ import Workshops from './Workshop';
 import Calibrations from './Calibrations';
 import Irrigations from './Irrigation';
 import Lands from './lands';
+import Rainfalls from './Rainfall';
 window.onload = function(){
   cashRequsets();
   cashFlows();
@@ -29,6 +30,7 @@ window.onload = function(){
   Calibrations();
   Irrigations();
   Lands();
+  Rainfalls();
   var acc = document.getElementsByClassName("clickbutton");
   var i;
 
