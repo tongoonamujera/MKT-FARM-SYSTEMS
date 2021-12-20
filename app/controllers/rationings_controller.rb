@@ -4,6 +4,7 @@ class RationingsController < ApplicationController
   # GET /rationings or /rationings.json
   def index
     @rationings = Rationing.all
+    @rationing = Rationing.new
   end
 
   # GET /rationings/1 or /rationings/1.json
@@ -22,11 +23,12 @@ class RationingsController < ApplicationController
   # POST /rationings or /rationings.json
   def create
     @rationing = Rationing.new(rationing_params)
+    @rationings = Rationing.all
 
     respond_to do |format|
       if @rationing.save
-        format.html { redirect_to @rationing, notice: "Rationing was successfully created." }
-        format.json { render :show, status: :created, location: @rationing }
+        format.html { redirect_to @rationings, notice: "Rationing was successfully created." }
+        format.json { render :index, status: :created, location: @rationings }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @rationing.errors, status: :unprocessable_entity }

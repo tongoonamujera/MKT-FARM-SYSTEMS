@@ -1,39 +1,64 @@
 <p id="notice"><%= notice %></p>
-<%= link_to 'New Rationing', new_rationing_path, class:"button btn-orange my-3" %>
-<div class='box outerdiv'>
-<h1 class="has-background-white">Rationings</h1>
+<div class="rationing-container">
+  <div class="navigation">
+    <div class="buttons">
+      <button class="rationing-first-label">Create New Entry for Harvesting</button>
+      <button class="rationing-second-label">Past Harvests</button>
+    </div>
+  </div>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>Company name</th>
-      <th>Date</th>
-      <th>Season</th>
-      <th>Farm name</th>
-      <th>Cereal name</th>
-      <th>Kgs issued</th>
-      <th>Issued To</th>
-      <th>Price</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <div class="pagination">
+    <div class="columns is-centered rationing-first-div">
+      <div class="column is-6 mx-auto">
+        <div class="card outerdiv">
+          <div class="">
+            <h1 class="has-text-centered"><strong>New Rationing</strong></h1>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <%= render 'form', rationing: @rationing %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <tbody>
-    <% @rationings.each do |rationing| %>
-      <tr>
-        <td><%= rationing.company_name %></td>
-        <td><%= rationing.date %></td>
-        <td><%= rationing.season %></td>
-        <td><%= rationing.farm_name %></td>
-        <td><%= rationing.cereal_name %></td>
-        <td><%= rationing.kgs_issued %></td>
-        <td><%= rationing.issued_to %></td>
-        <td><%= rationing.price %></td>
-        <td><%= link_to 'Show', rationing %></td>
-        <td><%= link_to 'Edit', edit_rationing_path(rationing) %></td>
-        <td><%= link_to 'Restore', rationing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <div class='box outerdiv rationing-second-div'>
+      <h1 class="has-background-white">Rationings</h1>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Company name</th>
+            <th>Date</th>
+            <th>Season</th>
+            <th>Farm name</th>
+            <th>Cereal name</th>
+            <th>Kgs issued</th>
+            <th>Issued To</th>
+            <th>Price</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @rationings.each do |rationing| %>
+            <tr>
+              <td><%= rationing.company_name %></td>
+              <td><%= rationing.date %></td>
+              <td><%= rationing.season %></td>
+              <td><%= rationing.farm_name %></td>
+              <td><%= rationing.cereal_name %></td>
+              <td><%= rationing.kgs_issued %></td>
+              <td><%= rationing.issued_to %></td>
+              <td><%= rationing.price %></td>
+              <td><%= link_to 'Show', rationing %></td>
+              <td><%= link_to 'Edit', edit_rationing_path(rationing) %></td>
+              <td><%= link_to 'Restore', rationing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
