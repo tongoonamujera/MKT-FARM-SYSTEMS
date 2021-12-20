@@ -1,48 +1,72 @@
 <p id="notice"><%= notice %></p>
-<%= link_to 'New Cereal Store', new_cereal_store_path, class:"button btn-orange my-3" %>
-<div class='box outerdiv'>
-<h1 class="has-background-white">Cereal Stores</h1>
+<div class="cerealstores-container">
+  <div class="navigation">
+    <div class="buttons">
+      <button class="cerealstores-first-label">Create New Cereal Storage</button>
+      <button class="cerealstores-second-label">Cereal Storage</button>
+    </div>
+  </div>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>Company name</th>
-      <th>Date</th>
-      <th>Season</th>
-      <th>Farm name</th>
-      <th>Type</th>
-      <th>Cereal Name</th>
-      <th>Quantity</th>
-      <th>Unit</th>
-      <th>Unit price</th>
-      <th>Total amount</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <div class="pagination">
+    <div class="columns is-centered cerealstores-first-div">
+      <div class="column is-6 mx-auto">
+        <div class="card outerdiv">
+          <div class="">
+            <h1 class="has-text-centered"><strong>New Cereal Store</strong></h1>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <%= render 'form', cereal_store: @cereal_store %>
+              <%= link_to 'Back', cereal_stores_path, class:"button is-dark" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <tbody>
-    <% @cereal_stores.each do |cereal_store| %>
-      <tr>
-        <td><%= cereal_store.company_name %></td>
-        <td><%= cereal_store.date %></td>
-        <td><%= cereal_store.season %></td>
-        <td><%= cereal_store.farm_name %></td>
-        <td><%= cereal_store.types %></td>
-        <td><%= cereal_store.cereal_name %></td>
-        <td>
-          <%= c_quantity(cereal_store.cereal_name) %>
-        </td>
-        <td><%= cereal_store.unit %></td>
-        <td><%= cereal_store.unit_price %></td>
-        <td><%= cereal_store.total_amount %></td>
-        <td><%= link_to 'Show', cereal_store %></td>
-        <td><%= link_to 'Top Up', edit_cereal_store_path(cereal_store) %></td>
-        <td><%= link_to 'Destroy', cereal_store, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <div class='box outerdiv cerealstores-second-div'>
+      <h1 class="has-background-white">Cereal Stores</h1>
 
-<br>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Company name</th>
+            <th>Date</th>
+            <th>Season</th>
+            <th>Farm name</th>
+            <th>Type</th>
+            <th>Cereal Name</th>
+            <th>Quantity</th>
+            <th>Unit</th>
+            <th>Unit price</th>
+            <th>Total amount</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @cereal_stores.each do |cereal_store| %>
+            <tr>
+              <td><%= cereal_store.company_name %></td>
+              <td><%= cereal_store.date %></td>
+              <td><%= cereal_store.season %></td>
+              <td><%= cereal_store.farm_name %></td>
+              <td><%= cereal_store.types %></td>
+              <td><%= cereal_store.cereal_name %></td>
+              <td>
+                <%= c_quantity(cereal_store.cereal_name) %>
+              </td>
+              <td><%= cereal_store.unit %></td>
+              <td><%= cereal_store.unit_price %></td>
+              <td><%= cereal_store.total_amount %></td>
+              <td><%= link_to 'Show', cereal_store %></td>
+              <td><%= link_to 'Top Up', edit_cereal_store_path(cereal_store) %></td>
+              <td><%= link_to 'Destroy', cereal_store, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
 
