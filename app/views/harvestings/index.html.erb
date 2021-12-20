@@ -1,41 +1,64 @@
 <p id="notice"><%= notice %></p>
-<%= link_to 'New Harvesting', new_harvesting_path, class:"button btn-orange my-3" %>
-<div class='box outerdiv'>
-<h1 class="has-background-white">Harvestings</h1>
+<div class="harvesting-container">
+  <div class="navigation">
+    <div class="buttons">
+      <button class="harvesting-first-label">Create New Entry for Harvesting</button>
+      <button class="harvesting-second-label">Past Harvests</button>
+    </div>
+  </div>
 
-<table class="tables">
-  <thead>
-    <tr>
-      <th>Company name</th>
-      <th>Date</th>
-      <th>Season</th>
-      <th>Farm name</th>
-      <th>Section</th>
-      <th>Cereal Name</th>
-      <th>Kgs done</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <div class="pagination">
+    <div class="columns is-centered harvesting-first-div">
+      <div class="column is-6 mx-auto">
+        <div class="card outerdiv">
+          <div class="">
+            <h1 class="has-text-centered"><strong>New Harvesting</strong></h1>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <%= render 'form', harvesting: @harvesting %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <tbody>
-    <% @harvestings.each do |harvesting| %>
-      <tr>
-        <td><%= harvesting.company_name %></td>
-        <td><%= harvesting.date %></td>
-        <td><%= harvesting.season %></td>
-        <td><%= harvesting.farm_name %></td>
-        <td><%= harvesting.section %></td>
-        <td><%= harvesting.cereal_name %></td>
-        <td><%= harvesting.kgs_done %></td>
-        <td><%= link_to 'Show', harvesting %></td>
-        <td><%= link_to 'Edit', edit_harvesting_path(harvesting) %></td>
-        <td><%= link_to 'Restore', harvesting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-  
-</table>
+    <div class='box outerdiv harvesting-second-div'>
+      <h1 class="has-background-white">Harvestings</h1>
 
-<br>
+      <table class="tables">
+        <thead>
+          <tr>
+            <th>Company name</th>
+            <th>Date</th>
+            <th>Season</th>
+            <th>Farm name</th>
+            <th>Section</th>
+            <th>Cereal Name</th>
+            <th>Kgs done</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @harvestings.each do |harvesting| %>
+            <tr>
+              <td><%= harvesting.company_name %></td>
+              <td><%= harvesting.date %></td>
+              <td><%= harvesting.season %></td>
+              <td><%= harvesting.farm_name %></td>
+              <td><%= harvesting.section %></td>
+              <td><%= harvesting.cereal_name %></td>
+              <td><%= harvesting.kgs_done %></td>
+              <td><%= link_to 'Show', harvesting %></td>
+              <td><%= link_to 'Edit', edit_harvesting_path(harvesting) %></td>
+              <td><%= link_to 'Restore', harvesting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+        
+      </table>
+    </div>
+  </div>
 </div>
 

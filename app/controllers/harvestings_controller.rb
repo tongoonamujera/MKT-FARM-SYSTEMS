@@ -4,6 +4,7 @@ class HarvestingsController < ApplicationController
   # GET /harvestings or /harvestings.json
   def index
     @harvestings = Harvesting.all
+    @harvesting = Harvesting.new
   end
 
   # GET /harvestings/1 or /harvestings/1.json
@@ -21,12 +22,13 @@ class HarvestingsController < ApplicationController
 
   # POST /harvestings or /harvestings.json
   def create
+    @harvestings = Harvesting.all
     @harvesting = Harvesting.new(harvesting_params)
 
     respond_to do |format|
       if @harvesting.save
         format.html { redirect_to @harvesting, notice: "Harvesting was successfully created." }
-        format.json { render :show, status: :created, location: @harvesting }
+        format.json { render :index, status: :created, location: @harvestings }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @harvesting.errors, status: :unprocessable_entity }
