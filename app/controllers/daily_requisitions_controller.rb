@@ -4,6 +4,7 @@ class DailyRequisitionsController < ApplicationController
   # GET /daily_requisitions or /daily_requisitions.json
   def index
     @daily_requisitions = DailyRequisition.all
+    @daily_requisition = DailyRequisition.new
   end
 
   # GET /daily_requisitions/1 or /daily_requisitions/1.json
