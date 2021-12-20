@@ -5,6 +5,7 @@ import Purchases from './purchases';
 import Rentals from './rentals';
 import Wages from './wages';
 import CerealStores from './CerealStore';
+import Deliveries from './delivery';
 window.onload = function(){
   cashRequsets();
   cashFlows();
@@ -13,6 +14,7 @@ window.onload = function(){
   Rentals();
   Wages();
   CerealStores();
+  Deliveries();
   var acc = document.getElementsByClassName("clickbutton");
   var i;
 

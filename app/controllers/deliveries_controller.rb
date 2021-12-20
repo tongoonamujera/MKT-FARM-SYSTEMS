@@ -4,6 +4,7 @@ class DeliveriesController < ApplicationController
   # GET /deliveries or /deliveries.json
   def index
     @deliveries = Delivery.all
+    @delivery = Delivery.new
   end
 
   # GET /deliveries/1 or /deliveries/1.json

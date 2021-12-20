@@ -1,45 +1,70 @@
 <p id="notice"><%= notice %></p>
-<%= link_to 'New Delivery', new_delivery_path, class:"button btn-orange my-3" %>
-<div class='box outerdiv'>
-<h1>Deliveries</h1>
+<div class="deliveries-container">
+  <div class="navigation">
+    <div class="buttons">
+      <button class="deliveries-first-label">Create New Entry for Delivery</button>
+      <button class="deliveries-second-label">Past Deliveries</button>
+    </div>
+  </div>
 
-<table class=" table has-background-white">
-  <thead>
-    <tr>
-      <th>Company name</th>
-      <th>Date</th>
-      <th>Season</th>
-      <th>Farm name</th>
-      <th>Section</th>
-      <th>Type</th>
-      <th>Delivered by</th>
-      <th>Goods</th>
-      <th>Quantity</th>
-      <th>Amount</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <div class="pagination">
+    <div class="columns is-centered deliveries-first-div">
+      <div class="column is-6 mx-auto">
+        <div class="card outerdiv">
+          <div class="">
+            <h1 class="has-text-centered"><strong>New Delivery</strong></h1>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <%= render 'form', delivery: @delivery %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <tbody>
-    <% @deliveries.each do |delivery| %>
-      <tr>
-        <td><%= delivery.company_name %></td>
-        <td><%= delivery.date %></td>
-        <td><%= delivery.season %></td>
-        <td><%= delivery.farm_name %></td>
-        <td><%= delivery.section %></td>
-        <td><%= delivery.types %></td>
-        <td><%= delivery.delivered_by %></td>
-        <td><%= delivery.goods %></td>
-        <td><%= delivery.quantity %></td>
-        <td><%= delivery.amount %></td>
-        <td><%= link_to 'Show', delivery %></td>
-        <td><%= link_to 'Edit', edit_delivery_path(delivery) %></td>
-        <td><%= link_to 'Destroy', delivery, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
+    <div class='box outerdiv deliveries-second-div'>
+      <h1>Deliveries</h1>
+
+      <table class=" table has-background-white">
+        <thead>
+          <tr>
+            <th>Company name</th>
+            <th>Date</th>
+            <th>Season</th>
+            <th>Farm name</th>
+            <th>Section</th>
+            <th>Type</th>
+            <th>Delivered by</th>
+            <th>Goods</th>
+            <th>Quantity</th>
+            <th>Amount</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @deliveries.each do |delivery| %>
+            <tr>
+              <td><%= delivery.company_name %></td>
+              <td><%= delivery.date %></td>
+              <td><%= delivery.season %></td>
+              <td><%= delivery.farm_name %></td>
+              <td><%= delivery.section %></td>
+              <td><%= delivery.types %></td>
+              <td><%= delivery.delivered_by %></td>
+              <td><%= delivery.goods %></td>
+              <td><%= delivery.quantity %></td>
+              <td><%= delivery.amount %></td>
+              <td><%= link_to 'Show', delivery %></td>
+              <td><%= link_to 'Edit', edit_delivery_path(delivery) %></td>
+              <td><%= link_to 'Destroy', delivery, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
 
