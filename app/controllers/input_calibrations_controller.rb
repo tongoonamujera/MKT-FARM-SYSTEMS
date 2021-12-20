@@ -4,6 +4,7 @@ class InputCalibrationsController < ApplicationController
   # GET /input_calibrations or /input_calibrations.json
   def index
     @input_calibrations = InputCalibration.all
+    @input_calibration = InputCalibration.new
   end
 
   # GET /input_calibrations/1 or /input_calibrations/1.json
