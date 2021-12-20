@@ -4,6 +4,7 @@ class WorkshopsController < ApplicationController
   # GET /workshops or /workshops.json
   def index
     @workshops = Workshop.all
+    @workshop = Workshop.new
   end
 
   # GET /workshops/1 or /workshops/1.json
