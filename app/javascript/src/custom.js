@@ -74,6 +74,24 @@ window.onload = function(){
     });
   }
 
+  //checking if an input has value 
+  const textInput = document.querySelectorAll('input[type="text"]');
+  if (textInput){
+    textInput.forEach(input => {
+      input.addEventListener('change', () => {
+        if (input && input.value) {
+          input.style.height = '100%';
+          input.style.padding = '0.8rem';
+          input.style.fontFamily = `Times New Roman', Times, serif`;
+          input.style.fontStyle = 'oblique';
+          input.style.fontSize = '16px';
+          input.style.fontWeight = '600';
+          input.style.textAlign = 'center';
+        }
+      });
+    });
+  }
+
   for (i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function() {
       /* Toggle between adding and removing the "active" class,

@@ -771,6 +771,30 @@ body {
 @import url('./CerealStores.scss');
 @import url('./deliveries.scss');
 
+.input[type="text"] {
+  border-bottom: 1px solid red;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  height: 0;
+  padding: 0;
+  margin: 0;
+
+  &:focus {
+    outline: white !important;
+    height: 100%;
+    padding: 0.8rem;
+    border-right: 1px solid white;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: oblique;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+  }
+}
+
 $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
 @import '@fortawesome/fontawesome-free/scss/fontawesome';
 @import '@fortawesome/fontawesome-free/scss/solid';
