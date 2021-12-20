@@ -4,6 +4,7 @@ class LandNamesController < ApplicationController
   # GET /land_names or /land_names.json
   def index
     @land_names = LandName.all
+    @land_name = LandName.new
   end
 
   # GET /land_names/1 or /land_names/1.json

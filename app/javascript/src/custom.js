@@ -11,6 +11,8 @@ import Rationing from './Rationing';
 import Stores from './stores';
 import Workshops from './Workshop';
 import Calibrations from './Calibrations';
+import Irrigations from './Irrigation';
+import Lands from './lands';
 window.onload = function(){
   cashRequsets();
   cashFlows();
@@ -25,6 +27,8 @@ window.onload = function(){
   Stores();
   Workshops();
   Calibrations();
+  Irrigations();
+  Lands();
   var acc = document.getElementsByClassName("clickbutton");
   var i;
 

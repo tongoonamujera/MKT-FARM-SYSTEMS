@@ -4,6 +4,7 @@ class IrriagtionSchedulesController < ApplicationController
   # GET /irriagtion_schedules or /irriagtion_schedules.json
   def index
     @irriagtion_schedules = IrriagtionSchedule.all
+    @irriagtion_schedule = IrriagtionSchedule.new
   end
 
   # GET /irriagtion_schedules/1 or /irriagtion_schedules/1.json

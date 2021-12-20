@@ -1,48 +1,71 @@
 <p id="notice"><%= notice %></p>
-<%= link_to 'New Irriagtion Schedule', new_irriagtion_schedule_path, class:"button btn-orange my-3" %>
-<div class='box outerdiv'>
-<h1 class="has-text-centered"><strong>Irriagtion Schedules</strong></h1>
+<div class="irrigations-container">
+  <div class="navigation">
+    <div class="buttons">
+      <button class="irrigations-first-label">New Schedule for Irrigation</button>
+      <button class="irrigations-second-label">Schedules for Irrigation</button>
+    </div>
+  </div>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>Company name</th>
-      <th>Date</th>
-      <th>Season</th>
-      <th>Farm name</th>
-      <th>Section</th>
-      <th>Crop</th>
-      <th>Calibration</th>
-      <th>Mls</th>
-      <th>Start date</th>
-      <th>End date</th>
-      <th>Turn around time</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <div class="pagination">
+    <div class="columns is-centered irrigations-first-div">
+      <div class="column is-6 mx-auto">
+        <div class="card outerdiv">
+          <div class="">
+            <h1 class='has-text-centered'><strong>New Irriagtion Schedule</strong></h1>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <%= render 'form', irriagtion_schedule: @irriagtion_schedule %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <tbody>
-    <% @irriagtion_schedules.each do |irriagtion_schedule| %>
-      <tr>
-        <td><%= irriagtion_schedule.company_name %></td>
-        <td><%= irriagtion_schedule.date %></td>
-        <td><%= irriagtion_schedule.season %></td>
-        <td><%= irriagtion_schedule.farm_name %></td>
-        <td><%= irriagtion_schedule.section %></td>
-        <td><%= irriagtion_schedule.crop %></td>
-        <td><%= irriagtion_schedule.calibration %></td>
-        <td><%= irriagtion_schedule.mls %></td>
-        <td><%= irriagtion_schedule.start_date %></td>
-        <td><%= irriagtion_schedule.end_date %></td>
-        <td><%= irriagtion_schedule.turn_around_time %></td>
-        <td><%= link_to 'Show', irriagtion_schedule %></td>
-        <td><%= link_to 'Edit', edit_irriagtion_schedule_path(irriagtion_schedule) %></td>
-        <td><%= link_to 'Destroy', irriagtion_schedule, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <div class='box outerdiv irrigations-second-div'>
+      <h1 class="has-text-centered"><strong>Irriagtion Schedules</strong></h1>
 
-<br>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Company name</th>
+            <th>Date</th>
+            <th>Season</th>
+            <th>Farm name</th>
+            <th>Section</th>
+            <th>Crop</th>
+            <th>Calibration</th>
+            <th>Mls</th>
+            <th>Start date</th>
+            <th>End date</th>
+            <th>Turn around time</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @irriagtion_schedules.each do |irriagtion_schedule| %>
+            <tr>
+              <td><%= irriagtion_schedule.company_name %></td>
+              <td><%= irriagtion_schedule.date %></td>
+              <td><%= irriagtion_schedule.season %></td>
+              <td><%= irriagtion_schedule.farm_name %></td>
+              <td><%= irriagtion_schedule.section %></td>
+              <td><%= irriagtion_schedule.crop %></td>
+              <td><%= irriagtion_schedule.calibration %></td>
+              <td><%= irriagtion_schedule.mls %></td>
+              <td><%= irriagtion_schedule.start_date %></td>
+              <td><%= irriagtion_schedule.end_date %></td>
+              <td><%= irriagtion_schedule.turn_around_time %></td>
+              <td><%= link_to 'Show', irriagtion_schedule %></td>
+              <td><%= link_to 'Edit', edit_irriagtion_schedule_path(irriagtion_schedule) %></td>
+              <td><%= link_to 'Destroy', irriagtion_schedule, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
 </div>
-
