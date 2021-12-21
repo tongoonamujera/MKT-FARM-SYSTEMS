@@ -571,8 +571,17 @@ body {
       }
 
       div {
+        &:hover {
+          span > .icon-div {
+            padding: 0;
+            border: none;
+            border-radius: none;
+            padding: 0.7rem;
+          }
+        }
+
         span {
-          padding-top: 8px;
+          padding-top: 4px;
           padding-left: 1.4rem;
           display: flex;
           justify-content: space-between;
@@ -583,6 +592,13 @@ body {
 
           label[for="control2"] {
             display: none;
+          }
+
+          .icon-div {
+            background-color: #7e1d2d;
+            padding: 0.5rem;
+            border: 0.3rem solid red;
+            border-radius: 50%;
           }
 
           span {
@@ -743,15 +759,27 @@ body {
         margin: 0;
         justify-content: right;
 
-        label {
-          padding: 1rem;
+        .section {
+          width: 100%;
+          padding: 0;
           margin: 0;
-          background-color: #7e1d2d;
-          border: 1rem solid #f3072e;
-          border-radius: 50%;
+          span {
+            width: 100%;
+            padding: 0;
+            margin: 0;
 
-          &:hover {
-            background-color: #f3072e;
+            label {
+              width: fit-content;
+              padding: 1rem;
+              margin: 0 auto;
+              background-color: #7e1d2d;
+              border: 1rem solid #f3072e;
+              border-radius: 50%;
+    
+              &:hover {
+                background-color: #f3072e;
+              }
+            }
           }
         }
       }
