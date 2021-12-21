@@ -4,6 +4,7 @@ class CerealSalesController < ApplicationController
   # GET /cereal_sales or /cereal_sales.json
   def index
     @cereal_sales = CerealSale.all
+    @cereal_sale = CerealSale.new
   end
 
   # GET /cereal_sales/1 or /cereal_sales/1.json

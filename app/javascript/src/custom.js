@@ -17,6 +17,7 @@ import Rainfalls from './Rainfall';
 import Activities from './Activities';
 import Requests from './requests';
 import Timebooks from './timebook';
+import CerealSales from './cereal_sales';
 window.onload = function(){
   cashRequsets();
   cashFlows();
@@ -37,6 +38,7 @@ window.onload = function(){
   Activities();
   Requests();
   Timebooks();
+  CerealSales();
   var acc = document.getElementsByClassName("clickbutton");
   var i;
 

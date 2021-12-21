@@ -1,58 +1,75 @@
 <p id="notice"><%= notice %></p>
-<%= link_to 'New Cereal Sale', new_cereal_sale_path, class:"button btn-orange my-3" %>
-<div class='box outerdiv'>
-<h1 class="has-text-centered">Cereal Sales</h1>
+<div class="csales-container">
+  <div class="navigation">
+    <div class="buttons">
+      <button class="csales-first-label">Create Cereal Sale</button>
+      <button class="csales-second-label">Sold Cereals</button>
+    </div>
+  </div>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>Company name</th>
-      <th>Date</th>
-      <th>Season</th>
-      <th>Farm name</th>
-      <th>Grower name</th>
-      <th>Crop</th>
-      <th>Truck number</th>
-      <th>Trailer number</th>
-      <th>Test density</th>
-      <th>External matter</th>
-      <th>Gross mass</th>
-      <th>Tare</th>
-      <th>Net mass</th>
-      <th>Price per tonne</th>
-      <th>Quantity</th>
-      <th>Amount paid</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <div class="pagination">
+    <div class="columns is-centered csales-first-div">
+      <div class="column is-6 mx-auto">
+        <div class="box outerdiv">
+          <h1 class="has-text-centered"><strong>New Cereal Sale</strong></h1>
 
-  <tbody>
-    <% @cereal_sales.each do |cereal_sale| %>
-      <tr>
-        <td><%= cereal_sale.company_name %></td>
-        <td><%= cereal_sale.date %></td>
-        <td><%= cereal_sale.season %></td>
-        <td><%= cereal_sale.farm_name %></td>
-        <td><%= cereal_sale.grower_name %></td>
-        <td><%= cereal_sale.crop %></td>
-        <td><%= cereal_sale.truck_number %></td>
-        <td><%= cereal_sale.trailer_number %></td>
-        <td><%= cereal_sale.test_density %></td>
-        <td><%= cereal_sale.external_matter %></td>
-        <td><%= cereal_sale.gross_mass %></td>
-        <td><%= cereal_sale.tare %></td>
-        <td><%= cereal_sale.net_mass %></td>
-        <td><%= cereal_sale.price_per_tonne %></td>
-        <td><%= cereal_sale.quantity %></td>
-        <td><%= cereal_sale.amount_paid %></td>
-        <td><%= link_to 'Show', cereal_sale %></td>
-        <td><%= link_to 'Edit', edit_cereal_sale_path(cereal_sale) %></td>
-        <td><%= link_to 'Destroy', cereal_sale, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+          <%= render 'form', cereal_sale: @cereal_sale %>
+        </div>
+      </div>
+    </div>
 
-<br>
+    <div class='box outerdiv csales-second-div'>
+      <h1 class="has-text-centered">Cereal Sales</h1>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Company name</th>
+            <th>Date</th>
+            <th>Season</th>
+            <th>Farm name</th>
+            <th>Grower name</th>
+            <th>Crop</th>
+            <th>Truck number</th>
+            <th>Trailer number</th>
+            <th>Test density</th>
+            <th>External matter</th>
+            <th>Gross mass</th>
+            <th>Tare</th>
+            <th>Net mass</th>
+            <th>Price per tonne</th>
+            <th>Quantity</th>
+            <th>Amount paid</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @cereal_sales.each do |cereal_sale| %>
+            <tr>
+              <td><%= cereal_sale.company_name %></td>
+              <td><%= cereal_sale.date %></td>
+              <td><%= cereal_sale.season %></td>
+              <td><%= cereal_sale.farm_name %></td>
+              <td><%= cereal_sale.grower_name %></td>
+              <td><%= cereal_sale.crop %></td>
+              <td><%= cereal_sale.truck_number %></td>
+              <td><%= cereal_sale.trailer_number %></td>
+              <td><%= cereal_sale.test_density %></td>
+              <td><%= cereal_sale.external_matter %></td>
+              <td><%= cereal_sale.gross_mass %></td>
+              <td><%= cereal_sale.tare %></td>
+              <td><%= cereal_sale.net_mass %></td>
+              <td><%= cereal_sale.price_per_tonne %></td>
+              <td><%= cereal_sale.quantity %></td>
+              <td><%= cereal_sale.amount_paid %></td>
+              <td><%= link_to 'Show', cereal_sale %></td>
+              <td><%= link_to 'Edit', edit_cereal_sale_path(cereal_sale) %></td>
+              <td><%= link_to 'Destroy', cereal_sale, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
-
