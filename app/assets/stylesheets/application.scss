@@ -845,11 +845,10 @@ input[type="text"] {
 }
 
 .text-animation {
-  color: #e2b842;
-  font-size: 1.8rem;
-  font-weight: bolder;
-  font-stretch: extra-expanded;
-  animation: blinks 0.5s infinite;
+  background-color: #f5b609;
+  height: 1.4rem;
+  width: 0.3rem;
+  animation: blinks 0.6s infinite;
 }
 
 $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
