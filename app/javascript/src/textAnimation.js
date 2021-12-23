@@ -15,7 +15,6 @@ const Animate = () => {
       }
       timer = setTimeout(typingLoop, 270);
     }
-
     typingLoop();
   }
 
@@ -29,7 +28,6 @@ const Animate = () => {
         typeEffect();
         return false;
       }
-
       timer = setTimeout(deleteLoop, 200);
     }
     deleteLoop();
