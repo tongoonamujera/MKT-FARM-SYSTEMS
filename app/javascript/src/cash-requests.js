@@ -1,6 +1,4 @@
 const cashRequsets = () => {
-  console.log('loaded');
-
   const firstBtn = document.querySelector('.cash-req-first-label');
   const secondBtn = document.querySelector('.cash-req-second-label');
 
