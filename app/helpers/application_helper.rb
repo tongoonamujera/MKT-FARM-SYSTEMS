@@ -77,7 +77,7 @@ module ApplicationHelper
   end
 
   def pass_greeting_to_users
-    user_signed_in? ? greeting_text : "Hello Gest User"
+    user_signed_in? ? greeting_text : "Hello Guest User, Please Sign In"
   end
 
   def admin_users

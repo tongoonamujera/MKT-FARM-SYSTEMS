@@ -840,6 +840,18 @@ input[type="text"] {
   }
 }
 
+@keyframes blinks {
+  to { opacity: .0;}
+}
+
+.text-animation {
+  color: #e2b842;
+  font-size: 1.8rem;
+  font-weight: bolder;
+  font-stretch: extra-expanded;
+  animation: blinks 0.5s infinite;
+}
+
 $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
 @import '@fortawesome/fontawesome-free/scss/fontawesome';
 @import '@fortawesome/fontawesome-free/scss/solid';

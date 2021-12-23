@@ -18,6 +18,7 @@ import Activities from './Activities';
 import Requests from './requests';
 import Timebooks from './timebook';
 import CerealSales from './cereal_sales';
+import Animate from './textAnimation';
 window.onload = function(){
   cashRequsets();
   cashFlows();
@@ -39,6 +40,7 @@ window.onload = function(){
   Requests();
   Timebooks();
   CerealSales();
+  Animate();
   var acc = document.getElementsByClassName("clickbutton");
   var i;
 
