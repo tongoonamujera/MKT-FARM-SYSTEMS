@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
-@import 'bulma';
+@import "bulma";
 
 .side-bar {
   background-color: rgba(3, 3, 78, 0.993);
@@ -41,12 +41,12 @@
 }
 
 body {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   font-weight: 400;
   font-size: 15px;
 }
 
-.box-height  {
+.box-height {
   height: 30vh;
   border-radius: 12px;
   .dark {
@@ -66,7 +66,7 @@ body {
   }
 }
 
-.box-height-middle  {
+.box-height-middle {
   height: 20vh;
   border-radius: 12px;
   .dark {
@@ -91,7 +91,7 @@ body {
   box-shadow: 10px goldenrod;
 }
 
-.box-height-last  {
+.box-height-last {
   height: 15vh;
   border-radius: 12px;
   .dark {
@@ -128,9 +128,15 @@ body {
 }
 
 @keyframes blinker {
-  from { opacity: 1.0;}
-  50% { opacity: 0.0; }
-  to {opacity: 1.0;}
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 // form {
@@ -162,7 +168,7 @@ body {
 
 // ########**********TABLE STYLES***********###########
 .tables {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   width: 100%;
   background: #012b39;
   border-radius: 5px;
@@ -189,7 +195,7 @@ body {
 
   tbody tr {
     transition: background 0.25s ease;
-    &:hover{
+    &:hover {
       background: #014055;
     }
   }
@@ -201,7 +207,7 @@ body {
   text-shadow: 3px 3px rgb(48, 45, 45);
   letter-spacing: 1px;
   font-size: 17px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
 
   &:hover {
     color: #000a0e;
@@ -219,7 +225,11 @@ body {
   background-color: rgb(168, 14, 60);
 
   .content-container {
-    background: linear-gradient(to right, rgba(204, 11, 243, 0.571), rgba(243, 230, 241, 0.959)) ;
+    background: linear-gradient(
+      to right,
+      rgba(204, 11, 243, 0.571),
+      rgba(243, 230, 241, 0.959)
+    );
   }
 
   input[type="radio"] {
@@ -289,7 +299,7 @@ body {
                 font-weight: 900;
                 text-shadow: 3px 3px rgb(48, 45, 45);
                 letter-spacing: 1px;
-                font-family: 'Times New Roman', Times, serif;
+                font-family: "Times New Roman", Times, serif;
                 opacity: 0.7;
 
                 &:hover {
@@ -319,14 +329,14 @@ body {
             font-weight: 900;
             text-shadow: 3px 3px rgb(48, 45, 45);
             letter-spacing: 1px;
-            font-family: 'Times New Roman', Times, serif;
-            
+            font-family: "Times New Roman", Times, serif;
           }
         }
       }
 
       .row1 {
         width: calc(100% - 1rem);
+        padding: 0.5rem 0 0.5rem 0;
         grid-row: 1 / span 1;
         &:hover {
           background-color: #7e1d2d;
@@ -340,6 +350,7 @@ body {
 
       .row2 {
         width: calc(100% - 1rem);
+        padding: 0.5rem 0 0.5rem 0;
         grid-row: 2 / span 1;
         &:hover {
           background-color: #7e1d2d;
@@ -353,6 +364,7 @@ body {
 
       .row3 {
         width: calc(100% - 1rem);
+        padding: 0.5rem 0 0.5rem 0;
         grid-row: 3 / span 1;
         &:hover {
           background-color: #7e1d2d;
@@ -366,6 +378,7 @@ body {
 
       .row4 {
         width: calc(100% - 1rem);
+        padding: 0.5rem 0 0.5rem 0;
         grid-row: 4 / span 1;
         &:hover {
           background-color: #7e1d2d;
@@ -379,6 +392,7 @@ body {
 
       .row5 {
         width: calc(100% - 1rem);
+        padding: 0.5rem 0 0.5rem 0;
         grid-row: 5 / span 1;
         &:hover {
           background-color: #7e1d2d;
@@ -392,6 +406,7 @@ body {
 
       .row6 {
         width: calc(100% - 1rem);
+        padding: 0.5rem 0 0.5rem 0;
         grid-row: 6 / span 1;
         &:hover {
           background-color: #7e1d2d;
@@ -405,6 +420,7 @@ body {
 
       .row7 {
         width: calc(100% - 1rem);
+        padding: 0.5rem 0 0.5rem 0;
         grid-row: 7 / span 1;
         &:hover {
           background-color: #7e1d2d;
@@ -418,6 +434,7 @@ body {
 
       .row8 {
         width: calc(100% - 1rem);
+        padding: 0.5rem 0 0.5rem 0;
         grid-row: 8 / span 1;
         &:hover {
           background-color: #7e1d2d;
@@ -431,6 +448,7 @@ body {
 
       .row9 {
         width: calc(100% - 1rem);
+        padding: 0.5rem 0 0.5rem 0;
         grid-row: 9 / span 1;
         &:hover {
           background-color: #7e1d2d;
@@ -444,6 +462,7 @@ body {
 
       .row10 {
         width: calc(100% - 1rem);
+        padding: 0.5rem 0 0.5rem 0;
         grid-row: 10 / span 1;
         &:hover {
           background-color: #7e1d2d;
@@ -457,6 +476,7 @@ body {
 
       .row11 {
         width: calc(100% - 1rem);
+        padding: 0.5rem 0 0.5rem 0;
         grid-row: 11 / span 1;
         &:hover {
           background-color: #7e1d2d;
@@ -538,7 +558,7 @@ body {
                 font-weight: 900;
                 text-shadow: 3px 3px rgb(48, 45, 45);
                 letter-spacing: 1px;
-                font-family: 'Times New Roman', Times, serif;
+                font-family: "Times New Roman", Times, serif;
                 font-size: 17px;
               }
             }
@@ -558,7 +578,7 @@ body {
                 font-weight: 900;
                 text-shadow: 3px 3px rgb(48, 45, 45);
                 letter-spacing: 1px;
-                font-family: 'Times New Roman', Times, serif;
+                font-family: "Times New Roman", Times, serif;
                 opacity: 0.7;
 
                 &:hover {
@@ -608,7 +628,7 @@ body {
       }
 
       .row1 {
-        width: calc(100% - 40%);
+        width: calc(100%);
         grid-row: 1 / span 1;
         &:hover {
           background-color: #7e1d2d;
@@ -621,7 +641,7 @@ body {
       }
 
       .row2 {
-        width: calc(100% - 40%);
+        width: calc(100%);
         grid-row: 2 / span 1;
         &:hover {
           background-color: #7e1d2d;
@@ -634,7 +654,7 @@ body {
       }
 
       .row3 {
-        width: calc(100% - 40%);
+        width: calc(100%);
         grid-row: 3 / span 1;
         &:hover {
           background-color: #7e1d2d;
@@ -647,7 +667,7 @@ body {
       }
 
       .row4 {
-        width: calc(100% - 40%);
+        width: calc(100%);
         grid-row: 4 / span 1;
         &:hover {
           background-color: #7e1d2d;
@@ -660,7 +680,7 @@ body {
       }
 
       .row5 {
-        width: calc(100% - 40%);
+        width: calc(100%);
         grid-row: 5 / span 1;
         &:hover {
           background-color: #7e1d2d;
@@ -673,7 +693,7 @@ body {
       }
 
       .row6 {
-        width: calc(100% - 40%);
+        width: calc(100%);
         grid-row: 6 / span 1;
         &:hover {
           background-color: #7e1d2d;
@@ -686,7 +706,7 @@ body {
       }
 
       .row7 {
-        width: calc(100% - 40%);
+        width: calc(100%);
         grid-row: 7 / span 1;
         &:hover {
           background-color: #7e1d2d;
@@ -699,7 +719,7 @@ body {
       }
 
       .row8 {
-        width: calc(100% - 40%);
+        width: calc(100%);
         grid-row: 8 / span 1;
         &:hover {
           background-color: #7e1d2d;
@@ -712,7 +732,7 @@ body {
       }
 
       .row9 {
-        width: calc(100% - 40%);
+        width: calc(100%);
         grid-row: 9 / span 1;
         &:hover {
           background-color: #7e1d2d;
@@ -725,7 +745,7 @@ body {
       }
 
       .row10 {
-        width: calc(100% - 40%);
+        width: calc(100%);
         grid-row: 10 / span 1;
         &:hover {
           background-color: #7e1d2d;
@@ -738,7 +758,7 @@ body {
       }
 
       .row11 {
-        width: calc(100% - 40%);
+        width: calc(100%);
         grid-row: 11 / span 1;
         &:hover {
           background-color: #7e1d2d;
@@ -775,7 +795,7 @@ body {
               background-color: #7e1d2d;
               border: 1rem solid #f3072e;
               border-radius: 50%;
-    
+
               &:hover {
                 background-color: #f3072e;
               }
@@ -787,29 +807,29 @@ body {
   }
 }
 
-@import url('./tables.scss');
+@import url("./tables.scss");
 // @import url('./forms.scss');
-@import url('./pagination.scss');
-@import url('./cashRequests.scss');
-@import url('./cashflows.scss');
-@import url('./deduction.scss');
-@import url('./Purchases.scss');
-@import url('./rentals.scss');
-@import url('./wages.scss');
-@import url('./CerealStores.scss');
-@import url('./deliveries.scss');
-@import url('./harvesting.scss');
-@import url('./rationings.scss');
-@import url('./stores.scss');
-@import url('./workshop.scss');
-@import url('./calibrations.scss');
-@import url('./irrigation.scss');
-@import url('./lands.scss');
-@import url('./rainfall.scss');
-@import url('./activities.scss');
-@import url('./requests.scss');
-@import url('./timebooks.scss');
-@import url('./cerealSales.scss');
+@import url("./pagination.scss");
+@import url("./cashRequests.scss");
+@import url("./cashflows.scss");
+@import url("./deduction.scss");
+@import url("./Purchases.scss");
+@import url("./rentals.scss");
+@import url("./wages.scss");
+@import url("./CerealStores.scss");
+@import url("./deliveries.scss");
+@import url("./harvesting.scss");
+@import url("./rationings.scss");
+@import url("./stores.scss");
+@import url("./workshop.scss");
+@import url("./calibrations.scss");
+@import url("./irrigation.scss");
+@import url("./lands.scss");
+@import url("./rainfall.scss");
+@import url("./activities.scss");
+@import url("./requests.scss");
+@import url("./timebooks.scss");
+@import url("./cerealSales.scss");
 
 input[type="text"] {
   border-bottom: 1px solid red;
@@ -832,7 +852,7 @@ input[type="text"] {
     border-top: 1px solid white;
     border-left: 1px solid white;
     border-bottom: 1px solid red;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Times New Roman", Times, serif;
     font-style: oblique;
     font-size: 16px;
     font-weight: 600;
@@ -841,7 +861,9 @@ input[type="text"] {
 }
 
 @keyframes blinks {
-  to { opacity: .0;}
+  to {
+    opacity: 0;
+  }
 }
 
 .text-animation {
@@ -851,9 +873,9 @@ input[type="text"] {
   animation: blinks 0.6s infinite;
 }
 
-$fa-font-path: '@fortawesome/fontawesome-free/webfonts';
-@import '@fortawesome/fontawesome-free/scss/fontawesome';
-@import '@fortawesome/fontawesome-free/scss/solid';
-@import '@fortawesome/fontawesome-free/scss/regular';
-@import '@fortawesome/fontawesome-free/scss/brands';
-@import '@fortawesome/fontawesome-free/scss/v4-shims';
+$fa-font-path: "@fortawesome/fontawesome-free/webfonts";
+@import "@fortawesome/fontawesome-free/scss/fontawesome";
+@import "@fortawesome/fontawesome-free/scss/solid";
+@import "@fortawesome/fontawesome-free/scss/regular";
+@import "@fortawesome/fontawesome-free/scss/brands";
+@import "@fortawesome/fontawesome-free/scss/v4-shims";
