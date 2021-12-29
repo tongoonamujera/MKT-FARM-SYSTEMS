@@ -1,19 +1,18 @@
 const Animate = () => {
   const text = document.querySelector('.animation');
   let i = 0;
-  let timer;
   const words = [text.dataset.id];
 
   const typeEffect = () => {
     let word = words[i].split("");
     const typingLoop = () => {
-      if (word.length > 0 ) {
+      if (word.length > 0) {
         text.innerHTML += word.shift();
       } else {
         deleteEffect();
         return false;
       }
-      timer = setTimeout(typingLoop, 270);
+      setTimeout(typingLoop, 270);
     }
     typingLoop();
   }
@@ -28,7 +27,7 @@ const Animate = () => {
         typeEffect();
         return false;
       }
-      timer = setTimeout(deleteLoop, 200);
+      setTimeout(deleteLoop, 200);
     }
     deleteLoop();
   }
