@@ -99,7 +99,7 @@
           <div class="columns">
             <div class="column is-7">
               <h4>Created At</h4>
-              <%= user.created_at%>
+              <%= user.created_at.strftime("%D %T")%>
             </div>
             <div class="column is-3">
               <h5>Category</h5>

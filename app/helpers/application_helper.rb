@@ -131,4 +131,12 @@ module ApplicationHelper
     a = InputStoresUsage.where("input_name =?", input_name).pluck(:quantity_used).inject(:+)
     a.nil? ? a = 0 : a
   end
+
+  def is_current_user
+    if current_user
+      return current_user.company_name
+    else
+      'null'
+    end
+  end
 end

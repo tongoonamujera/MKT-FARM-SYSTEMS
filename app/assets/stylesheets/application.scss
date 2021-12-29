@@ -873,6 +873,12 @@ input[type="text"] {
   animation: blinks 0.6s infinite;
 }
 
+.login-text {
+  font-weight: 900;
+  text-shadow: 2px 2px white;
+  font-size: 17px;
+}
+
 $fa-font-path: "@fortawesome/fontawesome-free/webfonts";
 @import "@fortawesome/fontawesome-free/scss/fontawesome";
 @import "@fortawesome/fontawesome-free/scss/solid";

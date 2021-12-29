@@ -1,9 +1,10 @@
 class TobaccoSalesController < ApplicationController
+  include ApplicationHelper
   before_action :set_tobacco_sale, only: %i[ show edit update destroy ]
 
   # GET /tobacco_sales or /tobacco_sales.json
   def index
-    @tobacco_sales = TobaccoSale.all
+    @tobacco_sales = TobaccoSale.where('company_name LIKE?', is_current_user)
   end
 
   # GET /tobacco_sales/1 or /tobacco_sales/1.json

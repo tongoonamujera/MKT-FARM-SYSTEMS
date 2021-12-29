@@ -17,7 +17,7 @@ const Users = () => {
         ctx.stroke();
         ctx.font = "18px Arial";
         ctx.fontStyle = "bold";
-        ctx.fillText(`${Math.ceil(percentage * 100)}%`, 55, 55);
+        ctx.fillText(`${Math.round(percentage * 100)}%`, 55, 55);
       }
     }
 
@@ -34,7 +34,7 @@ const Users = () => {
         ctx.stroke();
         ctx.font = "18px Arial";
         ctx.fontStyle = "bold";
-        ctx.fillText(`${Math.ceil(percentage * 100)}%`, 55, 55);
+        ctx.fillText(`${Math.round(percentage * 100)}%`, 55, 55);
       }
     }
 
@@ -51,7 +51,7 @@ const Users = () => {
         ctx.stroke();
         ctx.font = "18px Arial";
         ctx.fontStyle = "bold";
-        ctx.fillText(`${Math.ceil(percentage * 100)}%`, 55, 55);
+        ctx.fillText(`${Math.round(percentage * 100)}%`, 55, 55);
       }
     }
 
@@ -68,7 +68,7 @@ const Users = () => {
         ctx.stroke();
         ctx.font = "18px Arial";
         ctx.fontStyle = "bold";
-        ctx.fillText(`${Math.ceil(percentage * 100)}%`, 55, 55);
+        ctx.fillText(`${Math.round(percentage * 100)}%`, 55, 55);
       }
     }
 
@@ -85,7 +85,7 @@ const Users = () => {
         ctx.stroke();
         ctx.font = "18px Arial";
         ctx.fontStyle = "bold";
-        ctx.fillText(`${Math.ceil(percentage * 100)}%`, 55, 55);
+        ctx.fillText(`${Math.round(percentage * 100)}%`, 55, 55);
       }
     }
 
@@ -102,7 +102,7 @@ const Users = () => {
         ctx.stroke();
         ctx.font = "18px Arial";
         ctx.fontStyle = "bold";
-        ctx.fillText(`${Math.ceil(percentage * 100)}%`, 50, 55);
+        ctx.fillText(`${Math.round(percentage * 100)}%`, 50, 55);
       }
     }
 
