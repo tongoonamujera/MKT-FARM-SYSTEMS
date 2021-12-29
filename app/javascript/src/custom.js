@@ -63,8 +63,17 @@ window.onload = function(){
 
 // preventing default
   const list = document.querySelectorAll('li');
+  const xtraLinks = document.querySelectorAll('.xtra-links');
   [...list].forEach(list => {
     list.addEventListener('click', () => {
+      setTimeout(() => {
+        location.reload();
+      }, 1000);
+    });
+  });
+
+  [...xtraLinks].forEach(link => {
+    link.addEventListener('click', () => {
       setTimeout(() => {
         location.reload();
       }, 1000);

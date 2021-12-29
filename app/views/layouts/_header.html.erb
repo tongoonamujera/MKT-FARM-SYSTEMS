@@ -14,8 +14,8 @@
               </a>
 
               <div class="navbar-dropdown has-background-dark">
-                <%= link_to "Client Payments", client_payments_path, class:"navbar-item text has-text-white" %>
-                <%= link_to "Mkt Payments", mkt_payments_path, class:"navbar-item text has-text-white" %>
+                <%= link_to "Client Payments", client_payments_path, class:"navbar-item text has-text-white xtra-links" %>
+                <%= link_to "Mkt Payments", mkt_payments_path, class:"navbar-item text has-text-white xtra-links" %>
                 <a class="navbar-item">
                   Contact
                 </a>
@@ -43,7 +43,7 @@
             <div class="navbar-item">
               <div class="buttons">
               <% if admin_users %>
-                <%= link_to 'Users', users_path, class:"button is-light" %>
+                <%= link_to 'Users', users_path, class:"button is-light xtra-links" %>
               <% end %>
                 <%= link_to destroy_user_session_path, method: :delete, class:"has-text-dark button is-light" do %>
                   <span><i class="fas fa-sign-out-alt fa-2x"></i></span> 

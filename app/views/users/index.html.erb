@@ -5,7 +5,8 @@
         <h1 class="has-text-centered has-background-black"><strong class="has-text-light">All Users</strong></h1>
         <div class="card-content has-background-light">
           <div class="content has-text-centered">
-            <%= User.all.count %>
+            <canvas id="allUsers" width="150" height="100" data-id="<%= User.all.count %>">
+            </canvas>
           </div>
         </div>
       </div>
@@ -15,8 +16,9 @@
       <div class="card pb-0">
         <h1 class="has-text-centered has-background-black"><strong class="has-text-light">Admin Users</strong></h1>
         <div class="card-content has-background-light">
-          <div class="content has-text-centered">
-            <%= User.all.admin.count %>
+          <div class="content has-text-centered users-count" data-id="<%= User.all.count %>">
+            <canvas id="admin" width="150" height="100" data-id="<%= User.all.admin.count %>">
+            </canvas>
           </div>
         </div>
       </div>
@@ -27,7 +29,8 @@
         <h1 class="has-text-centered has-background-black"><strong class="has-text-light">Farm Owners</strong></h1>
         <div class="card-content has-background-light">
           <div class="content has-text-centered">
-            <%= User.all.farm_owner.count %>
+            <canvas id="farmOwner" width="150" height="100" data-id="<%= User.all.farm_owner.count %>">
+            </canvas>
           </div>
         </div>
       </div>
@@ -38,7 +41,8 @@
         <h1 class="has-text-centered has-background-black"><strong class="has-text-light">Farm Manager</strong></h1>
         <div class="card-content has-background-light">
           <div class="content has-text-centered">
-            <%= User.all.manager.count %>
+            <canvas id="farmManager" width="150" height="100" data-id="<%= User.all.manager.count %>">
+            </canvas>
           </div>
         </div>
       </div>
@@ -49,7 +53,8 @@
         <h1 class="has-text-centered has-background-black"><strong class="has-text-light">Verified Users</strong></h1>
         <div class="card-content has-background-light">
           <div class="content has-text-centered">
-            <%= User.all.verified.count %>
+            <canvas id="verified" width="150" height="100" data-id="<%= User.all.verified.count %>">
+            </canvas>
           </div>
         </div>
       </div>
@@ -60,7 +65,8 @@
         <h1 class="has-text-centered has-background-black"><strong class="has-text-light">Contractors</strong></h1>
         <div class="card-content has-background-light">
           <div class="content has-text-centered">
-            <%= User.all.contractor.count %>
+            <canvas id="contractor" width="150" height="100" data-id="<%= User.all.contractor.count %>">
+            </canvas>
           </div>
         </div>
       </div>
