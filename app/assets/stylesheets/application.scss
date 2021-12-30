@@ -879,6 +879,12 @@ input[type="text"] {
   font-size: 17px;
 }
 
+.user-text {
+  text-shadow: 2px 2px black;
+  letter-spacing: 1px;
+  font-weight: 900;
+}
+
 $fa-font-path: "@fortawesome/fontawesome-free/webfonts";
 @import "@fortawesome/fontawesome-free/scss/fontawesome";
 @import "@fortawesome/fontawesome-free/scss/solid";
