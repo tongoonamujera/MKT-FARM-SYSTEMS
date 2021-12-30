@@ -60,7 +60,7 @@ class TobaccoSalesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def is_current_users
-      admin_users ? TobaccoSale.all : TobaccoSale.where("company_name =?", is_current_user)
+      admin_users ? TobaccoSale.all.order(:company_name) : TobaccoSale.where("company_name =?", is_current_user)
     end
 
     def set_tobacco_sale
