@@ -4,7 +4,7 @@ class TobaccoSalesController < ApplicationController
 
   # GET /tobacco_sales or /tobacco_sales.json
   def index
-    @tobacco_sales = TobaccoSale.where('company_name LIKE?', is_current_user)
+    @tobacco_sales = is_current_users
   end
 
   # GET /tobacco_sales/1 or /tobacco_sales/1.json
@@ -59,6 +59,10 @@ class TobaccoSalesController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
+    def is_current_users
+      admin_users ? TobaccoSale.all : TobaccoSale.where("company_name =?", is_current_user)
+    end
+
     def set_tobacco_sale
       @tobacco_sale = TobaccoSale.find(params[:id])
     end
