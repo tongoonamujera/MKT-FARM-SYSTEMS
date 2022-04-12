@@ -20,6 +20,7 @@ import Timebooks from './timebook';
 import CerealSales from './cereal_sales';
 import Animate from './textAnimation';
 import Users from './Users';
+import { TodoTasks } from './Todos/index';
 window.onload = function(){
   cashRequsets();
   cashFlows();
@@ -43,6 +44,7 @@ window.onload = function(){
   CerealSales();
   Animate();
   Users();
+  TodoTasks();
   var acc = document.getElementsByClassName("clickbutton");
   var i;
 

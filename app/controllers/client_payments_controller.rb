@@ -3,7 +3,7 @@ class ClientPaymentsController < ApplicationController
 
   # GET /client_payments or /client_payments.json
   def index
-    @client_payments = ClientPayment.all
+    @client_payments = ClientPayment.valid
   end
 
   # GET /client_payments/1 or /client_payments/1.json

@@ -885,6 +885,8 @@ input[type="text"] {
   font-weight: 900;
 }
 
+@import url("./todo.scss");
+
 $fa-font-path: "@fortawesome/fontawesome-free/webfonts";
 @import "@fortawesome/fontawesome-free/scss/fontawesome";
 @import "@fortawesome/fontawesome-free/scss/solid";

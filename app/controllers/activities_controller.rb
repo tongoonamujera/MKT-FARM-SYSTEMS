@@ -5,6 +5,7 @@ class ActivitiesController < ApplicationController
   def index
     @activities = Activity.all
     @activity = Activity.new
+    # render json: {data: @activities}
   end
 
   # GET /activities/1 or /activities/1.json
