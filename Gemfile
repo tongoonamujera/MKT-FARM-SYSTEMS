@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
-gem 'rails', '~> 6.0.4'
+gem 'rails', '~> 7.0.0'
 # Use postgresql as the database for Active Record
 # gem 'pg', '~> 1.4', '>= 1.4.2'
 gem 'pg', '>= 0.18', '< 2.0'
@@ -40,7 +40,7 @@ gem 'bulma-rails', '~> 0.9.1'
 
 gem 'carrierwave', '~> 2.2', '>= 2.2.2'
 
-gem 'rails_admin', '~> 2.2', '>= 2.2.1'
+# gem 'rails_admin', '~> 2.2', '>= 2.2.1'
 gem 'rack-cors', '~> 1.1', '>= 1.1.1'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
