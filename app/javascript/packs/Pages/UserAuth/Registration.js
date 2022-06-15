@@ -23,6 +23,7 @@ const Registration = () => {
       && category
       && email.includes('@')
     ) ? proccesData(url,
+      "POST",
       {
         email,
         password,
