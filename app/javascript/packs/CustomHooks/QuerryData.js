@@ -9,26 +9,20 @@ const options = (reqType, params) => {
 };
 
 const post = (url, params) => {
-  return (fetch(url, options("POST",params))
+  return (fetch(url, options("POST", params))
     .then(res => res.json())
-    .then(data => data)
-    .catch(err => err.message)
   );
 }
 
 const patch = (url, params) => {
   return (fetch(url, options("PATCH",params))
     .then(res => res.json())
-    .then(data => data)
-    .catch(err => err.message)
     );
 }
 
 const get = (url) => {
   return (fetch(url)
     .then(res => res.json())
-    .then(data => data)
-    .catch(err => err.message)
   );
 }
 
