@@ -18,7 +18,8 @@ class Users::SessionsController < Devise::SessionsController
       session[:user_id] = @user.id
       render json: {
         logged_in: true,
-        user: @user
+        user: @user,
+        session: session
       }
     else
       render json: {

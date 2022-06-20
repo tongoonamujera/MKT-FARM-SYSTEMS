@@ -4,14 +4,24 @@
 
 import React from 'react'
 import ReactDOM from 'react-dom'
-import PropTypes from 'prop-types'
 import Login from './Pages/UserAuth/Login'
+import Registration from './Pages/UserAuth/Registration'
+import { createRoot } from 'react-dom/cjs/react-dom.production.min'
 
 
+const Home = () => {
+  return (
+    <div>
+      <Login /> <br/>
+      <Registration />
+    </div>
+  )
+}
 
 document.addEventListener('DOMContentLoaded', () => {
-  ReactDOM.render(
-    <Login />,
-    document.body.appendChild(document.createElement('div')),
+  const container = document.body.appendChild(document.createElement('div'));
+  const root = createRoot(container)
+  root.render(
+    <Home />
   )
 })
