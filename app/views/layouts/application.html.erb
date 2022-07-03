@@ -4,43 +4,11 @@
     <title>MKTFarmSystems</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    <%# <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %> %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'homePage' %>
   </head>
 
-  <body id="body">
-  
-    <%= render 'layouts/header' %>
-
-    <%if user_signed_in? %>
-        <% if admin_users %>
-          <div class="page-container">
-            <input type="radio" name="navigation-contol" id="control1" data-id="1"/>
-            <input type="radio" name="navigation-contol" id="control2" data-id="2" checked />
-            <%= render 'layouts/homepage' %>
-          <div class="content-container">
-            <%= yield %>
-          </div>
-          </div>
-        <% else %>
-          <% if authourize_user(current_user) %>
-              <div class="page-container">
-                <input type="radio" name="navigation-contol" id="control1" data-id="1" />
-                <input type="radio" name="navigation-contol" id="control2" data-id="2" checked />
-                <%= render 'layouts/homepage' %>
-              <div class="content-container">
-                <%= yield %>
-              </div>
-              </div>
-          <%else%>
-            <%= render 'layouts/verification' %>
-          <% end %>
-        <% end %>
-      <% else %>
-        <div class="container">
-          <%= yield %>
-        </div>
-    <% end %>
+  <body >
+    <%= yield %>
   </body>
 </html>

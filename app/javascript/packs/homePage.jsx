@@ -3,15 +3,15 @@
 // of the page.
 
 import React from 'react'
-import ReactDOM from 'react-dom'
 import Login from './Pages/UserAuth/Login'
 import Registration from './Pages/UserAuth/Registration'
 import { createRoot } from 'react-dom/cjs/react-dom.production.min'
+import './homePage.module.css'
 
 
 const Home = () => {
   return (
-    <div>
+    <div className={"container"}>
       <Login /> <br/>
       <Registration />
     </div>

@@ -1,0 +1,26 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Times New Roman", Times, serif;
+}
+
+body {
+  max-width: 100vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0;
+  padding: 0;
+  background-color: #750258;
+}
+
+body .container {
+  width: 100%;
+}
+
+body .container .main {
+  width: 100%;
+}
+/*# sourceMappingURL=homePage.module.css.map */
