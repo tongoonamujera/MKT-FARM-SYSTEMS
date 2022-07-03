@@ -6,12 +6,12 @@ import React from 'react'
 import Login from './Pages/UserAuth/Login'
 import Registration from './Pages/UserAuth/Registration'
 import { createRoot } from 'react-dom/cjs/react-dom.production.min'
-import './homePage.module.css'
+import styles from './homePage.module.css'
 
 
 const Home = () => {
   return (
-    <div className={"container"}>
+    <div className={styles.container}>
       <Login /> <br/>
       <Registration />
     </div>
