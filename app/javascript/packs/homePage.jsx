@@ -12,8 +12,7 @@ import styles from './homePage.module.css'
 const Home = () => {
   return (
     <div className={styles.container}>
-      <Login /> <br/>
-      <Registration />
+      <Login />
     </div>
   )
 }

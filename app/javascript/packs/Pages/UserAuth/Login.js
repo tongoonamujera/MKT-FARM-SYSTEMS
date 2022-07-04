@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import React from "react";
 import proccesData from "../../CustomHooks/QuerryData";
-import axios from 'axios';
+import styles from "./Login.module.css"
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -16,11 +16,6 @@ const Login = () => {
       proccesData(url, "POST", { email, password })
         .then(res => console.log(res))
         .catch(err => console.log('err', err.message));
-      // axios.post(url, {
-      //   email: email,
-      //   password: password
-      // }).then( res => console.log("data: ", res)).catch(err => console.log(err.message))
-
   }
 
   const togglePassword = () => {
@@ -35,23 +30,56 @@ const Login = () => {
     }
   }
   return (
-    <form onSubmit={handleLogin}>
-      <input
-        type={"email"}
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <input
-        type={inputType}
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
+    <div className={styles.container}>
+      <div className={styles.formContainer}>
+        <div className={styles.heading}>
+          <h1>WELCOME USER</h1>
+          <p>PLEASE LOGIN TO CONTINUE</p>
+        </div>
 
-      <span onClick={togglePassword}>
-        {text}
-      </span>
-      <button type="submit">Login</button>
-    </form>
+        <hr />
+
+        <form onSubmit={handleLogin} >
+          <div className={styles.control}>
+            <input
+            type={"email"}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Enter Email"
+            />
+          </div>
+          <div className={styles.control}>
+            <input
+              type={inputType}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+
+            <span onClick={togglePassword}>
+              {text}
+            </span>
+          </div>
+          <div className={styles.actions}>
+            <button type="submit">Login</button>
+          </div>
+        </form>
+      </div>
+      <div className={styles.aside}>
+        <div className={styles.info} >
+          <h3>
+            NEW HERE?
+          </h3>
+          <p>
+            Please Create an Account and discover A lot of Opportunities. <br/>
+            We are waiting for You!!!!
+          </p>
+        </div>
+
+        <div className={styles.btn} >
+          <button>Create Account</button>
+        </div>
+      </div>
+    </div>
   )
 }
 
