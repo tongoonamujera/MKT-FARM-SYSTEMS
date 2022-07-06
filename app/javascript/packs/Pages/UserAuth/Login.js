@@ -2,8 +2,11 @@ import { useState, useEffect, useRef } from "react";
 import React from "react";
 import proccesData from "../../CustomHooks/QuerryData";
 import styles from "./Login.module.css"
+import { useDispatch } from "react-redux";
+import { loginUser } from "../../redux/Actions/Auth/AuthActions";
 
 const Login = () => {
+  const dispatch = useDispatch();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [open, isOpen] = useState(false);
@@ -14,7 +17,7 @@ const Login = () => {
     const url = "/my/users/sign_in"
     if (email && password && email.includes('@'))
       proccesData(url, "POST", { email, password })
-        .then(res => console.log(res))
+        .then(res => dispatch(loginUser(res)))
         .catch(err => console.log('err', err.message));
   }
 

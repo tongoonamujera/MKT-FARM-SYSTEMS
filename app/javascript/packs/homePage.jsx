@@ -7,8 +7,8 @@ import Login from './Pages/UserAuth/Login'
 import Registration from './Pages/UserAuth/Registration'
 import { createRoot } from 'react-dom/cjs/react-dom.production.min'
 import styles from './homePage.module.css'
-
-
+import { Provider } from 'react-redux'
+import store from './redux/store'
 const Home = () => {
   return (
     <div className={styles.container}>
@@ -21,6 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const container = document.body.appendChild(document.createElement('div'));
   const root = createRoot(container)
   root.render(
-    <Home />
+    <Provider store={store}>
+      <Home />
+    </Provider>
   )
 })
