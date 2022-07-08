@@ -29,9 +29,26 @@ class Users::SessionsController < Devise::SessionsController
   end
 
   # DELETE /resource/sign_out
-  # def destroy
-  #   super
-  # end
+  def destroy
+    super
+  end
+
+  def logged_in
+    @user = User.find_by(id: session[:user_id])
+    if session
+      render json: {
+        logged_in: true,
+        user: @user,
+        session: session
+      }
+
+    else
+      render json: {
+        logged_in: false,
+        user: []
+      }
+    end
+  end
 
   # protected
 

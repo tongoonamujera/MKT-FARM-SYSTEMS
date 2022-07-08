@@ -7,10 +7,11 @@
   background-color: #9e9898;
   color: black;
   border-radius: 1.5rem;
-  border: 0.6rem solid red;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  -webkit-box-shadow: 7px 7px 7px 7px rgba(160, 158, 158, 0.7);
+          box-shadow: 7px 7px 7px 7px rgba(160, 158, 158, 0.7);
 }
 
 .container .formContainer {

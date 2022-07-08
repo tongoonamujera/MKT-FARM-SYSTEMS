@@ -66,3 +66,9 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# gem "hotwire-livereload", "~> 1.2"
+
+gem "rack-livereload", "~> 0.3.17"
+
+gem "guard-livereload", "~> 2.5"

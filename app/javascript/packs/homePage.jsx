@@ -9,6 +9,7 @@ import { createRoot } from 'react-dom/cjs/react-dom.production.min'
 import styles from './homePage.module.css'
 import { Provider } from 'react-redux'
 import store from './redux/store'
+import Admin from './Screens/AdminScreen/Admin'
 const Home = () => {
   return (
     <div className={styles.container}>

@@ -12,6 +12,10 @@ const Login = () => {
   const [open, isOpen] = useState(false);
   const [inputType, setInputType] = useState("password");
   const [text, setButtonText] = useState("Show Password");
+  const checkLogged = () => {
+    const urls = "logged_in"
+    proccesData(urls, "GET").then(res => console.log(res)).catch(err => console.log(err))
+  }
   const handleLogin = (e) => {
     e.preventDefault();
     const url = "/my/users/sign_in"
@@ -79,7 +83,7 @@ const Login = () => {
         </div>
 
         <div className={styles.btn} >
-          <button>Create Account</button>
+          <button onClick={checkLogged}>Create Account</button>
         </div>
       </div>
     </div>
