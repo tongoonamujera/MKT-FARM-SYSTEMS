@@ -48,6 +48,18 @@ class Users::SessionsController < Devise::SessionsController
         user: []
       }
     end
+
+    def log_out
+      id = params[:id]
+      if session[:user_id] = id
+        reset_session
+        render json: {
+          logged_in: false,
+          status: "Ok",
+          user: []
+        }
+      end
+    end
   end
 
   # protected
