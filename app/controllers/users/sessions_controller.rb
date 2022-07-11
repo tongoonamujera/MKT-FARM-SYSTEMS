@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class Users::SessionsController < Devise::SessionsController
+  skip_before_action :verify_signed_out_user
+  prepend_before_action :require_no_authentication,  only:[:cancel]
 
   # before_action :configure_sign_in_params, only: [:create]
 
@@ -11,10 +13,9 @@ class Users::SessionsController < Devise::SessionsController
 
   # POST /resource/sign_in
   def create
-    # super
     @user = User.find_by(email: params['email'])
 
-    if @user.present? && @user.valid_password?(params[:password])
+    if valid_user_auth(@user)
       session[:user_id] = @user.id
       render json: {
         logged_in: true,
@@ -30,15 +31,19 @@ class Users::SessionsController < Devise::SessionsController
 
   # DELETE /resource/sign_out
   def destroy
-    super
+        reset_session
+        render json: {
+          logged_in: false,
+          status: "Ok",
+          user: []
+        }
   end
 
   def logged_in
-    @user = User.find_by(id: session[:user_id])
-    if session
+    if session.has_key?(:user_id)
       render json: {
         logged_in: true,
-        user: @user,
+        # user: User.find(id: session[:user_id]),
         session: session
       }
 
@@ -68,4 +73,8 @@ class Users::SessionsController < Devise::SessionsController
   # def configure_sign_in_params
   #   devise_parameter_sanitizer.permit(:sign_in, keys: [:attribute])
   # end
+
+  def valid_user_auth user
+    user.present? && user.valid_password?(params[:password])
+  end 
 end

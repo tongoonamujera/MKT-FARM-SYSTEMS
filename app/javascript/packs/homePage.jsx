@@ -11,28 +11,39 @@ import { Provider, useDispatch, useSelector } from 'react-redux'
 import store from './redux/store'
 import Admin from './Screens/AdminScreen/Admin'
 import proccesData from './CustomHooks/QuerryData'
+import { loginUser } from './redux/Actions/Auth/AuthActions'
+import { useEffect } from 'react'
 
 const LogOutBtn = () => {
-  const userId = useSelector(logged.user.user_id);
+  const userId = useSelector(state => state.logged.user.id);
   const dispatch = useDispatch();
   const handleLogOut = (e) => {
     e.preventDefault()
     if (userId) {
-      proccesData("log_out", "DELETE", { id: userId })
+      proccesData(`my/users/sign_out`, "DELETE", { id: userId })
         .then(res => {
           console.log(res)
           dispatch(loginUser(res))
         })
         .catch(err => console.log(err))
     }
-  }
+  }  
   return (
     <button onClick={handleLogOut}>LOG OUT</button>
   )
 }
 
 const Home = () => {
-  const logged = useSelector(logged.user.logged_in);
+  const checkLogged = () => {
+    const urls = "logged_in"
+    proccesData(urls, "GET")
+      .then(res => console.log(res))
+      .catch(err => console.log(err))
+  }
+  useEffect(() => {
+    checkLogged();
+  }, [])
+  const logged = useSelector(state => state.logged.loggedIn);
   return (
     <div className={styles.container}>
       {

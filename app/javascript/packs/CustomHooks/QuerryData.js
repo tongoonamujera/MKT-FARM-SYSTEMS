@@ -1,11 +1,23 @@
 const options = (reqType, params) => {
-  return {
-    method: reqType,
-      body: JSON.stringify(params),
-        headers: {
-      "Content-type": "application/json; charset=UTF-8"
+  if (reqType === "DELETE") {
+    return {
+      method: reqType,
+        body: JSON.stringify(params),
+          headers: {
+        "Content-type": "application/json; charset=UTF-8"
+      },
+      withCredentials: true,
+    }
+  } else {
+    return {
+      method: reqType,
+        body: JSON.stringify(params),
+          headers: {
+        "Content-type": "application/json; charset=UTF-8"
+      }
     }
   }
+  
 };
 
 const post = (url, params) => {
