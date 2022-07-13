@@ -14,30 +14,12 @@ import proccesData from './CustomHooks/QuerryData'
 import { loginUser } from './redux/Actions/Auth/AuthActions'
 import { useEffect } from 'react'
 
-const LogOutBtn = () => {
-  const userId = useSelector(state => state.logged.user.id);
-  const dispatch = useDispatch();
-  const handleLogOut = (e) => {
-    e.preventDefault()
-    if (userId) {
-      proccesData(`my/users/sign_out`, "DELETE", { id: userId })
-        .then(res => {
-          console.log(res)
-          dispatch(loginUser(res))
-        })
-        .catch(err => console.log(err))
-    }
-  }  
-  return (
-    <button onClick={handleLogOut}>LOG OUT</button>
-  )
-}
-
 const Home = () => {
+  const dispatch = useDispatch();
   const checkLogged = () => {
     const urls = "logged_in"
     proccesData(urls, "GET")
-      .then(res => console.log(res))
+      .then(res => dispatch(loginUser(res)))
       .catch(err => console.log(err))
   }
   useEffect(() => {
@@ -47,7 +29,7 @@ const Home = () => {
   return (
     <div className={styles.container}>
       {
-        logged ? <LogOutBtn /> : <Login />
+        logged ? <Admin /> : <Login />
       }
     </div>
   )

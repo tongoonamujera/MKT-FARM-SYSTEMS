@@ -43,7 +43,7 @@ class Users::SessionsController < Devise::SessionsController
     if session.has_key?(:user_id)
       render json: {
         logged_in: true,
-        # user: User.find(id: session[:user_id]),
+        user: User.find(session[:user_id]),
         session: session
       }
 
