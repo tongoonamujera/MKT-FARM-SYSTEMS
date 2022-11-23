@@ -1,0 +1,17 @@
+.loading {
+  width: 100%;
+  .loadingspinner{
+    background-color: white;
+    font-size: 2.3rem;
+    width: 50%;
+    padding: 2rem;
+    color: black;
+    box-shadow: 7px 7px 7px 7px gray;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: auto;
+    text-shadow: 1px 1px gray;
+    border-radius: 0.5rem;
+  }
+}

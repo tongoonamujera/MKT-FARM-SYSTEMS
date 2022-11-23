@@ -3,10 +3,11 @@ import React from "react";
 import proccesData from "../../CustomHooks/QuerryData";
 import styles from "./Login.module.css"
 import { useDispatch } from "react-redux";
-import { loginUser } from "../../redux/Actions/Auth/AuthActions";
+import { Loading, loginUser } from "../../redux/Actions/Auth/AuthActions";
 
 const Login = () => {
   const dispatch = useDispatch();
+  const [loading, setLoading] = useState(true)
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [open, isOpen] = useState(false);
@@ -17,12 +18,18 @@ const Login = () => {
     proccesData(urls, "GET").then(res => console.log(res)).catch(err => console.log(err))
   }
   const handleLogin = (e) => {
+    loading && dispatch(Loading({ loading: true }))
     e.preventDefault();
     const url = "/my/users/sign_in"
-    if (email && password && email.includes('@'))
-      proccesData(url, "POST", { email, password })
-        .then(res => dispatch(loginUser(res)))
+    if (email && password && email.includes('@')) {
+      proccesData.post(url, { email, password })
+        .then(res => {
+          setLoading(false)
+          dispatch(loginUser(res))
+          dispatch(Loading({loading: false}))
+        })
         .catch(err => console.log('err', err.message));
+    }
   }
 
   const togglePassword = () => {

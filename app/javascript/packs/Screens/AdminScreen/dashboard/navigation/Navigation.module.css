@@ -1,0 +1,28 @@
+.header {
+  background-color: black;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.header .welcome {
+  width: 89%;
+  margin: auto;
+  font-size: large;
+  font-weight: 900;
+  text-shadow: 1px 1px gray;
+}
+
+.header .end {
+  width: 10%;
+  margin: auto;
+}
+/*# sourceMappingURL=Navigation.module.css.map */

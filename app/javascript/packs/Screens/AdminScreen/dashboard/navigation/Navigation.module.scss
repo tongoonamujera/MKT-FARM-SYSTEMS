@@ -1,0 +1,21 @@
+.header {
+  background-color: black;
+  height: fit-content;
+  width: 100%;
+  display:  flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+
+  .welcome {
+    width: 89%;
+    margin: auto;
+    font-size: large;
+    font-weight: 900;
+    text-shadow: 1px 1px gray;
+  }
+
+  .end {
+    width: 10%;
+    margin: auto;
+  }
+}

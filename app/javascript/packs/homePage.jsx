@@ -12,24 +12,29 @@ import store from './redux/store'
 import Admin from './Screens/AdminScreen/Admin'
 import proccesData from './CustomHooks/QuerryData'
 import { loginUser } from './redux/Actions/Auth/AuthActions'
+import Loading from './Pages/Components/Loading/Loading'
 import { useEffect } from 'react'
+import { BrowserRouter } from 'react-router-dom'
 
 const Home = () => {
   const dispatch = useDispatch();
   const checkLogged = () => {
     const urls = "logged_in"
-    proccesData(urls, "GET")
+    proccesData.get(urls)
       .then(res => dispatch(loginUser(res)))
       .catch(err => console.log(err))
   }
+
   useEffect(() => {
     checkLogged();
   }, [])
   const logged = useSelector(state => state.logged.loggedIn);
+  const isAdmin = useSelector(state => state.logged.user.is_admin);
+  console.log('admin: ', isAdmin);
   return (
     <div className={styles.container}>
       {
-        logged ? <Admin /> : <Login />
+        (logged && isAdmin ? <Admin /> : <Login />)
       }
     </div>
   )
@@ -40,7 +45,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const root = createRoot(container)
   root.render(
     <Provider store={store}>
-      <Home />
+      <BrowserRouter>
+        <Home />
+      </BrowserRouter>
     </Provider>
   )
 })

@@ -1,9 +1,9 @@
 import React from "react";
 
-const FarmOwner = () => {
+const Graph = () => {
   return (
     <div></div>
   )
 }
 
-export default FarmOwner;
+export default Graph;

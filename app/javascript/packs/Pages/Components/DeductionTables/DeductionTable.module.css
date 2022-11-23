@@ -1,0 +1,55 @@
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.container .table {
+  font-family: 'Times New Roman', Times, serif;
+  width: 100%;
+  background: #b1aeae;
+  border: 1px solid #856666;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 10px #e9e8e8;
+          box-shadow: 5px 10px #e9e8e8;
+}
+
+.container .table tr th {
+  width: inherit;
+  color: #7a3f07;
+  font-weight: 900;
+  font-size: 19px;
+  padding: 0.75em 1em;
+  text-align: center;
+}
+
+.container .table tr td {
+  padding: 0.65em 1em;
+  text-align: center;
+  font-weight: 600;
+}
+
+.container .table tr td a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container .table tbody tr:nth-child(odd) {
+  background: #fdfbfb;
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8) inset;
+          box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8) inset;
+  color: black;
+}
+
+.container .table tbody tr:nth-child(even) {
+  background: #e9e7e7;
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8) inset;
+          box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8) inset;
+}
+
+.container .table tbody tr:nth-child(even):hover {
+  background-color: #a5a6a7;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  color: #000000 !important;
+}
+/*# sourceMappingURL=DeductionTable.module.css.map */

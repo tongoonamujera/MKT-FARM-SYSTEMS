@@ -38,19 +38,26 @@ const get = (url) => {
   );
 }
 
-const Delete = (url, params) => {
+const deleteResource = (url, params) => {
   return (fetch(url, options("DELETE",params))
     .then(res => res.json())
     );
 }
 
-const proccesData = (url, reqType, params) => {
-  return (
-    reqType === "POST" ? post(url, params)
-      : reqType === ("PATCH" || "PUT") ? patch(url, params)
-        : reqType === "DELETE" ? Delete(url, params)
-          : get(url)
-  );
+// const proccesData = (url, reqType, params) => {
+//   return (
+//     reqType === "POST" ? post(url, params)
+//       : reqType === ("PATCH" || "PUT") ? patch(url, params)
+//         : reqType === "DELETE" ? Delete(url, params)
+//           : get(url)
+//   );
+// }
+
+const proccesData = {
+  post,
+  patch,
+  get,
+  deleteResource,
 }
 
 export default proccesData;

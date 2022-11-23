@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,CAAC;EACT,KAAK,EAAG,IAAI;CASb;;AAVD,AAGE,UAHQ,CAGR,WAAW,CAAC;EACV,KAAK,EAAE,IAAI;CACZ;;AALH,AAOE,UAPQ,CAOR,KAAK,CAAC;EACJ,KAAK,EAAE,IAAI;CACZ",
+    "sources": [
+        "Dashbord.module.scss"
+    ],
+    "names": [],
+    "file": "Dashbord.module.css"
+}
