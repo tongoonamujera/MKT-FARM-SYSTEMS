@@ -19,6 +19,41 @@
   font-size: large;
   font-weight: 900;
   text-shadow: 1px 1px gray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header .welcome .start {
+  width: 40%;
+}
+
+.header .welcome .Wend {
+  width: 58%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header .welcome .Wend a {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  text-shadow: inherit;
 }
 
 .header .end {

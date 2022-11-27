@@ -12,9 +12,11 @@ import store from './redux/store'
 import Admin from './Screens/AdminScreen/Admin'
 import proccesData from './CustomHooks/QuerryData'
 import { loginUser } from './redux/Actions/Auth/AuthActions'
-import Loading from './Pages/Components/Loading/Loading'
 import { useEffect } from 'react'
-import { BrowserRouter } from 'react-router-dom'
+import { HashRouter, Route, Routes } from 'react-router-dom'
+import DeductionTable from './Pages/Components/DeductionTables/DeductionTable'
+import DeductionForm from './Pages/Components/DeductionTables/newDeductions/newDeduction'
+import Showdeduction from './Pages/Components/DeductionTables/showDeduction/Showdeduction'
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -33,9 +35,15 @@ const Home = () => {
   console.log('admin: ', isAdmin);
   return (
     <div className={styles.container}>
-      {
-        (logged && isAdmin ? <Admin /> : <Login />)
-      }
+      <Routes>
+        <Route path='/' element={logged ? <Admin /> : <Login />} />
+        <Route path='/create_account' element={<Registration />} />
+        <Route path='/deductions'>
+          <Route index element={<DeductionTable/>} />
+          <Route path='new' element={<DeductionForm />} />
+          <Route path="show" element={<Showdeduction/>} />
+        </Route>
+      </Routes>
     </div>
   )
 }
@@ -45,9 +53,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const root = createRoot(container)
   root.render(
     <Provider store={store}>
-      <BrowserRouter>
+      <HashRouter>
         <Home />
-      </BrowserRouter>
+      </HashRouter>
     </Provider>
   )
 })

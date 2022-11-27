@@ -38,6 +38,51 @@ class DeductionTablesController < ApplicationController
     end
   end
 
+  def create_deductions
+    todo = DeductionTable.create!(
+      company_name: params['companyName'],
+      season: params['season'],
+      month: params['month'],
+      employee_name: params['employeeName'],
+      employee_number: params["employeeNumber"],
+      farm_name: params['farmName'],
+      allowance: params['allowance'],
+      payee: params['payee'],
+      nssa: params['nssa'],
+      nec: params['nec'],
+      cash_requests: params['cashRequests'],
+      other1_name: params['other1Name'],
+      other1_amount: params['other1Amount'],
+      other2_name: params['other2Name'],
+      other2_amount: params['other2Amount'],
+      other3_name: params['other3Name'],
+      other3_amount: params['other3Amount'],
+      other4_name: params["other4Name"],
+      other4_amount: params["other4Amount"],
+      other5_name: params["other5Name"],
+      other5_amount: params["other5Amount"],
+      other6_name: params["other6Name"],
+      other6_amount: params["other6Amount"],
+      other7_name: params["other7Name"],
+      other7_amount: params["other7Amount"],
+      other8_name: params["other8Name"],
+      other8_amount: params["other8Amount"],
+      other9_name: params["other9Name"],
+      other9_amount: params["other9Amount"],
+      other10_name: params['other10Name'],
+      other10_amount: params['other10Amount'],
+      month_starting: params["monthStarting"],
+      month_ending: params["monthEnding"],
+      total_amount: params["totalAmount"],
+    )
+
+    if todo
+      render json: {status: :created, data: DeductionTable.all}
+    else
+      render json: {status: 501}
+    end
+  end
+
   # PATCH/PUT /deduction_tables/1 or /deduction_tables/1.json
   def update
     respond_to do |format|
@@ -54,10 +99,8 @@ class DeductionTablesController < ApplicationController
   # DELETE /deduction_tables/1 or /deduction_tables/1.json
   def destroy
     @deduction_table.destroy
-    respond_to do |format|
-      format.html { redirect_to deduction_tables_url, notice: "Deduction table was successfully destroyed." }
-      format.json { head :no_content }
-    end
+
+    render json: {tables: DeductionTable.all}
   end
 
   private

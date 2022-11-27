@@ -1,14 +1,20 @@
 import React, { useState } from "react";
 import styles from './DeductionTable.module.css'
 import { useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
 
 
 const DeductionTable = () => {
   const deductions = useSelector(state => state.deduction.deduction);
   console.log('deductions :', deductions);
+  const navigate = useNavigate()
 
   return (
     <div className={styles.container}>
+      <div className={styles.navigation}>
+        <Link to={"/deductions/new"}>Create A New Deduction</Link>
+        <Link to={"/"}>Go To Homepage</Link>
+      </div>
         <table className={styles.table}>
           <thead>
             <tr>
@@ -23,23 +29,24 @@ const DeductionTable = () => {
             </tr>
           </thead>
 
+        
+          <tbody>
         {deductions && deductions.tables.map(row => {
-          const {nec, nssa, payee, cash_requests, allowance, employee_name, employee_number } = row;
+          const {nec, nssa, payee, cash_requests, allowance, employee_name, employee_number, id } = row;
           return (
-            <tbody>
-                <tr>
-                <td>{employee_name}</td>
-                <td>{employee_number}</td>
-                <td>{cash_requests}</td>
-                <td>{nssa}</td>
-                <td>{nec}</td>
-                <td>{ payee}</td>
-                <td>{allowance}</td>
-                <td>{ employee_name}</td>
+              <tr key={id } onClick={() => navigate("/deductions/show", {state: row})}>
+                  <td>{employee_name}</td>
+                  <td>{employee_number}</td>
+                  <td>{cash_requests}</td>
+                  <td>{nssa}</td>
+                  <td>{nec}</td>
+                  <td>{ payee}</td>
+                  <td>{allowance}</td>
+                  <td>{ employee_name}</td>
                 </tr>
-            </tbody>
           )
-          })}
+        })}
+        </tbody>
       </table>
     </div>
   )

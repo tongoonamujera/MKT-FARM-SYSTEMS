@@ -48,7 +48,7 @@ const deductionReducer = (state = { }, { type, payload }) => {
     case constants.CreateDeductions:
       return {
         ...state,
-        deduction: payloadS,
+        deduction: payload,
       }
 
     case constants.DeleteDeductions:

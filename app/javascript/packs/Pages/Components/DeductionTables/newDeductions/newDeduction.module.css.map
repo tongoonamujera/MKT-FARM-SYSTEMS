@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,CAAC;EACT,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,SAAS;EACjB,gBAAgB,EAAE,OAAkB;EACpC,KAAK,EAAE,KAAK;EACZ,aAAa,EAAE,MAAM;EACrB,MAAM,EAAE,WAAW;EACnB,UAAU,EAAE,GAAG,CAAC,GAAG,CAAC,GAAG,CAAC,GAAG,CAAC,wBAAwB;CACrD",
+    "sources": [
+        "newDeduction.module.scss"
+    ],
+    "names": [],
+    "file": "newDeduction.module.css"
+}

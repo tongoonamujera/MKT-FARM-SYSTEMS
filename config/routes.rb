@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'sessions/Create'
   get 'registrations/Create'
   get 'seasonal_inputs_usage_to_date/index'
+  post "create_deductions" => "deduction_tables#create_deductions"
   resources :farm_names
   resources :home
   resources :input_stores_usages do

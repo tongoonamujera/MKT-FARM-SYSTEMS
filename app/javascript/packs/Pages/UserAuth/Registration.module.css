@@ -1,5 +1,5 @@
 .container {
-  width: 45%;
+  width: 60%;
   margin: 3rem auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -80,28 +80,18 @@
   display: flex;
   background-color: white;
   color: black;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
   border-radius: 0.4rem;
 }
 
-.container .formContainer form .control span {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  margin: auto;
-  cursor: pointer;
-}
-
 .container .formContainer form .control input {
-  width: auto;
+  width: 100%;
   height: 2.5rem;
   font-size: 1.3rem;
   padding: 0;
   border: 1px solid white;
   background-color: white;
+  border-radius: inherit;
 }
 
 .container .formContainer form .control input:focus {
@@ -223,4 +213,4 @@
   color: inherit;
   text-decoration: none;
 }
-/*# sourceMappingURL=Login.module.css.map */
+/*# sourceMappingURL=Registration.module.css.map */

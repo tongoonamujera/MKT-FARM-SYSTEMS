@@ -1,0 +1,25 @@
+.delete {
+  margin: auto;
+  padding: 0.4rem 1.2rem;
+  background-color: #ff002b;
+  color: white;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  border-radius: 0.5rem;
+  text-shadow: 1px 1px gray;
+  font-weight: 900;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+/*# sourceMappingURL=deleteButton.module.css.map */

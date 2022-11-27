@@ -3,6 +3,36 @@
   margin: auto;
 }
 
+.container .navigation {
+  width: 40%;
+  margin: auto;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #000000;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 0.8rem;
+  border: #7a3f07 solid;
+}
+
+.container .navigation a {
+  text-decoration: none;
+  color: white;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  font-weight: 900;
+  text-shadow: 1px 1px gray;
+}
+
 .container .table {
   font-family: 'Times New Roman', Times, serif;
   width: 100%;
@@ -38,12 +68,15 @@
   -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8) inset;
           box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8) inset;
   color: black;
+  cursor: pointer;
 }
 
 .container .table tbody tr:nth-child(even) {
   background: #e9e7e7;
   -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8) inset;
           box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8) inset;
+  color: black;
+  cursor: pointer;
 }
 
 .container .table tbody tr:nth-child(even):hover {

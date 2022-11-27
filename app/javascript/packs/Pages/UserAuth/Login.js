@@ -4,6 +4,7 @@ import proccesData from "../../CustomHooks/QuerryData";
 import styles from "./Login.module.css"
 import { useDispatch } from "react-redux";
 import { Loading, loginUser } from "../../redux/Actions/Auth/AuthActions";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -90,7 +91,7 @@ const Login = () => {
         </div>
 
         <div className={styles.btn} >
-          <button onClick={checkLogged}>Create Account</button>
+          <button onClick={checkLogged}><Link to={'/create_account'}>Create Account</Link></button>
         </div>
       </div>
     </div>

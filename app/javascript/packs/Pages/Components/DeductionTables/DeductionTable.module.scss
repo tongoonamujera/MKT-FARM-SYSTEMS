@@ -2,6 +2,27 @@
   width: 80%;
   margin: auto;
 
+  .navigation {
+    width: 40%;
+    margin: auto;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    background-color: #000000;
+    justify-content: space-between;
+    border-radius: 0.8rem;
+    border: #7a3f07 solid;
+
+    a {
+      text-decoration: none;
+      color: white;
+      letter-spacing: 1px;
+      font-size: 1rem;
+      font-weight: 900;
+      text-shadow: 1px 1px gray;
+    }
+  }
+
   .table {
       font-family: 'Times New Roman', Times, serif;
       width: 100%;
@@ -36,11 +57,14 @@
         background: rgb(253, 251, 251);
         box-shadow: 0 1px 0 rgba(255, 255, 255, .8) inset;
         color: black;
+        cursor: pointer;
       }
   
       tbody tr:nth-child(even) {
         background: rgb(233, 231, 231);
         box-shadow: 0 1px 0 rgba(255, 255, 255, .8) inset;
+        color: black;
+        cursor: pointer;
   
         &:hover {
           background-color: #a5a6a7;
