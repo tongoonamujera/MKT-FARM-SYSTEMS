@@ -1,7 +1,7 @@
 import React from "react"
 import { useDispatch } from "react-redux"
 import { useNavigate } from "react-router"
-import proccesData from "../../../CustomHooks/QuerryData"
+import proccesData from "../../../../CustomHooks/QuerryData"
 import styles from "./deleteButton.module.css"
 
 const DeleteButton = (props) => {

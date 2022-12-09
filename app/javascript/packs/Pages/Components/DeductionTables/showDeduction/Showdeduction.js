@@ -1,7 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router";
 import { deleteDeduction } from "../../../../redux/Actions/Auth/AuthActions";
-import DeleteButton from "../../deleteButton/deleteButton";
+import DeleteButton from "../../CustomComponents/deleteButton/deleteButton";
 import styles from './Showdeduction.module.css'
 const Showdeduction = () => {
   const location = useLocation();

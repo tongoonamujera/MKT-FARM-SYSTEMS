@@ -1,29 +1,28 @@
 .container {
-  width:  100%;
+  width: 100%;
   .card {
-    width: 70%;
+    width: 50%;
     margin: auto;
     display: flex;
     flex-direction: column;
     height: fit-content;
     box-shadow: 7px 7px 7px 7px rgba(160, 158, 158, 0.7);
-  border-radius: 1.5rem;
-  background-color: rgb(158, 152, 152);
+    border-radius: 1.5rem;
+    background-color: rgb(158, 152, 152);
 
-    .main{
+    .main {
       width: 100%;
-
     }
 
-    .footer{
+    .footer {
       width: 100%;
 
-      .actions{
+      .actions {
         width: 60%;
         display: flex;
         justify-content: space-between;
 
-      button {
+        button {
           margin: auto;
           padding: 0.4rem 1.2rem;
           background-color: aqua;
@@ -38,7 +37,7 @@
           justify-content: center;
           align-items: center;
           cursor: pointer;
-      }
+        }
       }
     }
   }

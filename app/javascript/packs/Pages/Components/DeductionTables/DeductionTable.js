@@ -1,20 +1,33 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from './DeductionTable.module.css'
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
+import { getDeduction } from "../../../redux/Actions/Auth/AuthActions";
+import proccesData from "../../../CustomHooks/QuerryData";
 
 
 const DeductionTable = () => {
+  const dispatch = useDispatch()
+  const getAsset = () => {
+    proccesData.get("/deduction_tables")
+      .then(res => dispatch(getDeduction(res)))
+      .catch(err => console.log(err))
+  }
+  useEffect(() => {
+    getAsset()
+  },[] )
   const deductions = useSelector(state => state.deduction.deduction);
   console.log('deductions :', deductions);
   const navigate = useNavigate()
 
   return (
     <div className={styles.container}>
+      <br/>
       <div className={styles.navigation}>
         <Link to={"/deductions/new"}>Create A New Deduction</Link>
         <Link to={"/"}>Go To Homepage</Link>
       </div>
+      <br/>
         <table className={styles.table}>
           <thead>
             <tr>

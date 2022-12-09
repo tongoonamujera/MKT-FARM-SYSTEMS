@@ -32,11 +32,11 @@
 }
 
 .header .welcome .start {
-  width: 40%;
+  width: 25%;
 }
 
 .header .welcome .Wend {
-  width: 58%;
+  width: 75%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
