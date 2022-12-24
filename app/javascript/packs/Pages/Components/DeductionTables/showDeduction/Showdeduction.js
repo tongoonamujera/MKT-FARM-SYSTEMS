@@ -10,14 +10,34 @@ const Showdeduction = () => {
   return (
     <div className={styles.container}>
       <div className={styles.card} >
+        <h1 className={styles.heading}>Showing Deductions For: {employee_name} </h1>
         <main className={styles.main}>
-          <div>N.E.C: { nec}</div>
-          <div>N.S.S.A: { nssa }</div>
-          <div>PAYEE: { payee}</div>
-          <div>CashRequests: {cash_requests }</div>
-          <div>ALLOWANCE: {allowance }</div>
-          <div>NAME: {employee_name }</div>
-          <div>NUMBER: {employee_number }</div>
+          <div className={styles.innercards}>
+            <div className={styles.names}>N.E.C</div>
+            <div>{ nec}</div>
+          </div>
+          <div className={styles.innercards}>
+            <div className={styles.names}>N.S.S.A</div>
+            <div>{ nssa }</div>
+          </div>
+          <div className={styles.innercards}>
+            <div className={styles.names}>
+              PAYEE
+            </div>
+            <div>{ payee}</div>
+          </div>
+          <div className={styles.innercards}>
+            <div className={styles.names}>CashRequests</div>
+            <div>{cash_requests }</div>
+          </div>
+          <div className={styles.innercards}>
+            <div className={styles.names}>ALLOWANCE</div>
+            <div>{allowance }</div>
+          </div>
+          <div className={styles.innercards}>
+            <div className={styles.names}>NUMBER </div>
+          <div>{employee_number }</div>
+          </div>
         </main>
         <div className={styles.footer}>
           <div className={styles.actions}>

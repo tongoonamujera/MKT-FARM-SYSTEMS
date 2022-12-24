@@ -8,7 +8,11 @@ class User < ApplicationRecord
   has_many :timebooks
   has_many :stores
   def self.admin
-    where('is_admin =?', true)
+    where("is_admin =? OR email =?", true, "tongoonamujera@gmail.com")
+  end
+
+  def self.super_admin
+    where("email =?",  "tongoonamujera@gmail.com")
   end
 
   def self.farm_owner

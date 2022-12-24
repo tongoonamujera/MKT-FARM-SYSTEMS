@@ -7,6 +7,7 @@ export const useAnimation = (text, typingSpeed, deletingSpeed) => {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const indexControl = (arr) => {
+    if (arr.length === 0) return currentIndex;
     (currentIndex === 0 ? setCurrentIndex(currentIndex + 1)
       : (currentIndex > 0
         && (currentIndex < arr.length - 1)) ? setCurrentIndex(currentIndex + 1)

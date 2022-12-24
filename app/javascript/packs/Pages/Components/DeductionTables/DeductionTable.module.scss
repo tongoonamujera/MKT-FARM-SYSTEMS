@@ -27,19 +27,20 @@
   .table {
       font-family: 'Times New Roman', Times, serif;
       width: 100%;
-      background: rgb(177, 174, 174);
+      background: white;
       border: 1px solid rgb(133, 102, 102);
       border-radius: 10px;
-      box-shadow: 5px 10px rgb(233, 232, 232);
+      box-shadow: 5px 5px 5px 5px gray;
   
       tr {
         th {
           width: inherit;
-          color: #7a3f07;
+          color: #d36a08;
           font-weight: 900;
           font-size: 19px;
           padding: 0.75em 1em;
           text-align: center;
+          background: rgb(9, 7, 32);
         }
   
         td {
@@ -68,9 +69,9 @@
         cursor: pointer;
   
         &:hover {
-          background-color: #a5a6a7;
+          background-color: rgb(9, 7, 32);
           transition: all 0.1s ease-in-out;
-          color: #000000 !important;
+          color: white !important;
         }
       }
     }

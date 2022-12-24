@@ -9,6 +9,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
     @user = User.new
   end
 
+  def index
+    render json: {users: User.all}
+  end
+
   # POST /resource
   def create
     user = User.create!(
@@ -43,9 +47,34 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # PUT /resource
-  # def update
-  #   super
-  # end
+  def update
+    super
+  end
+
+  def update_user_account
+    update_user = User.find(params[:id])
+    user_params = {
+      email: params[:email],
+      company_name: params[:company_name],
+      cellphone: params[:cellphone],
+      username: params[:username],
+      address: params[:address],
+      category: params[:category],
+      is_admin: params[:is_admin],
+      is_farm_owner: params[:is_farm_owner]
+    }
+
+    if update_user.update!(user_params)
+      render json: {
+        status: :created,
+        user: User.all,
+      }
+    else
+      render json: {
+        status: 500
+      }
+    end
+  end
 
   # DELETE /resource
   # def destroy

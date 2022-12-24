@@ -21,16 +21,66 @@
   background-color: #9e9898;
 }
 
+.container .card h1 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
+  margin: auto;
+}
+
 .container .card .main {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.container .card .main .innercards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #1f1e1e;
+  color: wheat;
+  text-align: center;
+  -webkit-box-flex: 30%;
+      -ms-flex: 30%;
+          flex: 30%;
+  margin: 0.5rem;
+  border: 0.5rem solid gray;
+  border-radius: 0.5rem;
+  height: 10vh;
+}
+
+.container .card .main .innercards .names {
+  font-weight: 900;
+  font-size: 1.5rem;
 }
 
 .container .card .footer {
   width: 100%;
+  border-top: 0.3rem solid red;
+  margin-top: 0.3rem;
 }
 
 .container .card .footer .actions {
   width: 60%;
+  margin: auto;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -30,18 +30,34 @@
   color: white;
   letter-spacing: 1px;
   font-size: 1rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
   font-weight: 900;
   text-shadow: 1px 1px gray;
+}
+
+.container .note {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: red;
+  margin: auto;
 }
 
 .container .table {
   font-family: 'Times New Roman', Times, serif;
   width: 100%;
-  background: white;
+  background: whitesmoke;
   border: 1px solid #856666;
   border-radius: 10px;
   -webkit-box-shadow: 5px 5px 5px 5px gray;
           box-shadow: 5px 5px 5px 5px gray;
+}
+
+.container .table tr {
+  border-radius: inherit;
 }
 
 .container .table tr th {
@@ -65,19 +81,27 @@
   color: inherit;
 }
 
+.container .table tbody {
+  border-radius: inherit;
+}
+
 .container .table tbody tr:nth-child(odd) {
+  border-radius: inherit;
   background: #fdfbfb;
   -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8) inset;
           box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8) inset;
   color: black;
+  border: 2px #000000;
   cursor: pointer;
 }
 
 .container .table tbody tr:nth-child(even) {
+  border-radius: inherit;
   background: #e9e7e7;
   -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8) inset;
           box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8) inset;
   color: black;
+  border: 2px #000000;
   cursor: pointer;
 }
 
@@ -86,5 +110,6 @@
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
   color: white !important;
+  border: 2px #000000;
 }
-/*# sourceMappingURL=DeductionTable.module.css.map */
+/*# sourceMappingURL=user.module.css.map */

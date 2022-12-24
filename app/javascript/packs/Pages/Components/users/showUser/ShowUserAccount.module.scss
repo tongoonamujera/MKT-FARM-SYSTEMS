@@ -1,0 +1,94 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .userCard {
+    width: 50%;
+    background-color: white;
+    border-radius: 0.4rem;
+    margin: auto;
+    height: fit-content;
+    box-shadow: 5px 5px 5px 5px gray;
+    display: flex;
+    flex-direction: column;
+
+    .heading {
+      flex: 10%;
+      width: 100%;
+      color: black;
+      h2 {
+        width: fit-content;
+        margin: auto;
+      }
+    }
+
+    .cardMain {
+      flex: 75%;
+      display: flex;
+      flex-direction: column;
+
+      .top {
+        flex: 10%;
+        width: fit-content;
+        margin: auto;
+        color: #000;
+      }
+
+      .center {
+        flex: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        .content {
+          flex: 30%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin: 0.3rem;
+          color: #000;
+          height: 5vh;
+          border-radius: 0.3rem;
+          border: gray;
+          box-shadow: 2px 2px 2px 2px gray;
+
+          button {
+            width: fit-content;
+            padding: 0.1rem 0.8rem;
+          }
+        }
+      }
+    }
+
+    .cardFooter {
+      flex: 15%;
+      background-color: darkgrey;
+      padding: 1rem;
+      margin: 0.5rem;
+      border-top: 2px solid #000;
+      .actions {
+        width: 75%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        :nth-child(even) {
+          padding: 0.5rem 1.5rem;
+          border-radius: 0.4rem;
+          color: rgb(243, 93, 6);
+          background-color: rgb(3, 6, 34);
+          font-size: 1.3rem;
+          cursor: pointer;
+        }
+        button {
+          padding: 0.5rem 1.5rem;
+          border-radius: 0.4rem;
+          color: rgb(243, 93, 6);
+          background-color: rgb(3, 6, 34);
+          font-size: 1.3rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

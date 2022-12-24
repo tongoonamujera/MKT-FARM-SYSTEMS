@@ -10,15 +10,48 @@
     border-radius: 1.5rem;
     background-color: rgb(158, 152, 152);
 
+    h1 {
+      width: fit-content;
+      text-align: center;
+      margin: auto;
+    }
+
     .main {
       width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      .innercards {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: rgb(31, 30, 30);
+        color: wheat;
+        text-align: center;
+        flex: 30%;
+        margin: 0.5rem;
+        border: 0.5rem solid gray;
+        border-radius: 0.5rem;
+        height: 10vh;
+
+        .names {
+          font-weight: 900;
+          font-size: 1.5rem;
+        }
+      }
     }
 
     .footer {
       width: 100%;
+      border-top: 0.3rem solid red;
+      margin-top: 0.3rem;
 
       .actions {
         width: 60%;
+        margin: auto;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
         display: flex;
         justify-content: space-between;
 

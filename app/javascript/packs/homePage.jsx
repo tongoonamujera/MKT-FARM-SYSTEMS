@@ -17,6 +17,8 @@ import { HashRouter, Route, Routes } from 'react-router-dom'
 import DeductionTable from './Pages/Components/DeductionTables/DeductionTable'
 import DeductionForm from './Pages/Components/DeductionTables/newDeductions/newDeduction'
 import Showdeduction from './Pages/Components/DeductionTables/showDeduction/Showdeduction'
+import User from './Pages/Components/users/user'
+import ShowUserAccount from './Pages/Components/users/showUser/showUserAccount'
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -42,6 +44,10 @@ const Home = () => {
           <Route index element={<DeductionTable/>} />
           <Route path='new' element={<DeductionForm />} />
           <Route path="show" element={<Showdeduction/>} />
+        </Route>
+        <Route path='/users'>
+          <Route index element={<User />} />
+          <Route path='show_user' element={<ShowUserAccount />}/>
         </Route>
       </Routes>
     </div>

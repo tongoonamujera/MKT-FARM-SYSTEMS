@@ -56,3 +56,31 @@ export const deleteDeduction = (data) => {
     payload: data
   }
 }
+
+export const deActivateSeason = (data) => {
+  return {
+    type: constants.DeActivateSeason,
+    payload: data,
+  }
+}
+
+export const activateSeason = (data) => {
+  return {
+    type: constants.ActivateSeason,
+    payload: data,
+  }
+}
+
+export const createSeason = (data) => {
+  return {
+    type: constants.CreateSeason,
+    payload: data,
+  }
+}
+
+export const getActivateSeason = (data) => {
+  return {
+    type: constants.GetActiveSeason,
+    payload: data,
+  }
+}

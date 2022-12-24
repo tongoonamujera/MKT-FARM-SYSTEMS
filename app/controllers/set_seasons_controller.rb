@@ -3,8 +3,7 @@ class SetSeasonsController < ApplicationController
 
   # GET /set_seasons or /set_seasons.json
   def index
-    @set_seasons = SetSeason.inactive_season
-    @active_season = SetSeason.active_season
+    render json: {season: SetSeason.active_season}
   end
 
   # GET /set_seasons/1 or /set_seasons/1.json
@@ -33,6 +32,17 @@ class SetSeasonsController < ApplicationController
         format.json { render json: @set_season.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def create_season
+    season = SetSeason.create!(
+      date_from: params['dateFrom'],
+      date_to: params['dateFrom'],
+      is_active: params['isActive'],
+      user_id: params["userId"],
+    )
+
+    season ? render json: {status: :created, season: SetSeason.active_season}
   end
 
   # PATCH/PUT /set_seasons/1 or /set_seasons/1.json

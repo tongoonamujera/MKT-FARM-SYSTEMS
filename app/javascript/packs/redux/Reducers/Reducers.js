@@ -1,5 +1,6 @@
 import { combineReducers } from "redux";
 import constants from "../constants/Auth/AuthConst";
+import userConstants from "../constants/Auth/userConstants";
 
 const loggedReducer = (state = {user: [], loggedIn: false}, { type, payload }) => {
   switch (type) {
@@ -73,11 +74,68 @@ const deductionReducer = (state = { }, { type, payload }) => {
   }
 }
 
+const seasonReducer = (state = { }, { type, payload }) => {
+  switch (type) {
+    case constants.ActivateSeason:
+      return {
+        ...state,
+        deduction: payload,
+      }
+
+    case constants.DeActivateSeason:
+      return {
+        ...state,
+        deduction: payload,
+      }
+
+    case constants.CreateSeason:
+      return {
+        ...state,
+        deduction: payload,
+      }
+
+    case constants.GetActiveSeason:
+      return {
+        ...state,
+        deduction: payload,
+      }
+    default:
+      return state;
+  }
+}
+
+const userReducer = (state = { }, { type, payload }) => {
+  switch (type) {
+    case userConstants.GetAllUsers:
+      return {
+        ...state,
+        payload,
+      }
+
+    case userConstants.DeleteUser:
+      return {
+        ...state,
+        payload,
+      }
+
+    case userConstants.EditUser:
+      return {
+        ...state,
+        payload,
+      }
+
+    default:
+      return state;
+  }
+}
+
 const appData = combineReducers({
   logged: loggedReducer,
   loggedOut: loggedOutReducer,
   loading: loadingReducer,
   deduction: deductionReducer,
+  season: seasonReducer,
+  user: userReducer,
 });
 
 export default appData;

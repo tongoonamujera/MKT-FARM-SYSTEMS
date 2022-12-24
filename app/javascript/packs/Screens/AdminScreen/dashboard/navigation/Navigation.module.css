@@ -1,5 +1,5 @@
 .header {
-  background-color: black;
+  background-color: #090720;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -32,11 +32,19 @@
 }
 
 .header .welcome .start {
-  width: 25%;
+  width: 50%;
+}
+
+.header .welcome .start span {
+  color: black;
+  background-color: whitesmoke;
+  margin: 0.1rem;
+  padding: 0.5rem;
+  border-radius: 50%;
 }
 
 .header .welcome .Wend {
-  width: 75%;
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -1,5 +1,7 @@
 .dashboard {
   width: 100%;
+  background-color: #afadad;
+  height: 100vh;
 }
 
 .dashboard .navigation {
@@ -7,6 +9,291 @@
 }
 
 .dashboard .main {
+  width: 95%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80vh;
+}
+
+.dashboard .main .start {
+  -webkit-box-flex: 35%;
+      -ms-flex: 35%;
+          flex: 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dashboard .main .start h1, .dashboard .main .start h3 {
+  color: black !important;
+}
+
+.dashboard .main .end {
+  -webkit-box-flex: 65%;
+      -ms-flex: 65%;
+          flex: 65%;
+}
+
+.dashboard .main .end .card {
+  margin-top: 5%;
   width: 100%;
+  height: 93%;
+  background-color: whitesmoke;
+  border-radius: 1.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.3rem;
+  -webkit-box-shadow: 5px 5px 5px 5px gray;
+          box-shadow: 5px 5px 5px 5px gray;
+}
+
+.dashboard .main .end .card:hover {
+  width: 101%;
+}
+
+.dashboard .main .end .card .sidebar {
+  -webkit-box-flex: 20%;
+      -ms-flex: 20%;
+          flex: 20%;
+  background-color: #090720;
+  border-top-left-radius: 0.9rem;
+  border-bottom-left-radius: 0.9rem;
+}
+
+.dashboard .main .end .card .sidebar section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100%;
+  margin-left: 0.7rem;
+}
+
+.dashboard .main .end .card .sidebar section a {
+  margin-top: 0.7rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: white;
+  text-shadow: 1px 1px gray;
+}
+
+.dashboard .main .end .card .cardmain {
+  -webkit-box-flex: 80%;
+      -ms-flex: 80%;
+          flex: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.dashboard .main .end .card .cardmain .topbar {
+  -webkit-box-flex: 6%;
+      -ms-flex: 6%;
+          flex: 6%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem 2.2rem 0 0.2rem;
+}
+
+.dashboard .main .end .card .cardmain .topbar h3 {
+  -webkit-box-flex: 90%;
+      -ms-flex: 90%;
+          flex: 90%;
+  color: #000;
+}
+
+.dashboard .main .end .card .cardmain .topbar p {
+  -webkit-box-flex: 10%;
+      -ms-flex: 10%;
+          flex: 10%;
+}
+
+.dashboard .main .end .card .cardmain .topbar p span {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 1.4rem;
+  font-weight: 900;
+  margin: auto;
+  border-radius: 50%;
+  padding: 0.7rem;
+  background-color: #090720;
+  color: white;
+}
+
+.dashboard .main .end .card .cardmain .mainsection {
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.dashboard .main .end .card .cardmain .mainsection .right {
+  -webkit-box-flex: 20%;
+      -ms-flex: 20%;
+          flex: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.dashboard .main .end .card .cardmain .mainsection .right .fartop {
+  -webkit-box-flex: 30.3%;
+      -ms-flex: 30.3%;
+          flex: 30.3%;
+  background-color: #090720;
+  border-radius: 1rem;
+  margin: 0.2rem;
+}
+
+.dashboard .main .end .card .cardmain .mainsection .right .farcenter {
+  -webkit-box-flex: 30.3%;
+      -ms-flex: 30.3%;
+          flex: 30.3%;
+  background-color: #090720;
+  border-radius: 1rem;
+  margin: 0.2rem;
+}
+
+.dashboard .main .end .card .cardmain .mainsection .right .farbottom {
+  -webkit-box-flex: 30.3%;
+      -ms-flex: 30.3%;
+          flex: 30.3%;
+  background-color: #090720;
+  border-radius: 1rem;
+  margin: 0.2rem;
+}
+
+.dashboard .main .end .card .cardmain .mainsection .left {
+  -webkit-box-flex: 80%;
+      -ms-flex: 80%;
+          flex: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.dashboard .main .end .card .cardmain .mainsection .left .top {
+  -webkit-box-flex: 20%;
+      -ms-flex: 20%;
+          flex: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dashboard .main .end .card .cardmain .mainsection .left .top div {
+  -webkit-box-flex: 30.3%;
+      -ms-flex: 30.3%;
+          flex: 30.3%;
+  margin: 0.3rem;
+  background-color: #fcf6f5ff;
+  border: 1px solid #bdbaba;
+  border-radius: 0.6rem;
+  -webkit-box-shadow: 3px 3px 3px 3px #bdbaba;
+          box-shadow: 3px 3px 3px 3px #bdbaba;
+}
+
+.dashboard .main .end .card .cardmain .mainsection .left .center {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dashboard .main .end .card .cardmain .mainsection .left .center .start {
+  -webkit-box-flex: 70%;
+      -ms-flex: 70%;
+          flex: 70%;
+  margin: 0.3rem;
+  background-color: #fcf6f5ff;
+  border: 1px solid #bdbaba;
+  border-radius: 0.6rem;
+  -webkit-box-shadow: 3px 3px 3px 3px #bdbaba;
+          box-shadow: 3px 3px 3px 3px #bdbaba;
+}
+
+.dashboard .main .end .card .cardmain .mainsection .left .center .end {
+  -webkit-box-flex: 30%;
+      -ms-flex: 30%;
+          flex: 30%;
+  margin: 0.3rem;
+  background-color: #fcf6f5ff;
+  border: 1px solid #bdbaba;
+  border-radius: 0.6rem;
+  -webkit-box-shadow: 3px 3px 3px 3px #bdbaba;
+          box-shadow: 3px 3px 3px 3px #bdbaba;
+}
+
+.dashboard .main .end .card .cardmain .mainsection .left .bottom {
+  -webkit-box-flex: 30%;
+      -ms-flex: 30%;
+          flex: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dashboard .main .end .card .cardmain .mainsection .left .bottom .left {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  margin: 0.3rem;
+  background-color: #fcf6f5ff;
+  border: 1px solid #bdbaba;
+  border-radius: 0.6rem;
+  -webkit-box-shadow: 3px 3px 3px 3px #bdbaba;
+          box-shadow: 3px 3px 3px 3px #bdbaba;
+}
+
+.dashboard .main .end .card .cardmain .mainsection .left .bottom .right {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  margin: 0.3rem;
+  background-color: #fcf6f5ff;
+  border: 1px solid #bdbaba;
+  border-radius: 0.6rem;
+  -webkit-box-shadow: 3px 3px 3px 3px #bdbaba;
+          box-shadow: 3px 3px 3px 3px #bdbaba;
 }
 /*# sourceMappingURL=Dashbord.module.css.map */

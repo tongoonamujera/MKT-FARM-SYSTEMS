@@ -6,7 +6,11 @@ const constants = {
   GetDeductions: "GetDeductions",
   CreateDeductions: "CreateDeductions",
   EditDeductions: "EditDeductions",
-  DeleteDeductions: "DeleteDeductions"
+  DeleteDeductions: "DeleteDeductions",
+  GetActiveSeason: "GetActiveSeason",
+  CreateSeason: "CreateSeason",
+  DeActivateSeason: "DeActivateSeason",
+  ActivateSeason: "ActivateSeason",
 }
 
 export default constants;

@@ -53,6 +53,8 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: 'users/registrations', sessions: 'users/sessions'}, :path_prefix => 'my'
   devise_scope :user do
     get "/logged_in" => "users/sessions#logged_in"
+    get "/all_users" => "users/registrations#index"
+    patch "/update_user_account" => "users/registrations#update_user_account"
   end
   root 'activities#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
